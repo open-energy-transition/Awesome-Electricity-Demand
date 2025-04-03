@@ -50,5 +50,3 @@
 | South Korea                |      |      |      |      |      |      |      |      |      |      |
 | Sri Lanka                  |      |      |      |      |      |      |      |      |      |      |
 | Turkey                     |      |      |      |      |      |  [60min](https://www.kaggle.com/datasets/dharanikra/electrical-power-demand-in-turkey)    |   [60min](https://www.kaggle.com/datasets/dharanikra/electrical-power-demand-in-turkey)   |   [60min](https://www.kaggle.com/datasets/dharanikra/electrical-power-demand-in-turkey)   |      |      |
-
-
