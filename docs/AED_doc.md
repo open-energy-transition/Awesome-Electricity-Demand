@@ -27,9 +27,9 @@ An interactive visualization tool has been developed to provide a centralized vi
 
 The repository currently provides electricity demand data for a range of countries across the following regions:
 
-- Europe  
-- Asia  
-- Australia and New Zealand  
+- Europe
+- Asia
+- Australia and New Zealand
 - North America
 
 ### 🔍 Key Attributes
@@ -37,9 +37,9 @@ The repository currently provides electricity demand data for a range of countri
 - **Data Sources**: ENTSO-E, AEMO, EMI, PUCSL, Kaggle, CCEI, among others.
 - **Coverage**: Time series data with varying temporal resolution and historical span.
 - **Metadata Table**:
-  - Country name  
-  - Data availability (timestamp range)  
-  - Direct link to source platforms   
+  - Country name
+  - Data availability (timestamp range)
+  - Direct link to source platforms
 
 📄 [Access the Metadata Table](https://github.com/open-energy-transition/Awesome-Electric-Demand/blob/main/demand_forecasting_table.md)
 
@@ -50,7 +50,7 @@ To ensure consistency and interoperability across all datasets, the following st
 
 ### 📂 File Structure
 
-All cleaned and harmonized electricity demand datasets are stored in the `Data-files/` directory.  
+All cleaned and harmonized electricity demand datasets are stored in the `Data-files/` directory.
 Each file represents data from a specific country and is available in both `.csv` and `.parquet` formats.
 
 This centralized file structure facilitates easy access, comparison, and processing of demand data across countries.
@@ -66,9 +66,9 @@ This centralized file structure facilitates easy access, comparison, and process
 
 The following enhancements are currently under development:
 
-- Integration with cloud storage platforms for scalable access  
-- Implementation of automated ETL pipelines for continuous updates  
-- Expansion to include additional countries and regions  
+- Integration with cloud storage platforms for scalable access
+- Implementation of automated ETL pipelines for continuous updates
+- Expansion to include additional countries and regions
 
 ---
 
@@ -82,10 +82,10 @@ All datasets retain the licenses of their original sources. Users are advised to
 
 ## 🤝 Contact and Contributions
 
-Contributions, feedback, and collaborations are welcome!  
+Contributions, feedback, and collaborations are welcome!
 
-- Use [GitHub Issues](https://github.com/open-energy-transition/Awesome-Electric-Demand/issues) for bug reports or data requests  
-- Submit [Pull Requests](https://github.com/open-energy-transition/Awesome-Electric-Demand/pulls) for enhancements  
+- Use [GitHub Issues](https://github.com/open-energy-transition/Awesome-Electric-Demand/issues) for bug reports or data requests
+- Submit [Pull Requests](https://github.com/open-energy-transition/Awesome-Electric-Demand/pulls) for enhancements
 
 ---
 
