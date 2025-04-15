@@ -65,48 +65,35 @@ The format for the list of data sources in the repository is presented in `READM
 📄 [Access the Metadata Table](https://github.com/open-energy-transition/Awesome-Electric-Demand/blob/main/demand_data_table.md)
 
 ---
-## 3. 📁 Data Format and Standardization
 
-To ensure consistency and interoperability across all datasets, the following standardization protocols have been implemented:
-
-### 📂 File Structure
-
-All cleaned and harmonized electricity demand datasets are stored in the `Data-files/` directory.
-Each file represents data from a specific country and is available in both `.csv` and `.parquet` formats.
-
-This centralized file structure facilitates easy access, comparison, and processing of demand data across countries.
-
-### 🧾 Data Format
-
-- Electricity demand values are expressed in **megawatts (MW)**
-- Supported output formats: **CSV** and **Parquet**
-
----
-
-## 4. 🚀 Roadmap and Future Work
+## 3. 🚀 Roadmap and Future Work
 
 The following enhancements are currently under development:
 
-- Integration with cloud storage platforms for scalable access
-- Implementation of automated ETL pipelines for continuous updates
-- Expansion to include additional countries and regions
+- Expanding coverage to include demand data sources for more countries and sub-national regions.
+- Providing a static global map that highlights countries and regions with available data. This will give users a quick visual overview of data coverage.
+- Enhancing the Global Demand Data Map by:
+  - Adding links to country-level demand data sources.
+  - Improving visual presentation through clear color schemes for better differentiation between countries.
+
+> Note: Tasks related to data processing, ETL pipelines, and cloud storage integration are maintained in the companion repository: [`electric-demand-data`](https://github.com/open-energy-transition/electric-demand-data)
+---
+
+## 4. 📜 Licensing and Usage
+All data sources retain the licenses of their original providers. Users are advised to refer the specific licensing terms of each source before using or distributing the data. 
+
+> ⚖️ **Please ensure proper attribution when utilizing any data source from this repository.**
 
 ---
 
-## 5. 📜 Licensing and Usage
+## 🤝 Contributions
 
-All datasets retain the licenses of their original sources. Users are advised to refer to the source-specific licensing terms prior to reuse or distribution.
+Contributions and feedback are welcome!
 
-> ⚖️ **Please ensure proper attribution** when utilizing any dataset from this repository.
+- Contributions are welcome in the form of adding links to websites that provide hourly or sub-hourly electricity demand data, including information on data availability timelines and licensing conditions.
+- Use [GitHub Issues](https://github.com/open-energy-transition/Awesome-Electric-Demand/issues) for bug reports, data requests, or suggestions.
+- Submit [Pull Requests](https://github.com/open-energy-transition/Awesome-Electric-Demand/pulls) for adding new data sources or enhancing metadata.
 
----
-
-## 🤝 Contact and Contributions
-
-Contributions, feedback, and collaborations are welcome!
-
-- Use [GitHub Issues](https://github.com/open-energy-transition/Awesome-Electric-Demand/issues) for bug reports or data requests
-- Submit [Pull Requests](https://github.com/open-energy-transition/Awesome-Electric-Demand/pulls) for enhancements
 
 ---
 
