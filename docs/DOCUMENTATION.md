@@ -40,7 +40,7 @@ The repository currently provides electricity demand data for a range of countri
 - North America
 - Some subnational/regional datasets are also included where national data is unavailable.
 
-To improve accessibility, this section will be enhanced with a **static global map** highlighting countries and regions with available data. This will provide users with a quick visual overview of coverage.
+To improve accessibility, a **static global map** will be added, highlighting countries and regions with available data. This will provide users with a quick visual overview of coverage.
 
 🛠 *[Static overview map coming soon]*
 
