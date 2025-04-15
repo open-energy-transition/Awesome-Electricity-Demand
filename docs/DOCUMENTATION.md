@@ -6,9 +6,16 @@
 
 ## 🎯 Repository Objectives
 
-- Consolidate electricity demand datasets from multiple national and regional sources.
-- Ensure standardization across datasets for improved interoperability and analysis.
-- Promote open and verifiable access to energy data for researchers, analysts, and policymakers.
+- Serve as a curated list of websites and platforms that provide hourly or sub-hourly electricity demand data from various national and regional sources.
+- Include essential metadata for each data source such as:
+  - Time range of data availability
+  - Licensing and usage terms
+- Facilitate discoverability and transparency for researchers, analysts, and policymakers by promoting open and verifiable access to electricity demand data.
+
+This repository is limited to hosting links and metadata only.
+To access the code for downloading, extracting, and processing the data, please refer to our companion repository: [`electric-demand-data`](https://github.com/open-energy-transition/electric-demand-data).
+
+
 
 ---
 
@@ -17,7 +24,7 @@
 An interactive visualization tool has been developed to provide a centralized view of electricity demand datasets across the globe:
 
 - **Functionality**: Users can click on individual countries to access the corresponding electricity demand data or official data source.
-- **Purpose**: Facilitates intuitive navigation and efficient data discovery.
+- **Purpose**: Simplifies navigation and enhances discoverability of regional or national datasets.
 
 🔗 [View Interactive Map](https://vamsipriya22.github.io/global-demand/) | [Map Source Code](https://github.com/Vamsipriya22/global-demand/tree/main)
 
@@ -31,17 +38,31 @@ The repository currently provides electricity demand data for a range of countri
 - Asia
 - Australia and New Zealand
 - North America
+- Some subnational/regional datasets are also included where national data is unavailable.
+
+To improve accessibility, this section will be enhanced with a **static global map** highlighting countries and regions with available data. This will provide users with a quick visual overview of coverage.
+
+🛠 *[Static overview map coming soon]*  
 
 ### 🔍 Key Attributes
 
-- **Data Sources**: ENTSO-E, AEMO, EMI, PUCSL, Kaggle, CCEI, among others.
-- **Coverage**: Time series data with varying temporal resolution and historical span.
+- **Data Sources**: ENTSO-E, AEMO, EMI, PUCSL, Kaggle, CCEI, and others.
+- **Coverage**: Time series data with varying temporal resolution and historical span. Regional data is also provided in addition to the national-level datasets wherever available.
+- **Licensing terms**: Provided in `README.md` as the list of data sources in the repository.
+
 - **Metadata Table**:
   - Country name
   - Data availability (timestamp range)
   - Direct link to source platforms
 
-📄 [Access the Metadata Table](https://github.com/open-energy-transition/Awesome-Electric-Demand/blob/main/demand_forecasting_table.md)
+The format for the list of data sources in the repository is presented in `README.md` as:
+
+## Continent
+  - ### Country
+    - #### Region
+      Source | Years | License
+
+📄 [Access the Metadata Table](https://github.com/open-energy-transition/Awesome-Electric-Demand/blob/main/demand_data_table.md)
 
 ---
 ## 3. 📁 Data Format and Standardization
