@@ -80,7 +80,7 @@ The following enhancements are currently under development:
 ---
 
 ## 4. 📜 Licensing and Usage
-All data sources retain the licenses of their original providers. Users are advised to refer the specific licensing terms of each source before using or distributing the data. 
+All data sources retain the licenses of their original providers. Users are advised to refer the specific licensing terms of each source before using or distributing the data.
 
 > ⚖️ **Please ensure proper attribution when utilizing any data source from this repository.**
 
