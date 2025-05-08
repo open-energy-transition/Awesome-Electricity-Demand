@@ -16,6 +16,9 @@
 
 ## Europe
 
+- ### Albana
+  [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=18.03.2025+00:00|CET|DAY&biddingZone.values=CTY|10YAL-KESH-----5!CTY|10YAL-KESH-----5&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2022-present | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
+
 - ### Austria
   [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=BZN&atch=false&dateTime.dateTime=18.03.2025+00:00|CET|DAY&biddingZone.values=CTY|10YAT-APG------L!BZN|10YAT-APG------L&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
 
@@ -69,6 +72,11 @@
 
   [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=BZN&atch=false&dateTime.dateTime=15.03.2017+00:00|CET|DAY&biddingZone.values=CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A71M&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
 
+  
+- ### Kosova
+  [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=18.03.2025+00:00|CET|DAY&biddingZone.values=CTY|10Y1001C--00100H!CTY|10Y1001C--00100H&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2022-present | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
+  
+
 - ### Latvia
 
   [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=BZN&atch=false&dateTime.dateTime=15.03.2017+00:00|CET|DAY&biddingZone.values=CTY|10YLV-1001A00074!BZN|10YLV-1001A00074&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
@@ -79,6 +87,11 @@
 - ### Luxembourg
 
   [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=BZN&atch=false&dateTime.dateTime=15.03.2017+00:00|CET|DAY&biddingZone.values=CTY|10YLU-CEGEDEL-NQ!BZN|10Y1001A1001A63L&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
+
+  
+- ### Moldova
+  [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=18.03.2025+00:00|CET|DAY&biddingZone.values=CTY|10Y1001A1001A990!CTY|10Y1001A1001A990&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2020-present | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
+  
 
 - ### Montenegro
 
@@ -112,6 +125,10 @@
 
   [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=BZN&atch=false&dateTime.dateTime=15.03.2017+00:00|CET|DAY&biddingZone.values=CTY|10YCS-SERBIATSOV!BZN|10YCS-SERBIATSOV&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
 
+
+- ### Slovakia
+  [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=18.03.2025+00:00|CET|DAY&biddingZone.values=CTY|10YSK-SEPS-----K!CTY|10YSK-SEPS-----K&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2022-present | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
+
 - ### Slovenia
 
   [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=BZN&atch=false&dateTime.dateTime=15.03.2017+00:00|CET|DAY&biddingZone.values=CTY|10YSI-ELES-----O!BZN|10YSI-ELES-----O&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
@@ -129,30 +146,60 @@
   [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=BZN&atch=false&dateTime.dateTime=15.03.2017+00:00|CET|DAY&biddingZone.values=CTY|10YCH-SWISSGRIDZ!BZN|10YCH-SWISSGRIDZ&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
 
 
+- ### Ukraine
+  [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=18.03.2025+00:00|CET|DAY&biddingZone.values=CTY|10Y1001C--00003F!CTY|10Y1001C--00003F&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2018-present | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
+
+  
+- ### United Kingdom
+  [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.03.2020+00:00|CET|DAY&biddingZone.values=CTY|10Y1001A1001A92E!CTY|10Y1001A1001A92E&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-2022 | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
+  
+
+## North America
+  
+- ### Canada
+  [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-present | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
 
 
-## Asia
+## South America
+  
+- ### Brazil
+  [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2015-present | []()
 
-- ### Turkey
+- ### Chile
+  [CEN](https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/) | 2015-present | []()
 
-  [Kaggle](https://www.kaggle.com/datasets/dharanikra/electrical-power-demand-in-turkey) | 2020-2022 |
-
-- ### Sri Lanka
-
-  [PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | [Licensee Information](https://www.pucsl.gov.lk/electricity/licensee/)
+- ### Peru
+  [COES](https://www.coes.org.pe/Portal/portalinformacion/demanda) | 2015-present | []()
 
 
-## Australia and New Zealand
+
+## Oceania
 
 - ### Australia
-
   [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2015-present |
 
 - ### New Zealand
-
   [EMI](https://www.emi.ea.govt.nz/Wholesale/Reports/W_GD_C?DateFrom=20250212&DateTo=20250212&RegionType=NZ&_rsdr=D1&_si=_dr_RegionType|NZ,_dr__rsdr|L364D,_dr_DateFrom|20240213,_dr_DateTo|20250212,v|4) | 2015-present | [Legal Information](https://www.emi.ea.govt.nz/LegalInformation)
 
-## North America
-  - ### Canada
-    - #### Ontario
-      [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2002-present | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+## Africa
+
+- ### Algeria
+  [Sonelgaz](https://data.mendeley.com/datasets/z5x2d3mhw7/1) | 2015-2019 |
+
+  
+## Asia
+
+- ### Japan
+  [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2016-2024 |
+
+- ### Cyprus
+  [TSOC](https://tsoc.org.cy/electrical-system/archive-total-daily-system-generation-on-the-transmission-system/) | 2015-2024 |
+
+- ### Turkey
+  [Kaggle](https://www.kaggle.com/datasets/dharanikra/electrical-power-demand-in-turkey) | 2020-2022 |
+
+- ### Sri Lanka
+  [PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | [Licensee Information](https://www.pucsl.gov.lk/electricity/licensee/)
+
+
+
