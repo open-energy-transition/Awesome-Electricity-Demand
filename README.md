@@ -11,7 +11,7 @@
 
 ## National Datasets
 
-* [Global Demand Data Map](https://open-energy-transition.github.io/Awesome-Electric-Demand/) [[Code](https://github.com/Vamsipriya22/global-demand/tree/main)]
+* [Global Demand Data Map](https://open-energy-transition.github.io/Awesome-Electric-Demand/) [[Code](https://github.com/open-energy-transition/Awesome-Electric-Demand/tree/main/demand-data-map)]
 
 
 ## Europe
