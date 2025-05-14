@@ -26,7 +26,7 @@ An interactive visualization tool has been developed to provide a centralized vi
 - **Functionality**: Users can click on individual countries to access the corresponding electricity demand data or official data source.
 - **Purpose**: Simplifies navigation and enhances discoverability of regional or national datasets.
 
-🔗 [View Interactive Map](https://vamsipriya22.github.io/global-demand/) | [Map Source Code](https://github.com/Vamsipriya22/global-demand/tree/main)
+🔗 [View Interactive Map](https://open-energy-transition.github.io/Awesome-Electric-Demand/) | [Map Source Code](https://github.com/Vamsipriya22/global-demand/tree/main)
 
 ---
 
