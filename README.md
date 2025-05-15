@@ -170,6 +170,9 @@
 
 
 ## South America
+
+- ### Argentina
+  [Cammesa](https://api.cammesa.com/demanda-svc/demanda/RegionesDemanda) | 2024-present | 60-min resolution | []()
   
 - ### Brazil
   [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | 60-min resolution | []()
@@ -199,6 +202,9 @@
 
 - ### Nigeria
   [Mendeley](https://data.mendeley.com/datasets/pxvdm26rn7/2) | 2016-2017 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+- ### South Africa
+  [ESKOM](https://www.eskom.co.za/dataportal/demand-side/) | 2016-present | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
   
 ## Asia
