@@ -198,13 +198,13 @@
 ## Africa
 
 - ### Algeria
-  [Sonelgaz](https://data.mendeley.com/datasets/z5x2d3mhw7/1) | 2015-2019 | 60-min resolution | []()
+  [Sonelgaz](https://data.mendeley.com/datasets/z5x2d3mhw7/1) | 2015-2019 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 - ### Nigeria
   [Mendeley](https://data.mendeley.com/datasets/pxvdm26rn7/2) | 2016-2017 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 - ### South Africa
-  [ESKOM](https://www.eskom.co.za/dataportal/demand-side/) | 2016-present | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+  [ESKOM](https://www.eskom.co.za/dataportal/demand-side/) | 2016-present | 60-min resolution | []()
 
   
 ## Asia
