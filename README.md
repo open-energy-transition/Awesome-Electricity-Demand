@@ -234,8 +234,8 @@
   [Mendeley](https://data.mendeley.com/datasets/pxvdm26rn7/2) | 2016 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 - ### South Africa
-  [ESKOM](https://www.eskom.co.za/dataportal/data-request-form/) | 2016-present | 60-min resolution |  [Non-commercial use](https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf)
-
+  [ESKOM](https://www.eskom.co.za/dataportal/data-request-form/) | 2016-present | 60-min resolution |  [Access upon request – Non-commercial use](https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf)
+ 
   
 ## Asia
 
