@@ -45,7 +45,7 @@
 
   Generation:
   
-  [TSOC](https://tsoc.org.cy/electrical-system/archive-total-daily-system-generation-on-the-transmission-system/) | 2008-present | 15-min resolution | 
+  [TSOC](https://tsoc.org.cy/electrical-system/archive-total-daily-system-generation-on-the-transmission-system/) | 2008-present | 15-min resolution | [Use with authorization](https://tsoc.org.cy/)
 
 
 - ### Czech Republic
@@ -170,13 +170,45 @@
 ## North America
   
 - ### Canada
-  [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
 
+   - #### Newfoundland
+     [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+
+   - #### Prince Edward Island
+     [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2020-present | 15-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)     
+
+   - #### Nova Scotia
+     [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-2023 | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+     
+     [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 10-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+
+   - #### New Brunswick
+     [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)     
+
+   - #### Quebec
+     [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 15-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+     
+   - #### Ontario
+     [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 60-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+
+   - #### Saskatchewan
+     [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 24-hour resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+ 
+   - #### Alberta
+     [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 60-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+
+   - #### Newfoundland
+     [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+    
+   - #### Yukon
+     [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+
+     
 
 ## South America
 
 - ### Argentina
-  [Cammesa](https://api.cammesa.com/demanda-svc/demanda/RegionesDemanda) | 2024-present | 60-min resolution | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/)
+  [Cammesa](https://cammesaweb.cammesa.com/) | 2024-present | 60-min resolution | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/)
   
 - ### Brazil
   [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | 60-min resolution | [CC-BY](https://dados.ons.org.br/dataset/curva-carga)
@@ -194,32 +226,32 @@
  - ### Australia
    
      - #### New South Wales
-    [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Free to use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+       [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
   
-    [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Free to use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+       [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
      - #### Queensland
-    [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Free to use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+       [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
   
-    [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Free to use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+       [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
      - #### Victoria
-    [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Free to use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+       [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
   
-    [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Free to use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+       [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
      - #### South Australia
-    [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Free to use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+       [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
   
-    [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Free to use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+       [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
      - #### Tasmania
-    [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Free to use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+       [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
   
-    [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Free to use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+       [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
      - #### Western Australia
-    [AEMO](https://data.wa.aemo.com.au/public/market-data/wemde/operationalDemandWithdrawal/dailyFiles/) | 2023-present | 5-min resolution | [Free to use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+       [AEMO](https://data.wa.aemo.com.au/public/market-data/wemde/operationalDemandWithdrawal/dailyFiles/) | 2023-present | 5-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
   
   
 - ### New Zealand
@@ -245,10 +277,10 @@
   [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
 
 - ### Sri Lanka
-  [PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [Licensee Information](https://www.pucsl.gov.lk/electricity/licensee/)
+  [PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [Use with authorization](https://www.pucsl.gov.lk/electricity/licensee/)
 
 - ### Turkey
-  [Kaggle](https://www.kaggle.com/datasets/dharanikra/electrical-power-demand-in-turkey) | 2020-2022 | 60-min resolution | [Licensee Information](https://www.epias.com.tr/en/28624-2/)
+  [EPIAS](https://seffaflik.epias.com.tr/electricity/electricity-consumption/ex-post-consumption/real-time-consumption) | 2016-present | 60-min resolution | [Use with attribution](https://seffaflik.epias.com.tr/about/about)
 
 
 
