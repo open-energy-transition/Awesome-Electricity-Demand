@@ -182,16 +182,18 @@
   [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | 60-min resolution | [CC-BY](https://dados.ons.org.br/dataset/curva-carga)
 
 - ### Chile
-  [CEN](https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/) | 1999-present | 60-min resolution | []()
+  [CEN](https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/) | 1999-present | 60-min resolution | [Open data](http://energiaabierta.cl/)
 
 - ### Peru
-  [COES](https://www.coes.org.pe/Portal/portalinformacion/demanda) | 1997-present | 30-min resolution | []()
+  [COES](https://www.coes.org.pe/Portal/portalinformacion/demanda) | 1997-present | 30-min resolution | [Non-commercial use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones)
 
 
 
 ## Oceania
+
  - ### Australia
-  - #### New South Wales
+   
+     - #### New South Wales
     [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Free to use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
   
     [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Free to use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
@@ -232,15 +234,15 @@
   [Mendeley](https://data.mendeley.com/datasets/pxvdm26rn7/2) | 2016 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 - ### South Africa
-  [ESKOM](https://www.eskom.co.za/dataportal/demand-side/) | 2016-present | 60-min resolution | []()
+  [ESKOM](https://www.eskom.co.za/dataportal/data-request-form/) | 2016-present | 60-min resolution |  [Non-commercial use](https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf)
 
   
 ## Asia
 
 - ### Japan
-  [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2016-2021 | 60-min resolution | []()
+  [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2016-2021 | 60-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
 
-  [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5-min resolution | []()
+  [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
 
 - ### Sri Lanka
   [PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [Licensee Information](https://www.pucsl.gov.lk/electricity/licensee/)
