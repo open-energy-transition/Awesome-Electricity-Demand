@@ -280,7 +280,7 @@
   [PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [Use with authorization](https://www.pucsl.gov.lk/electricity/licensee/)
 
 - ### Turkey
-  [EPIAS](https://seffaflik.epias.com.tr/electricity/electricity-consumption/ex-post-consumption/real-time-consumption) | 2016-present | 60-min resolution | [Use with attribution](https://seffaflik.epias.com.tr/about/about)
+  [EPIAS](https://seffaflik.epias.com.tr/electricity/electricity-consumption/ex-post-consumption/real-time-consumption) | 2016-present | 60-min resolution | [Access upon request – Use with attribution](https://seffaflik.epias.com.tr/about/about)
 
 
 
