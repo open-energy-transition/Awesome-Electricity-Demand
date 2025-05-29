@@ -280,7 +280,14 @@
   [PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [Use with authorization](https://www.pucsl.gov.lk/electricity/licensee/)
 
 - ### Turkey
-  [EPIAS](https://seffaflik.epias.com.tr/electricity/electricity-consumption/ex-post-consumption/real-time-consumption) | 2016-present | 60-min resolution | [Access upon request – Use with attribution](https://seffaflik.epias.com.tr/about/about)
+  [EPIAS](https://kayit.epias.com.tr/epias-transparency-platform-registration-form) | 2016-present | 60-min resolution | [Access upon request – Use with attribution](https://seffaflik.epias.com.tr/about/about)
+
+
+## Data Source Log
+
+📁 **[data_source_log.csv](https://github.com/open-energy-transition/Awesome-Electric-Demand/blob/main/data_source_log.csv)**  
+
+This file tracks the countries’ websites that were explored for demand forecasting data — specifically for those countries where data could not be retrieved. It documents the country and the websites searched. It is designed to help other researchers avoid duplicating effort and to build a shared knowledge base.
 
 
 
