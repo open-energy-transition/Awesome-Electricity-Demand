@@ -287,7 +287,7 @@
 
 📁 **[data_source_log.csv](https://github.com/open-energy-transition/Awesome-Electric-Demand/blob/main/data_source_log.csv)**  
 
-This file tracks the countries’ websites that were explored for demand forecasting data — specifically for those countries where data could not be retrieved. It documents the country and the websites searched. It is designed to help other researchers avoid duplicating effort and to build a shared knowledge base.
+This file documents the countries and subdivisions that have been explored for hourly or sub-hourly electricity demand data, but where no such data has yet been found. It is also designed to help other researchers avoid duplicating effort and to build a shared knowledge base.
 
 
 
