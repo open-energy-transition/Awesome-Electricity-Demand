@@ -277,10 +277,17 @@
   [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
 
 - ### Sri Lanka
-  [PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [Use with authorization](https://www.pucsl.gov.lk/electricity/licensee/)
+  [PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [All rights reserved](https://www.pucsl.gov.lk/)
 
 - ### Turkey
-  [EPIAS](https://seffaflik.epias.com.tr/electricity/electricity-consumption/ex-post-consumption/real-time-consumption) | 2016-present | 60-min resolution | [Access upon request – Use with attribution](https://seffaflik.epias.com.tr/about/about)
+  [EPIAS](https://kayit.epias.com.tr/epias-transparency-platform-registration-form) | 2016-present | 60-min resolution | [Access upon request – Use with attribution](https://seffaflik.epias.com.tr/about/about)
+
+
+## Data Source Log
+
+📁 **[data_source_log.csv](https://github.com/open-energy-transition/Awesome-Electric-Demand/blob/main/data_source_log.csv)**  
+
+This file documents the countries and subdivisions that have been explored for hourly or sub-hourly electricity demand data, but where no such data has yet been found. It is also designed to help other researchers avoid duplicating effort and to build a shared knowledge base.
 
 
 
