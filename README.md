@@ -287,7 +287,7 @@
 
 📁 **[data_source_log](https://docs.google.com/spreadsheets/d/1qnGaXWZqT-xwbGeqDAFHkTN0VhoFUfKwtAD29n9HeFE/edit?gid=0#gid=0)**  
 
-This file documents the countries and subdivisions that have been explored for hourly or sub-hourly electricity demand data, but where no such data has yet been found. It is also designed to help other researchers avoid duplicating effort and to build a shared knowledge base.
+This spreadsheet documents the countries and subdivisions that have been explored for hourly or sub-hourly electricity demand data, but where no such data has yet been found. It is also designed to help other researchers avoid duplicating effort and to build a shared knowledge base.
 
 
 
