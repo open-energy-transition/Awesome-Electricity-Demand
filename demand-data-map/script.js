@@ -183,6 +183,10 @@ const countryData = {
     color: "#67B367",
     link: "https://www.eskom.co.za/dataportal/data-request-form/",
   },
+  India: {
+    color: "#67B367",
+    link: "https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve",
+  },
   Japan: {
     color: "#67B367",
     link: "https://www.tepco.co.jp/en/forecast/html/download-e.html",
