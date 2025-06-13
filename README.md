@@ -271,6 +271,9 @@
   
 ## Asia
 
+- ### India
+  [NITI Aayog](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2024 | 60-min resolution | [Access upon request – Use with attribution](https://iced.niti.gov.in/)
+
 - ### Japan
   [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2016-2021 | 60-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
 
