@@ -222,11 +222,49 @@ A curated collection of resources on hourly or sub-hourly electricity demand, de
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 15-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[HYDROQUEBEC](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/) | 2019-2023 | 60-min resolution | [Non-commercial use with attribution](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[HYDROQUEBEC](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/) | 2019-2023 | 60-min resolution | [CC BY-NC 4.0](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/)
     
   - ##### Yukon
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+
+- #### Mexico
+
+  - ##### Baja California
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+
+  - ##### Baja California Sur
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+
+  - ##### Noroeste
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+
+  - ##### Norte
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+
+  - ##### Noreste
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+
+  - ##### Occidental
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+
+  - ##### Central
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+
+  - ##### Oriental
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+
+  - ##### Peninsular
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
 
 ### South America
 
