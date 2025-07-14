@@ -290,41 +290,43 @@ A curated collection of resources on hourly or sub-hourly electricity demand, de
 
 ### Oceania
 
- - #### Australia
+- #### Australia
    
-     - ##### New South Wales
+  - ##### New South Wales
 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
-     - ##### Queensland
+  - ##### Queensland
 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
-     - ##### Victoria
+  - ##### South Australia
 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
-     - ##### South Australia
+  - ##### Tasmania
 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2005-2021 | 30-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
-     - ##### Tasmania
+  - ##### Victoria
 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2022-present | 5-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
-     - ##### Western Australia
+  - ##### Western Australia
 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://data.wa.aemo.com.au/public/market-data/wemde/operationalDemandWithdrawal/dailyFiles/) | 2023-present | 5-min resolution | [Use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://data.wa.aemo.com.au/datafiles/operational-demand/) | 2006-2023 | 30-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://data.wa.aemo.com.au/public/market-data/wemde/operationalDemandWithdrawal/dailyFiles/) | 2023-present | 5-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
   
 - #### New Zealand
 
