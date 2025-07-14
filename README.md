@@ -10,9 +10,7 @@ This collection includes links to data sources for countries and subdivisions in
 - [South America](#south-america)
 - [Oceania](#oceania)
 
-## Interactive map with links to data sources
-
-[Global Demand Data Map](https://open-energy-transition.github.io/Awesome-Electric-Demand/) [[Code](https://github.com/open-energy-transition/Awesome-Electric-Demand/tree/main/demand-data-map)]
+[Here](https://open-energy-transition.github.io/Awesome-Electric-Demand/) you can view an interactive map with links to the data sources.
 
 ## List of data sources
 
