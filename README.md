@@ -22,7 +22,7 @@ This collection includes links to data sources for countries and subdivisions in
 
 - #### Nigeria
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Mendeley](https://data.mendeley.com/datasets/pxvdm26rn7/2) | 2016 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) (Reconstructed demand without power outages)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Mendeley](https://data.mendeley.com/datasets/pxvdm26rn7/2) | 2016 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)&nbsp;&nbsp;&nbsp;(Reconstructed demand without power outages)
 
 - #### South Africa
 
@@ -84,15 +84,11 @@ This collection includes links to data sources for countries and subdivisions in
 
 - #### Cyprus
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Demand:
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YCY-1001A0003J!CTY|10YCY-1001A0003J&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2016-2022 | 30-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YCY-1001A0003J!CTY|10YCY-1001A0003J&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2016-2022 | 30-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YCY-1001A0003J!CTY|10YCY-1001A0003J&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2025-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YCY-1001A0003J!CTY|10YCY-1001A0003J&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2025-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generation:
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TSOC](https://tsoc.org.cy/electrical-system/archive-total-daily-system-generation-on-the-transmission-system/) | 2008-present | 15-min resolution | [Use with authorization](https://tsoc.org.cy/)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TSOC](https://tsoc.org.cy/electrical-system/archive-total-daily-system-generation-on-the-transmission-system/) | 2008-present | 15-min resolution | [Use with authorization](https://tsoc.org.cy/)&nbsp;&nbsp;&nbsp;(Generation, proxy for demand)
 
 - #### Czech Republic
 
