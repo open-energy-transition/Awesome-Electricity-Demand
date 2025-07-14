@@ -338,7 +338,7 @@ A curated collection of resources on hourly or sub-hourly electricity demand, de
 
 - #### Nigeria
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Mendeley](https://data.mendeley.com/datasets/pxvdm26rn7/2) | 2016 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Mendeley](https://data.mendeley.com/datasets/pxvdm26rn7/2) | 2016 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) (Reconstructed demand without power outages)
 
 - #### South Africa
 
@@ -348,9 +348,11 @@ A curated collection of resources on hourly or sub-hourly electricity demand, de
 
 - #### Japan
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2016-2021 | 60-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
+  - ##### Kantō
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2016-2021 | 60-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
 
 - #### Sri Lanka
 
