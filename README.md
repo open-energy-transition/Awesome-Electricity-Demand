@@ -1,12 +1,60 @@
-# Awesome-Electricity-Demand
+# Awesome Electricity Demand
 
 A curated collection of resources on hourly or sub-hourly electricity demand, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
+
+This collection includes links to data sources for countries and subdivisions in:
+- [Africa](#africa)
+- [Asia](#asia)
+- [Europe](#europe)
+- [North America](#north-america)
+- [South America](#south-america)
+- [Oceania](#oceania)
 
 ## Interactive map with links to data sources
 
 [Global Demand Data Map](https://open-energy-transition.github.io/Awesome-Electric-Demand/) [[Code](https://github.com/open-energy-transition/Awesome-Electric-Demand/tree/main/demand-data-map)]
 
 ## List of data sources
+
+### Africa
+
+- #### Algeria
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Sonelgaz](https://data.mendeley.com/datasets/z5x2d3mhw7/1) | 2008-2020 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+- #### Nigeria
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Mendeley](https://data.mendeley.com/datasets/pxvdm26rn7/2) | 2016 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) (Reconstructed demand without power outages)
+
+- #### South Africa
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ESKOM](https://www.eskom.co.za/dataportal/data-request-form/) | 2016-present | 60-min resolution |  [Access upon request – Non-commercial use](https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf)
+ 
+### Asia
+
+- #### India
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2024 | 30-min resolution | [Open data](https://iced.niti.gov.in/about-us)
+
+- #### Japan
+
+  - ##### Kantō
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2016-2021 | 60-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
+
+- #### Pakistan
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NTDC](https://www.kaggle.com/datasets/tentative/ntdc-dataset) | 2015-2020 | 60-min resolution | [CC0](https://www.kaggle.com/datasets/tentative/ntdc-dataset)
+
+- #### Sri Lanka
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [All rights reserved](https://www.pucsl.gov.lk/)
+
+- #### Turkey
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EPIAS](https://kayit.epias.com.tr/epias-transparency-platform-registration-form) | 2016-present | 60-min resolution | [Access upon request – Use with attribution](https://seffaflik.epias.com.tr/about/about)
 
 ### Europe
 
@@ -417,46 +465,6 @@ A curated collection of resources on hourly or sub-hourly electricity demand, de
 - #### New Zealand
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EMI](https://www.emi.ea.govt.nz/Wholesale/Reports/W_GD_C) | 2005-present | 30-min resolution | [CC-BY 4.0](https://www.emi.ea.govt.nz/LegalInformation)
-
-### Africa
-
-- #### Algeria
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Sonelgaz](https://data.mendeley.com/datasets/z5x2d3mhw7/1) | 2008-2020 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
-- #### Nigeria
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Mendeley](https://data.mendeley.com/datasets/pxvdm26rn7/2) | 2016 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) (Reconstructed demand without power outages)
-
-- #### South Africa
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ESKOM](https://www.eskom.co.za/dataportal/data-request-form/) | 2016-present | 60-min resolution |  [Access upon request – Non-commercial use](https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf)
- 
-### Asia
-
-- #### India
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2024 | 30-min resolution | [Open data](https://iced.niti.gov.in/about-us)
-
-- #### Japan
-
-  - ##### Kantō
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2016-2021 | 60-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
-
-- #### Pakistan
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NTDC](https://www.kaggle.com/datasets/tentative/ntdc-dataset) | 2015-2020 | 60-min resolution | [CC0](https://www.kaggle.com/datasets/tentative/ntdc-dataset)
-
-- #### Sri Lanka
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [All rights reserved](https://www.pucsl.gov.lk/)
-
-- #### Turkey
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EPIAS](https://kayit.epias.com.tr/epias-transparency-platform-registration-form) | 2016-present | 60-min resolution | [Access upon request – Use with attribution](https://seffaflik.epias.com.tr/about/about)
 
 ## Data Source Log
 
