@@ -1,6 +1,6 @@
 # Awesome Electricity Demand
 
-A curated collection of resources on hourly or sub-hourly electricity demand, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
+A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 This collection includes links to data sources for countries and subdivisions in:
 - [Africa](#africa)
