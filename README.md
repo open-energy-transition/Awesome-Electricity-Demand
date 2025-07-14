@@ -466,6 +466,6 @@ This collection includes links to data sources for countries and subdivisions in
 
 This spreadsheet documents the countries and subdivisions that have been explored for hourly or sub-hourly electricity demand data, but where no such data has yet been found. It is also designed to help other researchers avoid duplicating effort and to build a shared knowledge base.
 
+## Contributions
 
-
-
+Contributions are welcome in the form of new links to websites that provide hourly or sub-hourly electricity demand data, including information on data availability timelines and licensing conditions.
