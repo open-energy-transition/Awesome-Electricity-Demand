@@ -1,18 +1,10 @@
-# Awesome-Electric-Demand
+# Awesome-Electricity-Demand
 
-<table>
-<tr>
-<td colspan="2">
-<b>A curated collection of resources on electricity demand, aimed at enhancing global open data coverage, harmonization, and quality to support a sustainable energy transition.</b>
-</td>
-</tr>
-</table>
+A curated collection of resources on hourly or sub-hourly electricity demand, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
-
-## National Datasets
+## Interactive map with links to data sources
 
 * [Global Demand Data Map](https://open-energy-transition.github.io/Awesome-Electric-Demand/) [[Code](https://github.com/open-energy-transition/Awesome-Electric-Demand/tree/main/demand-data-map)]
-
 
 ## Europe
 
