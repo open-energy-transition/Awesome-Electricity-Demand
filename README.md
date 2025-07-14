@@ -4,7 +4,7 @@ A curated collection of resources on hourly or sub-hourly electricity demand, de
 
 ## Interactive map with links to data sources
 
-* [Global Demand Data Map](https://open-energy-transition.github.io/Awesome-Electric-Demand/) [[Code](https://github.com/open-energy-transition/Awesome-Electric-Demand/tree/main/demand-data-map)]
+[Global Demand Data Map](https://open-energy-transition.github.io/Awesome-Electric-Demand/) [[Code](https://github.com/open-energy-transition/Awesome-Electric-Demand/tree/main/demand-data-map)]
 
 ## List of data sources
 
@@ -178,47 +178,55 @@ A curated collection of resources on hourly or sub-hourly electricity demand, de
   
 - #### Canada
 
-   - ##### Newfoundland
+  - ##### Alberta
 
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2023-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
 
-   - ##### Prince Edward Island
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AESO](https://www.aeso.ca/market/market-and-system-reporting/data-requests/hourly-load-by-area-and-region) | 2011-2024 | 60-min resolution | [Non-commercial use with attribution](https://www.aeso.ca/legal)
 
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2020-present | 15-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)     
-
-   - ##### Nova Scotia
-
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-2023 | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
-
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 10-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
-
-   - ##### New Brunswick
-
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)     
-
-   - ##### Quebec
-
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 15-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
-     
-   - ##### Ontario
-
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 60-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
-
-   - ##### Saskatchewan
-
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 24-hour resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+  - ##### British Columbia
  
-   - ##### Alberta
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2001-2024 | 60-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
 
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 60-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[BCHYDRO](https://www.bchydro.com/energy-in-bc/operations/transmission/transmission-system/balancing-authority-load-data/historical-transmission-data.html) | 2001-present | 60-min resolution | [Non-commercial use offline only](https://www.bchydro.com/siteinfo/legal.html)
 
-   - ##### Newfoundland
+  - ##### New Brunswick
 
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2016-2021 | 60-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NBPOWER](https://tso.nbpower.com/Public/en/system_information_archive.aspx) | 2018-present | 60-min resolution | [All rights reserved](https://www.nbpower.com/en/terms-of-use)
+
+  - ##### Newfoundland
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+
+  - ##### Nova Scotia
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-2023 | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 10-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+
+  - ##### Ontario
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2002-present | 60-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[IESO](https://www.ieso.ca/Power-Data/Data-Directory) | 1994-present | 60-min resolution | [Limited license](https://www.ieso.ca/Terms-of-Use)
+
+  - ##### Prince Edward Island
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2012-present | 15-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+
+  - ##### Quebec
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 15-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[HYDROQUEBEC](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/) | 2019-2023 | 60-min resolution | [Non-commercial use with attribution](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/)
     
-   - ##### Yukon
+  - ##### Yukon
 
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
 
 ### South America
 
