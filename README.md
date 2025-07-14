@@ -354,6 +354,10 @@ A curated collection of resources on hourly or sub-hourly electricity demand, de
  
 ### Asia
 
+- #### India
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2024 | 30-min resolution | [Open data](https://iced.niti.gov.in/about-us)
+
 - #### Japan
 
   - ##### Kantō
@@ -361,6 +365,10 @@ A curated collection of resources on hourly or sub-hourly electricity demand, de
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2016-2021 | 60-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
+
+- #### Pakistan
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NTDC](https://www.kaggle.com/datasets/tentative/ntdc-dataset) | 2015-2020 | 60-min resolution | [CC0](https://www.kaggle.com/datasets/tentative/ntdc-dataset)
 
 - #### Sri Lanka
 
