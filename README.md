@@ -10,6 +10,8 @@ This collection includes links to data sources for countries and subdivisions in
 - [South America](#south-america)
 - [Oceania](#oceania)
 
+Each data source includes essential metadata such as time range and frequency of available data and licensing and usage terms.
+
 [Here](https://open-energy-transition.github.io/Awesome-Electric-Demand/) you can view an interactive map with links to the data sources.
 
 ## List of data sources
