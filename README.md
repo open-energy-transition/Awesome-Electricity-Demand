@@ -232,39 +232,39 @@ A curated collection of resources on hourly or sub-hourly electricity demand, de
 
   - ##### Baja California
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
 
   - ##### Baja California Sur
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
 
   - ##### Noroeste
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
 
   - ##### Norte
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
 
   - ##### Noreste
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
 
   - ##### Occidental
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
 
   - ##### Central
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
 
   - ##### Oriental
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
 
   - ##### Peninsular
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
 
 ### South America
 
