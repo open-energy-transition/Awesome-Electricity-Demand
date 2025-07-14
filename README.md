@@ -280,6 +280,10 @@ A curated collection of resources on hourly or sub-hourly electricity demand, de
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CEN](https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/) | 1999-present | 60-min resolution | [Open data](http://energiaabierta.cl/)
 
+- #### Colombia
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[XM](https://www.energiadecolombia.com/consulta) | 2000-present | 60-min resolution | [All rights reserved](https://www.xm.com.co/legales/terminos-legales-del-sitio-web)
+
 - #### Peru
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[COES](https://www.coes.org.pe/Portal/portalinformacion/demanda) | 1997-present | 30-min resolution | [Non-commercial use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones)
