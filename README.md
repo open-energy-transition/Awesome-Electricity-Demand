@@ -46,13 +46,13 @@ Python code for downloading, extracting, and processing the available data can b
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
 
-- #### Philippines
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NGCP](https://www.ngcp.ph/operations#operations) | 2013-2024 | 60-min resolution | [All rights reserved](https://ngcp.ph/privacy)
-
 - #### Pakistan
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NTDC](https://www.kaggle.com/datasets/tentative/ntdc-dataset) | 2015-2020 | 60-min resolution | [CC0](https://www.kaggle.com/datasets/tentative/ntdc-dataset)
+
+- #### Philippines
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NGCP](https://www.ngcp.ph/operations#operations) | 2013-2024 | 60-min resolution | [All rights reserved](https://ngcp.ph/privacy)
 
 - #### South korea
 
