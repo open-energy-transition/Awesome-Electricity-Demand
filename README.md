@@ -54,6 +54,14 @@ Python code for downloading, extracting, and processing the available data can b
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [All rights reserved](https://www.pucsl.gov.lk/)
 
+- #### South korea
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[KROGD](https://www.data.go.kr/en/data/15065266/fileData.do#) | 2024 | 60-min resolution | [All rights reserved](https://www.data.go.kr/en/ugs/selectPublicDataUseGuideView.do)
+  
+- #### Taiwan
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Zenodo](https://zenodo.org/records/7537890) | 2017-2022 | 10-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)
+
 - #### Turkey
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EPIAS](https://kayit.epias.com.tr/epias-transparency-platform-registration-form) | 2016-present | 60-min resolution | [Access upon request – Use with attribution](https://seffaflik.epias.com.tr/about/about)
