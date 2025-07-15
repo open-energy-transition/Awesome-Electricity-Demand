@@ -34,6 +34,10 @@ Python code for downloading, extracting, and processing the available data can b
  
 ### Asia
 
+- #### China
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Zenodo](https://zenodo.org/records/8322210) | 2018 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
 - #### India
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2024 | 30-min resolution | [Open data](https://iced.niti.gov.in/about-us)
