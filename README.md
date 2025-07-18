@@ -60,7 +60,7 @@ Python code for downloading, extracting, and processing the available data can b
 
 - #### South korea
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[KROGD](https://www.data.go.kr/en/data/15065266/fileData.do#) | 2024 | 60-min resolution | [All rights reserved](https://www.data.go.kr/en/ugs/selectPublicDataUseGuideView.do)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[KROGD](https://www.data.go.kr/en/data/15065266/fileData.do#) | 2013-2024 | 60-min resolution | [All rights reserved](https://www.data.go.kr/en/ugs/selectPublicDataUseGuideView.do)
 
 - #### Sri Lanka
 
