@@ -30,7 +30,7 @@ Python code for downloading, extracting, and processing the available data can b
 
 - #### South Africa
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ESKOM](https://www.eskom.co.za/dataportal/data-request-form/) | 2016-present | 60-min resolution |  [Access upon request – Non-commercial use](https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ESKOM](https://www.eskom.co.za/dataportal/data-request-form/) | 2021-present | 60-min resolution |  [Access upon request – Non-commercial use](https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf)
  
 ### Asia
 
