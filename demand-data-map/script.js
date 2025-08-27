@@ -11,8 +11,56 @@ const map = new maplibregl.Map({
 
 // Sample demand data with country colors and links
 const countryData = {
-  Albania: {
+  Algeria: {
+    color: "#267326",
+    link: "https://data.mendeley.com/datasets/z5x2d3mhw7/1",
+  },
+  Nigeria: {
     color: "#B2D8B2",
+    link: "https://data.mendeley.com/datasets/pxvdm26rn7/2",
+  },
+  "South Africa": {
+    color: "#67B367",
+    link: "https://www.eskom.co.za/dataportal/data-request-form/",
+  },
+  China: {
+    color: "#B2D8B2",
+    link: "https://zenodo.org/records/8322210",
+  },
+  India: {
+    color: "#67B367",
+    link: "https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve",
+  },
+  Japan: {
+    color: "#67B367",
+    link: "https://www.tepco.co.jp/en/forecast/html/download-e.html",
+  },
+  Pakistan: {
+    color: "#67B367",
+    link: "https://www.kaggle.com/datasets/tentative/ntdc-dataset",
+  },
+  Philippines: {
+    color: "#267326",
+    link: "https://www.ngcp.ph/operations#operations",
+  },
+  "South Korea": {
+    color: "#267326",
+    link: "https://www.data.go.kr/en/data/15065266/fileData.do#layer_data_infomation",
+  },
+  "Sri Lanka": {
+    color: "#B2D8B2",
+    link: "https://gendata.pucsl.gov.lk/generation-profile",
+  },
+  Taiwan: {
+    color: "#67B367",
+    link: "https://zenodo.org/records/7537890",
+  },
+  Turkey: {
+    color: "#267326",
+    link: "https://seffaflik.epias.com.tr/electricity/electricity-consumption/ex-post-consumption/real-time-consumption",
+  },
+  Albania: {
+    color: "#67B367",
     link: "https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=13.03.2025+00:00|CET|DAY&biddingZone.values=CTY|10YAL-KESH-----5!CTY|10YAL-KESH-----5&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2) ",
   },
   Austria: {
@@ -84,7 +132,7 @@ const countryData = {
     link: "https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=14.03.2024+00:00|CET|DAY&biddingZone.values=CTY|10YIT-GRTN-----B!CTY|10YIT-GRTN-----B&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2) ",
   },
   Kosovo: {
-    color: "#B2D8B2",
+    color: "#67B367",
     link: "https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=14.03.2024+00:00|CET|DAY&biddingZone.values=CTY|10Y1001C--00100H!CTY|10Y1001C--00100H&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2) ",
   },
   Latvia: {
@@ -136,7 +184,7 @@ const countryData = {
     link: "https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=13.03.2025+00:00|CET|DAY&biddingZone.values=CTY|10YCS-SERBIATSOV!CTY|10YCS-SERBIATSOV&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2) ",
   },
   Slovakia: {
-    color: "#267326",
+    color: "#B2D8B2",
     link: "https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=13.03.2025+00:00|CET|DAY&biddingZone.values=CTY|10YSK-SEPS-----K!CTY|10YSK-SEPS-----K&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2) ",
   },
   Slovenia: {
@@ -163,43 +211,22 @@ const countryData = {
     color: "#67B367",
     link: "https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=14.03.2024+00:00|CET|DAY&biddingZone.values=CTY|10Y1001A1001A92E!CTY|10Y1001A1001A92E&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2) ",
   },
-  Australia: {
-    color: "#0D400D",
-    link: "https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data",
-  },
-  "New Zealand": {
-    color: "#0D400D",
-    link: "https://www.emi.ea.govt.nz/Wholesale/Reports/W_GD_C",
-  },
-  Algeria: {
-    color: "#67B367",
-    link: "https://data.mendeley.com/datasets/z5x2d3mhw7/1",
-  },
-  Nigeria: {
-    color: "#B2D8B2",
-    link: "https://data.mendeley.com/datasets/pxvdm26rn7/2",
-  },
-  "South Africa": {
-    color: "#67B367",
-    link: "https://www.eskom.co.za/dataportal/data-request-form/",
-  },
-  Japan: {
-    color: "#67B367",
-    link: "https://www.tepco.co.jp/en/forecast/html/download-e.html",
-  },
-  "Sri Lanka": {
-    color: "#B2D8B2",
-    link: "https://gendata.pucsl.gov.lk/generation-profile",
-  },
-  Turkey: {
-    color: "#B2D8B2",
-    link: "https://seffaflik.epias.com.tr/electricity/electricity-consumption/ex-post-consumption/real-time-consumption",
-  },
   Canada: {
-    color: "#B2D8B2",
+    color: "#0D400D",
     link: "https://energy-information.canada.ca/en/resources/high-frequency-electricity-data",
   },
-  Argentina: { color: "#B2D8B2", link: "https://cammesaweb.cammesa.com/" },
+  Mexico: {
+    color: "#267326",
+    link: "https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx",
+  },
+  "United States of America": {
+    color: "#267326",
+    link: "https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/tree/master/data/release_2020_Oct/regions",
+  },
+  Argentina: { 
+    color: "#B2D8B2",
+    link: "https://cammesaweb.cammesa.com/", 
+  },
   Brazil: {
     color: "#0D400D",
     link: "https://dados.ons.org.br/dataset/curva-carga",
@@ -208,10 +235,22 @@ const countryData = {
     color: "#0D400D",
     link: "https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/",
   },
+  Colombia: {
+    color: "#0D400D",
+    link: "https://www.energiadecolombia.com/consulta",
+  },
   Peru: {
     color: "#0D400D",
     link: "https://www.coes.org.pe/Portal/portalinformacion/demanda",
   },
+  Australia: {
+    color: "#0D400D",
+    link: "https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data",
+  },
+  "New Zealand": {
+    color: "#0D400D",
+    link: "https://www.emi.ea.govt.nz/Wholesale/Reports/W_GD_C",
+  },  
 };
 
 // Load country boundaries from GeoJSON
