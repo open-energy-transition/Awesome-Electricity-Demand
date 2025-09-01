@@ -12,7 +12,7 @@ This collection includes links to data sources for countries and subdivisions in
 
 Each data source is listed with essential metadata, such as the time range and frequency of the available data, as well as licensing and usage terms.
 
-[Here](https://open-energy-transition.github.io/Awesome-Electric-Demand/) you can view an interactive map with links to the data sources.
+[Here](https://open-energy-transition.github.io/Awesome-Electricity-Demand/) you can view an interactive map with links to the data sources.
 
 Python code for downloading, extracting, and processing the available data can be found in our companion repository: [DemandCast](https://github.com/open-energy-transition/demandcast).
 
