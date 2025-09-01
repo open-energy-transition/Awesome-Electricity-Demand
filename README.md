@@ -52,7 +52,7 @@ Python code for downloading, extracting, and processing the available data can b
 
 - #### Pakistan
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NTDC](https://www.kaggle.com/datasets/tentative/ntdc-dataset) | 2015-2020 | 60-min resolution | [CC0](https://www.kaggle.com/datasets/tentative/ntdc-dataset)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NTDC](https://www.kaggle.com/datasets/tentative/ntdc-dataset) | 2015-2020 | 60-min resolution | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 
 - #### Philippines
 
@@ -64,7 +64,7 @@ Python code for downloading, extracting, and processing the available data can b
 
 - #### Sri Lanka
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [All rights reserved](https://www.pucsl.gov.lk/)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [All rights reserved](https://www.pucsl.gov.lk/)&nbsp;&nbsp;&nbsp;(Generation, proxy for demand)
   
 - #### Taiwan
 
