@@ -12,7 +12,7 @@ This collection includes links to data sources for countries and subdivisions in
 
 Each data source is listed with essential metadata, such as the time range and frequency of the available data, as well as licensing and usage terms.
 
-[Here](https://open-energy-transition.github.io/Awesome-Electric-Demand/) you can view an interactive map with links to the data sources.
+[Here](https://open-energy-transition.github.io/Awesome-Electricity-Demand/) you can view an interactive map with links to the data sources.
 
 Python code for downloading, extracting, and processing the available data can be found in our companion repository: [DemandCast](https://github.com/open-energy-transition/demandcast).
 
@@ -52,7 +52,7 @@ Python code for downloading, extracting, and processing the available data can b
 
 - #### Pakistan
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NTDC](https://www.kaggle.com/datasets/tentative/ntdc-dataset) | 2015-2020 | 60-min resolution | [CC0](https://www.kaggle.com/datasets/tentative/ntdc-dataset)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NTDC](https://www.kaggle.com/datasets/tentative/ntdc-dataset) | 2015-2020 | 60-min resolution | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 
 - #### Philippines
 
@@ -64,7 +64,7 @@ Python code for downloading, extracting, and processing the available data can b
 
 - #### Sri Lanka
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [All rights reserved](https://www.pucsl.gov.lk/)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [All rights reserved](https://www.pucsl.gov.lk/)&nbsp;&nbsp;&nbsp;(Generation, proxy for demand)
   
 - #### Taiwan
 
