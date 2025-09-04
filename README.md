@@ -16,6 +16,18 @@ Each data source is listed with essential metadata, such as the time range and f
 
 Python code for downloading, extracting, and processing the available data can be found in our companion repository: [DemandCast](https://github.com/open-energy-transition/demandcast).
 
+## Data Source Log
+
+📁 **[data_source_log](https://docs.google.com/spreadsheets/d/1qnGaXWZqT-xwbGeqDAFHkTN0VhoFUfKwtAD29n9HeFE/edit?gid=1036252638#gid=1036252638)**  
+
+This spreadsheet documents the countries and subdivisions that have been explored for hourly or sub-hourly electricity demand data, but where no such data has yet been found. It is also designed to help other researchers avoid duplicating effort and to build a shared knowledge base.
+
+## Contributions
+
+Contributions are welcome in the form of new links to websites that provide hourly or sub-hourly electricity demand data, including information on data availability timelines and licensing conditions.
+- Use [GitHub Issues](https://github.com/open-energy-transition/Awesome-Electricity-Demand/issues) for data requests or suggestions.
+- Submit [Pull Requests](https://github.com/open-energy-transition/Awesome-Electricity-Demand/pulls) for adding new data sources or enhancing metadata.
+
 ## List of data sources
 
 ### Africa
@@ -480,12 +492,3 @@ Python code for downloading, extracting, and processing the available data can b
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EMI](https://www.emi.ea.govt.nz/Wholesale/Reports/W_GD_C) | 2005-present | 30-min resolution | [CC-BY 4.0](https://www.emi.ea.govt.nz/LegalInformation)
 
-## Data Source Log
-
-📁 **[data_source_log](https://docs.google.com/spreadsheets/d/1qnGaXWZqT-xwbGeqDAFHkTN0VhoFUfKwtAD29n9HeFE/edit?gid=0#gid=0)**  
-
-This spreadsheet documents the countries and subdivisions that have been explored for hourly or sub-hourly electricity demand data, but where no such data has yet been found. It is also designed to help other researchers avoid duplicating effort and to build a shared knowledge base.
-
-## Contributions
-
-Contributions are welcome in the form of new links to websites that provide hourly or sub-hourly electricity demand data, including information on data availability timelines and licensing conditions.
