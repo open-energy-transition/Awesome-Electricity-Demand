@@ -25,6 +25,8 @@ This spreadsheet documents the countries and subdivisions that have been explore
 ## Contributions
 
 Contributions are welcome in the form of new links to websites that provide hourly or sub-hourly electricity demand data, including information on data availability timelines and licensing conditions.
+- Use [GitHub Issues](https://github.com/open-energy-transition/Awesome-Electric-Demand/issues) for bug reports, data requests, or suggestions.
+- Submit [Pull Requests](https://github.com/open-energy-transition/Awesome-Electric-Demand/pulls) for adding new data sources or enhancing metadata.
 
 ## List of data sources
 
