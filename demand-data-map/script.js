@@ -25,10 +25,6 @@ const map = new maplibregl.Map({
       color: "#67B367",
       link: "https://www.eskom.co.za/dataportal/data-request-form/",
     },
-    Bangladesh: {
-      color: "#267326",
-      link: "https://erp.powergrid.gov.bd/w/report/eyJpdiI6IldsU2ZQTGkvbkRnQU9FMjZ5UHhmeGc9PSIsInZhbHVlIjoiQzhONVl5ZGxRY3E3T3ZVNCtLZGt1Zz09IiwibWFjIjoiN2JiNTI5MzNhOWIxZDVjY2NkMmFlZWU4ZDU1N2I4OWZlYjNlZWM1ZGU4NzRiNWU4ZjQ3ZDc1ODRlMTk3MDc0YyIsInRhZyI6IiJ9/show_report",
-    },
     China: {
       color: "#B2D8B2",
       link: "https://zenodo.org/records/8322210",
@@ -40,10 +36,6 @@ const map = new maplibregl.Map({
     Japan: {
       color: "#67B367",
       link: "https://www.tepco.co.jp/en/forecast/html/download-e.html",
-    },
-    Nepal: {
-      color: "#B2D8B2",
-      link: "https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority",
     },
     Pakistan: {
       color: "#67B367",
