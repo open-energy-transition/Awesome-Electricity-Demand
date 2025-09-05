@@ -70,6 +70,10 @@ Contributions are welcome in the form of new links to websites that provide hour
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NGCP](https://www.ngcp.ph/operations#operations) | 2013-2024 | 60-min resolution | [All rights reserved](https://ngcp.ph/privacy)
 
+- #### Singapore
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EMA](https://www.ema.gov.sg/resources/statistics/half-hourly-system-demand-data) | 2014-present | 30-min resolution | [Open data](https://www.ema.gov.sg/terms-of-use)
+
 - #### South korea
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[KROGD](https://www.data.go.kr/data/15065266/fileData.do) | 2013-2024 | 60-min resolution | [Open data](https://www.data.go.kr/ugs/selectPublicDataUseGuideView.do)
@@ -346,6 +350,10 @@ Contributions are welcome in the form of new links to websites that provide hour
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
 
+  - #### Panama
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Mendeley](https://data.mendeley.com/datasets/tcmmj4t6f4/1) | 2016-2020 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
 - #### United States
 
   - ##### California
@@ -447,6 +455,10 @@ Contributions are welcome in the form of new links to websites that provide hour
 - #### Peru
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[COES](https://www.coes.org.pe/Portal/portalinformacion/demanda) | 1997-present | 30-min resolution | [Non-commercial use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones)
+
+- #### Uruguay
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ADME](https://adme.com.uy/controlpanel.php) | 2019-2025 | 60-min resolution | [Open Data](https://adme.com.uy/datosabiertos.html)
 
 ### Oceania
 
