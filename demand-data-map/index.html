@@ -10,10 +10,56 @@
     
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Inline CSS for Legend -->
+    <style>
+        /* Legend */
+        #legend {
+            position: absolute;
+            bottom: 20px;
+            left: 165px;
+            background: rgba(255,255,255,0.95);
+            padding: 12px;
+            border-radius: 6px;
+            font-family: sans-serif;
+            font-size: 14px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.3);
+            z-index: 1;
+        }
+
+        #legend h4 {
+            margin: 0 0 8px 0;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        #legend div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        #legend span {
+            display: inline-block;
+            width: 25px;
+            height: 18px;
+            margin-right: 8px;
+            border: 1px solid #555;
+        }
+    </style>
 </head>
 <body>
 
     <div id="map"></div>
+
+    <!-- Legend -->
+    <div id="legend">
+        <h4>Years of available data</h4>
+        <div><span style="background-color: #B2D8B2"></span> 0–4</div>
+        <div><span style="background-color: #67B367"></span> 5–9</div>
+        <div><span style="background-color: #267326"></span> 10–19</div>
+        <div><span style="background-color: #0D400D"></span> 20+</div>
+    </div>
 
     <!-- Include MapLibre GL JS -->
     <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>

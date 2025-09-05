@@ -8,3 +8,37 @@ body, html {
     width: 100%;
     height: 100vh;
 }
+
+/* Legend */
+#legend {
+    position: absolute;      /* overlay on top of the map */
+    bottom: 20px;            /* distance from bottom */
+    left: 20px;              /* distance from left */
+    background: rgba(255, 255, 255, 0.95);
+    padding: 12px;
+    border-radius: 6px;
+    font-family: sans-serif;
+    font-size: 14px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.3);
+    z-index: 1;              /* ensure it stays above the map */
+}
+
+#legend h4 {
+    margin: 0 0 8px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#legend div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+#legend span {
+    display: inline-block;
+    width: 25px;
+    height: 18px;
+    margin-right: 8px;
+    border: 1px solid #555;
+}
