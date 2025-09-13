@@ -46,6 +46,10 @@ Contributions are welcome in the form of new links to websites that provide hour
  
 ### Asia
 
+- #### Bangladesh
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PGCB](https://erp.powergrid.gov.bd/w/report/eyJpdiI6IldsU2ZQTGkvbkRnQU9FMjZ5UHhmeGc9PSIsInZhbHVlIjoiQzhONVl5ZGxRY3E3T3ZVNCtLZGt1Zz09IiwibWFjIjoiN2JiNTI5MzNhOWIxZDVjY2NkMmFlZWU4ZDU1N2I4OWZlYjNlZWM1ZGU4NzRiNWU4ZjQ3ZDc1ODRlMTk3MDc0YyIsInRhZyI6IiJ9/show_report) | 2014-present | 30-min resolution | [All rights reserved](https://pgcb.gov.bd/)
+  
 - #### China
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Zenodo](https://zenodo.org/records/8322210) | 2018 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
@@ -62,6 +66,9 @@ Contributions are welcome in the form of new links to websites that provide hour
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
 
+- #### Nepal
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Open Data Nepal](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | 2016-2017 | 60-min resolution | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - #### Pakistan
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NTDC](https://www.kaggle.com/datasets/tentative/ntdc-dataset) | 2015-2020 | 60-min resolution | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
@@ -69,6 +76,10 @@ Contributions are welcome in the form of new links to websites that provide hour
 - #### Philippines
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NGCP](https://www.ngcp.ph/operations#operations) | 2013-2024 | 60-min resolution | [All rights reserved](https://ngcp.ph/privacy)
+
+- #### Singapore
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EMA](https://www.ema.gov.sg/resources/statistics/half-hourly-system-demand-data) | 2014-present | 30-min resolution | [Open data](https://www.ema.gov.sg/terms-of-use)
 
 - #### South korea
 
@@ -350,6 +361,10 @@ Contributions are welcome in the form of new links to websites that provide hour
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
 
+- #### Panama
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Mendeley](https://data.mendeley.com/datasets/tcmmj4t6f4/1) | 2016-2020 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
 - #### United States
 
   - ##### California
@@ -451,6 +466,10 @@ Contributions are welcome in the form of new links to websites that provide hour
 - #### Peru
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[COES](https://www.coes.org.pe/Portal/portalinformacion/demanda) | 1997-present | 30-min resolution | [Non-commercial use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones)
+
+- #### Uruguay
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ADME](https://adme.com.uy/controlpanel.php) | 2019-2025 | 60-min resolution | [Open Data](https://adme.com.uy/datosabiertos.html)
 
 ### Oceania
 
