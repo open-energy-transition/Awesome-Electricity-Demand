@@ -95,7 +95,7 @@ Contributions are welcome in the form of new links to websites that provide hour
 
 - #### Thailand
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Zenodo](https://zenodo.org/records/15219959) | 2023 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Zenodo](https://doi.org/10.5281/zenodo.17109911) | 2023-2024 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)
 
 - #### Turkey
 
