@@ -93,6 +93,10 @@ Contributions are welcome in the form of new links to websites that provide hour
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Zenodo](https://zenodo.org/records/7537890) | 2017-2022 | 10-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)
 
+- #### Thailand
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Zenodo](https://doi.org/10.5281/zenodo.17109911) | 2023-2024 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)
+
 - #### Turkey
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EPIAS](https://kayit.epias.com.tr/epias-transparency-platform-registration-form) | 2016-present | 60-min resolution | [Access upon request – Use with attribution](https://seffaflik.epias.com.tr/about/about)
