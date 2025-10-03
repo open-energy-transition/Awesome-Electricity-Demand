@@ -25,6 +25,10 @@ const map = new maplibregl.Map({
       color: "#67B367",
       link: "https://www.eskom.co.za/dataportal/data-request-form/",
     },
+    Bangladesh: {
+      color: "#267326",
+      link: "https://erp.powergrid.gov.bd/w/report/eyJpdiI6IldsU2ZQTGkvbkRnQU9FMjZ5UHhmeGc9PSIsInZhbHVlIjoiQzhONVl5ZGxRY3E3T3ZVNCtLZGt1Zz09IiwibWFjIjoiN2JiNTI5MzNhOWIxZDVjY2NkMmFlZWU4ZDU1N2I4OWZlYjNlZWM1ZGU4NzRiNWU4ZjQ3ZDc1ODRlMTk3MDc0YyIsInRhZyI6IiJ9/show_report",
+    },
     China: {
       color: "#B2D8B2",
       link: "https://zenodo.org/records/8322210",
@@ -36,6 +40,14 @@ const map = new maplibregl.Map({
     Japan: {
       color: "#67B367",
       link: "https://www.tepco.co.jp/en/forecast/html/download-e.html",
+    },
+    Malaysia: {
+      color: "#B2D8B2",
+      link: "https://data.mendeley.com/datasets/f4fcrh4tn9/1#:~:text=This%20is%20hourly%20load%20data,for%20Energy%3A%20The%20International%20Journal",
+    },
+    Nepal: {
+      color: "#B2D8B2",
+      link: "https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority",
     },
     Pakistan: {
       color: "#67B367",
@@ -60,6 +72,10 @@ const map = new maplibregl.Map({
     Taiwan: {
       color: "#67B367",
       link: "https://zenodo.org/records/7537890",
+    },
+    Thailand: {
+      color: "#B2D8B2",
+      link: "https://zenodo.org/records/17109911",
     },
     Turkey: {
       color: "#267326",
