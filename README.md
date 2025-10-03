@@ -66,6 +66,16 @@ Contributions are welcome in the form of new links to websites that provide hour
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
 
+  - ##### Kansai
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[KANSAI](https://www.kansai-td.co.jp/english/home/denkiyoho/area-performance/past.html#:~:text=Financial%20) | 2016-present | 60-min resolution | [Personal use](https://www.kansai-td.co.jp/english/siteinfo/)
+
+- #### Malaysia
+
+  - ##### Johor
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Mendeley](https://data.mendeley.com/datasets/f4fcrh4tn9/1#:~:text=This%20is%20hourly%20load%20data,for%20Energy%3A%20The%20International%20Journal) | 2009-2010 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
 - #### Nepal
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Open Data Nepal](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | 2016-2017 | 60-min resolution | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
