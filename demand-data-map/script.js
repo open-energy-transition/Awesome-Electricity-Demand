@@ -41,10 +41,6 @@ const map = new maplibregl.Map({
       color: "#67B367",
       link: "https://www.tepco.co.jp/en/forecast/html/download-e.html",
     },
-    Malaysia: {
-      color: "#B2D8B2",
-      link: "https://data.mendeley.com/datasets/f4fcrh4tn9/1#:~:text=This%20is%20hourly%20load%20data,for%20Energy%3A%20The%20International%20Journal",
-    },
     Nepal: {
       color: "#B2D8B2",
       link: "https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority",
@@ -236,6 +232,10 @@ const map = new maplibregl.Map({
     Canada: {
       color: "#0D400D",
       link: "https://energy-information.canada.ca/en/resources/high-frequency-electricity-data",
+    },
+    "Costa Rica": {
+      color: "#267326",
+      link: "https://apps.grupoice.com/CenceWeb/paginas/CurvaDemanda.html?fecha=08/09/2025",
     },
     Mexico: {
       color: "#267326",
