@@ -329,7 +329,7 @@ Contributions are welcome in the form of new links to websites that provide hour
 
 - #### Costa Rica
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[GrupoICE](https://apps.grupoice.com/CenceWeb) | 2012-present | 60-min resolution | [Open data](https://www.grupoice.com/wps/wcm/connect/328d1cc7-6796-44cb-a981-8dca6043c983/Reglamento_funcionamiento_CENCE.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-328d1cc7-6796-44cb-a981-8dca6043c983-nWcNMD.)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[GrupoICE](https://apps.grupoice.com/CenceWeb) | 2012-present | 15-min resolution | [Open data](https://www.grupoice.com/wps/wcm/connect/328d1cc7-6796-44cb-a981-8dca6043c983/Reglamento_funcionamiento_CENCE.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-328d1cc7-6796-44cb-a981-8dca6043c983-nWcNMD.)
 
 - #### Mexico
 
