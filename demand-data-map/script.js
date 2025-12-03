@@ -10,7 +10,7 @@ const map = new maplibregl.Map({
     bearing: 0,
     antialias: true,
   });
-  
+
   // Sample demand data with country colors and links
   const countryData = {
     Algeria: {
@@ -249,9 +249,9 @@ const map = new maplibregl.Map({
       color: "#267326",
       link: "https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/tree/master/data/release_2020_Oct/regions",
     },
-    Argentina: { 
+    Argentina: {
       color: "#B2D8B2",
-      link: "https://cammesaweb.cammesa.com/", 
+      link: "https://cammesaweb.cammesa.com/",
     },
     Brazil: {
       color: "#0D400D",
@@ -280,9 +280,9 @@ const map = new maplibregl.Map({
     "New Zealand": {
       color: "#0D400D",
       link: "https://www.emi.ea.govt.nz/Wholesale/Reports/W_GD_C",
-    },  
+    },
   };
-  
+
   // Load country boundaries from GeoJSON
   map.on("load", function () {
     fetch(
@@ -294,7 +294,7 @@ const map = new maplibregl.Map({
           type: "geojson",
           data: data,
         });
-  
+
         map.addLayer({
           id: "country-fills",
           type: "fill",
@@ -313,7 +313,7 @@ const map = new maplibregl.Map({
             "fill-opacity": 1.0,
           },
         });
-  
+
         // Add country borders
         map.addLayer({
           id: "country-borders",
@@ -325,24 +325,24 @@ const map = new maplibregl.Map({
             "line-width": 1,
           },
         });
-  
+
         // Click Event for Countries
         map.on("click", "country-fills", function (e) {
           const countryName = e.features[0].properties.name;
           const countryInfo = countryData[countryName];
-  
+
           if (countryInfo) {
             window.open(countryInfo.link, "_blank"); // Open demand data link
           } else {
             alert("No demand data available for " + countryName);
           }
         });
-  
+
         // Change cursor on hover
         map.on("mouseenter", "country-fills", function () {
           map.getCanvas().style.cursor = "pointer";
         });
-  
+
         map.on("mouseleave", "country-fills", function () {
           map.getCanvas().style.cursor = "";
         });
