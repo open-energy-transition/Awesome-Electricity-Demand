@@ -27,7 +27,14 @@ The figure below shows the coverage of electricity demand data currently availab
 
 <img
     src="figures/coverage_by_continent.png"
-    alt="Data, Population, and Land Coverage by Continent"
+    alt="Country, Population, and Land Coverage by Continent"
+    style="max-width:100%; height:auto;">
+
+The next figure summarizes the depth of available demand data by reporting the total number of years of historical load time series available for each continent, disaggregated by measurement frequency (5-min, 10-min, 15-min, 30-min, 60-min).
+
+<img
+    src="figures/frequency_coverage_by_continent.png"
+    alt="Electricity Demand Data by Continent and Frequency"
     style="max-width:100%; height:auto;">
 
 ## Contributions
