@@ -33,7 +33,7 @@ def plot_frequency_coverage(
     """
     continents = list(frequency_data.keys())
     frequencies = ["5-min", "10-min", "15-min", "30-min", "60-min"]  # fixed order
-    colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"]
+    colors = ["#fdbe11", "#f7523a", "#da0e82", "#8a267f", "#676bbd"]
 
     # Prepare matrix: rows=continents, columns=frequencies
     years_matrix = [

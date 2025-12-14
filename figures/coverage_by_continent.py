@@ -38,7 +38,7 @@ def plot_continent_coverage(
     plt.figure(figsize=(12, 6))
     x = range(len(continents))
     width = 0.25
-    colors = ["#1f77b4", "#ff7f0e", "#2ca02c"]
+    colors = ["#fbb4ae", "#b3cde3", "#ccebc5"]
 
     bars1 = plt.bar(
         [p - width for p in x],
