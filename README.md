@@ -16,26 +16,32 @@ Each data source is listed with essential metadata, such as the time range and f
 
 Python code for downloading, extracting, and processing the available data can be found in our companion repository: [DemandCast](https://github.com/open-energy-transition/demandcast).
 
-## Data Source Log
+### Data Overview
 
-📁 **[data_source_log](https://docs.google.com/spreadsheets/d/1qnGaXWZqT-xwbGeqDAFHkTN0VhoFUfKwtAD29n9HeFE/edit?gid=1036252638#gid=1036252638)**
+The figure below summarizes the depth of available demand data by reporting the total number of years of historical load time series available for each continent, disaggregated by measurement frequency (5-min, 10-min, 15-min, 30-min, 60-min).
 
-This spreadsheet documents the countries and subdivisions that have been explored for hourly or sub-hourly electricity demand data, but where no such data has yet been found. It is also designed to help other researchers avoid duplicating effort and to build a shared knowledge base.
+<img
+    src="figures/frequency_coverage_by_continent.png"
+    alt="Electricity Demand Data by Continent and Frequency"
+    style="max-width:100%; height:auto;">
 
-
-The figure below shows the coverage of electricity demand data currently available in [DemandCast](https://github.com/open-energy-transition/demandcast), showing the percentage of coverage by continent in terms of countries, population, and land area.
+The next figure shows the coverage of electricity demand data, illustrating the percentage of coverage by continent in terms of countries, population, and land area.
 
 <img
     src="figures/coverage_by_continent.png"
     alt="Country, Population, and Land Coverage by Continent"
     style="max-width:100%; height:auto;">
 
-The next figure summarizes the depth of available demand data by reporting the total number of years of historical load time series available for each continent, disaggregated by measurement frequency (5-min, 10-min, 15-min, 30-min, 60-min).
 
-<img
-    src="figures/frequency_coverage_by_continent.png"
-    alt="Electricity Demand Data by Continent and Frequency"
-    style="max-width:100%; height:auto;">
+
+### Data Source Log
+
+📁 **[data_source_log](https://docs.google.com/spreadsheets/d/1qnGaXWZqT-xwbGeqDAFHkTN0VhoFUfKwtAD29n9HeFE/edit?gid=1036252638#gid=1036252638)**
+
+This spreadsheet documents the countries and subdivisions that have been explored for hourly or sub-hourly electricity demand data, but where no such data has yet been found. It is also designed to help other researchers avoid duplicating effort and to build a shared knowledge base.
+
+
+
 
 ## Contributions
 
