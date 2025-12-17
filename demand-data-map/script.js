@@ -10,7 +10,7 @@ const map = new maplibregl.Map({
     bearing: 0,
     antialias: true,
   });
-  
+
   // Sample demand data with country colors and links
   const countryData = {
     Algeria: {
@@ -25,6 +25,10 @@ const map = new maplibregl.Map({
       color: "#67B367",
       link: "https://www.eskom.co.za/dataportal/data-request-form/",
     },
+    Bangladesh: {
+      color: "#267326",
+      link: "https://erp.powergrid.gov.bd/w/report/eyJpdiI6IldsU2ZQTGkvbkRnQU9FMjZ5UHhmeGc9PSIsInZhbHVlIjoiQzhONVl5ZGxRY3E3T3ZVNCtLZGt1Zz09IiwibWFjIjoiN2JiNTI5MzNhOWIxZDVjY2NkMmFlZWU4ZDU1N2I4OWZlYjNlZWM1ZGU4NzRiNWU4ZjQ3ZDc1ODRlMTk3MDc0YyIsInRhZyI6IiJ9/show_report",
+    },
     China: {
       color: "#B2D8B2",
       link: "https://zenodo.org/records/8322210",
@@ -36,6 +40,10 @@ const map = new maplibregl.Map({
     Japan: {
       color: "#67B367",
       link: "https://www.tepco.co.jp/en/forecast/html/download-e.html",
+    },
+    Nepal: {
+      color: "#B2D8B2",
+      link: "https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority",
     },
     Pakistan: {
       color: "#67B367",
@@ -60,6 +68,10 @@ const map = new maplibregl.Map({
     Taiwan: {
       color: "#67B367",
       link: "https://zenodo.org/records/7537890",
+    },
+    Thailand: {
+      color: "#B2D8B2",
+      link: "https://zenodo.org/records/17109911",
     },
     Turkey: {
       color: "#267326",
@@ -221,6 +233,10 @@ const map = new maplibregl.Map({
       color: "#0D400D",
       link: "https://energy-information.canada.ca/en/resources/high-frequency-electricity-data",
     },
+    "Costa Rica": {
+      color: "#267326",
+      link: "https://apps.grupoice.com/CenceWeb/paginas/CurvaDemanda.html?fecha=08/09/2025",
+    },
     Mexico: {
       color: "#267326",
       link: "https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx",
@@ -233,9 +249,9 @@ const map = new maplibregl.Map({
       color: "#267326",
       link: "https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/tree/master/data/release_2020_Oct/regions",
     },
-    Argentina: { 
+    Argentina: {
       color: "#B2D8B2",
-      link: "https://cammesaweb.cammesa.com/", 
+      link: "https://cammesaweb.cammesa.com/",
     },
     Brazil: {
       color: "#0D400D",
@@ -264,9 +280,9 @@ const map = new maplibregl.Map({
     "New Zealand": {
       color: "#0D400D",
       link: "https://www.emi.ea.govt.nz/Wholesale/Reports/W_GD_C",
-    },  
+    },
   };
-  
+
   // Load country boundaries from GeoJSON
   map.on("load", function () {
     fetch(
@@ -278,7 +294,7 @@ const map = new maplibregl.Map({
           type: "geojson",
           data: data,
         });
-  
+
         map.addLayer({
           id: "country-fills",
           type: "fill",
@@ -297,7 +313,7 @@ const map = new maplibregl.Map({
             "fill-opacity": 1.0,
           },
         });
-  
+
         // Add country borders
         map.addLayer({
           id: "country-borders",
@@ -309,24 +325,24 @@ const map = new maplibregl.Map({
             "line-width": 1,
           },
         });
-  
+
         // Click Event for Countries
         map.on("click", "country-fills", function (e) {
           const countryName = e.features[0].properties.name;
           const countryInfo = countryData[countryName];
-  
+
           if (countryInfo) {
             window.open(countryInfo.link, "_blank"); // Open demand data link
           } else {
             alert("No demand data available for " + countryName);
           }
         });
-  
+
         // Change cursor on hover
         map.on("mouseenter", "country-fills", function () {
           map.getCanvas().style.cursor = "pointer";
         });
-  
+
         map.on("mouseleave", "country-fills", function () {
           map.getCanvas().style.cursor = "";
         });

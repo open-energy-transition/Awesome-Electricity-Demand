@@ -16,11 +16,32 @@ Each data source is listed with essential metadata, such as the time range and f
 
 Python code for downloading, extracting, and processing the available data can be found in our companion repository: [DemandCast](https://github.com/open-energy-transition/demandcast).
 
-## Data Source Log
+### Data Overview
 
-📁 **[data_source_log](https://docs.google.com/spreadsheets/d/1qnGaXWZqT-xwbGeqDAFHkTN0VhoFUfKwtAD29n9HeFE/edit?gid=1036252638#gid=1036252638)**  
+The figure below summarizes the depth of available demand data by reporting the total number of years of historical load time series available for each continent, disaggregated by measurement frequency (5-min, 10-min, 15-min, 30-min, 60-min).
+
+<img
+    src="figures/frequency_coverage_by_continent.png"
+    alt="Electricity Demand Data by Continent and Frequency"
+    style="max-width:100%; height:auto;">
+
+The next figure shows the coverage of electricity demand data, illustrating the percentage of coverage by continent in terms of countries, population, and land area.
+
+<img
+    src="figures/coverage_by_continent.png"
+    alt="Country, Population, and Land Coverage by Continent"
+    style="max-width:100%; height:auto;">
+
+
+
+### Data Source Log
+
+📁 **[data_source_log](https://docs.google.com/spreadsheets/d/1qnGaXWZqT-xwbGeqDAFHkTN0VhoFUfKwtAD29n9HeFE/edit?gid=1036252638#gid=1036252638)**
 
 This spreadsheet documents the countries and subdivisions that have been explored for hourly or sub-hourly electricity demand data, but where no such data has yet been found. It is also designed to help other researchers avoid duplicating effort and to build a shared knowledge base.
+
+
+
 
 ## Contributions
 
@@ -43,13 +64,13 @@ Contributions are welcome in the form of new links to websites that provide hour
 - #### South Africa
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ESKOM](https://www.eskom.co.za/dataportal/data-request-form/) | 2021-present | 60-min resolution |  [Access upon request – Non-commercial use](https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf)
- 
+
 ### Asia
 
 - #### Bangladesh
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PGCB](https://erp.powergrid.gov.bd/w/report/eyJpdiI6IldsU2ZQTGkvbkRnQU9FMjZ5UHhmeGc9PSIsInZhbHVlIjoiQzhONVl5ZGxRY3E3T3ZVNCtLZGt1Zz09IiwibWFjIjoiN2JiNTI5MzNhOWIxZDVjY2NkMmFlZWU4ZDU1N2I4OWZlYjNlZWM1ZGU4NzRiNWU4ZjQ3ZDc1ODRlMTk3MDc0YyIsInRhZyI6IiJ9/show_report) | 2014-present | 30-min resolution | [All rights reserved](https://pgcb.gov.bd/)
-  
+
 - #### China
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Zenodo](https://zenodo.org/records/8322210) | 2018 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
@@ -65,6 +86,10 @@ Contributions are welcome in the form of new links to websites that provide hour
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2016-2021 | 60-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
+
+  - ##### Kansai
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[KANSAI](https://www.kansai-td.co.jp/english/home/denkiyoho/area-performance/past.html#:~:text=Financial%20) | 2016-present | 60-min resolution | [Personal use](https://www.kansai-td.co.jp/english/siteinfo/)
 
 - #### Nepal
 
@@ -88,7 +113,7 @@ Contributions are welcome in the form of new links to websites that provide hour
 - #### Sri Lanka
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [All rights reserved](https://www.pucsl.gov.lk/)&nbsp;&nbsp;&nbsp;(Generation, proxy for demand)
-  
+
 - #### Taiwan
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Zenodo](https://zenodo.org/records/7537890) | 2017-2022 | 10-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)
@@ -266,11 +291,11 @@ Contributions are welcome in the form of new links to websites that provide hour
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10Y1001A1001A92E!CTY|10Y1001A1001A92E&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2024-present | 30-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
 
   - ##### Great Britain
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NESO](https://www.neso.energy/data-portal/historic-demand-data) | 2009-present | 30-min resolution | [Use for any purpose with attribution](https://www.neso.energy/data-portal/neso-open-licence)
 
 ### North America
-  
+
 - #### Canada
 
   - ##### Alberta
@@ -280,7 +305,7 @@ Contributions are welcome in the form of new links to websites that provide hour
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AESO](https://www.aeso.ca/market/market-and-system-reporting/data-requests/hourly-load-by-area-and-region) | 2011-2024 | 60-min resolution | [Non-commercial use with attribution](https://www.aeso.ca/legal)
 
   - ##### British Columbia
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2001-2024 | 60-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[BCHYDRO](https://www.bchydro.com/energy-in-bc/operations/transmission/transmission-system/balancing-authority-load-data/historical-transmission-data.html) | 2001-present | 60-min resolution | [Non-commercial use offline only](https://www.bchydro.com/siteinfo/legal.html)
@@ -318,10 +343,14 @@ Contributions are welcome in the form of new links to websites that provide hour
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 15-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[HYDROQUEBEC](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/) | 2019-2023 | 60-min resolution | [CC BY-NC 4.0](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/)
-    
+
   - ##### Yukon
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
+
+- #### Costa Rica
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[GrupoICE](https://apps.grupoice.com/CenceWeb) | 2012-present | 15-min resolution | [Open data](https://www.grupoice.com/wps/wcm/connect/328d1cc7-6796-44cb-a981-8dca6043c983/Reglamento_funcionamiento_CENCE.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-328d1cc7-6796-44cb-a981-8dca6043c983-nWcNMD.)
 
 - #### Mexico
 
@@ -368,81 +397,83 @@ Contributions are welcome in the form of new links to websites that provide hour
 - #### United States
 
   - ##### California
- 
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CAISO](https://www.caiso.com/library/historical-ems-hourly-load) | 2019-present | 60-min resolution | [Use for any purpose with attribution](https://www.caiso.com/privacy-terms-of-use)
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CAL.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CAL) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
 
   - ##### Carolinas
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CAR.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CAR) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
 
   - ##### Central
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CENT.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CENT) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
 
   - ##### Florida
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/FLA.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-FLA) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
 
   - ##### Mid-Atlantic
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/MIDA.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-MIDA) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
 
   - ##### Midwest
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/MIDW.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-MIDW) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
 
   - ##### New England
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NE.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NE) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
 
   - ##### New York
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NY.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NY) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
 
   - ##### Northwest
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NW.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NW) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
 
   - ##### Southeast
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/SE.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-SE) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
 
   - ##### Southwest
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/SW.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-SW) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
 
   - ##### Tennessee
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEN.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-TEN) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
 
   - ##### Texas
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEX.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
- 
+
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-TEX) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
 
 ### South America
@@ -450,7 +481,7 @@ Contributions are welcome in the form of new links to websites that provide hour
 - #### Argentina
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Cammesa](https://cammesaweb.cammesa.com/) | 2024-present | 60-min resolution | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/)
-  
+
 - #### Brazil
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | 60-min resolution | [CC-BY](https://dados.ons.org.br/dataset/curva-carga)
@@ -474,7 +505,7 @@ Contributions are welcome in the form of new links to websites that provide hour
 ### Oceania
 
 - #### Australia
-   
+
   - ##### New South Wales
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
@@ -510,8 +541,7 @@ Contributions are welcome in the form of new links to websites that provide hour
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://data.wa.aemo.com.au/datafiles/operational-demand/) | 2006-2023 | 30-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://data.wa.aemo.com.au/public/market-data/wemde/operationalDemandWithdrawal/dailyFiles/) | 2023-present | 5-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
-  
+
 - #### New Zealand
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EMI](https://www.emi.ea.govt.nz/Wholesale/Reports/W_GD_C) | 2005-present | 30-min resolution | [CC-BY 4.0](https://www.emi.ea.govt.nz/LegalInformation)
-
