@@ -91,6 +91,10 @@ Contributions are welcome in the form of new links to websites that provide hour
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[KANSAI](https://www.kansai-td.co.jp/english/home/denkiyoho/area-performance/past.html#:~:text=Financial%20) | 2016-present | 60-min resolution | [Personal use](https://www.kansai-td.co.jp/english/siteinfo/)
 
+- #### Malaysia
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[GSO](https://www.gso.org.my/SystemData/SystemDemand.aspx) | 2022-present | 10-min resolution | [All rights reserved](https://www.gso.org.my/TermsConditions.aspx)
+
 - #### Nepal
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Open Data Nepal](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | 2016-2017 | 60-min resolution | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
