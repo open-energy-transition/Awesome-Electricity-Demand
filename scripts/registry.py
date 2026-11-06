@@ -471,6 +471,30 @@ def _series(
     return series, problems
 
 
+def load_sources(data_dir: Path = DATA_DIR) -> dict[str, Source]:
+    """Load and validate the data files of the sources.
+
+    Parameters
+    ----------
+    data_dir : Path, default DATA_DIR
+        Folder with the ``sources`` folder.
+
+    Returns
+    -------
+    dict
+        The sources, by identifier.
+
+    Raises
+    ------
+    RegistryError
+        If any data file of a source is invalid.
+    """
+    sources, problems = _read_sources(data_dir / "sources")
+    if problems:
+        raise RegistryError("\n".join(problems))
+    return sources
+
+
 def load(data_dir: Path = DATA_DIR) -> list[Country]:
     """Load and validate the data files of the list.
 
