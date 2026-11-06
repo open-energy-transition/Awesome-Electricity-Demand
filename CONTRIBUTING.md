@@ -119,6 +119,22 @@ It is then reported as accepted, and noted when it is no longer found, so that i
 uv run scripts/demandcast_sync.py --demandcast ../demandcast/demandcast/retrievals/electricity_demand_data_sources --output sync
 ```
 
+## Checking the links
+
+`scripts/check_links.py` requests every link of the data files: the page and the terms of each source, and the pages of its entities. A link is:
+
+- **ok** if it answers;
+- **broken** if it answers with a client error, such as 404;
+- **unreachable** if its server fails, times out or cannot be reached;
+- **blocked** if the website refuses automated requests (401, 403 or 429), which says nothing about the page;
+- **unverifiable** if only a browser can check it: its website answers a missing page with the same page, as applications that render their pages in the browser do, or its certificate can only be verified by a browser.
+
+Every week, the check of all the links keeps the [`link-check` issue](https://github.com/open-energy-transition/Awesome-Electricity-Demand/issues?q=label%3Alink-check) open with the links that are broken or unreachable in two checks in a row, and lists the others for review. On pull requests that change `data/sources/`, it checks the links that they add, and reports those that fail as warnings. A failing link never fails CI. To check the links locally:
+
+```bash
+uv run scripts/check_links.py --output link-check
+```
+
 ## Changing the scripts
 
 The scripts in `scripts/` use Python 3.12+ and [uv](https://docs.astral.sh/uv/). Run the checks before you open a pull request: CI runs them all.

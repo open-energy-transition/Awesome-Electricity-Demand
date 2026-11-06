@@ -1,0 +1,142 @@
+# Checks the links of the data files. Every week, it checks all of them on
+# main, and keeps one issue open with the links that fail two checks in a
+# row, since a website can be out of reach for a while. On pull requests
+# that change the data files, it checks the links that they add, and
+# reports those that fail as warnings. A failing link never fails the
+# workflow.
+
+name: Link check
+
+on:
+  schedule:
+    - cron: "41 4 * * 1"
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "data/sources/**"
+      - "scripts/check_links.py"
+      - ".github/workflows/link-check.yml"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions: {}
+
+jobs:
+  new-links:
+    name: "Check the new links"
+    if: github.event_name == 'pull_request'
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: "Check out the data of the base branch"
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: base
+          sparse-checkout: data
+          persist-credentials: false
+
+      - name: "Install uv"
+        uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
+
+      - name: "Check the links that the pull request adds"
+        run: uv run --locked scripts/check_links.py --output link-check --only-new base/data
+
+      - name: "Write the summary"
+        run: cat link-check/link_report.md >> "$GITHUB_STEP_SUMMARY"
+
+  check:
+    name: "Check the links"
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read # Download the report of the previous check.
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: "Install uv"
+        uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
+
+      # The check counts the failures in a row of each link from the report
+      # of the previous check, if there is one.
+      - name: "Download the report of the previous check"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          run_id="$(gh run list --workflow link-check.yml --branch main --status success --limit 1 --json databaseId --jq '.[0].databaseId // empty')"
+          if [ -n "$run_id" ]; then
+            gh run download "$run_id" --name link-report --dir previous ||
+              echo "::notice::The previous check has no report."
+          fi
+
+      - name: "Check the links"
+        run: uv run --locked scripts/check_links.py --output link-check --previous previous/link_report.json
+
+      - name: "Write the summary"
+        run: cat link-check/link_report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: "Upload the report"
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: link-report
+          path: link-check/link_report.*
+          if-no-files-found: error
+          retention-days: 90
+
+  # Runs without the code: it only reads the report.
+  report:
+    name: "Report the failing links"
+    needs: check
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write # Open, update and close the tracking issue.
+    steps:
+      - name: "Download the report"
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: link-report
+
+      - name: "Open, update or close the tracking issue"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          LABEL: link-check
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          failing="$(jq '[.results[] | select(.failures_in_a_row >= 2)] | length' link_report.json)"
+          issue="$(gh issue list --label "$LABEL" --state open --limit 1 --json number --jq '.[0].number // empty')"
+
+          if [ "$failing" -gt 0 ]; then
+            {
+              echo
+              echo "Updated by the [weekly link check]($RUN_URL). A link is" \
+                "reported when it fails two checks in a row, and this issue" \
+                "is closed when no link does."
+            } >> link_report.md
+            if [ -n "$issue" ]; then
+              gh issue edit "$issue" --body-file link_report.md
+            else
+              gh label create "$LABEL" --force --color D93F0B \
+                --description "Links of the data files that fail the link check"
+              gh issue create --label "$LABEL" \
+                --title "Links that fail the link check" \
+                --body-file link_report.md
+            fi
+          elif [ -n "$issue" ]; then
+            gh issue close "$issue" --comment \
+              "No link fails two [link checks]($RUN_URL) in a row any more."
+          fi
