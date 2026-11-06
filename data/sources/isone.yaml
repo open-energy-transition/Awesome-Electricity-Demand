@@ -1,0 +1,14 @@
+name: ISO-NE
+url: https://webservices.iso-ne.com/docs/v1.1/
+access: on-request
+licence:
+  name: Personal use
+  url: https://www.iso-ne.com/legal-privacy
+  category: restricted
+entities:
+  - country_code: USA
+    subdivision_code: NE
+    subdivision_name: New England
+    start: 2019
+    end: present
+    resolution: 60

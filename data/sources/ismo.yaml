@@ -1,0 +1,13 @@
+name: ISMO
+url: https://www.ismo.gov.pk/library/hourly-system-demand
+access: public
+licence:
+  name: All rights reserved
+  url: https://www.ismo.gov.pk/terms-and-conditions
+  category: restricted
+entities:
+  - country_code: PAK
+    start: 2024
+    end: 2025
+    resolution: 60
+    note: Without K-Electric, which supplies Karachi

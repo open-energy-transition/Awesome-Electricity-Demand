@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **134 time series** from **41 data sources** for **67 countries** and their subdivisions in:
+The list has **146 time series** from **44 data sources** for **67 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (13 countries)
@@ -73,11 +73,22 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 | **Bangladesh** |  | [PGCB](https://erp.powergrid.gov.bd/w/report/eyJpdiI6IldsU2ZQTGkvbkRnQU9FMjZ5UHhmeGc9PSIsInZhbHVlIjoiQzhONVl5ZGxRY3E3T3ZVNCtLZGt1Zz09IiwibWFjIjoiN2JiNTI5MzNhOWIxZDVjY2NkMmFlZWU4ZDU1N2I4OWZlYjNlZWM1ZGU4NzRiNWU4ZjQ3ZDc1ODRlMTk3MDc0YyIsInRhZyI6IiJ9/show_report) | 2014-present | 30 min | [All rights reserved](https://pgcb.gov.bd/) |  |
 | **China** |  | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) |  |
 | **India** |  | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2024 | 30 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-| **Japan** | Kansai | [KANSAI](https://www.kansai-td.co.jp/english/home/denkiyoho/area-performance/past.html#:~:text=Financial%20) | 2016-present | 60 min | [Personal use](https://www.kansai-td.co.jp/english/siteinfo/) |  |
+| **Japan** | Chūbu | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
+|  | Chūgoku | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
+|  | Hokkaidō | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
+|  | Hokuriku | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
+|  | Kansai | [KANSAI](https://www.kansai-td.co.jp/english/home/denkiyoho/area-performance/past.html#:~:text=Financial%20) | 2016-present | 60 min | [Personal use](https://www.kansai-td.co.jp/english/siteinfo/) |  |
+|  | Kansai | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
+|  | Kantō | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
 |  | Kantō | [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2016-2021 | 60 min | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html) |  |
 |  | Kantō | [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5 min | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html) |  |
+|  | Kyūshū | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
+|  | Okinawa | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
+|  | Shikoku | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
+|  | Tōhoku | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
 | **Nepal** |  | [Open Data Nepal](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | 2016-2017 | 60 min | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |  |
 | **Pakistan** |  | [NTDC](https://www.kaggle.com/datasets/tentative/ntdc-dataset) | 2015-2020 | 60 min | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |  |
+|  |  | [ISMO](https://www.ismo.gov.pk/library/hourly-system-demand) | 2024-2025 | 60 min | [All rights reserved](https://www.ismo.gov.pk/terms-and-conditions) | Without K-Electric, which supplies Karachi |
 | **Philippines** |  | [NGCP](https://www.ngcp.ph/operations#operations) | 2013-2024 | 60 min | [All rights reserved](https://ngcp.ph/privacy) |  |
 | **Singapore** |  | [EMA](https://www.ema.gov.sg/resources/statistics/half-hourly-system-demand-data) | 2014-present | 30 min | [Open data](https://www.ema.gov.sg/terms-of-use) |  |
 | **South Korea** |  | [KROGD](https://www.data.go.kr/data/15065266/fileData.do) | 2013-2024 | 60 min | [Open data](https://www.data.go.kr/ugs/selectPublicDataUseGuideView.do) |  |
@@ -179,6 +190,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | Midwest | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/MIDW.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | Midwest | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-MIDW) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | New England | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NE.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | New England | [ISO-NE](https://webservices.iso-ne.com/docs/v1.1/) | 2019-present | 60 min | [Personal use](https://www.iso-ne.com/legal-privacy) | Access on request |
 |  | New England | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NE) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | New York | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NY.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | New York | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NY) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
