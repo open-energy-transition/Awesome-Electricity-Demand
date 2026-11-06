@@ -98,7 +98,7 @@ It reports as divergences:
 
 - a source of DemandCast that the list does not have, and an entity (country or subdivision) of DemandCast that its source in the list does not have;
 - a subdivision named differently;
-- years of DemandCast outside those of the list, and data that only one of them says is still updated (a last day of DemandCast in the current year agrees with `present`);
+- years of DemandCast outside those of the list, and data that only one of them says is still updated (a last day of DemandCast in the current year agrees with `present`; a first day in December counts in the next year, and a last day in January in the year before, since many series start or end with a few days in UTC);
 - data that DemandCast redistributes and the list calls `restricted`, or that DemandCast does not redistribute and the list calls `open`.
 
 It also notes the sources that DemandCast does not retrieve yet, and the different pages of terms.

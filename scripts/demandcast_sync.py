@@ -313,8 +313,18 @@ def _compare_years(
     -----
     The years of DemandCast can be fewer than those of the list, since
     a retriever may use only part of a series. A last day of DemandCast
-    in the current year agrees with "present" in the list.
+    in the current year agrees with "present" in the list. The days of
+    DemandCast are in UTC, and many series start with a few days of the
+    year before their first full year, so a first day in December
+    counts in the next year, and a last day in January in the year
+    before.
     """
+    first = entity.start_date.year + (entity.start_date.month == 12)
+    last = (
+        None
+        if entity.end_date == "today"
+        else entity.end_date.year - (entity.end_date.month == 1)
+    )
     start = min(p.start for p in periods)
     ends = [p.end for p in periods]
     end: int | Literal["present"] = (
@@ -323,30 +333,20 @@ def _compare_years(
         else max(e for e in ends if e != "present")
     )
     problems = []
-    if entity.start_date.year < start:
-        problems.append(
-            f"DemandCast starts in {entity.start_date.year}, the list in {start}"
-        )
-    if entity.end_date == "today" and end != "present":
+    if first < start:
+        problems.append(f"DemandCast starts in {first}, the list in {start}")
+    if last is None and end != "present":
         problems.append(
             f"DemandCast retrieves until today, the list ends in {end}"
         )
     elif (
-        entity.end_date != "today"
+        last is not None
         and end == "present"
-        and entity.end_date.year < registry.current_year()
+        and last < registry.current_year()
     ):
-        problems.append(
-            f"the list says present, DemandCast ends in {entity.end_date.year}"
-        )
-    elif (
-        entity.end_date != "today"
-        and end != "present"
-        and entity.end_date.year > end
-    ):
-        problems.append(
-            f"DemandCast ends in {entity.end_date.year}, the list in {end}"
-        )
+        problems.append(f"the list says present, DemandCast ends in {last}")
+    elif last is not None and end != "present" and last > end:
+        problems.append(f"DemandCast ends in {last}, the list in {end}")
     if not problems:
         return []
     return [

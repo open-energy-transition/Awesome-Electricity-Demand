@@ -181,9 +181,12 @@ def test_missing_entity_and_subdivision_name(
     ("start", "end", "message"),
     [
         (dt.date(2009, 5, 1), dt.date(2019, 1, 1), "starts in 2009"),
-        (dt.date(2010, 1, 1), dt.date(2020, 1, 1), "ends in 2020"),
+        (dt.date(2010, 1, 1), dt.date(2020, 6, 30), "ends in 2020"),
         (dt.date(2010, 1, 1), "today", "until today, the list ends in 2019"),
         (dt.date(2012, 1, 1), dt.date(2015, 1, 1), None),
+        (dt.date(2009, 12, 30), dt.date(2020, 1, 2), None),
+        (dt.date(2009, 11, 30), dt.date(2019, 1, 2), "starts in 2009"),
+        (dt.date(2010, 1, 1), dt.date(2020, 2, 1), "ends in 2020"),
     ],
 )
 def test_years_of_demandcast_within_the_list(
@@ -207,7 +210,7 @@ def test_present_agrees_with_an_end_this_year(
     data_dir: Path, dc_dir: Path
 ) -> None:
     """Accept a last day in the current year for "present"."""
-    end = dt.date(registry.current_year(), 1, 31)
+    end = dt.date(registry.current_year(), 3, 31)
     write_dc(
         dc_dir,
         "tepco",
@@ -231,7 +234,7 @@ def test_present_agrees_with_an_end_this_year(
                 subdivision_code="Kantō",
                 subdivision_name="Kantō",
                 start_date=dt.date(2016, 4, 1),
-                end_date=dt.date(2020, 1, 1),
+                end_date=dt.date(2020, 6, 30),
             )
         ],
     )
