@@ -32,7 +32,7 @@ entities:
     resolution: 5
   - country_code: CAN
     subdivision_code: NL
-    subdivision_name: Newfoundland
+    subdivision_name: Newfoundland and Labrador
     start: 2022
     end: present
     resolution: 5

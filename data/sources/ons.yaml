@@ -10,3 +10,27 @@ entities:
     start: 2000
     end: present
     resolution: 60
+  - country_code: BRA
+    subdivision_code: N
+    subdivision_name: North
+    start: 2000
+    end: present
+    resolution: 60
+  - country_code: BRA
+    subdivision_code: NE
+    subdivision_name: North-East
+    start: 2000
+    end: present
+    resolution: 60
+  - country_code: BRA
+    subdivision_code: SE
+    subdivision_name: South-East
+    start: 2000
+    end: present
+    resolution: 60
+  - country_code: BRA
+    subdivision_code: S
+    subdivision_name: South
+    start: 2000
+    end: present
+    resolution: 60

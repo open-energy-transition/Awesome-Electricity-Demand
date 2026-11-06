@@ -8,5 +8,5 @@ licence:
 entities:
   - country_code: KOR
     start: 2013
-    end: 2024
+    end: 2025
     resolution: 60
