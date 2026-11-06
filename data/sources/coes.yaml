@@ -10,3 +10,4 @@ entities:
     start: 1997
     end: present
     resolution: 30
+    note: Until 1999, hourly values about 20% lower

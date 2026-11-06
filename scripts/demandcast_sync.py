@@ -8,10 +8,8 @@ the list also has are read: the licence (whether the data can be
 redistributed, and the page of the terms) and the entities (country,
 subdivision, first and last day).
 
-Each difference is a finding: a divergence, or a note. DemandCast is
-the source of truth for the facts that both state, since its checks
-verify its data more often: a divergence is resolved in the list,
-unless DemandCast is outdated. Nothing fails: the divergences
+Each difference is a finding: a divergence, which one of the two
+repositories should resolve, or a note. Nothing fails: the divergences
 are reported in an issue, and on pull requests as warnings. A
 divergence that is deliberate is listed, with its reason, in
 ``data/demandcast_differences.yaml``, and reported as accepted.
@@ -51,6 +49,7 @@ Check = Literal[
     "entity",
     "subdivision",
     "years",
+    "list_years",
     "licence",
     "licence_url",
     "backlog",
@@ -309,12 +308,15 @@ def _compare_years(
     -------
     list of Finding
         A divergence if the years of DemandCast are outside those of
-        the list, or if only one of them says the data is still updated.
+        the list, or if only one of them says the data is still updated,
+        and a note if the list has years that DemandCast does not.
 
     Notes
     -----
     The years of DemandCast can be fewer than those of the list, since
-    a retriever may use only part of a series. A last day of DemandCast
+    a retriever may use only part of a series, so the extra years of
+    the list are only noted, for a check of the list, with the calendar
+    years of the days of DemandCast. A last day of DemandCast
     in the current year agrees with "present" in the list. The days of
     DemandCast are in UTC, and many series start with a few days of the
     year before their first full year, so a first day in December
@@ -349,17 +351,44 @@ def _compare_years(
         problems.append(f"the list says present, DemandCast ends in {last}")
     elif last is not None and end != "present" and last > end:
         problems.append(f"DemandCast ends in {last}, the list in {end}")
-    if not problems:
-        return []
-    return [
-        Finding(
-            source=source_id,
-            check="years",
-            entity=entity.label,
-            message="; ".join(problems),
-            severity="divergence",
+
+    extra = []
+    if start < entity.start_date.year:
+        extra.append(
+            f"the list starts in {start}, DemandCast in "
+            f"{entity.start_date.year}"
         )
-    ]
+    if (
+        entity.end_date != "today"
+        and end != "present"
+        and end > entity.end_date.year
+    ):
+        extra.append(
+            f"the list ends in {end}, DemandCast in {entity.end_date.year}"
+        )
+
+    findings = []
+    if problems:
+        findings.append(
+            Finding(
+                source=source_id,
+                check="years",
+                entity=entity.label,
+                message="; ".join(problems),
+                severity="divergence",
+            )
+        )
+    if extra:
+        findings.append(
+            Finding(
+                source=source_id,
+                check="list_years",
+                entity=entity.label,
+                message="; ".join(extra),
+                severity="note",
+            )
+        )
+    return findings
 
 
 def _compare_entities(
@@ -710,7 +739,9 @@ def report_markdown(findings: list[Finding], checked_at: dt.datetime) -> str:
     """
     open_ = [f for f in findings if f.is_open]
     accepted = [f for f in findings if f.accepted is not None]
-    notes = [f for f in findings if f.severity == "note"]
+    notes = [
+        f for f in findings if f.severity == "note" and f.accepted is None
+    ]
     lines = [
         "## Sync with DemandCast",
         "",
@@ -758,12 +789,10 @@ def comment_markdown(
         lines += [
             (
                 "This pull request adds divergences from the data sources "
-                "of DemandCast, which is the source of truth for the facts "
-                "that both state. Align the list with DemandCast; if "
-                "DemandCast is outdated, merge and fix it there, and the "
-                "`demandcast-sync` issue will track the divergence until "
-                "then. If a divergence is deliberate, add it with a reason "
-                "to `data/demandcast_differences.yaml`."
+                "of DemandCast. Resolve them here or in DemandCast; if "
+                "they are merged, the `demandcast-sync` issue tracks them "
+                "until they are resolved. If a divergence is deliberate, "
+                "add it with a reason to `data/demandcast_differences.yaml`."
             ),
             "",
             *_table(added),
