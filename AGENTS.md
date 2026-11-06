@@ -9,10 +9,10 @@ A curated list of hourly and sub-hourly electricity demand data, by country and 
 ## Layout
 
 - `data/sources/<id>.yaml`: one data source each, with its terms of use and its entities (countries and subdivisions, with their years and resolution), named after the YAML file of the source in DemandCast when there is one. `data/countries.csv`: every country considered, with its continent, population, land area and whether it has been searched. Their format is described once, in [CONTRIBUTING.md](CONTRIBUTING.md#adding-or-changing-a-data-source).
-- `scripts/registry.py`: the pydantic models that load and validate the data files, and flatten them into one `Series` per entity of a source. `scripts/build.py`: generates the blocks of README.md and builds the site. `scripts/figures.py`: the figures of the site. `scripts/demandcast_sync.py`: compares the sources with those of DemandCast; `data/demandcast_differences.yaml` lists the deliberate differences, each with a reason.
+- `scripts/registry.py`: the pydantic models that load and validate the data files, and flatten them into one `Series` per entity of a source. `scripts/build.py`: generates the blocks of README.md and builds the site. `scripts/figures.py`: the figures of the site. `scripts/check_links.py`: checks the links of the data files. `scripts/demandcast_sync.py`: compares the sources with those of DemandCast; `data/demandcast_differences.yaml` lists the deliberate differences, each with a reason.
 - `demand-data-map/`: the map, which reads `sources.json` from the built site.
 - `tests/`: the pytest suite, with a small data folder in `conftest.py`.
-- `.github/workflows/`: `ci.yml` runs the hooks, the tests and mypy, and checks README.md; `pages.yml` builds and deploys the site from `main`, and monthly; `demandcast-sync.yml` compares with DemandCast and keeps the `demandcast-sync` issue, and `demandcast-sync-comment.yml` comments on pull requests that change the divergences.
+- `.github/workflows/`: `ci.yml` runs the hooks, the tests and mypy, and checks README.md; `pages.yml` builds and deploys the site from `main`, and monthly; `demandcast-sync.yml` compares with DemandCast and keeps the `demandcast-sync` issue, and `demandcast-sync-comment.yml` comments on pull requests that change the divergences; `link-check.yml` checks the links every week, keeping the `link-check` issue, and the links that pull requests add.
 
 ## Commands
 
@@ -20,6 +20,7 @@ A curated list of hourly and sub-hourly electricity demand data, by country and 
 uv run scripts/build.py readme       # validate the data and update README.md
 uv run scripts/build.py check        # fail if the data is invalid or README.md is stale
 uv run scripts/build.py site _site   # build the site
+uv run scripts/check_links.py --output link-check   # check the links (network)
 uv run pytest                        # run the tests
 uv run mypy                          # check the types
 uvx pre-commit run --all-files       # lint, format and check everything
