@@ -1,0 +1,68 @@
+name: OCCTO
+url: https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login
+access: public
+licence:
+  name: No terms of use found
+  url: https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login
+  category: restricted
+entities:
+  - country_code: JPN
+    subdivision_code: Hokkaidō
+    subdivision_name: Hokkaidō
+    start: 2016
+    end: present
+    resolution: 60
+  - country_code: JPN
+    subdivision_code: Tōhoku
+    subdivision_name: Tōhoku
+    start: 2016
+    end: present
+    resolution: 60
+  - country_code: JPN
+    subdivision_code: Kantō
+    subdivision_name: Kantō
+    start: 2016
+    end: present
+    resolution: 60
+  - country_code: JPN
+    subdivision_code: Chūbu
+    subdivision_name: Chūbu
+    start: 2016
+    end: present
+    resolution: 60
+  - country_code: JPN
+    subdivision_code: Hokuriku
+    subdivision_name: Hokuriku
+    start: 2016
+    end: present
+    resolution: 60
+  - country_code: JPN
+    subdivision_code: Kansai
+    subdivision_name: Kansai
+    start: 2016
+    end: present
+    resolution: 60
+  - country_code: JPN
+    subdivision_code: Chūgoku
+    subdivision_name: Chūgoku
+    start: 2016
+    end: present
+    resolution: 60
+  - country_code: JPN
+    subdivision_code: Shikoku
+    subdivision_name: Shikoku
+    start: 2016
+    end: present
+    resolution: 60
+  - country_code: JPN
+    subdivision_code: Kyūshū
+    subdivision_name: Kyūshū
+    start: 2016
+    end: present
+    resolution: 60
+  - country_code: JPN
+    subdivision_code: Okinawa
+    subdivision_name: Okinawa
+    start: 2016
+    end: present
+    resolution: 60
