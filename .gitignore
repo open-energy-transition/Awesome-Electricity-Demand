@@ -1,0 +1,8 @@
+# Files made by the tools and by the build of the site, which are not
+# committed.
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+_site/

@@ -1,44 +1,69 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+/* Layout of the map of the countries with electricity demand data, its
+   legend and the popups that list the data sources of a country. */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 #map {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
-/* Legend */
 #legend {
-    position: absolute;      /* overlay on top of the map */
-    bottom: 20px;            /* distance from bottom */
-    left: 20px;              /* distance from left */
-    background: rgba(255, 255, 255, 0.95);
-    padding: 12px;
-    border-radius: 6px;
-    font-family: sans-serif;
-    font-size: 14px;
-    box-shadow: 0 0 6px rgba(0,0,0,0.3);
-    z-index: 1;              /* ensure it stays above the map */
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px;
+  border-radius: 6px;
+  font-family: sans-serif;
+  font-size: 14px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
 #legend h4 {
-    margin: 0 0 8px 0;
-    font-weight: bold;
-    font-size: 16px;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 #legend div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
 }
 
 #legend span {
-    display: inline-block;
-    width: 25px;
-    height: 18px;
-    margin-right: 8px;
-    border: 1px solid #555;
+  display: inline-block;
+  width: 25px;
+  height: 18px;
+  margin-right: 8px;
+  border: 1px solid #555;
+}
+
+.maplibregl-popup-content {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 13px;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.maplibregl-popup-content h4 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+}
+
+.maplibregl-popup-content ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.maplibregl-popup-content li {
+  margin-bottom: 4px;
 }

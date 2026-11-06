@@ -1,0 +1,12 @@
+name: Zenodo
+url: https://zenodo.org/records/7537890
+access: public
+licence:
+  name: CC-BY 4.0
+  url: https://creativecommons.org/licenses/by/4.0/legalcode
+  category: open
+entities:
+  - country_code: TWN
+    start: 2017
+    end: 2022
+    resolution: 10

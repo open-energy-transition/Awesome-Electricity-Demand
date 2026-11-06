@@ -1,0 +1,12 @@
+name: EMA
+url: https://www.ema.gov.sg/resources/statistics/half-hourly-system-demand-data
+access: public
+licence:
+  name: Open data
+  url: https://www.ema.gov.sg/terms-of-use
+  category: open
+entities:
+  - country_code: SGP
+    start: 2014
+    end: present
+    resolution: 30

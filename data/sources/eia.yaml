@@ -1,0 +1,99 @@
+name: EIA
+url: https://www.eia.gov/electricity/gridmonitor/
+access: public
+licence:
+  name: Use for any purpose with attribution
+  url: https://www.eia.gov/about/copyrights_reuse.php
+  category: open
+entities:
+  - country_code: USA
+    subdivision_code: CAL
+    subdivision_name: California
+    start: 2020
+    end: present
+    resolution: 60
+    url: https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CAL
+  - country_code: USA
+    subdivision_code: CAR
+    subdivision_name: Carolinas
+    start: 2020
+    end: present
+    resolution: 60
+    url: https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CAR
+  - country_code: USA
+    subdivision_code: CENT
+    subdivision_name: Central
+    start: 2020
+    end: present
+    resolution: 60
+    url: https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CENT
+  - country_code: USA
+    subdivision_code: FLA
+    subdivision_name: Florida
+    start: 2020
+    end: present
+    resolution: 60
+    url: https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-FLA
+  - country_code: USA
+    subdivision_code: MIDA
+    subdivision_name: Mid-Atlantic
+    start: 2020
+    end: present
+    resolution: 60
+    url: https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-MIDA
+  - country_code: USA
+    subdivision_code: MIDW
+    subdivision_name: Midwest
+    start: 2020
+    end: present
+    resolution: 60
+    url: https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-MIDW
+  - country_code: USA
+    subdivision_code: NE
+    subdivision_name: New England
+    start: 2020
+    end: present
+    resolution: 60
+    url: https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NE
+  - country_code: USA
+    subdivision_code: NY
+    subdivision_name: New York
+    start: 2020
+    end: present
+    resolution: 60
+    url: https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NY
+  - country_code: USA
+    subdivision_code: NW
+    subdivision_name: Northwest
+    start: 2020
+    end: present
+    resolution: 60
+    url: https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NW
+  - country_code: USA
+    subdivision_code: SE
+    subdivision_name: Southeast
+    start: 2020
+    end: present
+    resolution: 60
+    url: https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-SE
+  - country_code: USA
+    subdivision_code: SW
+    subdivision_name: Southwest
+    start: 2020
+    end: present
+    resolution: 60
+    url: https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-SW
+  - country_code: USA
+    subdivision_code: TEN
+    subdivision_name: Tennessee
+    start: 2020
+    end: present
+    resolution: 60
+    url: https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-TEN
+  - country_code: USA
+    subdivision_code: TEX
+    subdivision_name: Texas
+    start: 2020
+    end: present
+    resolution: 60
+    url: https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-TEX

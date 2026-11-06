@@ -1,0 +1,12 @@
+name: ESKOM
+url: https://www.eskom.co.za/dataportal/data-request-form/
+access: on-request
+licence:
+  name: Non-commercial use
+  url: https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf
+  category: non-commercial
+entities:
+  - country_code: ZAF
+    start: 2021
+    end: present
+    resolution: 60

@@ -1,0 +1,14 @@
+name: KANSAI
+url: https://www.kansai-td.co.jp/english/home/denkiyoho/area-performance/past.html#:~:text=Financial%20
+access: public
+licence:
+  name: Personal use
+  url: https://www.kansai-td.co.jp/english/siteinfo/
+  category: restricted
+entities:
+  - country_code: JPN
+    subdivision_code: Kansai
+    subdivision_name: Kansai
+    start: 2016
+    end: present
+    resolution: 60

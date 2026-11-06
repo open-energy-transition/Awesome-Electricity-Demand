@@ -1,0 +1,12 @@
+name: Zenodo
+url: https://doi.org/10.5281/zenodo.17109911
+access: public
+licence:
+  name: CC-BY 4.0
+  url: https://creativecommons.org/licenses/by/4.0/legalcode
+  category: open
+entities:
+  - country_code: THA
+    start: 2023
+    end: 2024
+    resolution: 60

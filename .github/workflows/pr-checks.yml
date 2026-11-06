@@ -1,0 +1,91 @@
+# Checks that pull request titles follow Conventional Commits and that every
+# commit is signed off (DCO).
+
+name: Pull request checks
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+  title:
+    name: Conventional Commits title
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the pull request title
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const title = context.payload.pull_request.title;
+            const types = [
+              "feat", "fix", "docs", "test", "refactor", "perf",
+              "build", "ci", "chore", "style", "revert",
+            ];
+            const pattern = new RegExp(
+              `^(${types.join("|")})(\\([\\w./-]+\\))?!?: \\S`,
+            );
+            if (!pattern.test(title)) {
+              core.setFailed(
+                `The title "${title}" does not follow Conventional Commits. ` +
+                  `Use "type(optional scope): description", where type is ` +
+                  `one of: ${types.join(", ")}. See CONTRIBUTING.md.`,
+              );
+            }
+
+  dco:
+    name: DCO sign-off
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Check that every commit is signed off by its author
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const commits = await github.paginate(
+              github.rest.pulls.listCommits,
+              {
+                ...context.repo,
+                pull_number: context.payload.pull_request.number,
+                per_page: 100,
+              },
+            );
+            const unsigned = [];
+            for (const commit of commits) {
+              const author = commit.commit.author ?? {};
+              const isBot =
+                commit.author?.type === "Bot" ||
+                (commit.author?.login ?? "").endsWith("[bot]");
+              if (commit.parents.length > 1 || isBot) {
+                continue;
+              }
+              const signOffs = [
+                ...commit.commit.message.matchAll(
+                  /^Signed-off-by: .+ <([^>]+)>\s*$/gim,
+                ),
+              ].map((m) => m[1].toLowerCase());
+              if (!signOffs.includes((author.email ?? "").toLowerCase())) {
+                unsigned.push(
+                  `${commit.sha.slice(0, 7)} ` +
+                    commit.commit.message.split("\n")[0],
+                );
+              }
+            }
+            if (unsigned.length > 0) {
+              core.setFailed(
+                "These commits have no Signed-off-by line matching their " +
+                  "author's email:\n" +
+                  unsigned.join("\n") +
+                  "\nSign them off with `git rebase --signoff origin/main` " +
+                  "and `git push --force-with-lease`. See CONTRIBUTING.md.",
+              );
+            }

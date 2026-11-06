@@ -1,0 +1,12 @@
+name: NGCP
+url: https://www.ngcp.ph/operations#operations
+access: public
+licence:
+  name: All rights reserved
+  url: https://ngcp.ph/privacy
+  category: restricted
+entities:
+  - country_code: PHL
+    start: 2013
+    end: 2024
+    resolution: 60

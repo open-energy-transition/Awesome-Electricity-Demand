@@ -1,0 +1,12 @@
+name: Cammesa
+url: https://cammesaweb.cammesa.com/
+access: public
+licence:
+  name: Use with authorization
+  url: https://cammesaweb.cammesa.com/politicas-de-acceso/
+  category: restricted
+entities:
+  - country_code: ARG
+    start: 2024
+    end: present
+    resolution: 60

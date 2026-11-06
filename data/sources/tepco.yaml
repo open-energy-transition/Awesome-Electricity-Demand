@@ -1,0 +1,20 @@
+name: TEPCO
+url: https://www.tepco.co.jp/en/forecast/html/download-e.html
+access: public
+licence:
+  name: Personal use
+  url: https://www4.tepco.co.jp/en/pg/legal/index-e.html
+  category: restricted
+entities:
+  - country_code: JPN
+    subdivision_code: Kantō
+    subdivision_name: Kantō
+    start: 2016
+    end: 2021
+    resolution: 60
+  - country_code: JPN
+    subdivision_code: Kantō
+    subdivision_name: Kantō
+    start: 2022
+    end: present
+    resolution: 5

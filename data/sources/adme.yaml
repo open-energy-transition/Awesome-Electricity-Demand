@@ -1,0 +1,12 @@
+name: ADME
+url: https://adme.com.uy/controlpanel.php
+access: public
+licence:
+  name: Open data
+  url: https://adme.com.uy/datosabiertos.html
+  category: open
+entities:
+  - country_code: URY
+    start: 2019
+    end: 2025
+    resolution: 60

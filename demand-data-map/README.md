@@ -1,4 +1,8 @@
-This folder contains a map made with [MapLibre](https://maplibre.org/).
-It is hosted with github pages [here](https://open-energy-transition.github.io/Awesome-Electricity-Demand/), click on the countries to be directed to the relevant data source.
+This folder contains a map made with [MapLibre](https://maplibre.org/), hosted with GitHub Pages [here](https://open-energy-transition.github.io/Awesome-Electricity-Demand/). Click on a country to see its data sources.
 
-The main [README.md](https://github.com/open-energy-transition/Awesome-Electricity-Demand/blob/main/README.md) takes precedence as it supports multiple data sources per country.
+The map reads `sources.json`, which `scripts/build.py site` generates from the data files next to these files. To see it locally, build the site and serve it:
+
+```bash
+uv run scripts/build.py site _site
+python -m http.server --directory _site
+```

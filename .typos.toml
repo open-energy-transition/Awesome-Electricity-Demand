@@ -1,0 +1,16 @@
+# Configuration of the typos spell checker (pre-commit hook).
+
+[files]
+extend-exclude = ["*.csv", "uv.lock"]
+
+[default]
+extend-ignore-re = [
+  # ISO 3166 country and subdivision codes, such as BA or THA.
+  "\\b[A-Z]{2,4}\\b",
+  # URLs, which can have any identifiers.
+  "https?://\\S+",
+]
+
+[default.extend-words]
+# Place names.
+sur = "sur"

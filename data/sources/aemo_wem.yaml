@@ -1,0 +1,21 @@
+name: AEMO
+url: https://data.wa.aemo.com.au/public/market-data/wemde/operationalDemandWithdrawal/dailyFiles/
+access: public
+licence:
+  name: Use for any purpose with attribution
+  url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
+  category: open
+entities:
+  - country_code: AUS
+    subdivision_code: WA
+    subdivision_name: Western Australia
+    start: 2006
+    end: 2023
+    resolution: 30
+    url: https://data.wa.aemo.com.au/datafiles/operational-demand/
+  - country_code: AUS
+    subdivision_code: WA
+    subdivision_name: Western Australia
+    start: 2023
+    end: present
+    resolution: 5
