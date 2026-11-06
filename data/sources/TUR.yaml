@@ -1,0 +1,11 @@
+sources:
+  - provider: EPIAS
+    url: https://kayit.epias.com.tr/epias-transparency-platform-registration-form
+    start: 2016
+    end: present
+    resolution: 60
+    access: on-request
+    licence:
+      name: Use with attribution
+      url: https://seffaflik.epias.com.tr/about/about
+      category: open

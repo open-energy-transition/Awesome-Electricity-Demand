@@ -1,0 +1,42 @@
+# Ruff configuration: linting and formatting of the Python code. Rules are
+# listed explicitly, so that upgrading Ruff never enables new ones silently.
+
+target-version = "py312"
+line-length = 79
+# The scripts are imported as top-level modules from the scripts folder.
+src = ["scripts", "tests"]
+
+[lint]
+select = [
+    # Errors, warnings and Pyflakes.
+    "E4", "E7", "E9", "F", "W",
+    # Imports and docstrings.
+    "I", "TID", "D",
+    # Docstring parameters, returns and raises (pydoclint, preview rules).
+    "DOC102", "DOC201", "DOC202", "DOC402", "DOC403", "DOC501", "DOC502",
+    # Likely bugs, security, and modern, simpler and faster code.
+    "A", "ARG", "B", "BLE", "C4", "C90", "DTZ", "ERA", "FURB", "ICN", "ISC",
+    "N", "PERF", "PIE", "PL", "PT", "RET", "RUF", "S", "SIM", "T20", "TRY",
+    "UP",
+]
+ignore = [
+    # Counts of returns, branches, arguments and statements: C90 limits the
+    # complexity of functions instead.
+    "PLR0911", "PLR0912", "PLR0913", "PLR0915", "PLR0917",
+    # Literal numbers such as years and minutes.
+    "PLR2004",
+    # Named return values, which match the NumPy-style docstrings.
+    "RET504",
+    # Exception messages written where the exception is raised.
+    "TRY003",
+]
+explicit-preview-rules = true
+preview = true
+pydocstyle.convention = "numpy"
+pycodestyle.max-doc-length = 72
+
+[lint.per-file-ignores]
+"tests/**" = ["S101"]
+
+[format]
+docstring-code-format = true

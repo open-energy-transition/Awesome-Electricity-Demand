@@ -1,0 +1,11 @@
+sources:
+  - provider: KROGD
+    url: https://www.data.go.kr/data/15065266/fileData.do
+    start: 2013
+    end: 2024
+    resolution: 60
+    access: public
+    licence:
+      name: Open data
+      url: https://www.data.go.kr/ugs/selectPublicDataUseGuideView.do
+      category: open

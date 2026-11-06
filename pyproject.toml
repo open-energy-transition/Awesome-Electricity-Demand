@@ -1,0 +1,36 @@
+# Dependencies of the scripts that validate the data files and generate
+# the README, the map data and the figures, and settings of their tools.
+
+[project]
+name = "awesome-electricity-demand"
+version = "0"
+description = "Validate the list of electricity demand data and generate its README, map and figures."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.9",
+    "pydantic>=2.9",
+    "pyyaml>=6.0",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.13",
+    "pytest>=8.3",
+    "types-pyyaml>=6.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["scripts"]
+testpaths = ["tests"]
+
+[tool.mypy]
+files = ["scripts", "tests"]
+mypy_path = ["scripts", "tests"]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]

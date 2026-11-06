@@ -1,0 +1,145 @@
+sources:
+  - provider: AEMO
+    url: https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data
+    subdivision_code: NSW
+    subdivision_name: New South Wales
+    start: 1998
+    end: 2021
+    resolution: 30
+    access: public
+    licence:
+      name: Use for any purpose with attribution
+      url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
+      category: open
+  - provider: AEMO
+    url: https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data
+    subdivision_code: NSW
+    subdivision_name: New South Wales
+    start: 2021
+    end: present
+    resolution: 5
+    access: public
+    licence:
+      name: Use for any purpose with attribution
+      url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
+      category: open
+  - provider: AEMO
+    url: https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data
+    subdivision_code: QLD
+    subdivision_name: Queensland
+    start: 1998
+    end: 2021
+    resolution: 30
+    access: public
+    licence:
+      name: Use for any purpose with attribution
+      url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
+      category: open
+  - provider: AEMO
+    url: https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data
+    subdivision_code: QLD
+    subdivision_name: Queensland
+    start: 2021
+    end: present
+    resolution: 5
+    access: public
+    licence:
+      name: Use for any purpose with attribution
+      url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
+      category: open
+  - provider: AEMO
+    url: https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data
+    subdivision_code: SA
+    subdivision_name: South Australia
+    start: 1998
+    end: 2021
+    resolution: 30
+    access: public
+    licence:
+      name: Use for any purpose with attribution
+      url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
+      category: open
+  - provider: AEMO
+    url: https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data
+    subdivision_code: SA
+    subdivision_name: South Australia
+    start: 2021
+    end: present
+    resolution: 5
+    access: public
+    licence:
+      name: Use for any purpose with attribution
+      url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
+      category: open
+  - provider: AEMO
+    url: https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data
+    subdivision_code: TAS
+    subdivision_name: Tasmania
+    start: 2005
+    end: 2021
+    resolution: 30
+    access: public
+    licence:
+      name: Use for any purpose with attribution
+      url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
+      category: open
+  - provider: AEMO
+    url: https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data
+    subdivision_code: TAS
+    subdivision_name: Tasmania
+    start: 2021
+    end: present
+    resolution: 5
+    access: public
+    licence:
+      name: Use for any purpose with attribution
+      url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
+      category: open
+  - provider: AEMO
+    url: https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data
+    subdivision_code: VIC
+    subdivision_name: Victoria
+    start: 1998
+    end: 2021
+    resolution: 30
+    access: public
+    licence:
+      name: Use for any purpose with attribution
+      url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
+      category: open
+  - provider: AEMO
+    url: https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data
+    subdivision_code: VIC
+    subdivision_name: Victoria
+    start: 2021
+    end: present
+    resolution: 5
+    access: public
+    licence:
+      name: Use for any purpose with attribution
+      url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
+      category: open
+  - provider: AEMO
+    url: https://data.wa.aemo.com.au/datafiles/operational-demand/
+    subdivision_code: WA
+    subdivision_name: Western Australia
+    start: 2006
+    end: 2023
+    resolution: 30
+    access: public
+    licence:
+      name: Use for any purpose with attribution
+      url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
+      category: open
+  - provider: AEMO
+    url: https://data.wa.aemo.com.au/public/market-data/wemde/operationalDemandWithdrawal/dailyFiles/
+    subdivision_code: WA
+    subdivision_name: Western Australia
+    start: 2023
+    end: present
+    resolution: 5
+    access: public
+    licence:
+      name: Use for any purpose with attribution
+      url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
+      category: open

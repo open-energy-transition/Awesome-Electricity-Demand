@@ -2,546 +2,223 @@
 
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
-This collection includes links to data sources for countries and subdivisions in:
-- [Africa](#africa)
-- [Asia](#asia)
-- [Europe](#europe)
-- [North America](#north-america)
-- [South America](#south-america)
-- [Oceania](#oceania)
+<!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
+The list has **134 data sources** for **67 countries** and their subdivisions in:
 
-Each data source is listed with essential metadata, such as the time range and frequency of the available data, as well as licensing and usage terms.
+- [Africa](#africa) (3 countries)
+- [Asia](#asia) (13 countries)
+- [Europe](#europe) (38 countries)
+- [North America](#north-america) (5 countries)
+- [South America](#south-america) (6 countries)
+- [Oceania](#oceania) (2 countries)
+<!-- summary:end -->
 
-[Here](https://open-energy-transition.github.io/Awesome-Electricity-Demand/) you can view an interactive map with links to the data sources.
+Each data source is listed with essential metadata, such as the time range and resolution of the available data, as well as licensing and usage terms.
+
+- [Interactive map](https://open-energy-transition.github.io/Awesome-Electricity-Demand/) with links to the data sources.
+- The whole list as [CSV](https://open-energy-transition.github.io/Awesome-Electricity-Demand/sources.csv) or [JSON](https://open-energy-transition.github.io/Awesome-Electricity-Demand/sources.json).
 
 Python code for downloading, extracting, and processing the available data can be found in our companion repository: [DemandCast](https://github.com/open-energy-transition/demandcast).
 
 ### Data Overview
 
-The figure below summarizes the depth of available demand data by reporting the total number of years of historical load time series available for each continent, disaggregated by measurement frequency (5-min, 10-min, 15-min, 30-min, 60-min).
+The figure below summarizes the depth of available demand data by reporting the total number of years of historical load time series available for each continent, disaggregated by time resolution.
 
 <img
-    src="figures/frequency_coverage_by_continent.png"
+    src="https://open-energy-transition.github.io/Awesome-Electricity-Demand/figures/frequency_coverage_by_continent.png"
     alt="Electricity Demand Data by Continent and Frequency"
     style="max-width:100%; height:auto;">
 
 The next figure shows the coverage of electricity demand data, illustrating the percentage of coverage by continent in terms of countries, population, and land area.
 
 <img
-    src="figures/coverage_by_continent.png"
+    src="https://open-energy-transition.github.io/Awesome-Electricity-Demand/figures/coverage_by_continent.png"
     alt="Country, Population, and Land Coverage by Continent"
     style="max-width:100%; height:auto;">
 
+Both figures are rebuilt from the list every time it changes.
 
+### Searched Without Success
 
-### Data Source Log
+These countries have been searched for hourly or sub-hourly electricity demand data, but none has been found yet. They are listed to help other researchers avoid duplicating effort and to build a shared knowledge base. If you know of a source for any of them, please contribute it!
 
-📁 **[data_source_log](https://docs.google.com/spreadsheets/d/1qnGaXWZqT-xwbGeqDAFHkTN0VhoFUfKwtAD29n9HeFE/edit?gid=1036252638#gid=1036252638)**
-
-This spreadsheet documents the countries and subdivisions that have been explored for hourly or sub-hourly electricity demand data, but where no such data has yet been found. It is also designed to help other researchers avoid duplicating effort and to build a shared knowledge base.
-
-
-
+<!-- searched:start: generated from data/ by scripts/build.py, do not edit -->
+- **Africa:** Angola, Benin, Cameroon, Egypt, Libya, Mauritius, Somalia
+<!-- searched:end -->
 
 ## Contributions
 
 Contributions are welcome in the form of new links to websites that provide hourly or sub-hourly electricity demand data, including information on data availability timelines and licensing conditions.
+
 - Use [GitHub Issues](https://github.com/open-energy-transition/Awesome-Electricity-Demand/issues) for data requests or suggestions.
 - Submit [Pull Requests](https://github.com/open-energy-transition/Awesome-Electricity-Demand/pulls) for adding new data sources or enhancing metadata.
 
+The list below is generated from the files in [`data/`](data/): do not edit it directly, but add or change the data source in `data/sources/<country code>.yaml`. See [CONTRIBUTING.md](CONTRIBUTING.md) for how.
+
 ## List of data sources
 
+<!-- sources:start: generated from data/ by scripts/build.py, do not edit -->
 ### Africa
 
-- #### Algeria
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Sonelgaz](https://data.mendeley.com/datasets/z5x2d3mhw7/1) | 2008-2020 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
-- #### Nigeria
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Mendeley](https://data.mendeley.com/datasets/pxvdm26rn7/2) | 2016 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)&nbsp;&nbsp;&nbsp;(Reconstructed demand without power outages)
-
-- #### South Africa
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ESKOM](https://www.eskom.co.za/dataportal/data-request-form/) | 2021-present | 60-min resolution |  [Access upon request – Non-commercial use](https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf)
+| Country | Subdivision | Source | Period | Resolution | Licence | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Algeria** |  | [Sonelgaz](https://data.mendeley.com/datasets/z5x2d3mhw7/1) | 2008-2020 | 60 min | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) |  |
+| **Nigeria** |  | [Mendeley](https://data.mendeley.com/datasets/pxvdm26rn7/2) | 2016 | 60 min | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | Reconstructed demand without power outages |
+| **South Africa** |  | [ESKOM](https://www.eskom.co.za/dataportal/data-request-form/) | 2021-present | 60 min | [Non-commercial use](https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf) | Access on request |
 
 ### Asia
 
-- #### Bangladesh
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PGCB](https://erp.powergrid.gov.bd/w/report/eyJpdiI6IldsU2ZQTGkvbkRnQU9FMjZ5UHhmeGc9PSIsInZhbHVlIjoiQzhONVl5ZGxRY3E3T3ZVNCtLZGt1Zz09IiwibWFjIjoiN2JiNTI5MzNhOWIxZDVjY2NkMmFlZWU4ZDU1N2I4OWZlYjNlZWM1ZGU4NzRiNWU4ZjQ3ZDc1ODRlMTk3MDc0YyIsInRhZyI6IiJ9/show_report) | 2014-present | 30-min resolution | [All rights reserved](https://pgcb.gov.bd/)
-
-- #### China
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Zenodo](https://zenodo.org/records/8322210) | 2018 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
-- #### India
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2024 | 30-min resolution | [Open data](https://iced.niti.gov.in/about-us)
-
-- #### Japan
-
-  - ##### Kantō
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2016-2021 | 60-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5-min resolution | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html)
-
-  - ##### Kansai
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[KANSAI](https://www.kansai-td.co.jp/english/home/denkiyoho/area-performance/past.html#:~:text=Financial%20) | 2016-present | 60-min resolution | [Personal use](https://www.kansai-td.co.jp/english/siteinfo/)
-
-- #### Nepal
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Open Data Nepal](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | 2016-2017 | 60-min resolution | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
-- #### Pakistan
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NTDC](https://www.kaggle.com/datasets/tentative/ntdc-dataset) | 2015-2020 | 60-min resolution | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
-
-- #### Philippines
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NGCP](https://www.ngcp.ph/operations#operations) | 2013-2024 | 60-min resolution | [All rights reserved](https://ngcp.ph/privacy)
-
-- #### Singapore
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EMA](https://www.ema.gov.sg/resources/statistics/half-hourly-system-demand-data) | 2014-present | 30-min resolution | [Open data](https://www.ema.gov.sg/terms-of-use)
-
-- #### South korea
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[KROGD](https://www.data.go.kr/data/15065266/fileData.do) | 2013-2024 | 60-min resolution | [Open data](https://www.data.go.kr/ugs/selectPublicDataUseGuideView.do)
-
-- #### Sri Lanka
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15-min resolution | [All rights reserved](https://www.pucsl.gov.lk/)&nbsp;&nbsp;&nbsp;(Generation, proxy for demand)
-
-- #### Taiwan
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Zenodo](https://zenodo.org/records/7537890) | 2017-2022 | 10-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)
-
-- #### Thailand
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Zenodo](https://doi.org/10.5281/zenodo.17109911) | 2023-2024 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)
-
-- #### Turkey
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EPIAS](https://kayit.epias.com.tr/epias-transparency-platform-registration-form) | 2016-present | 60-min resolution | [Access upon request – Use with attribution](https://seffaflik.epias.com.tr/about/about)
+| Country | Subdivision | Source | Period | Resolution | Licence | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Bangladesh** |  | [PGCB](https://erp.powergrid.gov.bd/w/report/eyJpdiI6IldsU2ZQTGkvbkRnQU9FMjZ5UHhmeGc9PSIsInZhbHVlIjoiQzhONVl5ZGxRY3E3T3ZVNCtLZGt1Zz09IiwibWFjIjoiN2JiNTI5MzNhOWIxZDVjY2NkMmFlZWU4ZDU1N2I4OWZlYjNlZWM1ZGU4NzRiNWU4ZjQ3ZDc1ODRlMTk3MDc0YyIsInRhZyI6IiJ9/show_report) | 2014-present | 30 min | [All rights reserved](https://pgcb.gov.bd/) |  |
+| **China** |  | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) |  |
+| **India** |  | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2024 | 30 min | [Open data](https://iced.niti.gov.in/about-us) |  |
+| **Japan** | Kansai | [KANSAI](https://www.kansai-td.co.jp/english/home/denkiyoho/area-performance/past.html#:~:text=Financial%20) | 2016-present | 60 min | [Personal use](https://www.kansai-td.co.jp/english/siteinfo/) |  |
+|  | Kantō | [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2016-2021 | 60 min | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html) |  |
+|  | Kantō | [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5 min | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html) |  |
+| **Nepal** |  | [Open Data Nepal](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | 2016-2017 | 60 min | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |  |
+| **Pakistan** |  | [NTDC](https://www.kaggle.com/datasets/tentative/ntdc-dataset) | 2015-2020 | 60 min | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |  |
+| **Philippines** |  | [NGCP](https://www.ngcp.ph/operations#operations) | 2013-2024 | 60 min | [All rights reserved](https://ngcp.ph/privacy) |  |
+| **Singapore** |  | [EMA](https://www.ema.gov.sg/resources/statistics/half-hourly-system-demand-data) | 2014-present | 30 min | [Open data](https://www.ema.gov.sg/terms-of-use) |  |
+| **South Korea** |  | [KROGD](https://www.data.go.kr/data/15065266/fileData.do) | 2013-2024 | 60 min | [Open data](https://www.data.go.kr/ugs/selectPublicDataUseGuideView.do) |  |
+| **Sri Lanka** |  | [PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15 min | [All rights reserved](https://www.pucsl.gov.lk/) | Generation, proxy for demand |
+| **Taiwan** |  | [Zenodo](https://zenodo.org/records/7537890) | 2017-2022 | 10 min | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode) |  |
+| **Thailand** |  | [Zenodo](https://doi.org/10.5281/zenodo.17109911) | 2023-2024 | 60 min | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode) |  |
+| **Turkey** |  | [EPIAS](https://kayit.epias.com.tr/epias-transparency-platform-registration-form) | 2016-present | 60 min | [Use with attribution](https://seffaflik.epias.com.tr/about/about) | Access on request |
 
 ### Europe
 
-- #### Albania
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YAL-KESH-----5!CTY|10YAL-KESH-----5&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-2016 | 15-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YAL-KESH-----5!CTY|10YAL-KESH-----5&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2021-present | 15-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Austria
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YAT-APG------L!CTY|10YAT-APG------L&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 15-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Belgium
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YBE----------2!CTY|10YBE----------2&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 15-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Bosnia and Herzegovina
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YBA-JPCC-----D!CTY|10YBA-JPCC-----D&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2017-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Bulgaria
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YCA-BULGARIA-R!CTY|10YCA-BULGARIA-R&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Croatia
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YHR-HEP------M!CTY|10YHR-HEP------M&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Cyprus
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YCY-1001A0003J!CTY|10YCY-1001A0003J&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2016-2022 | 30-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YCY-1001A0003J!CTY|10YCY-1001A0003J&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2024-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[TSOC](https://tsoc.org.cy/electrical-system/archive-total-daily-system-generation-on-the-transmission-system/) | 2008-present | 15-min resolution | [Use with authorization](https://tsoc.org.cy/)&nbsp;&nbsp;&nbsp;(Generation, proxy for demand)
-
-- #### Czech Republic
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YCZ-CEPS-----N!CTY|10YCZ-CEPS-----N&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Denmark
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10Y1001A1001A65H!CTY|10Y1001A1001A65H&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Estonia
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10Y1001A1001A39I!CTY|10Y1001A1001A39I&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Finland
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YFI-1--------U!CTY|10YFI-1--------U&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### France
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YFR-RTE------C!CTY|10YFR-RTE------C&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Georgia
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10Y1001A1001B012!CTY|10Y1001A1001B012&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2022-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Germany
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10Y1001A1001A83F!CTY|10Y1001A1001A83F&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 15-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Greece
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YGR-HTSO-----Y!CTY|10YGR-HTSO-----Y&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Hungary
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YHU-MAVIR----U!CTY|10YHU-MAVIR----U&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 15-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Ireland
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YIE-1001A00010!CTY|10YIE-1001A00010&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 30-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Italy
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YIT-GRTN-----B!CTY|10YIT-GRTN-----B&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Kosovo
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10Y1001C--00100H!CTY|10Y1001C--00100H&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2021-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Latvia
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YLV-1001A00074!CTY|10YLV-1001A00074&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Lithuania
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YLT-1001A0008Q!CTY|10YLT-1001A0008Q&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Luxembourg
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YLU-CEGEDEL-NQ!CTY|10YLU-CEGEDEL-NQ&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 15-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Moldova
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10Y1001A1001A990!CTY|10Y1001A1001A990&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2020-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Montenegro
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YCS-CG-TSO---S!CTY|10YCS-CG-TSO---S&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Netherlands
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YNL----------L!CTY|10YNL----------L&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 15-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### North Macedonia
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YMK-MEPSO----8!CTY|10YMK-MEPSO----8&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Norway
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YNO-0--------C!CTY|10YNO-0--------C&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Poland
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YPL-AREA-----S!CTY|10YPL-AREA-----S&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Portugal
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YPT-REN------W!CTY|10YPT-REN------W&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Romania
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YRO-TEL------P!CTY|10YRO-TEL------P&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Serbia
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YCS-SERBIATSOV!CTY|10YCS-SERBIATSOV&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Slovakia
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YSK-SEPS-----K!CTY|10YSK-SEPS-----K&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2022-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Slovenia
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YSI-ELES-----O!CTY|10YSI-ELES-----O&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Spain
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YES-REE------0!CTY|10YES-REE------0&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Sweden
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YSE-1--------K!CTY|10YSE-1--------K&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Switzerland
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YCH-SWISSGRIDZ!CTY|10YCH-SWISSGRIDZ&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-present | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### Ukraine
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2022+00:00|CET|DAY&biddingZone.values=CTY|10Y1001C--00003F!CTY|10Y1001C--00003F&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2017-2022 | 60-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-- #### United Kingdom
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10Y1001A1001A92E!CTY|10Y1001A1001A92E&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2015-2021 | 30-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-  - ##### Northern Ireland
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10Y1001A1001A92E!CTY|10Y1001A1001A92E&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)) | 2024-present | 30-min resolution | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf)
-
-  - ##### Great Britain
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NESO](https://www.neso.energy/data-portal/historic-demand-data) | 2009-present | 30-min resolution | [Use for any purpose with attribution](https://www.neso.energy/data-portal/neso-open-licence)
+| Country | Subdivision | Source | Period | Resolution | Licence | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Albania** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YAL-KESH-----5!CTY%7C10YAL-KESH-----5&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-2016 | 15 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+|  |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YAL-KESH-----5!CTY%7C10YAL-KESH-----5&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2021-present | 15 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Austria** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YAT-APG------L!CTY%7C10YAT-APG------L&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 15 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Belgium** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YBE----------2!CTY%7C10YBE----------2&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 15 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Bosnia and Herzegovina** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YBA-JPCC-----D!CTY%7C10YBA-JPCC-----D&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2017-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Bulgaria** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YCA-BULGARIA-R!CTY%7C10YCA-BULGARIA-R&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Croatia** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YHR-HEP------M!CTY%7C10YHR-HEP------M&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Cyprus** |  | [TSOC](https://tsoc.org.cy/electrical-system/archive-total-daily-system-generation-on-the-transmission-system/) | 2008-present | 15 min | [Use with authorization](https://tsoc.org.cy/) | Generation, proxy for demand |
+|  |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YCY-1001A0003J!CTY%7C10YCY-1001A0003J&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2016-2022 | 30 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+|  |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YCY-1001A0003J!CTY%7C10YCY-1001A0003J&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2024-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Czech Republic** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YCZ-CEPS-----N!CTY%7C10YCZ-CEPS-----N&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Denmark** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10Y1001A1001A65H!CTY%7C10Y1001A1001A65H&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Estonia** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10Y1001A1001A39I!CTY%7C10Y1001A1001A39I&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Finland** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YFI-1--------U!CTY%7C10YFI-1--------U&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **France** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YFR-RTE------C!CTY%7C10YFR-RTE------C&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Georgia** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10Y1001A1001B012!CTY%7C10Y1001A1001B012&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2022-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Germany** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10Y1001A1001A83F!CTY%7C10Y1001A1001A83F&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 15 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Greece** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YGR-HTSO-----Y!CTY%7C10YGR-HTSO-----Y&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Hungary** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YHU-MAVIR----U!CTY%7C10YHU-MAVIR----U&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 15 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Ireland** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YIE-1001A00010!CTY%7C10YIE-1001A00010&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 30 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Italy** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YIT-GRTN-----B!CTY%7C10YIT-GRTN-----B&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Kosovo** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10Y1001C--00100H!CTY%7C10Y1001C--00100H&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2021-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Latvia** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YLV-1001A00074!CTY%7C10YLV-1001A00074&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Lithuania** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YLT-1001A0008Q!CTY%7C10YLT-1001A0008Q&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Luxembourg** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YLU-CEGEDEL-NQ!CTY%7C10YLU-CEGEDEL-NQ&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 15 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Moldova** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10Y1001A1001A990!CTY%7C10Y1001A1001A990&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2020-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Montenegro** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YCS-CG-TSO---S!CTY%7C10YCS-CG-TSO---S&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Netherlands** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YNL----------L!CTY%7C10YNL----------L&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 15 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **North Macedonia** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YMK-MEPSO----8!CTY%7C10YMK-MEPSO----8&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Norway** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YNO-0--------C!CTY%7C10YNO-0--------C&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Poland** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YPL-AREA-----S!CTY%7C10YPL-AREA-----S&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Portugal** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YPT-REN------W!CTY%7C10YPT-REN------W&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Romania** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YRO-TEL------P!CTY%7C10YRO-TEL------P&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Serbia** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YCS-SERBIATSOV!CTY%7C10YCS-SERBIATSOV&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Slovakia** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YSK-SEPS-----K!CTY%7C10YSK-SEPS-----K&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2022-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Slovenia** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YSI-ELES-----O!CTY%7C10YSI-ELES-----O&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Spain** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YES-REE------0!CTY%7C10YES-REE------0&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Sweden** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YSE-1--------K!CTY%7C10YSE-1--------K&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Switzerland** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10YCH-SWISSGRIDZ!CTY%7C10YCH-SWISSGRIDZ&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-present | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **Ukraine** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2022+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10Y1001C--00003F!CTY%7C10Y1001C--00003F&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2017-2022 | 60 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+| **United Kingdom** |  | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10Y1001A1001A92E!CTY%7C10Y1001A1001A92E&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2015-2021 | 30 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
+|  | Great Britain | [NESO](https://www.neso.energy/data-portal/historic-demand-data) | 2009-present | 30 min | [Use for any purpose with attribution](https://www.neso.energy/data-portal/neso-open-licence) |  |
+|  | Northern Ireland | [ENTSO-E](https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00%7CCET%7CDAY&biddingZone.values=CTY%7C10Y1001A1001A92E!CTY%7C10Y1001A1001A92E&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+%28UTC+1%29+/+CEST+%28UTC+2%29) | 2024-present | 30 min | [CC-BY 4.0](https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf) |  |
 
 ### North America
 
-- #### Canada
-
-  - ##### Alberta
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2023-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AESO](https://www.aeso.ca/market/market-and-system-reporting/data-requests/hourly-load-by-area-and-region) | 2011-2024 | 60-min resolution | [Non-commercial use with attribution](https://www.aeso.ca/legal)
-
-  - ##### British Columbia
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2001-2024 | 60-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[BCHYDRO](https://www.bchydro.com/energy-in-bc/operations/transmission/transmission-system/balancing-authority-load-data/historical-transmission-data.html) | 2001-present | 60-min resolution | [Non-commercial use offline only](https://www.bchydro.com/siteinfo/legal.html)
-
-  - ##### New Brunswick
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2016-2021 | 60-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[NBPOWER](https://tso.nbpower.com/Public/en/system_information_archive.aspx) | 2018-present | 60-min resolution | [All rights reserved](https://www.nbpower.com/en/terms-of-use)
-
-  - ##### Newfoundland
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
-
-  - ##### Nova Scotia
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-2023 | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 10-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
-
-  - ##### Ontario
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2002-present | 60-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[IESO](https://www.ieso.ca/Power-Data/Data-Directory) | 1994-present | 60-min resolution | [Limited license](https://www.ieso.ca/Terms-of-Use)
-
-  - ##### Prince Edward Island
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2012-present | 15-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
-
-  - ##### Quebec
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 15-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[HYDROQUEBEC](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/) | 2019-2023 | 60-min resolution | [CC BY-NC 4.0](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/)
-
-  - ##### Yukon
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 5-min resolution | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html)
-
-- #### Costa Rica
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[GrupoICE](https://apps.grupoice.com/CenceWeb) | 2012-present | 15-min resolution | [Open data](https://www.grupoice.com/wps/wcm/connect/328d1cc7-6796-44cb-a981-8dca6043c983/Reglamento_funcionamiento_CENCE.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-328d1cc7-6796-44cb-a981-8dca6043c983-nWcNMD.)
-
-- #### Mexico
-
-  - ##### Baja California
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
-
-  - ##### Baja California Sur
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
-
-  - ##### Noroeste
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
-
-  - ##### Norte
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
-
-  - ##### Noreste
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
-
-  - ##### Occidental
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
-
-  - ##### Central
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
-
-  - ##### Oriental
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
-
-  - ##### Peninsular
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60-min resolution | [All rights reserved](https://www.gob.mx/terminos)
-
-- #### Panama
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Mendeley](https://data.mendeley.com/datasets/tcmmj4t6f4/1) | 2016-2020 | 60-min resolution | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
-- #### United States
-
-  - ##### California
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CAISO](https://www.caiso.com/library/historical-ems-hourly-load) | 2019-present | 60-min resolution | [Use for any purpose with attribution](https://www.caiso.com/privacy-terms-of-use)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CAL.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CAL) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-  - ##### Carolinas
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CAR.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CAR) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-  - ##### Central
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CENT.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CENT) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-  - ##### Florida
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/FLA.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-FLA) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-  - ##### Mid-Atlantic
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/MIDA.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-MIDA) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-  - ##### Midwest
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/MIDW.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-MIDW) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-  - ##### New England
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NE.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NE) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-  - ##### New York
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NY.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NY) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-  - ##### Northwest
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NW.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NW) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-  - ##### Southeast
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/SE.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-SE) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-  - ##### Southwest
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/SW.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-SW) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-  - ##### Tennessee
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEN.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-TEN) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-  - ##### Texas
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEX.csv) | 2015-2020 | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-TEX) | 2020-present | 60-min resolution | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php)
+| Country | Subdivision | Source | Period | Resolution | Licence | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Canada** | Alberta | [AESO](https://www.aeso.ca/market/market-and-system-reporting/data-requests/hourly-load-by-area-and-region) | 2011-2024 | 60 min | [Non-commercial use with attribution](https://www.aeso.ca/legal) |  |
+|  | Alberta | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2023-present | 5 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
+|  | British Columbia | [BCHYDRO](https://www.bchydro.com/energy-in-bc/operations/transmission/transmission-system/balancing-authority-load-data/historical-transmission-data.html) | 2001-present | 60 min | [Non-commercial use offline only](https://www.bchydro.com/siteinfo/legal.html) |  |
+|  | British Columbia | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2001-2024 | 60 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
+|  | New Brunswick | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2016-2021 | 60 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
+|  | New Brunswick | [NBPOWER](https://tso.nbpower.com/Public/en/system_information_archive.aspx) | 2018-present | 60 min | [All rights reserved](https://www.nbpower.com/en/terms-of-use) |  |
+|  | New Brunswick | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 5 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
+|  | Newfoundland | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-present | 5 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
+|  | Nova Scotia | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-2023 | 5 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
+|  | Nova Scotia | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 10 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
+|  | Ontario | [IESO](https://www.ieso.ca/Power-Data/Data-Directory) | 1994-present | 60 min | [Limited license](https://www.ieso.ca/Terms-of-Use) |  |
+|  | Ontario | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2002-present | 60 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
+|  | Prince Edward Island | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2012-present | 15 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
+|  | Quebec | [HYDROQUEBEC](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/) | 2019-2023 | 60 min | [CC BY-NC 4.0](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/) |  |
+|  | Quebec | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 15 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
+|  | Yukon | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 5 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
+| **Costa Rica** |  | [GrupoICE](https://apps.grupoice.com/CenceWeb) | 2012-present | 15 min | [Open data](https://www.grupoice.com/wps/wcm/connect/328d1cc7-6796-44cb-a981-8dca6043c983/Reglamento_funcionamiento_CENCE.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-328d1cc7-6796-44cb-a981-8dca6043c983-nWcNMD.) |  |
+| **Mexico** | Baja California | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
+|  | Baja California Sur | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
+|  | Central | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
+|  | Noreste | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
+|  | Noroeste | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
+|  | Norte | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
+|  | Occidental | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
+|  | Oriental | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
+|  | Peninsular | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
+| **Panama** |  | [Mendeley](https://data.mendeley.com/datasets/tcmmj4t6f4/1) | 2016-2020 | 60 min | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) |  |
+| **United States** | California | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CAL.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | California | [CAISO](https://www.caiso.com/library/historical-ems-hourly-load) | 2019-present | 60 min | [Use for any purpose with attribution](https://www.caiso.com/privacy-terms-of-use) |  |
+|  | California | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CAL) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Carolinas | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CAR.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Carolinas | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CAR) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Central | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CENT.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Central | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CENT) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Florida | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/FLA.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Florida | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-FLA) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Mid-Atlantic | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/MIDA.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Mid-Atlantic | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-MIDA) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Midwest | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/MIDW.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Midwest | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-MIDW) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | New England | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NE.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | New England | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NE) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | New York | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NY.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | New York | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NY) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Northwest | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NW.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Northwest | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NW) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Southeast | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/SE.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Southeast | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-SE) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Southwest | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/SW.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Southwest | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-SW) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Tennessee | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEN.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Tennessee | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-TEN) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Texas | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEX.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Texas | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-TEX) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 
 ### South America
 
-- #### Argentina
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Cammesa](https://cammesaweb.cammesa.com/) | 2024-present | 60-min resolution | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/)
-
-- #### Brazil
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | 60-min resolution | [CC-BY](https://dados.ons.org.br/dataset/curva-carga)
-
-- #### Chile
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CEN](https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/) | 1999-present | 60-min resolution | [Open data](http://energiaabierta.cl/)
-
-- #### Colombia
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[XM](https://www.energiadecolombia.com/consulta) | 2000-present | 60-min resolution | [All rights reserved](https://www.xm.com.co/legales/terminos-legales-del-sitio-web)
-
-- #### Peru
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[COES](https://www.coes.org.pe/Portal/portalinformacion/demanda) | 1997-present | 30-min resolution | [Non-commercial use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones)
-
-- #### Uruguay
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ADME](https://adme.com.uy/controlpanel.php) | 2019-2025 | 60-min resolution | [Open Data](https://adme.com.uy/datosabiertos.html)
+| Country | Subdivision | Source | Period | Resolution | Licence | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Argentina** |  | [Cammesa](https://cammesaweb.cammesa.com/) | 2024-present | 60 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) |  |
+| **Brazil** |  | [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | 60 min | [CC-BY](https://dados.ons.org.br/dataset/curva-carga) |  |
+| **Chile** |  | [CEN](https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/) | 1999-present | 60 min | [Open data](http://energiaabierta.cl/) |  |
+| **Colombia** |  | [XM](https://www.energiadecolombia.com/consulta) | 2000-present | 60 min | [All rights reserved](https://www.xm.com.co/legales/terminos-legales-del-sitio-web) |  |
+| **Peru** |  | [COES](https://www.coes.org.pe/Portal/portalinformacion/demanda) | 1997-present | 30 min | [Non-commercial use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones) |  |
+| **Uruguay** |  | [ADME](https://adme.com.uy/controlpanel.php) | 2019-2025 | 60 min | [Open data](https://adme.com.uy/datosabiertos.html) |  |
 
 ### Oceania
 
-- #### Australia
-
-  - ##### New South Wales
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
-
-  - ##### Queensland
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
-
-  - ##### South Australia
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
-
-  - ##### Tasmania
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2005-2021 | 30-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
-
-  - ##### Victoria
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
-
-  - ##### Western Australia
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://data.wa.aemo.com.au/datafiles/operational-demand/) | 2006-2023 | 30-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
-
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AEMO](https://data.wa.aemo.com.au/public/market-data/wemde/operationalDemandWithdrawal/dailyFiles/) | 2023-present | 5-min resolution | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions)
-
-- #### New Zealand
-
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EMI](https://www.emi.ea.govt.nz/Wholesale/Reports/W_GD_C) | 2005-present | 30-min resolution | [CC-BY 4.0](https://www.emi.ea.govt.nz/LegalInformation)
+| Country | Subdivision | Source | Period | Resolution | Licence | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Australia** | New South Wales | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
+|  | New South Wales | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
+|  | Queensland | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
+|  | Queensland | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
+|  | South Australia | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
+|  | South Australia | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
+|  | Tasmania | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2005-2021 | 30 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
+|  | Tasmania | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
+|  | Victoria | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
+|  | Victoria | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
+|  | Western Australia | [AEMO](https://data.wa.aemo.com.au/datafiles/operational-demand/) | 2006-2023 | 30 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
+|  | Western Australia | [AEMO](https://data.wa.aemo.com.au/public/market-data/wemde/operationalDemandWithdrawal/dailyFiles/) | 2023-present | 5 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
+| **New Zealand** |  | [EMI](https://www.emi.ea.govt.nz/Wholesale/Reports/W_GD_C) | 2005-present | 30 min | [CC-BY 4.0](https://www.emi.ea.govt.nz/LegalInformation) |  |
+<!-- sources:end -->

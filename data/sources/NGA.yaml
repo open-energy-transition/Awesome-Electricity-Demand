@@ -1,0 +1,12 @@
+sources:
+  - provider: Mendeley
+    url: https://data.mendeley.com/datasets/pxvdm26rn7/2
+    start: 2016
+    end: 2016
+    resolution: 60
+    access: public
+    licence:
+      name: CC-BY 4.0
+      url: https://creativecommons.org/licenses/by/4.0/
+      category: open
+    note: Reconstructed demand without power outages

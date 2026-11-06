@@ -1,0 +1,11 @@
+sources:
+  - provider: Cammesa
+    url: https://cammesaweb.cammesa.com/
+    start: 2024
+    end: present
+    resolution: 60
+    access: public
+    licence:
+      name: Use with authorization
+      url: https://cammesaweb.cammesa.com/politicas-de-acceso/
+      category: restricted

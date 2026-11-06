@@ -1,0 +1,11 @@
+sources:
+  - provider: XM
+    url: https://www.energiadecolombia.com/consulta
+    start: 2000
+    end: present
+    resolution: 60
+    access: public
+    licence:
+      name: All rights reserved
+      url: https://www.xm.com.co/legales/terminos-legales-del-sitio-web
+      category: restricted
