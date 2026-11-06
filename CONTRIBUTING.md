@@ -85,6 +85,40 @@ The fields of an entity are:
 
 The checks reject unknown fields and countries, years in the wrong order or in the future, entities listed twice, entity URLs that repeat the URL of their source, and subdivision codes with two names, and list every problem at once.
 
+## Keeping the list in sync with DemandCast
+
+Every data source that [DemandCast](https://github.com/open-energy-transition/demandcast) retrieves should be in this list, with the identifier of its YAML file in DemandCast, and with the same countries, subdivisions, years and terms of use. The list can have more: its sources that DemandCast does not retrieve yet are the backlog of DemandCast. So add a source here first, then its retriever in DemandCast.
+
+`scripts/demandcast_sync.py` compares the two repositories, and never fails because they differ:
+
+- On pull requests that change `data/`, it adds warnings to the changed files, and a comment and the `demandcast-sync` label when the pull request adds or resolves differences. Merge it if the change is genuine.
+- On `main`, after each change of `data/` and every month, it keeps the [`demandcast-sync` issue](https://github.com/open-energy-transition/Awesome-Electricity-Demand/issues?q=label%3Ademandcast-sync) open with the divergences, until one of the repositories changes.
+
+It reports as divergences:
+
+- a source of DemandCast that the list does not have, and an entity (country or subdivision) of DemandCast that its source in the list does not have;
+- a subdivision named differently;
+- years of DemandCast outside those of the list, and data that only one of them says is still updated (a last day of DemandCast in the current year agrees with `present`);
+- data that DemandCast redistributes and the list calls `restricted`, or that DemandCast does not redistribute and the list calls `open`.
+
+It also notes the sources that DemandCast does not retrieve yet, and the different pages of terms.
+
+A divergence that is deliberate, such as a retriever that takes only some years of a source, goes in `data/demandcast_differences.yaml`, with the check, the entity if any, and a reason:
+
+```yaml
+differences:
+  - source: aeso
+    check: years
+    entity: CAN-AB
+    reason: Why the two repositories differ, with a link to the evidence.
+```
+
+It is then reported as accepted, and noted when it is no longer found, so that it can be removed. To compare with a copy of DemandCast:
+
+```bash
+uv run scripts/demandcast_sync.py --demandcast ../demandcast/demandcast/retrievals/electricity_demand_data_sources --output sync
+```
+
 ## Changing the scripts
 
 The scripts in `scripts/` use Python 3.12+ and [uv](https://docs.astral.sh/uv/). Run the checks before you open a pull request: CI runs them all.

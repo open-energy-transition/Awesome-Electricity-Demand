@@ -9,10 +9,10 @@ A curated list of hourly and sub-hourly electricity demand data, by country and 
 ## Layout
 
 - `data/sources/<id>.yaml`: one data source each, with its terms of use and its entities (countries and subdivisions, with their years and resolution), named after the YAML file of the source in DemandCast when there is one. `data/countries.csv`: every country considered, with its continent, population, land area and whether it has been searched. Their format is described once, in [CONTRIBUTING.md](CONTRIBUTING.md#adding-or-changing-a-data-source).
-- `scripts/registry.py`: the pydantic models that load and validate the data files, and flatten them into one `Series` per entity of a source. `scripts/build.py`: generates the blocks of README.md and builds the site. `scripts/figures.py`: the figures of the site.
+- `scripts/registry.py`: the pydantic models that load and validate the data files, and flatten them into one `Series` per entity of a source. `scripts/build.py`: generates the blocks of README.md and builds the site. `scripts/figures.py`: the figures of the site. `scripts/demandcast_sync.py`: compares the sources with those of DemandCast; `data/demandcast_differences.yaml` lists the deliberate differences, each with a reason.
 - `demand-data-map/`: the map, which reads `sources.json` from the built site.
 - `tests/`: the pytest suite, with a small data folder in `conftest.py`.
-- `.github/workflows/`: `ci.yml` runs the hooks, the tests and mypy, and checks README.md; `pages.yml` builds and deploys the site from `main`, and monthly.
+- `.github/workflows/`: `ci.yml` runs the hooks, the tests and mypy, and checks README.md; `pages.yml` builds and deploys the site from `main`, and monthly; `demandcast-sync.yml` compares with DemandCast and keeps the `demandcast-sync` issue, and `demandcast-sync-comment.yml` comments on pull requests that change the divergences.
 
 ## Commands
 
@@ -34,6 +34,7 @@ Run the tests, mypy and the pre-commit hooks before you finish: CI runs them all
 - Never edit the generated blocks of README.md: change the data files and run `uv run scripts/build.py readme`.
 - Keep the data files free of comments. Name a source after its YAML file in DemandCast, and use the subdivision codes of DemandCast for grid regions without an ISO 3166-2 code.
 - Do not change a URL, a licence or the years of a source without a source for the change, and say in the pull request where the information comes from.
+- Every source of DemandCast must be in the list: add a source here before its retriever in DemandCast. Differences from DemandCast never fail CI; resolve them in either repository, or accept them with a reason in `data/demandcast_differences.yaml`.
 - Tests must not use the network, and write files to `tmp_path`.
 - Change dependencies in `pyproject.toml` and run `uv lock`; never edit `uv.lock` by hand.
 
