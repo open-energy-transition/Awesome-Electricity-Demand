@@ -206,6 +206,39 @@ def test_years_of_demandcast_within_the_list(
         assert message in result[0].message
 
 
+@pytest.mark.parametrize(
+    ("start", "end", "message"),
+    [
+        (
+            dt.date(2012, 1, 1),
+            dt.date(2019, 6, 30),
+            "starts in 2010, DemandCast in 2012",
+        ),
+        (
+            dt.date(2010, 1, 1),
+            dt.date(2017, 6, 30),
+            "ends in 2019, DemandCast in 2017",
+        ),
+        (dt.date(2010, 12, 13), dt.date(2019, 1, 15), None),
+    ],
+)
+def test_extra_years_of_the_list_are_noted(
+    data_dir: Path,
+    dc_dir: Path,
+    start: dt.date,
+    end: dt.date,
+    message: str | None,
+) -> None:
+    """Note the years of the list that DemandCast does not have."""
+    write_dc(dc_dir, "sonelgaz", [dc_entity(start_date=start, end_date=end)])
+    result = [f for f in findings(data_dir, dc_dir) if f.check == "list_years"]
+    if message is None:
+        assert result == []
+    else:
+        assert [f.severity for f in result] == ["note"]
+        assert message in result[0].message
+
+
 def test_present_agrees_with_an_end_this_year(
     data_dir: Path, dc_dir: Path
 ) -> None:
@@ -329,6 +362,29 @@ def test_accepted_differences(data_dir: Path, dc_dir: Path) -> None:
     stale = next(f for f in result if f.check == "accepted")
     assert stale.source == "tepco"
     assert "no longer found" in stale.message
+
+
+def test_accepted_note_is_listed_once(data_dir: Path, dc_dir: Path) -> None:
+    """List an accepted note with the accepted differences only."""
+    write_dc(dc_dir, "sonelgaz", [dc_entity(start_date=dt.date(2012, 1, 1))])
+    (data_dir / "demandcast_differences.yaml").write_text(
+        yaml.safe_dump(
+            {
+                "differences": [
+                    {
+                        "source": "sonelgaz",
+                        "check": "list_years",
+                        "entity": "DZA",
+                        "reason": "Earlier years are on another basis.",
+                    }
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+    text = sync.report_markdown(findings(data_dir, dc_dir), CHECKED_AT)
+    assert "0 open divergences, 1 accepted, 1 notes." in text
+    assert text.count("the list starts in 2010") == 1
 
 
 def test_invalid_differences_file(data_dir: Path) -> None:

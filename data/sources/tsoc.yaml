@@ -7,7 +7,7 @@ licence:
   category: restricted
 entities:
   - country_code: CYP
-    start: 2008
+    start: 2018
     end: present
     resolution: 15
     note: Generation, proxy for demand

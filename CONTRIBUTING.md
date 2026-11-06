@@ -89,8 +89,6 @@ The checks reject unknown fields and countries, years in the wrong order or in t
 
 Every data source that [DemandCast](https://github.com/open-energy-transition/demandcast) retrieves should be in this list, with the identifier of its YAML file in DemandCast, and with the same countries, subdivisions, years and terms of use. The list can have more: its sources that DemandCast does not retrieve yet are the backlog of DemandCast. So add a source here first, then its retriever in DemandCast.
 
-Where the two state the same fact, DemandCast is the source of truth, since its checks verify its data more often: align the list with DemandCast, or, if DemandCast is outdated, fix it there.
-
 `scripts/demandcast_sync.py` compares the two repositories, and never fails because they differ:
 
 - On pull requests that change `data/`, it adds warnings to the changed files, and a comment and the `demandcast-sync` label when the pull request adds or resolves differences. Merge it if the change is genuine.
@@ -103,7 +101,7 @@ It reports as divergences:
 - years of DemandCast outside those of the list, and data that only one of them says is still updated (a last day of DemandCast in the current year agrees with `present`; a first day in December counts in the next year, and a last day in January in the year before, since many series start or end with a few days in UTC);
 - data that DemandCast redistributes and the list calls `restricted`, or that DemandCast does not redistribute and the list calls `open`.
 
-It also notes the sources that DemandCast does not retrieve yet, and the different pages of terms.
+It also notes the sources that DemandCast does not retrieve yet, the different pages of terms, and the years of the list that DemandCast does not have: a retriever may use only part of a series, but these years are worth checking.
 
 A divergence that is deliberate, such as a retriever that takes only some years of a source, goes in `data/demandcast_differences.yaml`, with the check, the entity if any, and a reason:
 
