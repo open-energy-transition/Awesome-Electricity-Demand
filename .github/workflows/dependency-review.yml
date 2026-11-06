@@ -1,0 +1,35 @@
+# Fails pull requests that add dependencies with known vulnerabilities or with
+# licenses outside the list of open-source licenses that the project accepts.
+
+name: Dependency review
+
+on:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+  dependency-review:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294 # v5.0.0
+        with:
+          allow-licenses: >-
+            0BSD, AGPL-3.0-only, AGPL-3.0-or-later, Apache-2.0,
+            BSD-2-Clause, BSD-3-Clause, BSL-1.0, CC0-1.0, GPL-1.0-or-later,
+            GPL-2.0-or-later, GPL-3.0-only, GPL-3.0-or-later, HPND, ISC,
+            LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-only,
+            LGPL-2.1-or-later, LGPL-3.0-only, LGPL-3.0-or-later, MIT, MIT-0,
+            MIT-CMU, MPL-2.0, OFL-1.1, PSF-2.0, Python-2.0, Unlicense, Zlib,
+            ZPL-2.1
+          # Dependencies whose license metadata uses non-standard
+          # identifiers.
+          allow-dependencies-licenses: >-
+            pkg:pypi/matplotlib

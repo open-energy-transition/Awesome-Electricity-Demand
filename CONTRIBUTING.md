@@ -95,4 +95,39 @@ Follow the existing style:
 - Tests must not use the network, and write files to `tmp_path`.
 - Change dependencies in `pyproject.toml` and run `uv lock`; never edit `uv.lock` by hand.
 
-Pull request titles follow [Conventional Commits](https://www.conventionalcommits.org/), such as `feat(data): add Malaysia` or `fix(map): show every source of a country`. Say in the description which AI tools were used, if any, and for what.
+## Commits and pull requests
+
+### Sign off your commits (DCO)
+
+Every commit must be signed off to certify that you have the right to submit it under the project's license, as described in the [Developer Certificate of Origin](https://developercertificate.org/). Add `-s` when committing:
+
+```bash
+git commit -s -m "feat(data): add Malaysia"
+```
+
+This appends `Signed-off-by: Your Name <your@email>` to the commit message, using your git name and email. If you forgot, sign off all the commits of your branch and update your pull request:
+
+```bash
+git rebase --signoff origin/main
+git push --force-with-lease
+```
+
+When you commit on GitHub's website, GitHub signs off your commits for you.
+
+### Pull request titles
+
+Pull requests are squash-merged, and their title becomes the commit message on `main`. Titles must follow [Conventional Commits](https://www.conventionalcommits.org/): `type(optional scope): description`, for example:
+
+- `feat(data): add Malaysia`
+- `fix(data): update the ENTSO-E links`
+- `fix(map): show every source of a country`
+
+Common types are `feat`, `fix`, `docs`, `test`, `refactor`, `build`, `ci` and `chore`.
+
+### Review
+
+A maintainer reviews every pull request. Before it is merged, all CI checks must pass and every review conversation must be resolved. Please keep pull requests focused: several small ones are easier to review than a large one.
+
+### AI-assisted contributions
+
+You may use AI tools to help with your contribution, provided that you say so in the pull request description (which tool, and for what), that you have reviewed and checked every change, and that you are responsible for the contribution: your DCO sign-off certifies that you have the right to submit it.

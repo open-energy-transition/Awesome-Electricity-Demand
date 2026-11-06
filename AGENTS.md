@@ -40,4 +40,6 @@ Run the tests, mypy and the pre-commit hooks before you finish: CI runs them all
 ## Pull requests
 
 - Titles follow [Conventional Commits](https://www.conventionalcommits.org/), e.g. `feat(data): add Malaysia`.
+- Every commit needs a DCO `Signed-off-by` line from the human contributor. Do not add it on their behalf unless they explicitly ask you to.
 - Keep pull requests focused, and say in the description which AI tools were used and for what.
+- The ruleset of `main` requires the checks `CI result`, `Conventional Commits title`, `DCO sign-off` and `dependency-review`, the CodeQL results, and a review by the code owners.

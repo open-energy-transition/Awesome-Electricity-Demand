@@ -69,3 +69,16 @@ jobs:
 
       - name: "Build the site"
         run: uv run --locked scripts/build.py site _site
+
+  # The single check that the ruleset of main requires.
+  result:
+    name: "CI result"
+    if: always()
+    needs: [pre-commit, tests]
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check that all CI jobs succeeded
+        env:
+          RESULTS: ${{ toJSON(needs.*.result) }}
+        run: jq --exit-status 'all(. == "success" or . == "skipped")' <<< "$RESULTS"
