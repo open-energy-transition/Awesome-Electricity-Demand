@@ -3,7 +3,7 @@ url: https://www.ngcp.ph/operations#operations
 access: public
 licence:
   name: All rights reserved
-  url: https://ngcp.ph/privacy
+  url: https://ngcp.ph
   category: restricted
 entities:
   - country_code: PHL

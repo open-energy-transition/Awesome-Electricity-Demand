@@ -2,9 +2,9 @@ name: ENTSO-E
 url: https://transparency.entsoe.eu/
 access: public
 licence:
-  name: CC-BY 4.0
-  url: https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf
-  category: open
+  name: Re-use with the agreement of the TSOs
+  url: https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions
+  category: restricted
 entities:
   - country_code: ALB
     start: 2015

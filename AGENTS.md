@@ -34,7 +34,7 @@ Run the tests, mypy and the pre-commit hooks before you finish: CI runs them all
 - Never edit the generated blocks of README.md: change the data files and run `uv run scripts/build.py readme`.
 - Keep the data files free of comments. Name a source after its YAML file in DemandCast, and use the subdivision codes of DemandCast for grid regions without an ISO 3166-2 code.
 - Do not change a URL, a licence or the years of a source without a source for the change, and say in the pull request where the information comes from.
-- Every source of DemandCast must be in the list: add a source here before its retriever in DemandCast. Differences from DemandCast never fail CI; resolve them in either repository, or accept them with a reason in `data/demandcast_differences.yaml`.
+- Every source of DemandCast must be in the list: add a source here before its retriever in DemandCast. DemandCast is the source of truth for the facts that both state: resolve a difference by aligning the list, unless DemandCast is outdated, or accept it with a reason in `data/demandcast_differences.yaml`. Differences never fail CI.
 - Tests must not use the network, and write files to `tmp_path`.
 - Change dependencies in `pyproject.toml` and run `uv lock`; never edit `uv.lock` by hand.
 

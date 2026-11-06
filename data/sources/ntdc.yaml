@@ -3,7 +3,7 @@ url: https://www.kaggle.com/datasets/tentative/ntdc-dataset
 access: public
 licence:
   name: CC0 1.0
-  url: https://creativecommons.org/publicdomain/zero/1.0/
+  url: https://www.kaggle.com/datasets/tentative/ntdc-dataset
   category: open
 entities:
   - country_code: PAK

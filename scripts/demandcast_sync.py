@@ -8,8 +8,10 @@ the list also has are read: the licence (whether the data can be
 redistributed, and the page of the terms) and the entities (country,
 subdivision, first and last day).
 
-Each difference is a finding: a divergence, which one of the two
-repositories should resolve, or a note. Nothing fails: the divergences
+Each difference is a finding: a divergence, or a note. DemandCast is
+the source of truth for the facts that both state, since its checks
+verify its data more often: a divergence is resolved in the list,
+unless DemandCast is outdated. Nothing fails: the divergences
 are reported in an issue, and on pull requests as warnings. A
 divergence that is deliberate is listed, with its reason, in
 ``data/demandcast_differences.yaml``, and reported as accepted.
@@ -756,9 +758,11 @@ def comment_markdown(
         lines += [
             (
                 "This pull request adds divergences from the data sources "
-                "of DemandCast. If they are genuine, merge it: the "
-                "`demandcast-sync` issue will track them until DemandCast "
-                "follows. If they are deliberate, add them with a reason "
+                "of DemandCast, which is the source of truth for the facts "
+                "that both state. Align the list with DemandCast; if "
+                "DemandCast is outdated, merge and fix it there, and the "
+                "`demandcast-sync` issue will track the divergence until "
+                "then. If a divergence is deliberate, add it with a reason "
                 "to `data/demandcast_differences.yaml`."
             ),
             "",
