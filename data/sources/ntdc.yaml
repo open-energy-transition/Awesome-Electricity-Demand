@@ -1,0 +1,12 @@
+name: NTDC
+url: https://www.kaggle.com/datasets/tentative/ntdc-dataset
+access: public
+licence:
+  name: CC0 1.0
+  url: https://creativecommons.org/publicdomain/zero/1.0/
+  category: open
+entities:
+  - country_code: PAK
+    start: 2015
+    end: 2020
+    resolution: 60

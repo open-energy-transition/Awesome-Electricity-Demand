@@ -1,0 +1,74 @@
+name: CCEI
+url: https://energy-information.canada.ca/en/resources/high-frequency-electricity-data
+access: public
+licence:
+  name: Non-commercial reproduction
+  url: https://www.canada.ca/en/transparency/terms.html
+  category: non-commercial
+entities:
+  - country_code: CAN
+    subdivision_code: AB
+    subdivision_name: Alberta
+    start: 2023
+    end: present
+    resolution: 5
+  - country_code: CAN
+    subdivision_code: BC
+    subdivision_name: British Columbia
+    start: 2001
+    end: 2024
+    resolution: 60
+  - country_code: CAN
+    subdivision_code: NB
+    subdivision_name: New Brunswick
+    start: 2016
+    end: 2021
+    resolution: 60
+  - country_code: CAN
+    subdivision_code: NB
+    subdivision_name: New Brunswick
+    start: 2021
+    end: present
+    resolution: 5
+  - country_code: CAN
+    subdivision_code: NL
+    subdivision_name: Newfoundland
+    start: 2022
+    end: present
+    resolution: 5
+  - country_code: CAN
+    subdivision_code: NS
+    subdivision_name: Nova Scotia
+    start: 2022
+    end: 2023
+    resolution: 5
+  - country_code: CAN
+    subdivision_code: NS
+    subdivision_name: Nova Scotia
+    start: 2024
+    end: present
+    resolution: 10
+  - country_code: CAN
+    subdivision_code: "ON"
+    subdivision_name: Ontario
+    start: 2002
+    end: present
+    resolution: 60
+  - country_code: CAN
+    subdivision_code: PE
+    subdivision_name: Prince Edward Island
+    start: 2012
+    end: present
+    resolution: 15
+  - country_code: CAN
+    subdivision_code: QC
+    subdivision_name: Quebec
+    start: 2021
+    end: present
+    resolution: 15
+  - country_code: CAN
+    subdivision_code: YT
+    subdivision_name: Yukon
+    start: 2024
+    end: present
+    resolution: 5

@@ -1,6 +1,6 @@
 """Draw the figures of the coverage of the list.
 
-The figures are computed from the countries and data sources loaded by
+The figures are computed from the countries and time series loaded by
 `registry`: the share of the countries, population and land area of
 each continent that have data, and the years of data of each continent
 by time resolution.
@@ -65,8 +65,8 @@ def coverage_by_continent(
 
     Notes
     -----
-    A country counts as covered if it has any data source, even one for
-    only some of its subdivisions.
+    A country counts as covered if it has any time series, even one
+    for only some of its subdivisions.
     """
     shares: dict[str, list[float]] = {
         "countries": [],
@@ -75,7 +75,7 @@ def coverage_by_continent(
     }
     for continent in CONTINENTS:
         members = [c for c in countries if c.continent == continent]
-        covered = [c for c in members if c.sources]
+        covered = [c for c in members if c.series]
         shares["countries"].append(percent(len(covered), len(members)))
         shares["population"].append(
             percent(
@@ -112,14 +112,16 @@ def years_by_resolution(countries: list[Country]) -> dict[int, list[int]]:
     sources or subdivisions of the country have data for it at that
     resolution.
     """
-    resolutions = sorted({s.resolution for c in countries for s in c.sources})
+    resolutions = sorted(
+        {s.entity.resolution for c in countries for s in c.series}
+    )
     years = {r: [0] * len(CONTINENTS) for r in resolutions}
     for country in countries:
         i = CONTINENTS.index(country.continent)
         covered: dict[int, set[int]] = {}
-        for source in country.sources:
-            covered.setdefault(source.resolution, set()).update(
-                range(source.start, source.end_year + 1)
+        for series in country.series:
+            covered.setdefault(series.entity.resolution, set()).update(
+                range(series.entity.start, series.end_year + 1)
             )
         for resolution, years_covered in covered.items():
             years[resolution][i] += len(years_covered)

@@ -39,7 +39,7 @@ function link(text, url) {
 function popupContent(country) {
   const content = element("div");
   content.append(element("h4", country.name));
-  if (country.sources.length === 0) {
+  if (country.series.length === 0) {
     content.append(
       element(
         "p",
@@ -51,12 +51,12 @@ function popupContent(country) {
     return content;
   }
   const list = element("ul");
-  for (const source of country.sources) {
+  for (const source of country.series) {
     const item = element("li");
     if (source.subdivision_name) {
       item.append(element("strong", `${source.subdivision_name}: `));
     }
-    item.append(link(source.provider, source.url));
+    item.append(link(source.source_name, source.url));
     const end = source.end === source.start ? "" : `-${source.end}`;
     item.append(
       ` · ${source.start}${end} · ${source.resolution_minutes} min · `,
@@ -110,7 +110,7 @@ map.on("load", async () => {
     const country = list.countries[feature.properties.code] ?? {
       name: feature.properties.name,
       searched: false,
-      sources: [],
+      series: [],
     };
     new maplibregl.Popup({ maxWidth: "420px" })
       .setLngLat(event.lngLat)

@@ -1,0 +1,12 @@
+name: XM
+url: https://www.energiadecolombia.com/consulta
+access: public
+licence:
+  name: All rights reserved
+  url: https://www.xm.com.co/legales/terminos-legales-del-sitio-web
+  category: restricted
+entities:
+  - country_code: COL
+    start: 2000
+    end: present
+    resolution: 60

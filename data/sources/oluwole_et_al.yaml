@@ -1,0 +1,13 @@
+name: Mendeley
+url: https://data.mendeley.com/datasets/pxvdm26rn7/2
+access: public
+licence:
+  name: CC-BY 4.0
+  url: https://creativecommons.org/licenses/by/4.0/
+  category: open
+entities:
+  - country_code: NGA
+    start: 2016
+    end: 2016
+    resolution: 60
+    note: Reconstructed demand without power outages

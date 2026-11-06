@@ -1,0 +1,12 @@
+name: PGCB
+url: https://erp.powergrid.gov.bd/w/report/eyJpdiI6IldsU2ZQTGkvbkRnQU9FMjZ5UHhmeGc9PSIsInZhbHVlIjoiQzhONVl5ZGxRY3E3T3ZVNCtLZGt1Zz09IiwibWFjIjoiN2JiNTI5MzNhOWIxZDVjY2NkMmFlZWU4ZDU1N2I4OWZlYjNlZWM1ZGU4NzRiNWU4ZjQ3ZDc1ODRlMTk3MDc0YyIsInRhZyI6IiJ9/show_report
+access: public
+licence:
+  name: All rights reserved
+  url: https://pgcb.gov.bd/
+  category: restricted
+entities:
+  - country_code: BGD
+    start: 2014
+    end: present
+    resolution: 30

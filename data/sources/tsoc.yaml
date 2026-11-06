@@ -1,0 +1,13 @@
+name: TSOC
+url: https://tsoc.org.cy/electrical-system/archive-total-daily-system-generation-on-the-transmission-system/
+access: public
+licence:
+  name: Use with authorization
+  url: https://tsoc.org.cy/
+  category: restricted
+entities:
+  - country_code: CYP
+    start: 2008
+    end: present
+    resolution: 15
+    note: Generation, proxy for demand

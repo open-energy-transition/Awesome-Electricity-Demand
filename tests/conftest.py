@@ -19,8 +19,8 @@ JPN,Japan,Asia,120,300,yes
 """
 
 
-def source(**changes: Any) -> dict[str, Any]:
-    """Return a valid data source, with some fields changed.
+def entity(**changes: Any) -> dict[str, Any]:
+    """Return a valid entity, with some fields changed.
 
     Parameters
     ----------
@@ -30,45 +30,66 @@ def source(**changes: Any) -> dict[str, Any]:
     Returns
     -------
     dict
-        The data source, as in a data file.
+        The entity, as in a data file.
     """
     values: dict[str, Any] = {
-        "provider": "Sonelgaz",
-        "url": "https://example.org/data",
+        "country_code": "DZA",
         "start": 2010,
         "end": 2019,
         "resolution": 60,
+    }
+    return values | changes
+
+
+def source(entities: list[Any], **changes: Any) -> dict[str, Any]:
+    """Return a valid data source, with some fields changed.
+
+    Parameters
+    ----------
+    entities : list
+        Entities of the source.
+    **changes
+        Fields to change or add.
+
+    Returns
+    -------
+    dict
+        The data source, as in a data file.
+    """
+    values: dict[str, Any] = {
+        "name": "Sonelgaz",
+        "url": "https://example.org/data",
         "licence": {
             "name": "CC-BY 4.0",
             "url": "https://example.org/licence",
             "category": "open",
         },
+        "entities": entities,
     }
     return values | changes
 
 
-def write_sources(data_dir: Path, code: str, sources: list[Any]) -> None:
-    """Write the data file of a country.
+def write_source(data_dir: Path, source_id: str, content: Any) -> None:
+    """Write the data file of a source.
 
     Parameters
     ----------
     data_dir : Path
         Data folder.
-    code : str
-        Code of the country, which names the file.
-    sources : list
-        Data sources of the country.
+    source_id : str
+        Identifier of the source, which names the file.
+    content : Any
+        Content of the file.
     """
-    path = data_dir / "sources" / f"{code}.yaml"
+    path = data_dir / "sources" / f"{source_id}.yaml"
     path.write_text(
-        yaml.safe_dump({"sources": sources}, allow_unicode=True),
-        encoding="utf-8",
+        yaml.safe_dump(content, allow_unicode=True), encoding="utf-8"
     )
 
 
 @pytest.fixture
 def data_dir(tmp_path: Path) -> Path:
-    """Write a data folder with three countries, two of them with data.
+    """Write a data folder with four countries, two of them with data.
 
     Parameters
     ----------
@@ -79,35 +100,53 @@ def data_dir(tmp_path: Path) -> Path:
     -------
     Path
         The data folder.
+
+    Notes
+    -----
+    Japan has a national series from a source that covers two
+    countries, and a series of a subdivision that needs a request.
     """
     (tmp_path / "sources").mkdir()
     (tmp_path / "countries.csv").write_text(COUNTRIES, encoding="utf-8")
-    write_sources(tmp_path, "DZA", [source()])
-    write_sources(
+    write_source(tmp_path, "sonelgaz", source([entity()]))
+    write_source(
         tmp_path,
-        "JPN",
-        [
-            source(
-                provider="TEPCO",
-                subdivision_code="Kantō",
-                subdivision_name="Kantō",
-                start=2016,
-                end="present",
-                resolution=5,
-                access="on-request",
-            ),
-            source(
-                provider="ENTSO-E",
-                url="https://example.org/a|b(c)",
-                start=2015,
-                end=2017,
-                licence={
-                    "name": "Personal use",
-                    "url": "https://example.org/terms",
-                    "category": "restricted",
-                },
-                note="Generation, proxy for demand",
-            ),
-        ],
+        "entsoe",
+        source(
+            [
+                entity(
+                    country_code="JPN",
+                    start=2015,
+                    end=2017,
+                    url="https://example.org/a|b(c)",
+                    note="Generation, proxy for demand",
+                ),
+                entity(country_code="DZA", start=2012, end=2013),
+            ],
+            name="ENTSO-E",
+            licence={
+                "name": "Personal use",
+                "url": "https://example.org/terms",
+                "category": "restricted",
+            },
+        ),
+    )
+    write_source(
+        tmp_path,
+        "tepco",
+        source(
+            [
+                entity(
+                    country_code="JPN",
+                    subdivision_code="Kantō",
+                    subdivision_name="Kantō",
+                    start=2016,
+                    end="present",
+                    resolution=5,
+                )
+            ],
+            name="TEPCO",
+            access="on-request",
+        ),
     )
     return tmp_path

@@ -1,0 +1,14 @@
+name: CAISO
+url: https://www.caiso.com/library/historical-ems-hourly-load
+access: public
+licence:
+  name: Use for any purpose with attribution
+  url: https://www.caiso.com/privacy-terms-of-use
+  category: open
+entities:
+  - country_code: USA
+    subdivision_code: CAL
+    subdivision_name: California
+    start: 2019
+    end: present
+    resolution: 60

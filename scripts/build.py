@@ -26,7 +26,7 @@ from collections.abc import Callable
 from pathlib import Path
 
 import registry
-from registry import CONTINENTS, ROOT, Country, RegistryError, Source
+from registry import CONTINENTS, ROOT, Country, RegistryError, Series
 
 README = ROOT / "README.md"
 MAP_DIR = ROOT / "demand-data-map"
@@ -36,7 +36,8 @@ CSV_FIELDS = (
     "continent",
     "subdivision_code",
     "subdivision_name",
-    "provider",
+    "source_id",
+    "source_name",
     "url",
     "start",
     "end",
@@ -108,51 +109,52 @@ def link(label: str, url: str) -> str:
     return f"[{cell(label)}]({url})"
 
 
-def sort_key(source: Source) -> tuple[bool, str, int, str]:
-    """Order the sources of a country: national first, then by region.
+def sort_key(series: Series) -> tuple[bool, str, int, str]:
+    """Order the series of a country: national first, then by region.
 
     Parameters
     ----------
-    source : Source
-        A data source.
+    series : Series
+        A time series.
 
     Returns
     -------
     tuple
-        Whether the source is for a subdivision, the name of the
-        subdivision, the first year and the provider.
+        Whether the series is for a subdivision, the name of the
+        subdivision, the first year and the name of the source.
     """
+    entity = series.entity
     return (
-        source.subdivision_name is not None,
-        source.subdivision_name or "",
-        source.start,
-        source.provider,
+        entity.subdivision_name is not None,
+        entity.subdivision_name or "",
+        entity.start,
+        series.name,
     )
 
 
-def notes(source: Source) -> str:
-    """Return the text of the Notes column for a source.
+def notes(series: Series) -> str:
+    """Return the text of the Notes column for a series.
 
     Parameters
     ----------
-    source : Source
-        A data source.
+    series : Series
+        A time series.
 
     Returns
     -------
     str
-        Whether access is on request, and the note of the source.
+        Whether access is on request, and the note of the series.
     """
     parts = []
-    if source.access == "on-request":
+    if series.access == "on-request":
         parts.append("Access on request")
-    if source.note:
-        parts.append(source.note)
+    if series.entity.note:
+        parts.append(series.entity.note)
     return cell(". ".join(parts))
 
 
 def readme_summary(countries: list[Country]) -> str:
-    """Write the number of sources and of countries of each continent.
+    """Write the number of series, sources and countries.
 
     Parameters
     ----------
@@ -164,11 +166,13 @@ def readme_summary(countries: list[Country]) -> str:
     str
         Markdown with the totals and links to the continents.
     """
-    covered = [c for c in countries if c.sources]
-    total = sum(len(c.sources) for c in covered)
+    covered = [c for c in countries if c.series]
+    series = [s for c in covered for s in c.series]
+    sources = {s.source_id for s in series}
     lines = [
         (
-            f"The list has **{total} data sources** for "
+            f"The list has **{len(series)} time series** from "
+            f"**{len(sources)} data sources** for "
             f"**{len(covered)} countries** and their subdivisions in:"
         ),
         "",
@@ -206,15 +210,15 @@ def readme_sources(countries: list[Country]) -> str:
         for country in countries:
             if country.continent != continent:
                 continue
-            for i, source in enumerate(sorted(country.sources, key=sort_key)):
+            for i, series in enumerate(sorted(country.series, key=sort_key)):
                 cells = [
                     f"**{cell(country.name)}**" if i == 0 else "",
-                    cell(source.subdivision_name or ""),
-                    link(source.provider, source.url),
-                    source.period,
-                    f"{source.resolution} min",
-                    link(source.licence.name, source.licence.url),
-                    notes(source),
+                    cell(series.entity.subdivision_name or ""),
+                    link(series.name, series.url),
+                    series.period,
+                    f"{series.entity.resolution} min",
+                    link(series.licence.name, series.licence.url),
+                    notes(series),
                 ]
                 rows.append("| " + " | ".join(cells) + " |")
         blocks.append("\n".join(rows))
@@ -239,7 +243,7 @@ def readme_searched(countries: list[Country]) -> str:
         names = [
             c.name
             for c in countries
-            if c.continent == continent and c.searched and not c.sources
+            if c.continent == continent and c.searched and not c.series
         ]
         if names:
             lines.append(f"- **{continent}:** {', '.join(names)}")
@@ -287,7 +291,7 @@ def render_readme(text: str, countries: list[Country]) -> str:
 
 
 def records(countries: list[Country]) -> list[dict[str, str | int | None]]:
-    """Return one flat record per data source.
+    """Return one flat record per time series.
 
     Parameters
     ----------
@@ -297,28 +301,29 @@ def records(countries: list[Country]) -> list[dict[str, str | int | None]]:
     Returns
     -------
     list of dict
-        The values of `CSV_FIELDS` for each data source.
+        The values of `CSV_FIELDS` for each time series.
     """
     return [
         {
             "country_code": country.code,
             "country_name": country.name,
             "continent": country.continent,
-            "subdivision_code": source.subdivision_code,
-            "subdivision_name": source.subdivision_name,
-            "provider": source.provider,
-            "url": source.url,
-            "start": source.start,
-            "end": source.end,
-            "resolution_minutes": source.resolution,
-            "access": source.access,
-            "licence_name": source.licence.name,
-            "licence_url": source.licence.url,
-            "licence_category": source.licence.category,
-            "note": source.note,
+            "subdivision_code": series.entity.subdivision_code,
+            "subdivision_name": series.entity.subdivision_name,
+            "source_id": series.source_id,
+            "source_name": series.name,
+            "url": series.url,
+            "start": series.entity.start,
+            "end": series.entity.end,
+            "resolution_minutes": series.entity.resolution,
+            "access": series.access,
+            "licence_name": series.licence.name,
+            "licence_url": series.licence.url,
+            "licence_category": series.licence.category,
+            "note": series.entity.note,
         }
         for country in countries
-        for source in sorted(country.sources, key=sort_key)
+        for series in sorted(country.series, key=sort_key)
     ]
 
 
@@ -361,7 +366,7 @@ def build_site(countries: list[Country], site_dir: Path) -> None:
                 "continent": country.continent,
                 "searched": country.searched,
                 "years": country.years,
-                "sources": [
+                "series": [
                     {k: v for k, v in r.items() if k not in country_fields}
                     for r in rows
                     if r["country_code"] == country.code

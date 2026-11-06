@@ -1,0 +1,13 @@
+name: PUCSL
+url: https://gendata.pucsl.gov.lk/generation-profile
+access: public
+licence:
+  name: All rights reserved
+  url: https://www.pucsl.gov.lk/
+  category: restricted
+entities:
+  - country_code: LKA
+    start: 2023
+    end: present
+    resolution: 15
+    note: Generation, proxy for demand

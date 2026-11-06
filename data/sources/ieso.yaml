@@ -1,0 +1,14 @@
+name: IESO
+url: https://www.ieso.ca/Power-Data/Data-Directory
+access: public
+licence:
+  name: Limited license
+  url: https://www.ieso.ca/Terms-of-Use
+  category: restricted
+entities:
+  - country_code: CAN
+    subdivision_code: "ON"
+    subdivision_name: Ontario
+    start: 1994
+    end: present
+    resolution: 60

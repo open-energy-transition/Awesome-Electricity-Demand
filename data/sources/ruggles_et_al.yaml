@@ -1,0 +1,99 @@
+name: EIA (Ruggles et al.)
+url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data
+access: public
+licence:
+  name: Use for any purpose with attribution
+  url: https://www.eia.gov/about/copyrights_reuse.php
+  category: open
+entities:
+  - country_code: USA
+    subdivision_code: CAL
+    subdivision_name: California
+    start: 2015
+    end: 2020
+    resolution: 60
+    url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CAL.csv
+  - country_code: USA
+    subdivision_code: CAR
+    subdivision_name: Carolinas
+    start: 2015
+    end: 2020
+    resolution: 60
+    url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CAR.csv
+  - country_code: USA
+    subdivision_code: CENT
+    subdivision_name: Central
+    start: 2015
+    end: 2020
+    resolution: 60
+    url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CENT.csv
+  - country_code: USA
+    subdivision_code: FLA
+    subdivision_name: Florida
+    start: 2015
+    end: 2020
+    resolution: 60
+    url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/FLA.csv
+  - country_code: USA
+    subdivision_code: MIDA
+    subdivision_name: Mid-Atlantic
+    start: 2015
+    end: 2020
+    resolution: 60
+    url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/MIDA.csv
+  - country_code: USA
+    subdivision_code: MIDW
+    subdivision_name: Midwest
+    start: 2015
+    end: 2020
+    resolution: 60
+    url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/MIDW.csv
+  - country_code: USA
+    subdivision_code: NE
+    subdivision_name: New England
+    start: 2015
+    end: 2020
+    resolution: 60
+    url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NE.csv
+  - country_code: USA
+    subdivision_code: NY
+    subdivision_name: New York
+    start: 2015
+    end: 2020
+    resolution: 60
+    url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NY.csv
+  - country_code: USA
+    subdivision_code: NW
+    subdivision_name: Northwest
+    start: 2015
+    end: 2020
+    resolution: 60
+    url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NW.csv
+  - country_code: USA
+    subdivision_code: SE
+    subdivision_name: Southeast
+    start: 2015
+    end: 2020
+    resolution: 60
+    url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/SE.csv
+  - country_code: USA
+    subdivision_code: SW
+    subdivision_name: Southwest
+    start: 2015
+    end: 2020
+    resolution: 60
+    url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/SW.csv
+  - country_code: USA
+    subdivision_code: TEN
+    subdivision_name: Tennessee
+    start: 2015
+    end: 2020
+    resolution: 60
+    url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEN.csv
+  - country_code: USA
+    subdivision_code: TEX
+    subdivision_name: Texas
+    start: 2015
+    end: 2020
+    resolution: 60
+    url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEX.csv

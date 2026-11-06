@@ -1,0 +1,12 @@
+name: COES
+url: https://www.coes.org.pe/Portal/portalinformacion/demanda
+access: public
+licence:
+  name: Non-commercial use
+  url: https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones
+  category: non-commercial
+entities:
+  - country_code: PER
+    start: 1997
+    end: present
+    resolution: 30

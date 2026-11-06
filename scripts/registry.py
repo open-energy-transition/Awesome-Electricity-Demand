@@ -1,17 +1,21 @@
 """Load and validate the electricity demand data sources of the list.
 
-The list is kept in the data folder. ``sources/<code>.yaml`` holds the
-data sources of one country, and is named after its ISO 3166-1
-alpha-3 code. ``countries.csv`` holds every country that the list
-considers, with its continent, its population in millions and land
-area in km² (estimates for 2025), and whether it has been searched for
-data. The README, the map and the figures are generated from them.
+The list is kept in the data folder. ``sources/<id>.yaml`` holds one
+data source, such as the ENTSO-E Transparency Platform, with its terms
+of use and the countries and subdivisions (the entities) that it has
+data for. The identifier of a source is that of its YAML file in
+DemandCast, when DemandCast retrieves it. ``countries.csv`` holds every
+country that the list considers, with its continent, its population in
+millions and land area in km² (estimates for 2025), and whether it has
+been searched for data. The README, the map and the figures are
+generated from them.
 """
 
 from __future__ import annotations
 
 import csv
 import datetime as dt
+import re
 from collections import Counter
 from pathlib import Path
 from typing import Annotated, Literal, get_args
@@ -29,6 +33,7 @@ from pydantic import (
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
+SOURCE_ID = re.compile(r"^[a-z0-9]+(_[a-z0-9]+)*$")
 
 Continent = Literal[
     "Africa",
@@ -42,6 +47,8 @@ CONTINENTS: tuple[Continent, ...] = get_args(Continent)
 
 Url = Annotated[str, StringConstraints(pattern=r"^https?://\S+$")]
 Text = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]
+CountryCode = Annotated[str, StringConstraints(pattern=r"^[A-Z]{3}$")]
+Access = Literal["public", "on-request"]
 
 
 def current_year() -> int:
@@ -82,15 +89,13 @@ class Licence(StrictModel):
     category: Literal["open", "non-commercial", "restricted"]
 
 
-class Source(StrictModel):
-    """Time series of electricity demand from one provider.
+class Entity(StrictModel):
+    """Time series of a source for a country or one of its subdivisions.
 
     Attributes
     ----------
-    provider : str
-        Name of the organisation or platform that publishes the data.
-    url : str
-        Page where the data can be downloaded or requested.
+    country_code : str
+        ISO 3166-1 alpha-3 code of the country, or XKX for Kosovo.
     subdivision_code, subdivision_name : str or None
         Code and name of the subdivision or grid region that the data
         covers, or None for the whole country.
@@ -100,11 +105,9 @@ class Source(StrictModel):
         Last year with data, or "present" if the data is still updated.
     resolution : int
         Time step of the data in minutes, which divides 60.
-    access : {"public", "on-request"}
-        ``on-request``: the data is given only after a request or a
-        registration.
-    licence : Licence
-        Terms of use of the data.
+    url : str or None
+        Page of the data of this entity, if it is not the page of the
+        source.
     note : str or None
         Remark shown in the list, such as what the data measures when
         it is not demand.
@@ -116,15 +119,13 @@ class Source(StrictModel):
     uses, so that the two lists can be compared.
     """
 
-    provider: Text
-    url: Url
+    country_code: CountryCode
     subdivision_code: Text | None = None
     subdivision_name: Text | None = None
     start: int = Field(ge=1900)
     end: int | Literal["present"]
     resolution: int
-    access: Literal["public", "on-request"] = "public"
-    licence: Licence
+    url: Url | None = None
     note: Text | None = None
 
     @field_validator("resolution")
@@ -152,13 +153,13 @@ class Source(StrictModel):
         return value
 
     @model_validator(mode="after")
-    def _check_fields(self) -> Source:
-        """Check the subdivision and the years of the source.
+    def _check_fields(self) -> Entity:
+        """Check the subdivision and the years of the entity.
 
         Returns
         -------
-        Source
-            The source, unchanged.
+        Entity
+            The entity, unchanged.
 
         Raises
         ------
@@ -185,66 +186,108 @@ class Source(StrictModel):
         return self
 
     @property
-    def end_year(self) -> int:
-        """Last year with data, with "present" as the current year."""
-        return current_year() if self.end == "present" else self.end
+    def key(self) -> tuple[str, str | None, int, int | str, int]:
+        """Country, subdivision, years and resolution of the entity."""
+        return (
+            self.country_code,
+            self.subdivision_code,
+            self.start,
+            self.end,
+            self.resolution,
+        )
 
-    @property
-    def period(self) -> str:
-        """Years with data, such as "2015-present" or "2018"."""
-        if self.end == self.start:
-            return str(self.start)
-        return f"{self.start}-{self.end}"
 
-
-class CountrySources(StrictModel):
-    """Content of the data file of one country.
+class Source(StrictModel):
+    """Content of the data file of one data source.
 
     Attributes
     ----------
-    sources : list of Source
-        Data sources of the country and of its subdivisions.
+    name : str
+        Name of the source, as shown in the list.
+    url : str
+        Page where the data can be downloaded or requested.
+    access : {"public", "on-request"}
+        ``on-request``: the data is given only after a request or a
+        registration.
+    licence : Licence
+        Terms of use of the data.
+    entities : list of Entity
+        Countries and subdivisions with data, with their years.
     """
 
-    sources: list[Source] = Field(min_length=1)
+    name: Text
+    url: Url
+    access: Access = "public"
+    licence: Licence
+    entities: list[Entity] = Field(min_length=1)
 
     @model_validator(mode="after")
-    def _check_sources(self) -> CountrySources:
-        """Check that subdivisions have one name and sources are unique.
+    def _check_entities(self) -> Source:
+        """Check that the entities are unique and need their own URL.
 
         Returns
         -------
-        CountrySources
-            The content, unchanged.
+        Source
+            The source, unchanged.
 
         Raises
         ------
         ValueError
-            If a subdivision code has two names, or if a source is
-            listed twice.
+            If an entity is listed twice, or has the URL of the source.
         """
-        names: dict[str, str | None] = {}
-        for source in self.sources:
-            if source.subdivision_code is None:
-                continue
-            name = names.setdefault(
-                source.subdivision_code, source.subdivision_name
-            )
-            if name != source.subdivision_name:
-                raise ValueError(
-                    f"subdivision {source.subdivision_code!r} has two "
-                    f"names: {name!r} and {source.subdivision_name!r}"
-                )
-        for source, count in Counter(self.sources).items():
+        for key, count in Counter(e.key for e in self.entities).items():
             if count > 1:
+                raise ValueError(f"duplicate entity: {key}")
+        for entity in self.entities:
+            if entity.url == self.url:
                 raise ValueError(
-                    f"duplicate source: {source.provider} {source.period}"
+                    f"the url of the entity {entity.key} is that of the "
+                    "source: leave it out"
                 )
         return self
 
 
+class Series(StrictModel):
+    """Time series of one entity in one source, as listed in the README.
+
+    Attributes
+    ----------
+    source_id : str
+        Identifier of the source, the name of its data file.
+    name : str
+        Name of the source.
+    url : str
+        Page of the data of the entity.
+    access : {"public", "on-request"}
+        Whether the data needs a request or a registration.
+    licence : Licence
+        Terms of use of the data.
+    entity : Entity
+        Country or subdivision, years and resolution of the data.
+    """
+
+    source_id: str
+    name: str
+    url: str
+    access: Access
+    licence: Licence
+    entity: Entity
+
+    @property
+    def end_year(self) -> int:
+        """Last year with data, with "present" as the current year."""
+        end = self.entity.end
+        return current_year() if end == "present" else end
+
+    @property
+    def period(self) -> str:
+        """Years with data, such as "2015-present" or "2018"."""
+        start, end = self.entity.start, self.entity.end
+        return str(start) if end == start else f"{start}-{end}"
+
+
 class Country(StrictModel):
-    """Country considered by the list, with its data sources.
+    """Country considered by the list, with its time series.
 
     Attributes
     ----------
@@ -260,24 +303,24 @@ class Country(StrictModel):
         Land area in km².
     searched : bool
         Whether the country has been searched for data.
-    sources : tuple of Source
-        Data sources of the country and of its subdivisions.
+    series : tuple of Series
+        Time series of the country and of its subdivisions.
     """
 
-    code: Annotated[str, StringConstraints(pattern=r"^[A-Z]{3}$")]
+    code: CountryCode
     name: Text
     continent: Continent
     population_millions: float = Field(gt=0)
     land_area_km2: int = Field(gt=0)
     searched: bool
-    sources: tuple[Source, ...] = ()
+    series: tuple[Series, ...] = ()
 
     @property
     def years(self) -> int:
-        """Number of calendar years covered by at least one source."""
+        """Number of calendar years covered by at least one series."""
         covered: set[int] = set()
-        for source in self.sources:
-            covered.update(range(source.start, source.end_year + 1))
+        for series in self.series:
+            covered.update(range(series.entity.start, series.end_year + 1))
         return len(covered)
 
 
@@ -337,45 +380,95 @@ def _read_countries(
     return rows, problems
 
 
-def _read_sources(
-    directory: Path, codes: set[str]
-) -> tuple[dict[str, tuple[Source, ...]], list[str]]:
-    """Read and validate the data files of the countries.
+def _read_sources(directory: Path) -> tuple[dict[str, Source], list[str]]:
+    """Read and validate the data files of the sources.
 
     Parameters
     ----------
     directory : Path
-        Folder of the data files, one per country.
-    codes : set of str
-        Codes of the countries in the countries file.
+        Folder of the data files, one per source.
 
     Returns
     -------
     sources : dict
-        The data sources of each country, by country code.
+        The sources, by identifier.
     problems : list of str
         The problems of the data files.
     """
-    sources: dict[str, tuple[Source, ...]] = {}
+    sources: dict[str, Source] = {}
     problems = []
     for path in sorted(directory.iterdir()):
         name = f"{directory.parent.name}/{directory.name}/{path.name}"
         if path.suffix != ".yaml":
             problems.append(f"{name}: data files must end in .yaml")
-        elif path.stem not in codes:
+        elif not SOURCE_ID.match(path.stem):
             problems.append(
-                f"{name}: {path.stem} is not a country code of countries.csv"
+                f"{name}: the name must be lower-case letters and digits, "
+                "separated by underscores"
             )
         else:
             try:
                 content = yaml.safe_load(path.read_text(encoding="utf-8"))
-                parsed = CountrySources.model_validate(content)
-                sources[path.stem] = tuple(parsed.sources)
+                sources[path.stem] = Source.model_validate(content)
             except yaml.YAMLError as e:
                 problems.append(f"{name}: invalid YAML: {e}")
             except ValidationError as e:
                 problems.extend(_describe(name, e))
     return sources, problems
+
+
+def _series(
+    sources: dict[str, Source], codes: set[str]
+) -> tuple[dict[str, list[Series]], list[str]]:
+    """Group the entities of the sources by country.
+
+    Parameters
+    ----------
+    sources : dict
+        The sources, by identifier.
+    codes : set of str
+        Codes of the countries in the countries file.
+
+    Returns
+    -------
+    series : dict
+        The time series of each country, by country code.
+    problems : list of str
+        Entities of unknown countries, and subdivisions with two names.
+    """
+    series: dict[str, list[Series]] = {}
+    names: dict[tuple[str, str], str | None] = {}
+    problems = []
+    for source_id, source in sources.items():
+        prefix = f"data/sources/{source_id}.yaml"
+        for entity in source.entities:
+            code = entity.country_code
+            if code not in codes:
+                problems.append(
+                    f"{prefix}: {code} is not a country code of countries.csv"
+                )
+                continue
+            if entity.subdivision_code is not None:
+                key = (code, entity.subdivision_code)
+                name = names.setdefault(key, entity.subdivision_name)
+                if name != entity.subdivision_name:
+                    problems.append(
+                        f"{prefix}: subdivision {code} "
+                        f"{entity.subdivision_code} is named "
+                        f"{entity.subdivision_name!r} here and {name!r} "
+                        "elsewhere"
+                    )
+            series.setdefault(code, []).append(
+                Series(
+                    source_id=source_id,
+                    name=source.name,
+                    url=entity.url or source.url,
+                    access=source.access,
+                    licence=source.licence,
+                    entity=entity,
+                )
+            )
+    return series, problems
 
 
 def load(data_dir: Path = DATA_DIR) -> list[Country]:
@@ -399,8 +492,9 @@ def load(data_dir: Path = DATA_DIR) -> list[Country]:
         so that they can all be fixed at once.
     """
     rows, problems = _read_countries(data_dir / "countries.csv")
-    sources, source_problems = _read_sources(data_dir / "sources", set(rows))
-    problems += source_problems
+    sources, source_problems = _read_sources(data_dir / "sources")
+    series, series_problems = _series(sources, set(rows))
+    problems += source_problems + series_problems
 
     countries = []
     for code, (location, row) in rows.items():
@@ -409,16 +503,16 @@ def load(data_dir: Path = DATA_DIR) -> list[Country]:
             continue
         values = row | {
             "searched": row["searched"] == "yes",
-            "sources": sources.get(code, ()),
+            "series": tuple(series.get(code, ())),
         }
         try:
             country = Country.model_validate(values)
         except ValidationError as e:
             problems.extend(_describe(location, e))
             continue
-        if country.sources and not country.searched:
+        if country.series and not country.searched:
             problems.append(
-                f"{location}: {code} has data sources, so searched must be yes"
+                f"{location}: {code} has data, so searched must be yes"
             )
         countries.append(country)
 

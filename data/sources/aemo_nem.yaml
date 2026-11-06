@@ -1,0 +1,68 @@
+name: AEMO
+url: https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data
+access: public
+licence:
+  name: Use for any purpose with attribution
+  url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
+  category: open
+entities:
+  - country_code: AUS
+    subdivision_code: NSW
+    subdivision_name: New South Wales
+    start: 1998
+    end: 2021
+    resolution: 30
+  - country_code: AUS
+    subdivision_code: NSW
+    subdivision_name: New South Wales
+    start: 2021
+    end: present
+    resolution: 5
+  - country_code: AUS
+    subdivision_code: QLD
+    subdivision_name: Queensland
+    start: 1998
+    end: 2021
+    resolution: 30
+  - country_code: AUS
+    subdivision_code: QLD
+    subdivision_name: Queensland
+    start: 2021
+    end: present
+    resolution: 5
+  - country_code: AUS
+    subdivision_code: SA
+    subdivision_name: South Australia
+    start: 1998
+    end: 2021
+    resolution: 30
+  - country_code: AUS
+    subdivision_code: SA
+    subdivision_name: South Australia
+    start: 2021
+    end: present
+    resolution: 5
+  - country_code: AUS
+    subdivision_code: TAS
+    subdivision_name: Tasmania
+    start: 2005
+    end: 2021
+    resolution: 30
+  - country_code: AUS
+    subdivision_code: TAS
+    subdivision_name: Tasmania
+    start: 2021
+    end: present
+    resolution: 5
+  - country_code: AUS
+    subdivision_code: VIC
+    subdivision_name: Victoria
+    start: 1998
+    end: 2021
+    resolution: 30
+  - country_code: AUS
+    subdivision_code: VIC
+    subdivision_name: Victoria
+    start: 2021
+    end: present
+    resolution: 5

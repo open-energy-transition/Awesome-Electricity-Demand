@@ -1,0 +1,12 @@
+name: CEN
+url: https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/
+access: public
+licence:
+  name: Open data
+  url: http://energiaabierta.cl/
+  category: open
+entities:
+  - country_code: CHL
+    start: 1999
+    end: present
+    resolution: 60

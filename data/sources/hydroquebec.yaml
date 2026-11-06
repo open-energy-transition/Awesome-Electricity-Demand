@@ -1,0 +1,14 @@
+name: HYDROQUEBEC
+url: https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/
+access: public
+licence:
+  name: CC BY-NC 4.0
+  url: https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/
+  category: non-commercial
+entities:
+  - country_code: CAN
+    subdivision_code: QC
+    subdivision_name: Quebec
+    start: 2019
+    end: 2023
+    resolution: 60

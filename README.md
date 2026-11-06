@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **134 data sources** for **67 countries** and their subdivisions in:
+The list has **134 time series** from **41 data sources** for **67 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (13 countries)
@@ -53,7 +53,7 @@ Contributions are welcome in the form of new links to websites that provide hour
 - Use [GitHub Issues](https://github.com/open-energy-transition/Awesome-Electricity-Demand/issues) for data requests or suggestions.
 - Submit [Pull Requests](https://github.com/open-energy-transition/Awesome-Electricity-Demand/pulls) for adding new data sources or enhancing metadata.
 
-The list below is generated from the files in [`data/`](data/): do not edit it directly, but add or change the data source in `data/sources/<country code>.yaml`. See [CONTRIBUTING.md](CONTRIBUTING.md) for how.
+The list below is generated from the files in [`data/`](data/): do not edit it directly, but add or change the data source in `data/sources/<source>.yaml`. See [CONTRIBUTING.md](CONTRIBUTING.md) for how.
 
 ## List of data sources
 
@@ -165,32 +165,32 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | Oriental | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
 |  | Peninsular | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
 | **Panama** |  | [Mendeley](https://data.mendeley.com/datasets/tcmmj4t6f4/1) | 2016-2020 | 60 min | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) |  |
-| **United States** | California | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CAL.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+| **United States** | California | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CAL.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | California | [CAISO](https://www.caiso.com/library/historical-ems-hourly-load) | 2019-present | 60 min | [Use for any purpose with attribution](https://www.caiso.com/privacy-terms-of-use) |  |
 |  | California | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CAL) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Carolinas | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CAR.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Carolinas | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CAR.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | Carolinas | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CAR) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Central | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CENT.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Central | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CENT.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | Central | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CENT) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Florida | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/FLA.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Florida | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/FLA.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | Florida | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-FLA) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Mid-Atlantic | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/MIDA.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Mid-Atlantic | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/MIDA.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | Mid-Atlantic | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-MIDA) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Midwest | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/MIDW.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Midwest | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/MIDW.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | Midwest | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-MIDW) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | New England | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NE.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | New England | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NE.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | New England | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NE) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | New York | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NY.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | New York | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NY.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | New York | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NY) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Northwest | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NW.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Northwest | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NW.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | Northwest | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NW) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Southeast | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/SE.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Southeast | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/SE.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | Southeast | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-SE) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Southwest | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/SW.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Southwest | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/SW.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | Southwest | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-SW) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Tennessee | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEN.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Tennessee | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEN.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | Tennessee | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-TEN) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Texas | [EIA](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEX.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Texas | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEX.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | Texas | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-TEX) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 
 ### South America

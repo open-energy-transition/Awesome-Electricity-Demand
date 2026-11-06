@@ -9,7 +9,7 @@ Thank you for helping to improve the list! You can contribute in two ways:
 
 The list is kept in the [`data/`](data/) folder, and everything else is generated from it:
 
-- `data/sources/<code>.yaml` has the data sources of one country, and is named after its [ISO 3166-1 alpha-3 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3), such as `DEU.yaml` for Germany. Kosovo uses `XKX`.
+- `data/sources/<id>.yaml` has one data source, such as `entsoe.yaml` for the ENTSO-E Transparency Platform: its name, page and terms of use, and the countries and subdivisions (the entities) that it has data for, with their years and resolution. A source that [DemandCast](https://github.com/open-energy-transition/demandcast) retrieves has the identifier of its YAML file in DemandCast's `retrievals/electricity_demand_data_sources/` folder; a new one gets a short identifier in lower case, such as the acronym of the provider, or `<first author>_et_al` for the dataset of a paper.
 - `data/countries.csv` has every country that the list considers, with its name, continent, population in millions and land area in km² (estimates for 2025), and whether it has been searched for data (`yes` or `no`).
 
 From these files, `scripts/build.py` generates:
@@ -20,7 +20,7 @@ From these files, `scripts/build.py` generates:
 ## Adding or changing a data source
 
 1. Fork the repository and create a branch.
-2. Add the data source to `data/sources/<code>.yaml`, or create the file for a new country. Keep the file free of comments; a remark for readers goes in `note`.
+2. Add the countries or subdivisions to the file of the source, or create the file of a new source. Keep the file free of comments; a remark for readers goes in `note`.
 3. Set `searched` to `yes` for the country in `data/countries.csv`, if it is not already.
 4. Update README.md and check the data with:
 
@@ -32,47 +32,58 @@ From these files, `scripts/build.py` generates:
 
 5. Open a pull request, with a link to where the licence or terms of use are stated.
 
-For example, `data/sources/MEX.yaml` starts with:
+For example, `data/sources/cenace.yaml` starts with:
 
 ```yaml
-sources:
-  - provider: CENACE
-    url: https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx
+name: CENACE
+url: https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx
+access: public
+licence:
+  name: All rights reserved
+  url: https://www.gob.mx/terminos
+  category: restricted
+entities:
+  - country_code: MEX
     subdivision_code: BCA
     subdivision_name: Baja California
     start: 2016
     end: present
     resolution: 60
-    access: public
-    licence:
-      name: All rights reserved
-      url: https://www.gob.mx/terminos
-      category: restricted
 ```
+
+The fields of a source are:
+
+| Field              | Required | Meaning                                                                          |
+| ------------------ | -------- | -------------------------------------------------------------------------------- |
+| `name`             | yes      | Name of the source, as shown in the list.                                        |
+| `url`              | yes      | Where to download or request the data.                                           |
+| `access`           | no       | `public` (the default), or `on-request` if a request or registration is needed. |
+| `licence.name`     | yes      | Short description of the terms of use, as shown in the list.                     |
+| `licence.url`      | yes      | Page with the full terms.                                                        |
+| `licence.category` | yes      | `open`, `non-commercial` or `restricted` (see below).                            |
+| `entities`         | yes      | The countries and subdivisions with data, with the fields below.                 |
+
+The fields of an entity are:
 
 | Field                                  | Required | Meaning                                                                          |
 | -------------------------------------- | -------- | -------------------------------------------------------------------------------- |
-| `provider`                             | yes      | Who publishes the data.                                                          |
-| `url`                                  | yes      | Where to download or request the data.                                           |
+| `country_code`                         | yes      | [ISO 3166-1 alpha-3 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) of the country, such as `DEU`; Kosovo uses `XKX`. |
 | `subdivision_code`, `subdivision_name` | no       | The subdivision or grid region covered, for data of only part of the country.   |
 | `start`                                | yes      | First year with data.                                                            |
 | `end`                                  | yes      | Last year with data, or `present` if the data is still updated.                  |
 | `resolution`                           | yes      | Time step in minutes, such as 5, 15, 30 or 60.                                   |
-| `access`                               | no       | `public` (the default), or `on-request` if a request or registration is needed. |
-| `licence.name`                         | yes      | Short description of the terms of use, as shown in the list.                     |
-| `licence.url`                          | yes      | Page with the full terms.                                                        |
-| `licence.category`                     | yes      | `open`, `non-commercial` or `restricted` (see below).                            |
+| `url`                                  | no       | Page of the data of this entity, if it is not the `url` of the source.          |
 | `note`                                 | no       | Remark shown in the list, such as "Generation, proxy for demand".                |
 
-- `subdivision_code` is the [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code without the country prefix (`NSW` for New South Wales). For grid regions without one, use the code that [DemandCast](https://github.com/open-energy-transition/demandcast) uses (`CAL` for the California region of the EIA), so that the two lists can be compared.
+- `subdivision_code` is the [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code without the country prefix (`NSW` for New South Wales). For grid regions without one, use the code that DemandCast uses (`CAL` for the California region of the EIA), so that the two lists can be compared.
 - `licence.category` sorts the terms:
   - `open`: any use, possibly with attribution (CC-BY, CC0, open data licences);
   - `non-commercial`: only non-commercial use (CC BY-NC, non-commercial reproduction);
   - `restricted`: personal use, all rights reserved, or use only with an authorisation.
 - Only hourly or sub-hourly data belongs to the list, so `resolution` must divide 60 minutes.
-- If the data of a source changes resolution or provider over time, list each period as a separate source.
+- If the data of an entity changes resolution over time, list each period as a separate entity.
 
-The checks reject unknown fields, unknown country codes, years in the wrong order or in the future, and duplicate sources, and list every problem at once.
+The checks reject unknown fields and countries, years in the wrong order or in the future, entities listed twice, entity URLs that repeat the URL of their source, and subdivision codes with two names, and list every problem at once.
 
 ## Changing the scripts
 

@@ -1,0 +1,12 @@
+name: ONS
+url: https://dados.ons.org.br/dataset/curva-carga
+access: public
+licence:
+  name: CC-BY
+  url: https://dados.ons.org.br/dataset/curva-carga
+  category: open
+entities:
+  - country_code: BRA
+    start: 2000
+    end: present
+    resolution: 60
