@@ -10,3 +10,195 @@ entities:
     start: 2017
     end: 2024
     resolution: 30
+  - country_code: IND
+    subdivision_code: AP
+    subdivision_name: Andhra Pradesh
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: AR
+    subdivision_name: Arunachal Pradesh
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: AS
+    subdivision_name: Assam
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: BR
+    subdivision_name: Bihar
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: CH
+    subdivision_name: Chandigarh
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: CT
+    subdivision_name: Chhattisgarh
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: DH
+    subdivision_name: Dadra and Nagar Haveli and Daman and Diu
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: DL
+    subdivision_name: Delhi
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: GA
+    subdivision_name: Goa
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: GJ
+    subdivision_name: Gujarat
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: HP
+    subdivision_name: Himachal Pradesh
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: HR
+    subdivision_name: Haryana
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: JHWB
+    subdivision_name: Jharkhand and West Bengal
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: JKLA
+    subdivision_name: Jammu and Kashmir and Ladakh
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: KA
+    subdivision_name: Karnataka
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: KL
+    subdivision_name: Kerala
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: MH
+    subdivision_name: Maharashtra
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: ML
+    subdivision_name: Meghalaya
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: MN
+    subdivision_name: Manipur
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: MP
+    subdivision_name: Madhya Pradesh
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: MZ
+    subdivision_name: Mizoram
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: NL
+    subdivision_name: Nagaland
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: OR
+    subdivision_name: Odisha
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: PB
+    subdivision_name: Punjab
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: PY
+    subdivision_name: Puducherry
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: RJ
+    subdivision_name: Rajasthan
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: SK
+    subdivision_name: Sikkim
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: TG
+    subdivision_name: Telangana
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: TN
+    subdivision_name: Tamil Nadu
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: TR
+    subdivision_name: Tripura
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: UP
+    subdivision_name: Uttar Pradesh
+    start: 2017
+    end: 2026
+    resolution: 60
+  - country_code: IND
+    subdivision_code: UT
+    subdivision_name: Uttarakhand
+    start: 2017
+    end: 2026
+    resolution: 60

@@ -12,3 +12,11 @@ entities:
     start: 2011
     end: 2024
     resolution: 60
+  - country_code: CAN
+    subdivision_code: AB
+    subdivision_name: Alberta
+    start: 2001
+    end: 2025
+    resolution: 60
+    url: https://www.aeso.ca/market/market-and-system-reporting/data-requests/hourly-generation-metered-volumes-and-pool-price-and-ail-data-2001-to-july-2025/
+    note: Alberta Internal Load (AIL), with the load behind the fence of industrial sites

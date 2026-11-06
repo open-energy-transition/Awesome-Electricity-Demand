@@ -9,6 +9,6 @@ entities:
   - country_code: GBR
     subdivision_code: GB
     subdivision_name: Great Britain
-    start: 2009
+    start: 2001
     end: present
     resolution: 30

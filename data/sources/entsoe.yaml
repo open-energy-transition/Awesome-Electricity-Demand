@@ -2,9 +2,9 @@ name: ENTSO-E
 url: https://transparency.entsoe.eu/
 access: public
 licence:
-  name: CC-BY 4.0
-  url: https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/230309_ENTSOE_Transparency_Terms_Conditions_MC_APPROVED.pdf
-  category: open
+  name: Re-use with the agreement of the TSOs
+  url: https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions
+  category: restricted
 entities:
   - country_code: ALB
     start: 2015
@@ -22,7 +22,7 @@ entities:
     resolution: 15
     url: https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YAT-APG------L!CTY|10YAT-APG------L&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)
   - country_code: BEL
-    start: 2015
+    start: 2014
     end: present
     resolution: 15
     url: https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YBE----------2!CTY|10YBE----------2&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)
@@ -37,7 +37,7 @@ entities:
     resolution: 60
     url: https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YBA-JPCC-----D!CTY|10YBA-JPCC-----D&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)
   - country_code: CHE
-    start: 2015
+    start: 2014
     end: present
     resolution: 60
     url: https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YCH-SWISSGRIDZ!CTY|10YCH-SWISSGRIDZ&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)
@@ -87,6 +87,8 @@ entities:
     resolution: 60
     url: https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YFR-RTE------C!CTY|10YFR-RTE------C&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)
   - country_code: GBR
+    subdivision_code: GB
+    subdivision_name: Great Britain
     start: 2015
     end: 2021
     resolution: 30
@@ -94,8 +96,8 @@ entities:
   - country_code: GBR
     subdivision_code: NIR
     subdivision_name: Northern Ireland
-    start: 2024
-    end: present
+    start: 2015
+    end: 2025
     resolution: 30
     url: https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10Y1001A1001A92E!CTY|10Y1001A1001A92E&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)
   - country_code: GEO
@@ -159,7 +161,7 @@ entities:
     resolution: 60
     url: https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YCS-CG-TSO---S!CTY|10YCS-CG-TSO---S&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)
   - country_code: NLD
-    start: 2015
+    start: 2014
     end: present
     resolution: 15
     url: https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YNL----------L!CTY|10YNL----------L&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)
@@ -189,7 +191,7 @@ entities:
     resolution: 60
     url: https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YCS-SERBIATSOV!CTY|10YCS-SERBIATSOV&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)
   - country_code: SVK
-    start: 2022
+    start: 2015
     end: present
     resolution: 60
     url: https://transparency.entsoe.eu/load-domain/r2/totalLoadR2/show?name=&defaultValue=false&viewType=TABLE&areaType=CTY&atch=false&dateTime.dateTime=01.01.2025+00:00|CET|DAY&biddingZone.values=CTY|10YSK-SEPS-----K!CTY|10YSK-SEPS-----K&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2)

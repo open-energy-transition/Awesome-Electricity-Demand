@@ -10,3 +10,157 @@ entities:
     start: 2024
     end: present
     resolution: 60
+  - country_code: ARG
+    subdivision_code: A
+    subdivision_name: Salta
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: BA
+    subdivision_name: Buenos Aires and Ciudad Autónoma de Buenos Aires
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: D
+    subdivision_name: San Luis
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: E
+    subdivision_name: Entre Ríos
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: F
+    subdivision_name: La Rioja
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: G
+    subdivision_name: Santiago del Estero
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: H
+    subdivision_name: Chaco
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: J
+    subdivision_name: San Juan
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: K
+    subdivision_name: Catamarca
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: L
+    subdivision_name: La Pampa
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: M
+    subdivision_name: Mendoza
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: N
+    subdivision_name: Misiones
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: P
+    subdivision_name: Formosa
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: Q
+    subdivision_name: Neuquén
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: R
+    subdivision_name: Río Negro
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: S
+    subdivision_name: Santa Fe
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: T
+    subdivision_name: Tucumán
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: U
+    subdivision_name: Chubut
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: W
+    subdivision_name: Corrientes
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: X
+    subdivision_name: Córdoba
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: Y
+    subdivision_name: Jujuy
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months
+  - country_code: ARG
+    subdivision_code: Z
+    subdivision_name: Santa Cruz
+    start: 2026
+    end: present
+    resolution: 5
+    note: The API keeps only about the last 7 to 8 months

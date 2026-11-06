@@ -3,10 +3,228 @@ url: https://zenodo.org/records/8322210
 access: public
 licence:
   name: CC-BY 4.0
-  url: https://creativecommons.org/licenses/by/4.0/
+  url: https://zenodo.org/records/8322210
   category: open
 entities:
   - country_code: CHN
     start: 2018
     end: 2018
     resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: BJ
+    subdivision_name: Beijing
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: TJ
+    subdivision_name: Tianjin
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: HE
+    subdivision_name: Hebei
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: SX
+    subdivision_name: Shanxi
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: NM
+    subdivision_name: Inner Mongolia
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: LN
+    subdivision_name: Liaoning
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: JL
+    subdivision_name: Jilin
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: HL
+    subdivision_name: Heilongjiang
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: SH
+    subdivision_name: Shanghai
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: JS
+    subdivision_name: Jiangsu
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: ZJ
+    subdivision_name: Zhejiang
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: AH
+    subdivision_name: Anhui
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: FJ
+    subdivision_name: Fujian
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: JX
+    subdivision_name: Jiangxi
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: SD
+    subdivision_name: Shandong
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: HA
+    subdivision_name: Henan
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: HB
+    subdivision_name: Hubei
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: HN
+    subdivision_name: Hunan
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: GD
+    subdivision_name: Guangdong
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: GX
+    subdivision_name: Guangxi
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: HI
+    subdivision_name: Hainan
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: CQ
+    subdivision_name: Chongqing
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: SC
+    subdivision_name: Sichuan
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: GZ
+    subdivision_name: Guizhou
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: YN
+    subdivision_name: Yunnan
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: XZ
+    subdivision_name: Tibet
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: SN
+    subdivision_name: Shaanxi
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: GS
+    subdivision_name: Gansu
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: QH
+    subdivision_name: Qinghai
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: NX
+    subdivision_name: Ningxia
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day
+  - country_code: CHN
+    subdivision_code: XJ
+    subdivision_name: Xinjiang
+    start: 2018
+    end: 2018
+    resolution: 60
+    note: Modelled from the highest and lowest load of each day

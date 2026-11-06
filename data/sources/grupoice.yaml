@@ -3,7 +3,7 @@ url: https://apps.grupoice.com/CenceWeb
 access: public
 licence:
   name: Open data
-  url: https://www.grupoice.com/wps/wcm/connect/328d1cc7-6796-44cb-a981-8dca6043c983/Reglamento_funcionamiento_CENCE.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-328d1cc7-6796-44cb-a981-8dca6043c983-nWcNMD.
+  url: https://www.grupoice.com/wps/portal/ICE/Transparencia/datos-abiertos
   category: open
 entities:
   - country_code: CRI

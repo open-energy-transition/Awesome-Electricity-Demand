@@ -3,7 +3,7 @@ url: https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/
 access: public
 licence:
   name: Open data
-  url: http://energiaabierta.cl/
+  url: https://www.coordinador.cl/terminos-y-condiciones/
   category: open
 entities:
   - country_code: CHL

@@ -8,5 +8,5 @@ licence:
 entities:
   - country_code: URY
     start: 2019
-    end: 2025
+    end: present
     resolution: 60

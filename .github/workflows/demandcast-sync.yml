@@ -123,8 +123,10 @@ jobs:
             {
               echo
               echo "Updated by the [comparison with DemandCast]($RUN_URL)." \
-                "A divergence stays here until one of the repositories" \
-                "changes, or it is added with a reason to" \
+                "DemandCast is the source of truth for the facts that both" \
+                "state: align the list with it, or fix DemandCast if it is" \
+                "outdated. A divergence stays here until then, or until it" \
+                "is added with a reason to" \
                 "\`data/demandcast_differences.yaml\`. This issue is closed" \
                 "when no divergence is open."
             } >> demandcast_sync_report.md
