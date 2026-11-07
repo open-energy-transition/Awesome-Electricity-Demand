@@ -45,7 +45,7 @@ jobs:
           persist-credentials: false
 
       - name: "Install uv"
-        uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
+        uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
 
       - name: "Check the links that the pull request adds"
         run: uv run --locked scripts/check_links.py --output link-check --only-new base/data
@@ -67,7 +67,7 @@ jobs:
           persist-credentials: false
 
       - name: "Install uv"
-        uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
+        uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
 
       # The check counts the failures in a row of each link from the report
       # of the previous check, if there is one.
