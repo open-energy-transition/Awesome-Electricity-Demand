@@ -1,0 +1,13 @@
+name: GSO
+url: https://www.gso.org.my/SystemData/SystemDemand.aspx
+access: public
+licence:
+  name: All rights reserved
+  url: https://www.gso.org.my/TermsConditions.aspx
+  category: restricted
+entities:
+  - country_code: MYS
+    start: 2016
+    end: present
+    resolution: 10
+    note: Peninsular Malaysia only, without Sabah and Sarawak

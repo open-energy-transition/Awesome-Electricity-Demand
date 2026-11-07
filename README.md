@@ -3,10 +3,10 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **236 time series** from **44 data sources** for **67 countries** and their subdivisions in:
+The list has **237 time series** from **45 data sources** for **68 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
-- [Asia](#asia) (13 countries)
+- [Asia](#asia) (14 countries)
 - [Europe](#europe) (38 countries)
 - [North America](#north-america) (5 countries)
 - [South America](#south-america) (6 countries)
@@ -149,6 +149,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | Okinawa | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
 |  | Shikoku | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
 |  | Tōhoku | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
+| **Malaysia** |  | [GSO](https://www.gso.org.my/SystemData/SystemDemand.aspx) | 2016-present | 10 min | [All rights reserved](https://www.gso.org.my/TermsConditions.aspx) | Peninsular Malaysia only, without Sabah and Sarawak |
 | **Nepal** |  | [Open Data Nepal](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | 2017-2018 | 60 min | [CC BY-SA 4.0](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) |  |
 | **Pakistan** |  | [NTDC](https://zenodo.org/records/24023127) | 2015-2020 | 60 min | [CC0 1.0](https://zenodo.org/records/24023127) | Copy on Zenodo of the dataset removed from Kaggle in 2026 |
 |  |  | [ISMO](https://www.ismo.gov.pk/library/hourly-system-demand) | 2024-2025 | 60 min | [All rights reserved](https://www.ismo.gov.pk/terms-and-conditions) | Without K-Electric, which supplies Karachi |
