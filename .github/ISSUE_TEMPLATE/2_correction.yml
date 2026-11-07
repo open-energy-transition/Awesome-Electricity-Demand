@@ -1,0 +1,36 @@
+# Issue form for reporting a broken link or a wrong detail of a data
+# source of the list.
+
+name: Correction
+description: Report a broken link, or wrong years, resolution or terms of a data source
+labels: ["bug"]
+
+body:
+  - type: input
+    attributes:
+      label: Data source
+      description: Name of the data source in the list, or its data file in data/sources/.
+      placeholder: ENTSO-E, or data/sources/entsoe.yaml
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: What is wrong
+      multiple: true
+      options:
+        - Broken link
+        - Years
+        - Time resolution
+        - Countries or subdivisions
+        - Licence or terms of use
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Details
+      description: What the list says, what it should say, and where the correct information is stated, with links.
+    validations:
+      required: true
