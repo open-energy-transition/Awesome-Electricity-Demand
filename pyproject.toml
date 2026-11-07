@@ -10,6 +10,7 @@ license = "MIT"
 requires-python = ">=3.12"
 dependencies = [
     "matplotlib>=3.9",
+    "numpy>=2.0",
     "pydantic>=2.9",
     "pyyaml>=6.0",
 ]
@@ -34,3 +35,9 @@ mypy_path = ["scripts", "tests"]
 python_version = "3.12"
 strict = true
 plugins = ["pydantic.mypy"]
+
+# scripts/shapes.py runs in the environment of DemandCast, with its
+# geographic libraries and code, which this project does not install.
+[[tool.mypy.overrides]]
+module = ["cartopy.*", "geopandas.*", "shapely.*", "utils.*"]
+ignore_missing_imports = true

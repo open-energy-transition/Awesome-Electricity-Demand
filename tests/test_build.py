@@ -1,4 +1,4 @@
-"""Tests of the generation of the README, the site and the figures."""
+"""Tests of the generation of the README and the site."""
 
 from __future__ import annotations
 
@@ -9,7 +9,6 @@ from typing import TYPE_CHECKING
 import pytest
 
 import build
-import figures
 import registry
 from conftest import entity, source, write_source
 
@@ -143,46 +142,14 @@ def test_render_readme_needs_every_block(data_dir: Path) -> None:
         )
 
 
-def test_coverage_by_continent(data_dir: Path) -> None:
-    """Compute the shares of countries, population and land covered."""
-    shares = figures.coverage_by_continent(registry.load(data_dir))
-    assert shares["countries"][0] == pytest.approx(100 / 3)
-    assert shares["population"][0] == pytest.approx(20)
-    assert shares["land"][0] == pytest.approx(20)
-    assert shares["countries"][1] == pytest.approx(100)
-
-
-def test_years_by_resolution(data_dir: Path) -> None:
-    """Count the years of each country and resolution once."""
-    years = figures.years_by_resolution(registry.load(data_dir))
-    assert years[60][:2] == [10, 3]
-    assert years[5][1] == registry.current_year() - 2016 + 1
-
-
-def test_years_of_subdivisions_count_once(data_dir: Path) -> None:
-    """Count the years of a country once for all its subdivisions."""
-    (data_dir / "demandcast.yaml").unlink()
-    write_source(
-        data_dir,
-        "sonelgaz",
-        source(
-            [
-                entity(subdivision_code="A", subdivision_name="A", end=2011),
-                entity(subdivision_code="B", subdivision_name="B", end=2012),
-            ]
-        ),
-    )
-    write_source(data_dir, "entsoe", source([entity(start=2011, end=2011)]))
-    years = figures.years_by_resolution(registry.load(data_dir))
-    assert years[60][0] == 3
-
-
 def test_build_site(data_dir: Path, tmp_path: Path) -> None:
     """Write the map, the CSV and JSON lists and the figures."""
     site = tmp_path / "site"
-    build.build_site(registry.load(data_dir), site)
+    build.build_site(
+        registry.load(data_dir), registry.load_shapes(data_dir), site
+    )
     assert (site / "index.html").exists()
-    assert (site / "figures" / "coverage_by_continent.png").exists()
+    assert (site / "figures" / "map_dark.png").exists()
     with (site / "sources.csv").open(encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
     assert [r["source_name"] for r in rows] == [

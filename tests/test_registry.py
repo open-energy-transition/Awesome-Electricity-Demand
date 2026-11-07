@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING, Any
 import pytest
 
 import registry
-from conftest import entity, source, write_source
+from conftest import entity, source, write_shapes, write_source
 
 if TYPE_CHECKING:
     from pathlib import Path
@@ -224,3 +224,73 @@ def test_every_problem_is_reported(data_dir: Path) -> None:
     with pytest.raises(registry.RegistryError) as error:
         registry.load(data_dir)
     assert len(str(error.value).splitlines()) == 2
+
+
+def test_repository_shapes_are_valid() -> None:
+    """Load the shapes of the repository, one for every country."""
+    shapes = registry.load_shapes()
+    assert {c.code for c in registry.load()} <= set(shapes)
+
+
+def test_load_shapes(data_dir: Path) -> None:
+    """Load each shape as a list of polygons, by label."""
+    shapes = registry.load_shapes(data_dir)
+    assert list(shapes) == ["DZA", "EGY", "AGO", "JPN", "JPN-Kantō"]
+    assert len(shapes["DZA"]) == 1
+    assert [len(ring) for ring in shapes["DZA"][0]] == [5, 5]
+    assert shapes["EGY"][0][0][1] == (19.0, 0.0)
+
+
+def test_load_multipolygon_shapes(data_dir: Path) -> None:
+    """Load each polygon of a multipolygon."""
+    ring = [[0, 0], [1, 0], [1, 1], [0, 0]]
+    (data_dir / "shapes.geojson").write_text(
+        '{"type": "FeatureCollection", "features": [{"type": "Feature", '
+        '"properties": {"label": "DZA"}, "geometry": {"type": '
+        f'"MultiPolygon", "coordinates": [[{ring}], [{ring}]]}}}}]}}',
+        encoding="utf-8",
+    )
+    assert len(registry.load_shapes(data_dir)["DZA"]) == 2
+
+
+@pytest.mark.parametrize(
+    ("content", "message"),
+    [
+        (None, "No such file"),
+        ("{}", "type: Field required"),
+        (
+            (
+                '{"type": "FeatureCollection", "features": [{"type": '
+                '"Feature", "properties": {"label": "dza"}, "geometry": '
+                '{"type": "Polygon", "coordinates": []}}]}'
+            ),
+            "label: String should match pattern",
+        ),
+        (
+            (
+                '{"type": "FeatureCollection", "features": [{"type": '
+                '"Feature", "properties": {"label": "DZA"}, "geometry": '
+                '{"type": "Point", "coordinates": [0, 0]}}]}'
+            ),
+            "does not match any of the expected tags",
+        ),
+    ],
+)
+def test_invalid_shapes_are_rejected(
+    data_dir: Path, content: str | None, message: str
+) -> None:
+    """Reject a shapes file that is missing or not valid GeoJSON."""
+    path = data_dir / "shapes.geojson"
+    if content is None:
+        path.unlink()
+    else:
+        path.write_text(content, encoding="utf-8")
+    with pytest.raises(registry.RegistryError, match=message):
+        registry.load_shapes(data_dir)
+
+
+def test_duplicate_shape_is_rejected(data_dir: Path) -> None:
+    """Reject a shapes file with two shapes of an entity."""
+    write_shapes(data_dir, ["DZA", "DZA"])
+    with pytest.raises(registry.RegistryError, match="duplicate shape DZA"):
+        registry.load_shapes(data_dir)
