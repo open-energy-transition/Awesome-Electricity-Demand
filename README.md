@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **237 time series** from **45 data sources** for **68 countries** and their subdivisions in:
+The list has **243 time series** from **47 data sources** for **68 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (14 countries)
@@ -177,6 +177,11 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2024-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
 | **Czech Republic** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
 | **Denmark** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
+|  |  | [Energi Data Service](https://www.energidataservice.dk/search/consumption) | 2021-present | 60 min | [CC-BY 4.0](https://www.energidataservice.dk/terms-and-conditions) | By grid area, region and consumer category, industry, and household heating |
+|  | Eastern Denmark | [Energi Data Service](https://www.energidataservice.dk/tso-electricity/ProductionConsumptionSettlement) | 2005-present | 60 min | [CC-BY 4.0](https://www.energidataservice.dk/terms-and-conditions) | Gross consumption with grid losses, from settlement data |
+|  | Eastern Denmark | [Energi Data Service](https://www.energidataservice.dk/tso-electricity/GenerationProdTypeExchange) | 2015-present | 60 min | [CC-BY 4.0](https://www.energidataservice.dk/terms-and-conditions) | Gross consumption, near real time |
+|  | Western Denmark | [Energi Data Service](https://www.energidataservice.dk/tso-electricity/ProductionConsumptionSettlement) | 2005-present | 60 min | [CC-BY 4.0](https://www.energidataservice.dk/terms-and-conditions) | Gross consumption with grid losses, from settlement data |
+|  | Western Denmark | [Energi Data Service](https://www.energidataservice.dk/tso-electricity/GenerationProdTypeExchange) | 2015-present | 60 min | [CC-BY 4.0](https://www.energidataservice.dk/terms-and-conditions) | Gross consumption, near real time |
 | **Estonia** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
 | **Finland** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
 | **France** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
@@ -267,6 +272,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | Southwest | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-SW) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | Tennessee | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEN.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | Tennessee | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-TEN) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | Texas | [ERCOT](https://www.ercot.com/gridinfo/load/load_hist) | 1995-present | 60 min | [Reuse and redistribution allowed](https://www.ercot.com/help/terms) | By weather zone from 2002, by control area before; no data for 2001 |
 |  | Texas | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEX.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 |  | Texas | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-TEX) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
 
