@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from typing import TYPE_CHECKING, Any
 
 import pytest
@@ -87,6 +88,36 @@ def write_source(data_dir: Path, source_id: str, content: Any) -> None:
     )
 
 
+def write_shapes(data_dir: Path, labels: list[str]) -> None:
+    """Write a shapes file with a square for each entity.
+
+    Parameters
+    ----------
+    data_dir : Path
+        Data folder.
+    labels : list of str
+        Labels of the entities, each with a square of 10 degrees along
+        the equator, the first with a square hole.
+    """
+    features = []
+    for i, label in enumerate(labels):
+        x = 10.0 * i
+        rings = [[[x, 0.0], [x + 9, 0.0], [x + 9, 9.0], [x, 9.0], [x, 0.0]]]
+        if i == 0:
+            rings.append([[2, 2], [2, 4], [4, 4], [4, 2], [2, 2]])
+        features.append(
+            {
+                "type": "Feature",
+                "properties": {"label": label},
+                "geometry": {"type": "Polygon", "coordinates": rings},
+            }
+        )
+    (data_dir / "shapes.geojson").write_text(
+        json.dumps({"type": "FeatureCollection", "features": features}),
+        encoding="utf-8",
+    )
+
+
 @pytest.fixture
 def data_dir(tmp_path: Path) -> Path:
     """Write a data folder with four countries, two of them with data.
@@ -105,7 +136,8 @@ def data_dir(tmp_path: Path) -> Path:
     -----
     Japan has a national series from a source that covers two
     countries, and a series of a subdivision that needs a request.
-    DemandCast retrieves the series of Sonelgaz and of TEPCO.
+    DemandCast retrieves the series of Sonelgaz and of TEPCO. Each
+    country and the subdivision have a shape.
     """
     (tmp_path / "sources").mkdir()
     (tmp_path / "countries.csv").write_text(COUNTRIES, encoding="utf-8")
@@ -154,4 +186,5 @@ def data_dir(tmp_path: Path) -> Path:
         "sources:\n  sonelgaz:\n  - DZA\n  tepco:\n  - JPN-Kantō\n",
         encoding="utf-8",
     )
+    write_shapes(tmp_path, ["DZA", "EGY", "AGO", "JPN", "JPN-Kantō"])
     return tmp_path

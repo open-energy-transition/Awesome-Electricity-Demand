@@ -12,7 +12,7 @@ import yaml
 
 import demandcast_sync as sync
 import registry
-from conftest import entity, source, write_source
+from conftest import entity, source, write_shapes, write_source
 
 if TYPE_CHECKING:
     from pathlib import Path
@@ -335,6 +335,17 @@ def test_marks_follow_demandcast(data_dir: Path, dc_dir: Path) -> None:
         ("entsoe", "JPN", True)
     ]
     assert "does not retrieve it" in result[0].message
+
+
+def test_entities_without_a_shape(data_dir: Path, dc_dir: Path) -> None:
+    """Report each entity of a source without an outline for the map."""
+    write_shapes(data_dir, ["DZA", "EGY", "AGO"])
+    result = [f for f in findings(data_dir, dc_dir) if f.check == "shape"]
+    assert [(f.source, f.entity, f.is_open) for f in result] == [
+        ("entsoe", "JPN", True),
+        ("tepco", "JPN-Kantō", True),
+    ]
+    assert "run scripts/shapes.py" in result[0].message
 
 
 def test_update_marks_writes_the_file(

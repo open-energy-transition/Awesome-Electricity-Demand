@@ -22,21 +22,28 @@ Python code for downloading, extracting, and processing the available data can b
 
 ### Data Overview
 
-The figure below summarizes the depth of available demand data by reporting the total number of years of historical load time series available for each continent, disaggregated by time resolution.
+The map shows each country and subdivision of the list, coloured by its years of data from all sources.
 
-<img
-    src="https://open-energy-transition.github.io/Awesome-Electricity-Demand/figures/frequency_coverage_by_continent.png"
-    alt="Electricity Demand Data by Continent and Frequency"
-    style="max-width:100%; height:auto;">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://open-energy-transition.github.io/Awesome-Electricity-Demand/figures/map_dark.png">
+  <img src="https://open-energy-transition.github.io/Awesome-Electricity-Demand/figures/map_light.png" alt="World map of the countries and subdivisions with demand data, coloured by their years of data" width="100%">
+</picture>
 
-The next figure shows the coverage of electricity demand data, illustrating the percentage of coverage by continent in terms of countries, population, and land area.
+The years of data of each continent, by time resolution:
 
-<img
-    src="https://open-energy-transition.github.io/Awesome-Electricity-Demand/figures/coverage_by_continent.png"
-    alt="Country, Population, and Land Coverage by Continent"
-    style="max-width:100%; height:auto;">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://open-energy-transition.github.io/Awesome-Electricity-Demand/figures/years_by_continent_dark.png">
+  <img src="https://open-energy-transition.github.io/Awesome-Electricity-Demand/figures/years_by_continent_light.png" alt="Horizontal bars of the years of demand data of each continent, stacked by time resolution" width="100%">
+</picture>
 
-Both figures are rebuilt from the list every time it changes.
+The share of the countries of each continent with data, and of their population and land area:
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://open-energy-transition.github.io/Awesome-Electricity-Demand/figures/coverage_by_continent_dark.png">
+  <img src="https://open-energy-transition.github.io/Awesome-Electricity-Demand/figures/coverage_by_continent_light.png" alt="Dot plot of the share of countries, people and land of each continent with demand data" width="100%">
+</picture>
+
+The figures are rebuilt from the list every time it changes, and every month.
 
 ### Searched Without Success
 

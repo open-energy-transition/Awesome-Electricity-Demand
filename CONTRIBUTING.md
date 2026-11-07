@@ -12,11 +12,12 @@ The list is kept in the [`data/`](data/) folder, and everything else is generate
 - `data/sources/<id>.yaml` has one data source, such as `entsoe.yaml` for the ENTSO-E Transparency Platform: its name, page and terms of use, and the countries and subdivisions (the entities) that it has data for, with their years and resolution. A source that [DemandCast](https://github.com/open-energy-transition/demandcast) retrieves has the identifier of its YAML file in DemandCast's `retrievals/electricity_demand_data_sources/` folder; a new one gets a short identifier in lower case, such as the acronym of the provider, or `<first author>_et_al` for the dataset of a paper.
 - `data/countries.csv` has every country that the list considers, with its name, continent, population in millions and land area in km² (estimates for 2025), and whether it has been searched for data (`yes` or `no`).
 - `data/demandcast.yaml` lists, for each source, the countries and subdivisions whose series [DemandCast](https://github.com/open-energy-transition/demandcast) retrieves, which the list marks with ✅. It is written by a command (see below), not by hand.
+- `data/shapes.geojson` has the outlines of every country and of each subdivision of the list, for the map of the figures. It is written by a command (see below), not by hand.
 
 From these files, `scripts/build.py` generates:
 
 - the summary, the tables of data sources (one per continent, folded, with a row for the subdivisions of a source that share their years and resolution, the category of their terms as 🟢 open, 🟡 non-commercial or 🔴 restricted, 🔒 for access on request, and ✅ for the series that DemandCast retrieves) and the countries searched without success in [README.md](README.md), between the `<!-- ...:start -->` and `<!-- ...:end -->` markers: do not edit them by hand;
-- the [map](https://open-energy-transition.github.io/Awesome-Electricity-Demand/), the list as CSV and JSON, and the figures, which the Pages workflow publishes from `main`.
+- the [map](https://open-energy-transition.github.io/Awesome-Electricity-Demand/), the list as CSV and JSON, and the figures, which the Pages workflow publishes from `main` and every month, in a light and a dark version that the README shows according to the reader's theme.
 
 ## Adding or changing a data source
 
@@ -110,6 +111,14 @@ The ✅ marks of the list come from `data/demandcast.yaml`. When DemandCast retr
 uv run scripts/demandcast_sync.py --demandcast ../demandcast/demandcast/retrievals/electricity_demand_data_sources --output sync --update-marks
 uv run scripts/build.py readme
 ```
+
+The comparison also reports the countries and subdivisions without an outline in `data/shapes.geojson`, which the map of the figures leaves out. A new subdivision needs one: write the file with the code of DemandCast, which finds the shapes in Natural Earth or in its own shapes of grid regions, from the `demandcast` folder of a copy of DemandCast, in its environment:
+
+```bash
+PYTHONPATH=. uv run --locked python ../../Awesome-Electricity-Demand/scripts/shapes.py
+```
+
+The command lists the subdivisions that still have no shape. A grid region needs a shape in DemandCast first, or, made from regions of Natural Earth, an entry in `COMPOSITES` in `scripts/shapes.py`.
 
 A divergence that is deliberate, such as a retriever that takes only some years of a source, goes in `data/demandcast_differences.yaml`, with the check, the entity if any, and a reason:
 

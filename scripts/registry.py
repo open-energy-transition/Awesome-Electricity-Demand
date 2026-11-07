@@ -9,7 +9,9 @@ country that the list considers, with its continent, its population in
 millions and land area in km² (estimates for 2025), and whether it has
 been searched for data. ``demandcast.yaml`` lists, for each source,
 the entities whose series DemandCast retrieves, which the list marks.
-The README, the map and the figures are generated from them.
+``shapes.geojson`` holds the outlines of the countries and of the
+subdivisions of the list, for the map of the figures. The README, the
+map and the figures are generated from them.
 """
 
 from __future__ import annotations
@@ -35,6 +37,7 @@ from pydantic import (
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 DEMANDCAST_FILE = "demandcast.yaml"
+SHAPES_FILE = "shapes.geojson"
 SOURCE_ID = re.compile(r"^[a-z0-9]+(_[a-z0-9]+)*$")
 
 Continent = Literal[
@@ -353,6 +356,47 @@ class Country(StrictModel):
         return len(covered)
 
 
+Position = tuple[float, float]
+Polygon = list[list[Position]]
+
+
+class PolygonShape(StrictModel):
+    """GeoJSON polygon: its exterior ring, then its holes."""
+
+    type: Literal["Polygon"]
+    coordinates: Polygon
+
+
+class MultiPolygonShape(StrictModel):
+    """GeoJSON multipolygon: the rings of each of its polygons."""
+
+    type: Literal["MultiPolygon"]
+    coordinates: list[Polygon]
+
+
+class ShapeLabel(StrictModel):
+    """Properties of a shape: the label of its entity."""
+
+    label: EntityLabel
+
+
+class ShapeFeature(StrictModel):
+    """GeoJSON feature with the outline of a country or subdivision."""
+
+    type: Literal["Feature"]
+    properties: ShapeLabel
+    geometry: Annotated[
+        PolygonShape | MultiPolygonShape, Field(discriminator="type")
+    ]
+
+
+class ShapeCollection(StrictModel):
+    """GeoJSON feature collection of the shapes file."""
+
+    type: Literal["FeatureCollection"]
+    features: list[ShapeFeature]
+
+
 class RegistryError(Exception):
     """Invalid data files, with one problem per line of the message."""
 
@@ -604,6 +648,53 @@ def load_demandcast(
     if problems:
         raise RegistryError("\n".join(problems))
     return marks
+
+
+def load_shapes(data_dir: Path = DATA_DIR) -> dict[str, list[Polygon]]:
+    """Load the outlines of the countries and subdivisions of the map.
+
+    Parameters
+    ----------
+    data_dir : Path, default DATA_DIR
+        Folder with the shapes file.
+
+    Returns
+    -------
+    dict
+        The polygons of each country and subdivision, in degrees of
+        longitude and latitude, by label of the entity.
+
+    Raises
+    ------
+    RegistryError
+        If the shapes file is missing or invalid, or has a label twice.
+
+    Notes
+    -----
+    The file is written by ``scripts/shapes.py``. A polygon is a list
+    of rings: the exterior anticlockwise, then the holes clockwise.
+    """
+    path = data_dir / SHAPES_FILE
+    try:
+        collection = ShapeCollection.model_validate_json(
+            path.read_bytes(), strict=True
+        )
+    except OSError as e:
+        raise RegistryError(f"{SHAPES_FILE}: {e.strerror}") from e
+    except ValidationError as e:
+        raise RegistryError("\n".join(_describe(SHAPES_FILE, e))) from e
+    shapes: dict[str, list[Polygon]] = {}
+    for feature in collection.features:
+        label = feature.properties.label
+        if label in shapes:
+            raise RegistryError(f"{SHAPES_FILE}: duplicate shape {label}")
+        geometry = feature.geometry
+        shapes[label] = (
+            [geometry.coordinates]
+            if isinstance(geometry, PolygonShape)
+            else geometry.coordinates
+        )
+    return shapes
 
 
 def load(data_dir: Path = DATA_DIR) -> list[Country]:

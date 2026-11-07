@@ -26,7 +26,14 @@ from collections.abc import Callable
 from pathlib import Path
 
 import registry
-from registry import CONTINENTS, ROOT, Country, RegistryError, Series
+from registry import (
+    CONTINENTS,
+    ROOT,
+    Country,
+    Polygon,
+    RegistryError,
+    Series,
+)
 
 README = ROOT / "README.md"
 MAP_DIR = ROOT / "demand-data-map"
@@ -493,13 +500,20 @@ def records(
     ]
 
 
-def build_site(countries: list[Country], site_dir: Path) -> None:
+def build_site(
+    countries: list[Country],
+    shapes: dict[str, list[Polygon]],
+    site_dir: Path,
+) -> None:
     """Build the site for GitHub Pages.
 
     Parameters
     ----------
     countries : list of Country
         Every country of the list.
+    shapes : dict
+        The outlines of the countries and subdivisions, by label, for
+        the map of the figures.
     site_dir : Path
         Folder of the site, created if needed.
 
@@ -545,7 +559,7 @@ def build_site(countries: list[Country], site_dir: Path) -> None:
         json.dumps(data, ensure_ascii=False, indent=1) + "\n",
         encoding="utf-8",
     )
-    figures.plot_all(countries, site_dir / "figures")
+    figures.plot_all(countries, shapes, site_dir / "figures")
     logger.info("Site built in %s", site_dir)
 
 
@@ -576,12 +590,13 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         countries = registry.load()
+        shapes = registry.load_shapes()
     except RegistryError as e:
         logger.error("The data files have errors:\n%s", e)  # noqa: TRY400
         return 1
 
     if args.command == "site":
-        build_site(countries, args.directory)
+        build_site(countries, shapes, args.directory)
         return 0
 
     current = README.read_text(encoding="utf-8")

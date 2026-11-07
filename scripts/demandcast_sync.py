@@ -12,7 +12,9 @@ The series that DemandCast retrieves are marked in the list, from
 ``data/demandcast.yaml``, which ``--update-marks`` writes from the files
 of DemandCast; a mark that the files of DemandCast no longer support,
 or a series that they support and the file does not mark, is a
-divergence too.
+divergence too. So is an entity without an outline in
+``data/shapes.geojson``, which ``scripts/shapes.py`` writes with the
+code of DemandCast, as the map of the figures cannot draw it.
 
 Each difference is a finding: a divergence, which one of the two
 repositories should resolve, or a note. Nothing fails: the divergences
@@ -63,6 +65,7 @@ Check = Literal[
     "backlog",
     "accepted",
     "mark",
+    "shape",
 ]
 Severity = Literal["divergence", "note"]
 DIFFERENCES_FILE = DATA_DIR / "demandcast_differences.yaml"
@@ -185,7 +188,8 @@ class Finding:
         What differs: the presence of the source, an entity, the name
         of a subdivision, the years, the licence or the page of the
         terms; "backlog" for a source that DemandCast does not retrieve,
-        and "accepted" for an accepted difference that is not found.
+        "accepted" for an accepted difference that is not found, "mark"
+        for a mark of the list and "shape" for a missing outline.
     entity : str or None
         Country code, and subdivision code after a dash.
     message : str
@@ -998,6 +1002,38 @@ def compare_marks(
     return findings
 
 
+def compare_shapes(
+    sources: dict[str, Source], shapes: set[str]
+) -> list[Finding]:
+    """Find the entities of the list without an outline for the map.
+
+    Parameters
+    ----------
+    sources : dict
+        The data sources of the list, by identifier.
+    shapes : set of str
+        The labels of the entities with an outline.
+
+    Returns
+    -------
+    list of Finding
+        A divergence for each entity of a source without an outline.
+    """
+    return [
+        Finding(
+            source=source_id,
+            check="shape",
+            entity=entity.label,
+            message="data/shapes.geojson has no outline of it for the map: "
+            "run scripts/shapes.py",
+            severity="divergence",
+        )
+        for source_id, source in sources.items()
+        for entity in source.entities
+        if entity.label not in shapes
+    ]
+
+
 def _findings(
     data_dir: Path, demandcast: dict[str, DemandCastSource]
 ) -> list[Finding]:
@@ -1019,6 +1055,7 @@ def _findings(
     marks = registry.load_demandcast(data_dir)
     findings = compare(sources, demandcast)
     findings += compare_marks(marks, retrieved_marks(sources, demandcast))
+    findings += compare_shapes(sources, set(registry.load_shapes(data_dir)))
     differences = read_differences(data_dir / DIFFERENCES_FILE.name)
     return apply_differences(findings, differences)
 

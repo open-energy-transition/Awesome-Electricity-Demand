@@ -65,6 +65,8 @@ repos:
     hooks:
       - id: prettier
         types_or: [yaml, json, html, css, javascript]
+        # One feature per line, as scripts/shapes.py writes it.
+        exclude: ^data/shapes\.geojson$
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: a76b92851fc9eede9f9bc4073eb55202f34eb0df # frozen: 0.39.0
