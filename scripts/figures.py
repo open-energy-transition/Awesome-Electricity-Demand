@@ -75,8 +75,8 @@ class Theme:
         Titles and values, labels, and axis notes.
     grid, base : str
         Grid lines, and the axis line and the range of the dots.
-    land, none : str
-        Countries without data, and those searched without success.
+    land : str
+        Countries without national data.
     classes : tuple of str
         The classes of years of data, from the fewest years.
     resolutions : tuple of str
@@ -102,7 +102,6 @@ class Theme:
     grid: str
     base: str
     land: str
-    none: str
     classes: tuple[str, ...]
     resolutions: tuple[str, ...]
     metrics: tuple[str, ...]
@@ -118,7 +117,6 @@ THEMES = (
         grid="#e1e0d9",
         base="#c3c2b7",
         land="#e4e3dd",
-        none="#b4b2a9",
         classes=("#86b6ef", "#3987e5", "#1c5cab", "#0d366b"),
         resolutions=("#0d366b", "#1c5cab", "#2a78d6", "#5598e7", "#86b6ef"),
         metrics=("#2a78d6", "#eb6834", "#1baf7a"),
@@ -132,7 +130,6 @@ THEMES = (
         grid="#2c2c2a",
         base="#383835",
         land="#2c2c2a",
-        none="#52514e",
         classes=("#184f95", "#256abf", "#5598e7", "#9ec5f4"),
         resolutions=("#b7d3f6", "#6da7ec", "#3987e5", "#256abf", "#184f95"),
         metrics=("#3987e5", "#d95926", "#199e70"),
@@ -491,11 +488,9 @@ def plot_map(
     -----
     Each country with national data, and each subdivision on top of its
     country, is coloured by its own years of data, in the classes of
-    `YEAR_LABELS`. The countries searched without success are darker
-    than the land. An entity without an outline is left out.
+    `YEAR_LABELS`. An entity without an outline is left out.
     """
     years = years_by_entity(countries)
-    searched = {c.code for c in countries if c.searched and not c.series}
     fig = _figure(theme, 4.3)
     ax = fig.add_axes((0.0, 0.11, 1.0, 0.75))
     ax.axis("off")
@@ -523,8 +518,7 @@ def plot_map(
                 (outline_path(polygons), colour)
             )
         if is_country:
-            colour = theme.none if label in searched else theme.land
-            layers[0].append((outline_path(polygons), colour))
+            layers[0].append((outline_path(polygons), theme.land))
     for layer in layers:
         ax.add_collection(
             PathCollection(
@@ -541,7 +535,6 @@ def plot_map(
         Patch(facecolor=c, label=label)
         for c, label in zip(theme.classes, YEAR_LABELS, strict=True)
     ]
-    handles.append(Patch(facecolor=theme.none, label="searched, none found"))
     fig.legend(
         handles=handles,
         loc="lower center",
