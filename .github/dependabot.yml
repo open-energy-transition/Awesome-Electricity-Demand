@@ -1,0 +1,61 @@
+# Dependabot keeps dependencies up to date: security fixes as soon as an
+# advisory is published, and monthly version updates of the Python
+# dependencies, the GitHub Actions and the pre-commit hooks, each grouped
+# in one pull request, after a 7-day cooldown.
+
+version: 2
+updates:
+  - package-ecosystem: "uv"
+    directory: "/"
+    commit-message:
+      prefix: "build"
+      include: "scope"
+    schedule:
+      interval: "monthly"
+    cooldown:
+      default-days: 7
+    groups:
+      security-updates:
+        applies-to: security-updates
+        patterns:
+          - "*"
+      minor-and-patch:
+        applies-to: version-updates
+        update-types:
+          - "minor"
+          - "patch"
+        patterns:
+          - "*"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    schedule:
+      interval: "monthly"
+    cooldown:
+      default-days: 7
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+
+  - package-ecosystem: "pre-commit"
+    directory: "/"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    schedule:
+      interval: "monthly"
+    cooldown:
+      default-days: 7
+    groups:
+      pre-commit:
+        patterns:
+          - "*"
+    ignore:
+      # The typos repository also tags releases of its libraries, such as
+      # varcon-core-v5.0.7, which Dependabot mistakes for typos releases.
+      - dependency-name: "*crate-ci/typos*"
+        versions: [">= 2"]
