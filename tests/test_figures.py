@@ -122,7 +122,5 @@ def test_map_leaves_out_entities_without_a_shape(
     shapes = registry.load_shapes(data_dir)
     del shapes["JPN-Kantō"]
     path = tmp_path / "map.png"
-    figures.plot_map(
-        registry.load(data_dir), shapes, figures.THEMES[0], path
-    )
+    figures.plot_map(registry.load(data_dir), shapes, figures.THEMES[0], path)
     assert path.stat().st_size > 0
