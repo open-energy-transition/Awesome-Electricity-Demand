@@ -1,0 +1,83 @@
+# Issue form for suggesting a new source of hourly or sub-hourly
+# electricity demand data, with the fields of a data file of the list.
+
+name: New data source
+description: Suggest a source of hourly or sub-hourly electricity demand data
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: >
+        #### Before submitting, please check that the source isn't already in
+        [the list](https://github.com/open-energy-transition/Awesome-Electricity-Demand#list-of-data-sources)
+        or in [the open issues](https://github.com/open-energy-transition/Awesome-Electricity-Demand/issues).
+        You can also add it yourself with a pull request: see
+        [CONTRIBUTING.md](https://github.com/open-energy-transition/Awesome-Electricity-Demand/blob/main/CONTRIBUTING.md#adding-or-changing-a-data-source).
+
+  - type: input
+    attributes:
+      label: Data source
+      description: Organisation that publishes the data, and the link to the page where it can be downloaded or requested.
+      placeholder: GSO, https://www.gso.org.my/SystemData/SystemDemand.aspx
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Countries or subdivisions
+      description: Countries or subdivisions covered, ideally with their ISO 3166 codes, and what the data leaves out, if anything.
+      placeholder: Malaysia (MYS), Peninsular Malaysia only
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Years
+      description: First year with data, and last year or "present" if the data is still updated.
+      placeholder: 2016-present
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Time resolution
+      options:
+        - 5 minutes
+        - 10 minutes
+        - 15 minutes
+        - 30 minutes
+        - 60 minutes
+        - Other (say which below)
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Access
+      options:
+        - Public download
+        - On request or after registration
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Licence and terms of use
+      description: Under which terms is the data published, with a link to where they are stated?
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Notes
+      description: Anything else, such as what the data measures if it is not demand, or gaps.
+    validations:
+      required: false
+
+  - type: checkboxes
+    attributes:
+      label: Contribution
+      options:
+        - label: I would like to add the data file myself with a pull request.
+          required: false
