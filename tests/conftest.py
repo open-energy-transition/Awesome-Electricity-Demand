@@ -105,6 +105,7 @@ def data_dir(tmp_path: Path) -> Path:
     -----
     Japan has a national series from a source that covers two
     countries, and a series of a subdivision that needs a request.
+    DemandCast retrieves the series of Sonelgaz and of TEPCO.
     """
     (tmp_path / "sources").mkdir()
     (tmp_path / "countries.csv").write_text(COUNTRIES, encoding="utf-8")
@@ -148,5 +149,9 @@ def data_dir(tmp_path: Path) -> Path:
             name="TEPCO",
             access="on-request",
         ),
+    )
+    (tmp_path / "demandcast.yaml").write_text(
+        "sources:\n  sonelgaz:\n  - DZA\n  tepco:\n  - JPN-Kantō\n",
+        encoding="utf-8",
     )
     return tmp_path

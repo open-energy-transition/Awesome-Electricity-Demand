@@ -8,6 +8,12 @@ the list also has are read: the licence (whether the data can be
 redistributed, and the page of the terms) and the entities (country,
 subdivision, first and last day).
 
+The series that DemandCast retrieves are marked in the list, from
+``data/demandcast.yaml``, which ``--update-marks`` writes from the files
+of DemandCast; a mark that the files of DemandCast no longer support,
+or a series that they support and the file does not mark, is a
+divergence too.
+
 Each difference is a finding: a divergence, which one of the two
 repositories should resolve, or a note. Nothing fails: the divergences
 are reported in an issue, and on pull requests as warnings. A
@@ -19,6 +25,8 @@ Usage::
     python scripts/demandcast_sync.py --demandcast DIR --output DIR
     python scripts/demandcast_sync.py --demandcast DIR --output DIR \\
         --base-data BASE_DATA_DIR
+    python scripts/demandcast_sync.py --demandcast DIR --output DIR \\
+        --update-marks
 """
 
 from __future__ import annotations
@@ -54,6 +62,7 @@ Check = Literal[
     "licence_url",
     "backlog",
     "accepted",
+    "mark",
 ]
 Severity = Literal["divergence", "note"]
 DIFFERENCES_FILE = DATA_DIR / "demandcast_differences.yaml"
@@ -870,6 +879,125 @@ def write_report(
         (directory / "comment.md").write_text(comment, encoding="utf-8")
 
 
+def retrieved_marks(
+    sources: dict[str, Source], demandcast: dict[str, DemandCastSource]
+) -> dict[str, list[str]]:
+    """List the entities of the list whose series DemandCast retrieves.
+
+    Parameters
+    ----------
+    sources : dict
+        The sources of the list, by identifier.
+    demandcast : dict
+        The sources of DemandCast, by identifier.
+
+    Returns
+    -------
+    dict
+        For each source that both have, the sorted labels of the
+        entities of the list that DemandCast retrieves.
+    """
+    marks: dict[str, list[str]] = {}
+    for source_id, source in sorted(sources.items()):
+        theirs = demandcast.get(source_id)
+        if theirs is None:
+            continue
+        known = {entity.label for entity in source.entities}
+        labels = sorted({entity.label for entity in theirs.entities} & known)
+        if labels:
+            marks[source_id] = labels
+    return marks
+
+
+class _IndentedDumper(yaml.SafeDumper):
+    """YAML dumper that indents lists under their key, like prettier."""
+
+    def increase_indent(
+        self, flow: bool = False, indentless: bool = False
+    ) -> None:
+        """Indent the items of a list under their key.
+
+        Parameters
+        ----------
+        flow : bool, default False
+            Whether the collection is written inline.
+        indentless : bool, default False
+            Whether the list would not be indented, which is ignored.
+        """
+        del indentless
+        super().increase_indent(flow, False)
+
+
+def write_marks(path: Path, marks: dict[str, list[str]]) -> None:
+    """Write the file of the series that DemandCast retrieves.
+
+    Parameters
+    ----------
+    path : Path
+        The file, ``data/demandcast.yaml``.
+    marks : dict
+        For each source, the labels of the entities that DemandCast
+        retrieves.
+    """
+    path.write_text(
+        yaml.dump(
+            {"sources": marks},
+            Dumper=_IndentedDumper,
+            sort_keys=True,
+            allow_unicode=True,
+        ),
+        encoding="utf-8",
+    )
+
+
+def compare_marks(
+    marks: set[tuple[str, str]], expected: dict[str, list[str]]
+) -> list[Finding]:
+    """Compare the marks of the list with what DemandCast retrieves.
+
+    Parameters
+    ----------
+    marks : set of tuple
+        The source and entity of each series that the list marks.
+    expected : dict
+        For each source, the labels of the entities that DemandCast
+        retrieves.
+
+    Returns
+    -------
+    list of Finding
+        A divergence for each series marked but not retrieved, or
+        retrieved but not marked.
+    """
+    retrieved = {
+        (source, label)
+        for source, labels in expected.items()
+        for label in labels
+    }
+    command = "run scripts/demandcast_sync.py with --update-marks"
+    findings = [
+        Finding(
+            source=source,
+            check="mark",
+            entity=label,
+            message=f"DemandCast retrieves it, but data/demandcast.yaml does not mark it: {command}",
+            severity="divergence",
+        )
+        for source, label in sorted(retrieved - marks)
+    ]
+    findings += [
+        Finding(
+            source=source,
+            check="mark",
+            entity=label,
+            message=f"data/demandcast.yaml marks it, but DemandCast does not retrieve it: {command}",
+            severity="divergence",
+        )
+        for source, label in sorted(marks - retrieved)
+    ]
+    return findings
+
+
 def _findings(
     data_dir: Path, demandcast: dict[str, DemandCastSource]
 ) -> list[Finding]:
@@ -888,8 +1016,11 @@ def _findings(
         The findings, with the accepted differences of the folder.
     """
     sources = registry.load_sources(data_dir)
+    marks = registry.load_demandcast(data_dir)
+    findings = compare(sources, demandcast)
+    findings += compare_marks(marks, retrieved_marks(sources, demandcast))
     differences = read_differences(data_dir / DIFFERENCES_FILE.name)
-    return apply_differences(compare(sources, demandcast), differences)
+    return apply_differences(findings, differences)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -924,10 +1055,21 @@ def main(argv: list[str] | None = None) -> int:
         type=Path,
         help="data folder of the base branch of a pull request",
     )
+    parser.add_argument(
+        "--update-marks",
+        action="store_true",
+        help="write data/demandcast.yaml from the files of DemandCast",
+    )
     args = parser.parse_args(argv)
 
     try:
         demandcast = read_demandcast(args.demandcast)
+        if args.update_marks:
+            marks = retrieved_marks(
+                registry.load_sources(args.data), demandcast
+            )
+            write_marks(args.data / registry.DEMANDCAST_FILE, marks)
+            logger.info("%s updated.", registry.DEMANDCAST_FILE)
         findings = _findings(args.data, demandcast)
     except (RegistryError, SyncError) as e:
         logger.error("Invalid files:\n%s", e)  # noqa: TRY400

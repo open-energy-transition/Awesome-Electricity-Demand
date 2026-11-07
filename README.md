@@ -58,276 +58,167 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 ## List of data sources
 
 <!-- sources:start: generated from data/ by scripts/build.py, do not edit -->
+<sub>🟢 open · 🟡 non-commercial · 🔴 restricted terms · 🔒 access on request · ✅ retrieved by [DemandCast](https://github.com/open-energy-transition/demandcast)</sub>
+
 ### Africa
 
-| Country | Subdivision | Source | Period | Resolution | Licence | Notes |
-| --- | --- | --- | --- | --- | --- | --- |
-| **Algeria** |  | [Sonelgaz](https://data.mendeley.com/datasets/z5x2d3mhw7/1) | 2008-2020 | 60 min | [CC-BY 4.0](https://data.mendeley.com/datasets/z5x2d3mhw7/1) |  |
-| **Nigeria** |  | [Mendeley](https://data.mendeley.com/datasets/pxvdm26rn7/2) | 2016 | 60 min | [CC-BY 4.0](https://data.mendeley.com/datasets/pxvdm26rn7/2) | Reconstructed demand without power outages |
-| **South Africa** |  | [ESKOM](https://www.eskom.co.za/dataportal/data-request-form/) | 2021-present | 60 min | [Non-commercial use](https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf) | Access on request |
+<details open><summary>3 countries · 3 time series</summary>
+
+| Country | Area | Source | Years | Resolution | Terms | DemandCast |
+| --- | --- | --- | --- | --- | --- | :-: |
+| **Algeria** | National | [Sonelgaz](https://data.mendeley.com/datasets/z5x2d3mhw7/1) | 2008-2020 | hourly | 🟢 [CC-BY 4.0](https://data.mendeley.com/datasets/z5x2d3mhw7/1) | ✅ |
+| **Nigeria** | National | [Mendeley](https://data.mendeley.com/datasets/pxvdm26rn7/2)<br><sub>Reconstructed demand without power outages</sub> | 2016 | hourly | 🟢 [CC-BY 4.0](https://data.mendeley.com/datasets/pxvdm26rn7/2) | ✅ |
+| **South Africa** | National | [ESKOM](https://www.eskom.co.za/dataportal/data-request-form/) | 2021-present | hourly | 🟡 [Non-commercial use](https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf) 🔒 | ✅ |
+
+</details>
 
 ### Asia
 
-| Country | Subdivision | Source | Period | Resolution | Licence | Notes |
-| --- | --- | --- | --- | --- | --- | --- |
-| **Bangladesh** |  | [PGCB](https://erp.powergrid.gov.bd/w/report/eyJpdiI6IldsU2ZQTGkvbkRnQU9FMjZ5UHhmeGc9PSIsInZhbHVlIjoiQzhONVl5ZGxRY3E3T3ZVNCtLZGt1Zz09IiwibWFjIjoiN2JiNTI5MzNhOWIxZDVjY2NkMmFlZWU4ZDU1N2I4OWZlYjNlZWM1ZGU4NzRiNWU4ZjQ3ZDc1ODRlMTk3MDc0YyIsInRhZyI6IiJ9/show_report) | 2014-present | 30 min | [All rights reserved](https://pgcb.gov.bd/) |  |
-| **China** |  | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Anhui | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Beijing | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Chongqing | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Fujian | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Gansu | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Guangdong | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Guangxi | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Guizhou | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Hainan | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Hebei | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Heilongjiang | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Henan | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Hubei | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Hunan | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Inner Mongolia | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Jiangsu | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Jiangxi | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Jilin | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Liaoning | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Ningxia | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Qinghai | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Shaanxi | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Shandong | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Shanghai | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Shanxi | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Sichuan | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Tianjin | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Tibet | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Xinjiang | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Yunnan | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-|  | Zhejiang | [Zenodo](https://zenodo.org/records/8322210) | 2018 | 60 min | [CC-BY 4.0](https://zenodo.org/records/8322210) | Modelled from the highest and lowest load of each day |
-| **India** |  | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2024 | 30 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Andhra Pradesh | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Arunachal Pradesh | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Assam | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Bihar | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Chandigarh | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Chhattisgarh | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Dadra and Nagar Haveli and Daman and Diu | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Delhi | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Goa | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Gujarat | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Haryana | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Himachal Pradesh | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Jammu and Kashmir and Ladakh | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Jharkhand and West Bengal | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Karnataka | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Kerala | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Madhya Pradesh | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Maharashtra | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Manipur | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Meghalaya | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Mizoram | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Nagaland | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Odisha | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Puducherry | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Punjab | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Rajasthan | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Sikkim | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Tamil Nadu | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Telangana | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Tripura | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Uttar Pradesh | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-|  | Uttarakhand | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | 60 min | [Open data](https://iced.niti.gov.in/about-us) |  |
-| **Japan** | Chūbu | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
-|  | Chūgoku | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
-|  | Hokkaidō | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
-|  | Hokuriku | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
-|  | Kansai | [KANSAI](https://www.kansai-td.co.jp/english/home/denkiyoho/area-performance/past.html#:~:text=Financial%20) | 2016-present | 60 min | [Personal use](https://www.kansai-td.co.jp/english/siteinfo/) |  |
-|  | Kansai | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
-|  | Kantō | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
-|  | Kantō | [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2016-2021 | 60 min | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html) |  |
-|  | Kantō | [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5 min | [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html) |  |
-|  | Kyūshū | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
-|  | Okinawa | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
-|  | Shikoku | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
-|  | Tōhoku | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | 60 min | [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) |  |
-| **Malaysia** |  | [GSO](https://www.gso.org.my/SystemData/SystemDemand.aspx) | 2016-present | 10 min | [All rights reserved](https://www.gso.org.my/TermsConditions.aspx) | Peninsular Malaysia only, without Sabah and Sarawak |
-| **Nepal** |  | [Open Data Nepal](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | 2017-2018 | 60 min | [CC BY-SA 4.0](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) |  |
-| **Pakistan** |  | [NTDC](https://zenodo.org/records/24023127) | 2015-2020 | 60 min | [CC0 1.0](https://zenodo.org/records/24023127) | Copy on Zenodo of the dataset removed from Kaggle in 2026 |
-|  |  | [ISMO](https://www.ismo.gov.pk/library/hourly-system-demand) | 2024-2025 | 60 min | [All rights reserved](https://www.ismo.gov.pk/terms-and-conditions) | Without K-Electric, which supplies Karachi |
-| **Philippines** |  | [NGCP](https://www.ngcp.ph/operations#operations) | 2013-2025 | 60 min | [All rights reserved](https://ngcp.ph) |  |
-| **Singapore** |  | [EMA](https://www.ema.gov.sg/resources/statistics/half-hourly-system-demand-data) | 2014-present | 30 min | [Open data](https://www.ema.gov.sg/terms-of-use) |  |
-| **South Korea** |  | [KROGD](https://www.data.go.kr/data/15065266/fileData.do) | 2013-2025 | 60 min | [Open data](https://www.data.go.kr/data/15065266/fileData.do) |  |
-| **Sri Lanka** |  | [PUCSL](https://gendata.pucsl.gov.lk/generation-profile) | 2023-present | 15 min | [All rights reserved](https://www.pucsl.gov.lk/) | Generation, proxy for demand |
-| **Taiwan** |  | [Zenodo](https://zenodo.org/records/7537890) | 2017-2022 | 10 min | [CC-BY 4.0](https://zenodo.org/records/7537890) |  |
-| **Thailand** |  | [Zenodo](https://doi.org/10.5281/zenodo.17109911) | 2023-2024 | 60 min | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode) |  |
-| **Turkey** |  | [EPIAS](https://kayit.epias.com.tr/epias-transparency-platform-registration-form) | 2016-present | 60 min | [Use with attribution](https://seffaflik.epias.com.tr/about/about) | Access on request |
+<details open><summary>14 countries · 90 time series</summary>
+
+| Country | Area | Source | Years | Resolution | Terms | DemandCast |
+| --- | --- | --- | --- | --- | --- | :-: |
+| **Bangladesh** | National | [PGCB](https://erp.powergrid.gov.bd/w/report/eyJpdiI6IldsU2ZQTGkvbkRnQU9FMjZ5UHhmeGc9PSIsInZhbHVlIjoiQzhONVl5ZGxRY3E3T3ZVNCtLZGt1Zz09IiwibWFjIjoiN2JiNTI5MzNhOWIxZDVjY2NkMmFlZWU4ZDU1N2I4OWZlYjNlZWM1ZGU4NzRiNWU4ZjQ3ZDc1ODRlMTk3MDc0YyIsInRhZyI6IiJ9/show_report) | 2014-present | 30 min | 🔴 [All rights reserved](https://pgcb.gov.bd/) | ✅ |
+| **China** | National | [Zenodo](https://zenodo.org/records/8322210)<br><sub>Modelled from the highest and lowest load of each day</sub> | 2018 | hourly | 🟢 [CC-BY 4.0](https://zenodo.org/records/8322210) |  |
+|  | <details><summary>31 subdivisions</summary>Anhui, Beijing, Chongqing, Fujian, Gansu, Guangdong, Guangxi, Guizhou, Hainan, Hebei, Heilongjiang, Henan, Hubei, Hunan, Inner Mongolia, Jiangsu, Jiangxi, Jilin, Liaoning, Ningxia, Qinghai, Shaanxi, Shandong, Shanghai, Shanxi, Sichuan, Tianjin, Tibet, Xinjiang, Yunnan, Zhejiang</details> | [Zenodo](https://zenodo.org/records/8322210)<br><sub>Modelled from the highest and lowest load of each day</sub> | 2018 | hourly | 🟢 [CC-BY 4.0](https://zenodo.org/records/8322210) | ✅ |
+| **India** | National | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2024 | 30 min | 🟢 [Open data](https://iced.niti.gov.in/about-us) |  |
+|  | <details><summary>32 subdivisions</summary>Andhra Pradesh, Arunachal Pradesh, Assam, Bihar, Chandigarh, Chhattisgarh, Dadra and Nagar Haveli and Daman and Diu, Delhi, Goa, Gujarat, Haryana, Himachal Pradesh, Jammu and Kashmir and Ladakh, Jharkhand and West Bengal, Karnataka, Kerala, Madhya Pradesh, Maharashtra, Manipur, Meghalaya, Mizoram, Nagaland, Odisha, Puducherry, Punjab, Rajasthan, Sikkim, Tamil Nadu, Telangana, Tripura, Uttar Pradesh, Uttarakhand</details> | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | hourly | 🟢 [Open data](https://iced.niti.gov.in/about-us) | ✅ |
+| **Japan** | <details><summary>10 subdivisions</summary>Chūbu, Chūgoku, Hokkaidō, Hokuriku, Kansai, Kantō, Kyūshū, Okinawa, Shikoku, Tōhoku</details> | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | hourly | 🔴 [No terms of use found](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | ✅ |
+|  | Kansai | [KANSAI](https://www.kansai-td.co.jp/english/home/denkiyoho/area-performance/past.html#:~:text=Financial%20) | 2016-present | hourly | 🔴 [Personal use](https://www.kansai-td.co.jp/english/siteinfo/) | ✅ |
+|  | Kantō | [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2016-2021 | hourly | 🔴 [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html) | ✅ |
+|  | Kantō | [TEPCO](https://www.tepco.co.jp/en/forecast/html/download-e.html) | 2022-present | 5 min | 🔴 [Personal use](https://www4.tepco.co.jp/en/pg/legal/index-e.html) | ✅ |
+| **Malaysia** | National | [GSO](https://www.gso.org.my/SystemData/SystemDemand.aspx)<br><sub>Peninsular Malaysia only, without Sabah and Sarawak</sub> | 2016-present | 10 min | 🔴 [All rights reserved](https://www.gso.org.my/TermsConditions.aspx) |  |
+| **Nepal** | National | [Open Data Nepal](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | 2017-2018 | hourly | 🟢 [CC BY-SA 4.0](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | ✅ |
+| **Pakistan** | National | [NTDC](https://zenodo.org/records/24023127)<br><sub>Copy on Zenodo of the dataset removed from Kaggle in 2026</sub> | 2015-2020 | hourly | 🟢 [CC0 1.0](https://zenodo.org/records/24023127) | ✅ |
+|  | National | [ISMO](https://www.ismo.gov.pk/library/hourly-system-demand)<br><sub>Without K-Electric, which supplies Karachi</sub> | 2024-2025 | hourly | 🔴 [All rights reserved](https://www.ismo.gov.pk/terms-and-conditions) | ✅ |
+| **Philippines** | National | [NGCP](https://www.ngcp.ph/operations#operations) | 2013-2025 | hourly | 🔴 [All rights reserved](https://ngcp.ph) | ✅ |
+| **Singapore** | National | [EMA](https://www.ema.gov.sg/resources/statistics/half-hourly-system-demand-data) | 2014-present | 30 min | 🟢 [Open data](https://www.ema.gov.sg/terms-of-use) | ✅ |
+| **South Korea** | National | [KROGD](https://www.data.go.kr/data/15065266/fileData.do) | 2013-2025 | hourly | 🟢 [Open data](https://www.data.go.kr/data/15065266/fileData.do) | ✅ |
+| **Sri Lanka** | National | [PUCSL](https://gendata.pucsl.gov.lk/generation-profile)<br><sub>Generation, proxy for demand</sub> | 2023-present | 15 min | 🔴 [All rights reserved](https://www.pucsl.gov.lk/) | ✅ |
+| **Taiwan** | National | [Zenodo](https://zenodo.org/records/7537890) | 2017-2022 | 10 min | 🟢 [CC-BY 4.0](https://zenodo.org/records/7537890) | ✅ |
+| **Thailand** | National | [Zenodo](https://doi.org/10.5281/zenodo.17109911) | 2023-2024 | hourly | 🟢 [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode) | ✅ |
+| **Turkey** | National | [EPIAS](https://kayit.epias.com.tr/epias-transparency-platform-registration-form) | 2016-present | hourly | 🟢 [Use with attribution](https://seffaflik.epias.com.tr/about/about) 🔒 | ✅ |
+
+</details>
 
 ### Europe
 
-| Country | Subdivision | Source | Period | Resolution | Licence | Notes |
-| --- | --- | --- | --- | --- | --- | --- |
-| **Albania** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-2016 | 15 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-|  |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2021-present | 15 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Austria** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 15 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Belgium** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2014-present | 15 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Bosnia and Herzegovina** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2017-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Bulgaria** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Croatia** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Cyprus** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2016-2022 | 30 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-|  |  | [TSOC](https://tsoc.org.cy/electrical-system/archive-total-daily-system-generation-on-the-transmission-system/) | 2018-present | 15 min | [Use with authorization](https://tsoc.org.cy/) | Generation, proxy for demand |
-|  |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2024-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Czech Republic** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Denmark** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-|  |  | [Energi Data Service](https://www.energidataservice.dk/search/consumption) | 2021-present | 60 min | [CC-BY 4.0](https://www.energidataservice.dk/terms-and-conditions) | By grid area, region and consumer category, industry, and household heating |
-|  | Eastern Denmark | [Energi Data Service](https://www.energidataservice.dk/tso-electricity/ProductionConsumptionSettlement) | 2005-present | 60 min | [CC-BY 4.0](https://www.energidataservice.dk/terms-and-conditions) | Gross consumption with grid losses, from settlement data |
-|  | Eastern Denmark | [Energi Data Service](https://www.energidataservice.dk/tso-electricity/GenerationProdTypeExchange) | 2015-present | 60 min | [CC-BY 4.0](https://www.energidataservice.dk/terms-and-conditions) | Gross consumption, near real time |
-|  | Western Denmark | [Energi Data Service](https://www.energidataservice.dk/tso-electricity/ProductionConsumptionSettlement) | 2005-present | 60 min | [CC-BY 4.0](https://www.energidataservice.dk/terms-and-conditions) | Gross consumption with grid losses, from settlement data |
-|  | Western Denmark | [Energi Data Service](https://www.energidataservice.dk/tso-electricity/GenerationProdTypeExchange) | 2015-present | 60 min | [CC-BY 4.0](https://www.energidataservice.dk/terms-and-conditions) | Gross consumption, near real time |
-| **Estonia** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Finland** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **France** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Georgia** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2022-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Germany** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 15 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Greece** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Hungary** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 15 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Ireland** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 30 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Italy** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Kosovo** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2021-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Latvia** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Lithuania** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Luxembourg** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 15 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Moldova** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2020-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Montenegro** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Netherlands** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2014-present | 15 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **North Macedonia** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Norway** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Poland** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Portugal** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Romania** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Serbia** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Slovakia** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Slovenia** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Spain** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Sweden** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Switzerland** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2014-present | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Ukraine** |  | [ENTSO-E](https://transparency.entsoe.eu/) | 2017-2022 | 60 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **United Kingdom** | Great Britain | [NESO](https://www.neso.energy/data-portal/historic-demand-data) | 2001-present | 30 min | [Use for any purpose with attribution](https://www.neso.energy/data-portal/neso-open-licence) |  |
-|  | Great Britain | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-2021 | 30 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-|  | Northern Ireland | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-2025 | 30 min | [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
+<details open><summary>38 countries · 48 time series</summary>
+
+| Country | Area | Source | Years | Resolution | Terms | DemandCast |
+| --- | --- | --- | --- | --- | --- | :-: |
+| **Albania** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-2016 | 15 min | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+|  | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2021-present | 15 min | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Austria** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 15 min | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Belgium** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2014-present | 15 min | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Bosnia and Herzegovina** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2017-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Bulgaria** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Croatia** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Cyprus** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2016-2022 | 30 min | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+|  | National | [TSOC](https://tsoc.org.cy/electrical-system/archive-total-daily-system-generation-on-the-transmission-system/)<br><sub>Generation, proxy for demand</sub> | 2018-present | 15 min | 🔴 [Use with authorization](https://tsoc.org.cy/) | ✅ |
+|  | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2024-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Czech Republic** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Denmark** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+|  | National | [Energi Data Service](https://www.energidataservice.dk/search/consumption)<br><sub>By grid area, region and consumer category, industry, and household heating</sub> | 2021-present | hourly | 🟢 [CC-BY 4.0](https://www.energidataservice.dk/terms-and-conditions) |  |
+|  | <details><summary>2 subdivisions</summary>Eastern Denmark, Western Denmark</details> | [Energi Data Service](https://www.energidataservice.dk/tso-electricity/ProductionConsumptionSettlement)<br><sub>Gross consumption with grid losses, from settlement data</sub> | 2005-present | hourly | 🟢 [CC-BY 4.0](https://www.energidataservice.dk/terms-and-conditions) |  |
+|  | <details><summary>2 subdivisions</summary>Eastern Denmark, Western Denmark</details> | [Energi Data Service](https://www.energidataservice.dk/tso-electricity/GenerationProdTypeExchange)<br><sub>Gross consumption, near real time</sub> | 2015-present | hourly | 🟢 [CC-BY 4.0](https://www.energidataservice.dk/terms-and-conditions) |  |
+| **Estonia** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Finland** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **France** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Georgia** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2022-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Germany** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 15 min | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Greece** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Hungary** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 15 min | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Ireland** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 30 min | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Italy** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Kosovo** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2021-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Latvia** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Lithuania** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Luxembourg** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 15 min | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Moldova** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2020-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Montenegro** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Netherlands** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2014-present | 15 min | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **North Macedonia** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Norway** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Poland** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Portugal** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Romania** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Serbia** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Slovakia** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Slovenia** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Spain** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Sweden** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Switzerland** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2014-present | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Ukraine** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2017-2022 | hourly | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **United Kingdom** | Great Britain | [NESO](https://www.neso.energy/data-portal/historic-demand-data) | 2001-present | 30 min | 🟢 [Use for any purpose with attribution](https://www.neso.energy/data-portal/neso-open-licence) | ✅ |
+|  | Great Britain | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-2021 | 30 min | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+|  | Northern Ireland | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-2025 | 30 min | 🔴 [Re-use with the agreement of the TSOs](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+
+</details>
 
 ### North America
 
-| Country | Subdivision | Source | Period | Resolution | Licence | Notes |
-| --- | --- | --- | --- | --- | --- | --- |
-| **Canada** | Alberta | [AESO](https://www.aeso.ca/market/market-and-system-reporting/data-requests/hourly-generation-metered-volumes-and-pool-price-and-ail-data-2001-to-july-2025/) | 2001-2025 | 60 min | [Non-commercial use with attribution](https://www.aeso.ca/legal) | Alberta Internal Load (AIL), with the load behind the fence of industrial sites |
-|  | Alberta | [AESO](https://www.aeso.ca/market/market-and-system-reporting/data-requests/hourly-load-by-area-and-region) | 2011-2024 | 60 min | [Non-commercial use with attribution](https://www.aeso.ca/legal) |  |
-|  | Alberta | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2023-present | 5 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
-|  | British Columbia | [BCHYDRO](https://www.bchydro.com/energy-in-bc/operations/transmission/transmission-system/balancing-authority-load-data/historical-transmission-data.html) | 2001-present | 60 min | [Non-commercial use offline only](https://www.bchydro.com/siteinfo/legal.html) |  |
-|  | British Columbia | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2001-2024 | 60 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
-|  | New Brunswick | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2016-2021 | 60 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
-|  | New Brunswick | [NBPOWER](https://tso.nbpower.com/Public/en/system_information_archive.aspx) | 2018-present | 60 min | [All rights reserved](https://www.nbpower.com/en/terms-of-use) |  |
-|  | New Brunswick | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 5 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
-|  | Newfoundland and Labrador | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-present | 5 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
-|  | Nova Scotia | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-2023 | 5 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
-|  | Nova Scotia | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 10 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
-|  | Ontario | [IESO](https://www.ieso.ca/Power-Data/Data-Directory) | 1994-present | 60 min | [Limited license](https://www.ieso.ca/Terms-of-Use) |  |
-|  | Ontario | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2002-present | 60 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
-|  | Prince Edward Island | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2012-present | 15 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
-|  | Quebec | [HYDROQUEBEC](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/) | 2019-2025 | 60 min | [CC BY-NC 4.0](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/) |  |
-|  | Quebec | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 15 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
-|  | Yukon | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 5 min | [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
-| **Costa Rica** |  | [GrupoICE](https://apps.grupoice.com/CenceWeb) | 2012-present | 15 min | [Open data](https://www.grupoice.com/wps/portal/ICE/Transparencia/datos-abiertos) |  |
-| **Mexico** | Baja California | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
-|  | Baja California Sur | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
-|  | Central | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
-|  | Noreste | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
-|  | Noroeste | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
-|  | Norte | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
-|  | Occidental | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
-|  | Oriental | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
-|  | Peninsular | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | 60 min | [All rights reserved](https://www.gob.mx/terminos) |  |
-| **Panama** |  | [Mendeley](https://data.mendeley.com/datasets/tcmmj4t6f4/1) | 2016-2020 | 60 min | [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) |  |
-| **United States** | California | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CAL.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | California | [CAISO](https://www.caiso.com/library/historical-ems-hourly-load) | 2019-present | 60 min | [Use for any purpose with attribution](https://www.caiso.com/privacy-terms-of-use) |  |
-|  | California | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CAL) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Carolinas | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CAR.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Carolinas | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CAR) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Central | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/CENT.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Central | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-CENT) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Florida | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/FLA.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Florida | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-FLA) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Mid-Atlantic | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/MIDA.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Mid-Atlantic | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-MIDA) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Midwest | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/MIDW.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Midwest | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-MIDW) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | New England | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NE.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | New England | [ISO-NE](https://webservices.iso-ne.com/docs/v1.1/) | 2019-present | 60 min | [Personal use](https://www.iso-ne.com/legal-privacy) | Access on request |
-|  | New England | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NE) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | New York | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NY.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | New York | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NY) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Northwest | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/NW.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Northwest | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-NW) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Southeast | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/SE.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Southeast | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-SE) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Southwest | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/SW.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Southwest | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-SW) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Tennessee | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEN.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Tennessee | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-TEN) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Texas | [ERCOT](https://www.ercot.com/gridinfo/load/load_hist) | 1995-present | 60 min | [Reuse and redistribution allowed](https://www.ercot.com/help/terms) | By weather zone from 2002, by control area before; no data for 2001 |
-|  | Texas | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data/blob/master/data/release_2020_Oct/regions/TEX.csv) | 2015-2020 | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
-|  | Texas | [EIA](https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/regional/REG-TEX) | 2020-present | 60 min | [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+<details open><summary>5 countries · 57 time series</summary>
+
+| Country | Area | Source | Years | Resolution | Terms | DemandCast |
+| --- | --- | --- | --- | --- | --- | :-: |
+| **Canada** | Alberta | [AESO](https://www.aeso.ca/market/market-and-system-reporting/data-requests/hourly-generation-metered-volumes-and-pool-price-and-ail-data-2001-to-july-2025/)<br><sub>Alberta Internal Load (AIL), with the load behind the fence of industrial sites</sub> | 2001-2025 | hourly | 🟡 [Non-commercial use with attribution](https://www.aeso.ca/legal) | ✅ |
+|  | Alberta | [AESO](https://www.aeso.ca/market/market-and-system-reporting/data-requests/hourly-load-by-area-and-region) | 2011-2024 | hourly | 🟡 [Non-commercial use with attribution](https://www.aeso.ca/legal) | ✅ |
+|  | Alberta | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2023-present | 5 min | 🟡 [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) | ✅ |
+|  | British Columbia | [BCHYDRO](https://www.bchydro.com/energy-in-bc/operations/transmission/transmission-system/balancing-authority-load-data/historical-transmission-data.html) | 2001-present | hourly | 🟡 [Non-commercial use offline only](https://www.bchydro.com/siteinfo/legal.html) | ✅ |
+|  | British Columbia | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2001-2024 | hourly | 🟡 [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) |  |
+|  | New Brunswick | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2016-2021 | hourly | 🟡 [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) | ✅ |
+|  | New Brunswick | [NBPOWER](https://tso.nbpower.com/Public/en/system_information_archive.aspx) | 2018-present | hourly | 🔴 [All rights reserved](https://www.nbpower.com/en/terms-of-use) | ✅ |
+|  | New Brunswick | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 5 min | 🟡 [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) | ✅ |
+|  | Newfoundland and Labrador | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-present | 5 min | 🟡 [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) | ✅ |
+|  | Nova Scotia | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2022-2023 | 5 min | 🟡 [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) | ✅ |
+|  | Nova Scotia | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 10 min | 🟡 [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) | ✅ |
+|  | Ontario | [IESO](https://www.ieso.ca/Power-Data/Data-Directory) | 1994-present | hourly | 🔴 [Limited license](https://www.ieso.ca/Terms-of-Use) | ✅ |
+|  | Ontario | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2002-present | hourly | 🟡 [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) | ✅ |
+|  | Prince Edward Island | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2012-present | 15 min | 🟡 [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) | ✅ |
+|  | Quebec | [HYDROQUEBEC](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/) | 2019-2025 | hourly | 🟡 [CC BY-NC 4.0](https://donnees.hydroquebec.com/explore/dataset/historique-demande-electricite-quebec/information/) | ✅ |
+|  | Quebec | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2021-present | 15 min | 🟡 [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) | ✅ |
+|  | Yukon | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data) | 2024-present | 5 min | 🟡 [Non-commercial reproduction](https://www.canada.ca/en/transparency/terms.html) | ✅ |
+| **Costa Rica** | National | [GrupoICE](https://apps.grupoice.com/CenceWeb) | 2012-present | 15 min | 🟢 [Open data](https://www.grupoice.com/wps/portal/ICE/Transparencia/datos-abiertos) | ✅ |
+| **Mexico** | <details><summary>9 subdivisions</summary>Baja California, Baja California Sur, Central, Noreste, Noroeste, Norte, Occidental, Oriental, Peninsular</details> | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | hourly | 🔴 [All rights reserved](https://www.gob.mx/terminos) | ✅ |
+| **Panama** | National | [Mendeley](https://data.mendeley.com/datasets/tcmmj4t6f4/1) | 2016-2020 | hourly | 🟢 [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) | ✅ |
+| **United States** | <details><summary>13 subdivisions</summary>California, Carolinas, Central, Florida, Mid-Atlantic, Midwest, New England, New York, Northwest, Southeast, Southwest, Tennessee, Texas</details> | [EIA (Ruggles et al.)](https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data) | 2015-2020 | hourly | 🟢 [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) |  |
+|  | California | [CAISO](https://www.caiso.com/library/historical-ems-hourly-load) | 2019-present | hourly | 🟢 [Use for any purpose with attribution](https://www.caiso.com/privacy-terms-of-use) | ✅ |
+|  | <details><summary>13 subdivisions</summary>California, Carolinas, Central, Florida, Mid-Atlantic, Midwest, New England, New York, Northwest, Southeast, Southwest, Tennessee, Texas</details> | [EIA](https://www.eia.gov/electricity/gridmonitor/) | 2020-present | hourly | 🟢 [Use for any purpose with attribution](https://www.eia.gov/about/copyrights_reuse.php) | ✅ |
+|  | New England | [ISO-NE](https://webservices.iso-ne.com/docs/v1.1/) | 2019-present | hourly | 🔴 [Personal use](https://www.iso-ne.com/legal-privacy) 🔒 | ✅ |
+|  | Texas | [ERCOT](https://www.ercot.com/gridinfo/load/load_hist)<br><sub>By weather zone from 2002, by control area before; no data for 2001</sub> | 1995-present | hourly | 🟢 [Reuse and redistribution allowed](https://www.ercot.com/help/terms) |  |
+
+</details>
 
 ### South America
 
-| Country | Subdivision | Source | Period | Resolution | Licence | Notes |
-| --- | --- | --- | --- | --- | --- | --- |
-| **Argentina** |  | [Cammesa](https://cammesaweb.cammesa.com/) | 2024-present | 60 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) |  |
-|  | Buenos Aires and Ciudad Autónoma de Buenos Aires | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Catamarca | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Chaco | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Chubut | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Corrientes | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Córdoba | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Entre Ríos | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Formosa | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Jujuy | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | La Pampa | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | La Rioja | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Mendoza | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Misiones | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Neuquén | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Río Negro | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Salta | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | San Juan | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | San Luis | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Santa Cruz | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Santa Fe | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Santiago del Estero | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-|  | Tucumán | [Cammesa](https://cammesaweb.cammesa.com/) | 2026-present | 5 min | [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | The API keeps only about the last 7 to 8 months |
-| **Brazil** |  | [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | 60 min | [CC-BY](https://dados.ons.org.br/dataset/curva-carga) |  |
-|  | North | [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | 60 min | [CC-BY](https://dados.ons.org.br/dataset/curva-carga) |  |
-|  | North-East | [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | 60 min | [CC-BY](https://dados.ons.org.br/dataset/curva-carga) |  |
-|  | South | [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | 60 min | [CC-BY](https://dados.ons.org.br/dataset/curva-carga) |  |
-|  | South-East | [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | 60 min | [CC-BY](https://dados.ons.org.br/dataset/curva-carga) |  |
-| **Chile** |  | [CEN](https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/) | 1999-present | 60 min | [Open data](https://www.coordinador.cl/terminos-y-condiciones/) | Until 2015, the central system (SIC) only, about 30% less |
-| **Colombia** |  | [XM](https://www.energiadecolombia.com/consulta) | 2000-present | 60 min | [All rights reserved](https://www.xm.com.co/legales/terminos-legales-del-sitio-web) |  |
-| **Peru** |  | [COES](https://www.coes.org.pe/Portal/portalinformacion/demanda) | 1997-present | 30 min | [Non-commercial use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones) | Until 1999, hourly values about 20% lower |
-| **Uruguay** |  | [ADME](https://adme.com.uy/controlpanel.php) | 2019-present | 60 min | [Open data](https://adme.com.uy/datosabiertos.html) |  |
+<details open><summary>6 countries · 32 time series</summary>
+
+| Country | Area | Source | Years | Resolution | Terms | DemandCast |
+| --- | --- | --- | --- | --- | --- | :-: |
+| **Argentina** | National | [Cammesa](https://cammesaweb.cammesa.com/) | 2024-present | hourly | 🔴 [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) |  |
+|  | <details><summary>22 subdivisions</summary>Buenos Aires and Ciudad Autónoma de Buenos Aires, Catamarca, Chaco, Chubut, Corrientes, Córdoba, Entre Ríos, Formosa, Jujuy, La Pampa, La Rioja, Mendoza, Misiones, Neuquén, Río Negro, Salta, San Juan, San Luis, Santa Cruz, Santa Fe, Santiago del Estero, Tucumán</details> | [Cammesa](https://cammesaweb.cammesa.com/)<br><sub>The API keeps only about the last 7 to 8 months</sub> | 2026-present | 5 min | 🔴 [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | ✅ |
+| **Brazil** | National | [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | hourly | 🟢 [CC-BY](https://dados.ons.org.br/dataset/curva-carga) |  |
+|  | <details><summary>4 subdivisions</summary>North, North-East, South, South-East</details> | [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | hourly | 🟢 [CC-BY](https://dados.ons.org.br/dataset/curva-carga) | ✅ |
+| **Chile** | National | [CEN](https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/)<br><sub>Until 2015, the central system (SIC) only, about 30% less</sub> | 1999-present | hourly | 🟢 [Open data](https://www.coordinador.cl/terminos-y-condiciones/) | ✅ |
+| **Colombia** | National | [XM](https://www.energiadecolombia.com/consulta) | 2000-present | hourly | 🔴 [All rights reserved](https://www.xm.com.co/legales/terminos-legales-del-sitio-web) | ✅ |
+| **Peru** | National | [COES](https://www.coes.org.pe/Portal/portalinformacion/demanda)<br><sub>Until 1999, hourly values about 20% lower</sub> | 1997-present | 30 min | 🟡 [Non-commercial use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones) | ✅ |
+| **Uruguay** | National | [ADME](https://adme.com.uy/controlpanel.php) | 2019-present | hourly | 🟢 [Open data](https://adme.com.uy/datosabiertos.html) | ✅ |
+
+</details>
 
 ### Oceania
 
-| Country | Subdivision | Source | Period | Resolution | Licence | Notes |
-| --- | --- | --- | --- | --- | --- | --- |
-| **Australia** | New South Wales | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
-|  | New South Wales | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
-|  | Queensland | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
-|  | Queensland | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
-|  | South Australia | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
-|  | South Australia | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
-|  | Tasmania | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2005-2021 | 30 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
-|  | Tasmania | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
-|  | Victoria | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
-|  | Victoria | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
-|  | Western Australia | [AEMO](https://data.wa.aemo.com.au/datafiles/operational-demand/) | 2006-2023 | 30 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
-|  | Western Australia | [AEMO](https://data.wa.aemo.com.au/public/market-data/wemde/operationalDemandWithdrawal/dailyFiles/) | 2023-present | 5 min | [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) |  |
-| **New Zealand** |  | [EMI](https://www.emi.ea.govt.nz/Wholesale/Reports/W_GD_C) | 2005-present | 30 min | [CC-BY 4.0](https://www.emi.ea.govt.nz/LegalInformation) |  |
+<details open><summary>2 countries · 13 time series</summary>
+
+| Country | Area | Source | Years | Resolution | Terms | DemandCast |
+| --- | --- | --- | --- | --- | --- | :-: |
+| **Australia** | <details><summary>4 subdivisions</summary>New South Wales, Queensland, South Australia, Victoria</details> | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30 min | 🟢 [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) | ✅ |
+|  | <details><summary>5 subdivisions</summary>New South Wales, Queensland, South Australia, Tasmania, Victoria</details> | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5 min | 🟢 [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) | ✅ |
+|  | Tasmania | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2005-2021 | 30 min | 🟢 [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) | ✅ |
+|  | Western Australia | [AEMO](https://data.wa.aemo.com.au/datafiles/operational-demand/) | 2006-2023 | 30 min | 🟢 [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) | ✅ |
+|  | Western Australia | [AEMO](https://data.wa.aemo.com.au/public/market-data/wemde/operationalDemandWithdrawal/dailyFiles/) | 2023-present | 5 min | 🟢 [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) | ✅ |
+| **New Zealand** | National | [EMI](https://www.emi.ea.govt.nz/Wholesale/Reports/W_GD_C) | 2005-present | 30 min | 🟢 [CC-BY 4.0](https://www.emi.ea.govt.nz/LegalInformation) | ✅ |
+
+</details>
 <!-- sources:end -->

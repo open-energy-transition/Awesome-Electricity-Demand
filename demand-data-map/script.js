@@ -64,6 +64,7 @@ function popupContent(country) {
     item.append(link(source.licence_name, source.licence_url));
     if (source.access === "on-request") item.append(" · access on request");
     if (source.note) item.append(` · ${source.note}`);
+    if (source.demandcast) item.append(" · retrieved by DemandCast");
     list.append(item);
   }
   content.append(list);

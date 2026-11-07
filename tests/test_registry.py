@@ -43,6 +43,48 @@ def test_series_take_the_fields_of_their_source(data_dir: Path) -> None:
     assert by_source["tepco"].access == "on-request"
 
 
+def test_series_are_marked_from_the_demandcast_file(
+    data_dir: Path,
+) -> None:
+    """Mark the series that the DemandCast file lists."""
+    marked = {
+        (s.source_id, s.entity.label)
+        for c in registry.load(data_dir)
+        for s in c.series
+        if s.demandcast
+    }
+    assert marked == {("sonelgaz", "DZA"), ("tepco", "JPN-Kantō")}
+    assert registry.load_demandcast(data_dir) == marked
+
+
+def test_series_are_not_marked_without_the_file(data_dir: Path) -> None:
+    """Mark no series if there is no DemandCast file."""
+    (data_dir / "demandcast.yaml").unlink()
+    assert not any(
+        s.demandcast for c in registry.load(data_dir) for s in c.series
+    )
+
+
+@pytest.mark.parametrize(
+    ("content", "message"),
+    [
+        ("sources:\n  other:\n  - DZA\n", "other is not a data source"),
+        (
+            "sources:\n  tepco:\n  - JPN-Kansai\n",
+            "tepco has no entity JPN-Kansai",
+        ),
+        ("sources:\n  tepco:\n  - japan\n", "should match pattern"),
+    ],
+)
+def test_invalid_demandcast_file_is_rejected(
+    data_dir: Path, content: str, message: str
+) -> None:
+    """Reject marks of sources or entities that the list lacks."""
+    (data_dir / "demandcast.yaml").write_text(content, encoding="utf-8")
+    with pytest.raises(registry.RegistryError, match=message):
+        registry.load(data_dir)
+
+
 def test_years_counts_each_year_once(data_dir: Path) -> None:
     """Count the years covered by overlapping series once."""
     write_source(
