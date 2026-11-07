@@ -1,0 +1,250 @@
+sources:
+  adme:
+    - URY
+  aemo_nem:
+    - AUS-NSW
+    - AUS-QLD
+    - AUS-SA
+    - AUS-TAS
+    - AUS-VIC
+  aemo_wem:
+    - AUS-WA
+  aeso:
+    - CAN-AB
+  bchydro:
+    - CAN-BC
+  caiso:
+    - USA-CAL
+  cammesa:
+    - ARG-A
+    - ARG-BA
+    - ARG-D
+    - ARG-E
+    - ARG-F
+    - ARG-G
+    - ARG-H
+    - ARG-J
+    - ARG-K
+    - ARG-L
+    - ARG-M
+    - ARG-N
+    - ARG-P
+    - ARG-Q
+    - ARG-R
+    - ARG-S
+    - ARG-T
+    - ARG-U
+    - ARG-W
+    - ARG-X
+    - ARG-Y
+    - ARG-Z
+  ccei:
+    - CAN-AB
+    - CAN-NB
+    - CAN-NL
+    - CAN-NS
+    - CAN-ON
+    - CAN-PE
+    - CAN-QC
+    - CAN-YT
+  cen:
+    - CHL
+  cenace:
+    - MEX-BCA
+    - MEX-BCS
+    - MEX-CEN
+    - MEX-NES
+    - MEX-NOR
+    - MEX-NTE
+    - MEX-OCC
+    - MEX-ORI
+    - MEX-PEN
+  cnd:
+    - PAN
+  coes:
+    - PER
+  egat:
+    - THA
+  eia:
+    - USA-CAL
+    - USA-CAR
+    - USA-CENT
+    - USA-FLA
+    - USA-MIDA
+    - USA-MIDW
+    - USA-NE
+    - USA-NW
+    - USA-NY
+    - USA-SE
+    - USA-SW
+    - USA-TEN
+    - USA-TEX
+  ema:
+    - SGP
+  emi:
+    - NZL
+  entsoe:
+    - ALB
+    - AUT
+    - BEL
+    - BGR
+    - BIH
+    - CHE
+    - CYP
+    - CZE
+    - DEU
+    - DNK
+    - ESP
+    - EST
+    - FIN
+    - FRA
+    - GBR-GB
+    - GBR-NIR
+    - GEO
+    - GRC
+    - HRV
+    - HUN
+    - IRL
+    - ITA
+    - LTU
+    - LUX
+    - LVA
+    - MDA
+    - MKD
+    - MNE
+    - NLD
+    - NOR
+    - POL
+    - PRT
+    - ROU
+    - SRB
+    - SVK
+    - SVN
+    - SWE
+    - UKR
+    - XKX
+  epias:
+    - TUR
+  eskom:
+    - ZAF
+  grupoice:
+    - CRI
+  hydroquebec:
+    - CAN-QC
+  ieso:
+    - CAN-ON
+  ismo:
+    - PAK
+  isone:
+    - USA-NE
+  kansaitd:
+    - JPN-Kansai
+  krogd:
+    - KOR
+  nbpower:
+    - CAN-NB
+  nea:
+    - NPL
+  neso:
+    - GBR-GB
+  ngcp:
+    - PHL
+  niti:
+    - IND-AP
+    - IND-AR
+    - IND-AS
+    - IND-BR
+    - IND-CH
+    - IND-CT
+    - IND-DH
+    - IND-DL
+    - IND-GA
+    - IND-GJ
+    - IND-HP
+    - IND-HR
+    - IND-JHWB
+    - IND-JKLA
+    - IND-KA
+    - IND-KL
+    - IND-MH
+    - IND-ML
+    - IND-MN
+    - IND-MP
+    - IND-MZ
+    - IND-NL
+    - IND-OR
+    - IND-PB
+    - IND-PY
+    - IND-RJ
+    - IND-SK
+    - IND-TG
+    - IND-TN
+    - IND-TR
+    - IND-UP
+    - IND-UT
+  ntdc:
+    - PAK
+  occto:
+    - JPN-Chūbu
+    - JPN-Chūgoku
+    - JPN-Hokkaidō
+    - JPN-Hokuriku
+    - JPN-Kansai
+    - JPN-Kantō
+    - JPN-Kyūshū
+    - JPN-Okinawa
+    - JPN-Shikoku
+    - JPN-Tōhoku
+  oluwole_et_al:
+    - NGA
+  ons:
+    - BRA-N
+    - BRA-NE
+    - BRA-S
+    - BRA-SE
+  pgcb:
+    - BGD
+  pucsl:
+    - LKA
+  sonelgaz:
+    - DZA
+  taipower:
+    - TWN
+  tepco:
+    - JPN-Kantō
+  tsoc:
+    - CYP
+  wu_et_al:
+    - CHN-AH
+    - CHN-BJ
+    - CHN-CQ
+    - CHN-FJ
+    - CHN-GD
+    - CHN-GS
+    - CHN-GX
+    - CHN-GZ
+    - CHN-HA
+    - CHN-HB
+    - CHN-HE
+    - CHN-HI
+    - CHN-HL
+    - CHN-HN
+    - CHN-JL
+    - CHN-JS
+    - CHN-JX
+    - CHN-LN
+    - CHN-NM
+    - CHN-NX
+    - CHN-QH
+    - CHN-SC
+    - CHN-SD
+    - CHN-SH
+    - CHN-SN
+    - CHN-SX
+    - CHN-TJ
+    - CHN-XJ
+    - CHN-XZ
+    - CHN-YN
+    - CHN-ZJ
+  xm:
+    - COL

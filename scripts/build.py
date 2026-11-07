@@ -47,6 +47,7 @@ CSV_FIELDS = (
     "licence_url",
     "licence_category",
     "note",
+    "demandcast",
 )
 
 logger = logging.getLogger(__name__)
@@ -132,27 +133,6 @@ def sort_key(series: Series) -> tuple[bool, str, int, str]:
     )
 
 
-def notes(series: Series) -> str:
-    """Return the text of the Notes column for a series.
-
-    Parameters
-    ----------
-    series : Series
-        A time series.
-
-    Returns
-    -------
-    str
-        Whether access is on request, and the note of the series.
-    """
-    parts = []
-    if series.access == "on-request":
-        parts.append("Access on request")
-    if series.entity.note:
-        parts.append(series.entity.note)
-    return cell(". ".join(parts))
-
-
 def readme_summary(countries: list[Country]) -> str:
     """Write the number of series, sources and countries.
 
@@ -183,8 +163,180 @@ def readme_summary(countries: list[Country]) -> str:
     return "\n".join(lines)
 
 
+LICENCE_MARKS = {"open": "🟢", "non-commercial": "🟡", "restricted": "🔴"}
+LEGEND = (
+    "🟢 open · 🟡 non-commercial · 🔴 restricted terms · 🔒 access on "
+    "request · ✅ retrieved by "
+    "[DemandCast](https://github.com/open-energy-transition/demandcast)"
+)
+
+
+def group_series(series: tuple[Series, ...]) -> list[list[Series]]:
+    """Group the series of a country that differ only by subdivision.
+
+    Parameters
+    ----------
+    series : tuple of Series
+        The time series of a country.
+
+    Returns
+    -------
+    list of list of Series
+        The groups, national first, then by subdivision and first year,
+        each a row of the README.
+
+    Notes
+    -----
+    A group joins the series of the subdivisions of one source with the
+    same years, resolution and note, such as the 13 regions of the EIA,
+    and never joins the national series with those of subdivisions.
+    """
+    groups: dict[tuple[object, ...], list[Series]] = {}
+    for item in sorted(series, key=sort_key):
+        entity = item.entity
+        key = (
+            item.source_id,
+            entity.subdivision_code is None,
+            entity.start,
+            entity.end,
+            entity.resolution,
+            entity.note,
+        )
+        groups.setdefault(key, []).append(item)
+    return list(groups.values())
+
+
+def group_url(group: list[Series]) -> str:
+    """Return the page to link for a group of series.
+
+    Parameters
+    ----------
+    group : list of Series
+        Series of one source that differ only by subdivision.
+
+    Returns
+    -------
+    str
+        The page of the series if they share one, otherwise the page of
+        their source.
+    """
+    urls = {item.url for item in group}
+    return urls.pop() if len(urls) == 1 else group[0].source_url
+
+
+def area_cell(group: list[Series]) -> str:
+    """Return the Area cell of a group of series.
+
+    Parameters
+    ----------
+    group : list of Series
+        Series of one source that differ only by subdivision.
+
+    Returns
+    -------
+    str
+        "National", the name of the subdivision, or the number of the
+        subdivisions with their names folded under it.
+    """
+    names = [
+        cell(item.entity.subdivision_name)
+        for item in group
+        if item.entity.subdivision_name is not None
+    ]
+    if not names:
+        return "National"
+    if len(names) == 1:
+        return names[0]
+    return (
+        f"<details><summary>{len(names)} subdivisions</summary>"
+        f"{', '.join(names)}</details>"
+    )
+
+
+def source_cell(group: list[Series]) -> str:
+    """Return the Source cell of a group of series.
+
+    Parameters
+    ----------
+    group : list of Series
+        Series of one source that differ only by subdivision.
+
+    Returns
+    -------
+    str
+        The name of the source linked to its page, and its note in
+        small text below.
+    """
+    first = group[0]
+    text = link(first.name, group_url(group))
+    if first.entity.note:
+        text += f"<br><sub>{cell(first.entity.note)}</sub>"
+    return text
+
+
+def terms_cell(series: Series) -> str:
+    """Return the Terms cell of a series.
+
+    Parameters
+    ----------
+    series : Series
+        A time series.
+
+    Returns
+    -------
+    str
+        The mark of the category of the licence, its name linked to its
+        page, and a lock if the data is given only on request.
+    """
+    licence = series.licence
+    text = (
+        f"{LICENCE_MARKS[licence.category]} {link(licence.name, licence.url)}"
+    )
+    if series.access == "on-request":
+        text += " 🔒"
+    return text
+
+
+def demandcast_cell(group: list[Series]) -> str:
+    """Return the DemandCast cell of a group of series.
+
+    Parameters
+    ----------
+    group : list of Series
+        Series of one source that differ only by subdivision.
+
+    Returns
+    -------
+    str
+        A check mark if DemandCast retrieves every series of the group,
+        with the number of them if it retrieves only some, or nothing.
+    """
+    retrieved = sum(item.demandcast for item in group)
+    if retrieved == 0:
+        return ""
+    if retrieved == len(group):
+        return "✅"
+    return f"✅ {retrieved}/{len(group)}"
+
+
+def resolution_label(minutes: int) -> str:
+    """Return the time step of a series as shown in the README.
+
+    Parameters
+    ----------
+    minutes : int
+        Time step in minutes.
+
+    Returns
+    -------
+    str
+        "hourly", or the number of minutes.
+    """
+    return "hourly" if minutes == 60 else f"{minutes} min"
+
+
 def readme_sources(countries: list[Country]) -> str:
-    """Write a table of the data sources of each continent.
+    """Write a folded table of the data sources of each continent.
 
     Parameters
     ----------
@@ -194,33 +346,44 @@ def readme_sources(countries: list[Country]) -> str:
     Returns
     -------
     str
-        Markdown with one heading and one table per continent.
+        Markdown with a legend, then for each continent a heading and a
+        table, folded under the number of its countries and series, with
+        a row for each group of series.
     """
-    blocks = []
+    blocks = [f"<sub>{LEGEND}</sub>"]
     for continent in CONTINENTS:
+        members = [
+            c for c in countries if c.continent == continent and c.series
+        ]
+        n_series = sum(len(c.series) for c in members)
         rows = [
             f"### {continent}",
             "",
             (
-                "| Country | Subdivision | Source | Period | Resolution "
-                "| Licence | Notes |"
+                f"<details open><summary>{len(members)} countries · "
+                f"{n_series} time series</summary>"
             ),
-            "| --- | --- | --- | --- | --- | --- | --- |",
+            "",
+            (
+                "| Country | Area | Source | Years | Resolution | Terms "
+                "| DemandCast |"
+            ),
+            "| --- | --- | --- | --- | --- | --- | :-: |",
         ]
-        for country in countries:
-            if country.continent != continent:
-                continue
-            for i, series in enumerate(sorted(country.series, key=sort_key)):
+        for country in members:
+            for i, group in enumerate(group_series(country.series)):
+                first = group[0]
                 cells = [
                     f"**{cell(country.name)}**" if i == 0 else "",
-                    cell(series.entity.subdivision_name or ""),
-                    link(series.name, series.url),
-                    series.period,
-                    f"{series.entity.resolution} min",
-                    link(series.licence.name, series.licence.url),
-                    notes(series),
+                    area_cell(group),
+                    source_cell(group),
+                    first.period,
+                    resolution_label(first.entity.resolution),
+                    terms_cell(first),
+                    demandcast_cell(group),
                 ]
                 rows.append("| " + " | ".join(cells) + " |")
+        rows += ["", "</details>"]
         blocks.append("\n".join(rows))
     return "\n\n".join(blocks)
 
@@ -290,7 +453,9 @@ def render_readme(text: str, countries: list[Country]) -> str:
     return text
 
 
-def records(countries: list[Country]) -> list[dict[str, str | int | None]]:
+def records(
+    countries: list[Country],
+) -> list[dict[str, str | int | bool | None]]:
     """Return one flat record per time series.
 
     Parameters
@@ -321,6 +486,7 @@ def records(countries: list[Country]) -> list[dict[str, str | int | None]]:
             "licence_url": series.licence.url,
             "licence_category": series.licence.category,
             "note": series.entity.note,
+            "demandcast": series.demandcast,
         }
         for country in countries
         for series in sorted(country.series, key=sort_key)

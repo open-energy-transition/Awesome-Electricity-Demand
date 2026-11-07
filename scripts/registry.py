@@ -7,8 +7,9 @@ data for. The identifier of a source is that of its YAML file in
 DemandCast, when DemandCast retrieves it. ``countries.csv`` holds every
 country that the list considers, with its continent, its population in
 millions and land area in km² (estimates for 2025), and whether it has
-been searched for data. The README, the map and the figures are
-generated from them.
+been searched for data. ``demandcast.yaml`` lists, for each source,
+the entities whose series DemandCast retrieves, which the list marks.
+The README, the map and the figures are generated from them.
 """
 
 from __future__ import annotations
@@ -33,6 +34,7 @@ from pydantic import (
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
+DEMANDCAST_FILE = "demandcast.yaml"
 SOURCE_ID = re.compile(r"^[a-z0-9]+(_[a-z0-9]+)*$")
 
 Continent = Literal[
@@ -48,6 +50,7 @@ CONTINENTS: tuple[Continent, ...] = get_args(Continent)
 Url = Annotated[str, StringConstraints(pattern=r"^https?://\S+$")]
 Text = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]
 CountryCode = Annotated[str, StringConstraints(pattern=r"^[A-Z]{3}$")]
+EntityLabel = Annotated[str, StringConstraints(pattern=r"^[A-Z]{3}(-\S+)?$")]
 Access = Literal["public", "on-request"]
 
 
@@ -186,6 +189,13 @@ class Entity(StrictModel):
         return self
 
     @property
+    def label(self) -> str:
+        """Country code, and subdivision code after a dash."""
+        if self.subdivision_code is None:
+            return self.country_code
+        return f"{self.country_code}-{self.subdivision_code}"
+
+    @property
     def key(self) -> tuple[str, str | None, int, int | str, int]:
         """Country, subdivision, years and resolution of the entity."""
         return (
@@ -258,20 +268,26 @@ class Series(StrictModel):
         Name of the source.
     url : str
         Page of the data of the entity.
+    source_url : str
+        Page of the source.
     access : {"public", "on-request"}
         Whether the data needs a request or a registration.
     licence : Licence
         Terms of use of the data.
     entity : Entity
         Country or subdivision, years and resolution of the data.
+    demandcast : bool
+        Whether DemandCast retrieves the series.
     """
 
     source_id: str
     name: str
     url: str
+    source_url: str
     access: Access
     licence: Licence
     entity: Entity
+    demandcast: bool = False
 
     @property
     def end_year(self) -> int:
@@ -284,6 +300,19 @@ class Series(StrictModel):
         """Years with data, such as "2015-present" or "2018"."""
         start, end = self.entity.start, self.entity.end
         return str(start) if end == start else f"{start}-{end}"
+
+
+class Retrieved(StrictModel):
+    """Content of the file of the series that DemandCast retrieves.
+
+    Attributes
+    ----------
+    sources : dict
+        For each source, the labels of the entities whose series
+        DemandCast retrieves, such as "USA-TEX" or "DNK".
+    """
+
+    sources: dict[str, list[EntityLabel]] = Field(default_factory=dict)
 
 
 class Country(StrictModel):
@@ -417,8 +446,56 @@ def _read_sources(directory: Path) -> tuple[dict[str, Source], list[str]]:
     return sources, problems
 
 
+def _read_demandcast(
+    path: Path, sources: dict[str, Source]
+) -> tuple[set[tuple[str, str]], list[str]]:
+    """Read the series that DemandCast retrieves.
+
+    Parameters
+    ----------
+    path : Path
+        File of the series that DemandCast retrieves.
+    sources : dict
+        The sources, by identifier.
+
+    Returns
+    -------
+    marks : set of tuple
+        The identifier of the source and the label of the entity of each
+        series that DemandCast retrieves, or none if there is no file.
+    problems : list of str
+        The sources and entities of the file that the list lacks.
+    """
+    if not path.exists():
+        return set(), []
+    name = f"{path.parent.name}/{path.name}"
+    try:
+        content = yaml.safe_load(path.read_text(encoding="utf-8"))
+        retrieved = Retrieved.model_validate(content or {})
+    except yaml.YAMLError as e:
+        return set(), [f"{name}: invalid YAML: {e}"]
+    except ValidationError as e:
+        return set(), _describe(name, e)
+    marks: set[tuple[str, str]] = set()
+    problems = []
+    for source_id, labels in retrieved.sources.items():
+        source = sources.get(source_id)
+        if source is None:
+            if not (path.parent / "sources" / f"{source_id}.yaml").exists():
+                problems.append(f"{name}: {source_id} is not a data source")
+            continue
+        known = {entity.label for entity in source.entities}
+        for label in labels:
+            if label not in known:
+                problems.append(f"{name}: {source_id} has no entity {label}")
+            marks.add((source_id, label))
+    return marks, problems
+
+
 def _series(
-    sources: dict[str, Source], codes: set[str]
+    sources: dict[str, Source],
+    codes: set[str],
+    marks: set[tuple[str, str]],
 ) -> tuple[dict[str, list[Series]], list[str]]:
     """Group the entities of the sources by country.
 
@@ -428,6 +505,8 @@ def _series(
         The sources, by identifier.
     codes : set of str
         Codes of the countries in the countries file.
+    marks : set of tuple
+        The source and entity of each series that DemandCast retrieves.
 
     Returns
     -------
@@ -463,9 +542,11 @@ def _series(
                     source_id=source_id,
                     name=source.name,
                     url=entity.url or source.url,
+                    source_url=source.url,
                     access=source.access,
                     licence=source.licence,
                     entity=entity,
+                    demandcast=(source_id, entity.label) in marks,
                 )
             )
     return series, problems
@@ -495,6 +576,36 @@ def load_sources(data_dir: Path = DATA_DIR) -> dict[str, Source]:
     return sources
 
 
+def load_demandcast(
+    data_dir: Path = DATA_DIR,
+) -> set[tuple[str, str]]:
+    """Load the series that the list marks as retrieved by DemandCast.
+
+    Parameters
+    ----------
+    data_dir : Path, default DATA_DIR
+        Folder with the ``sources`` folder and the file of the series
+        that DemandCast retrieves.
+
+    Returns
+    -------
+    set of tuple
+        The identifier of the source and the label of the entity of each
+        series that DemandCast retrieves.
+
+    Raises
+    ------
+    RegistryError
+        If a data file of a source, or the file of the series, is
+        invalid.
+    """
+    sources = load_sources(data_dir)
+    marks, problems = _read_demandcast(data_dir / DEMANDCAST_FILE, sources)
+    if problems:
+        raise RegistryError("\n".join(problems))
+    return marks
+
+
 def load(data_dir: Path = DATA_DIR) -> list[Country]:
     """Load and validate the data files of the list.
 
@@ -517,8 +628,11 @@ def load(data_dir: Path = DATA_DIR) -> list[Country]:
     """
     rows, problems = _read_countries(data_dir / "countries.csv")
     sources, source_problems = _read_sources(data_dir / "sources")
-    series, series_problems = _series(sources, set(rows))
-    problems += source_problems + series_problems
+    marks, mark_problems = _read_demandcast(
+        data_dir / DEMANDCAST_FILE, sources
+    )
+    series, series_problems = _series(sources, set(rows), marks)
+    problems += source_problems + mark_problems + series_problems
 
     countries = []
     for code, (location, row) in rows.items():

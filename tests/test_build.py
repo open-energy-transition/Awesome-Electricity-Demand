@@ -57,13 +57,75 @@ def test_tables_list_national_sources_first(data_dir: Path) -> None:
     text = build.readme_sources(registry.load(data_dir))
     japan = text.split("### Asia")[1].splitlines()
     rows = [line for line in japan if "ENTSO-E" in line or "TEPCO" in line]
-    assert rows[0].startswith(
-        "| **Japan** |  | [ENTSO-E](https://example.org/a%7Cb%28c%29) |"
+    assert rows == [
+        (
+            "| **Japan** | National | "
+            "[ENTSO-E](https://example.org/a%7Cb%28c%29)"
+            "<br><sub>Generation, proxy for demand</sub> | 2015-2017 | "
+            "hourly | 🔴 [Personal use](https://example.org/terms) |  |"
+        ),
+        (
+            "|  | Kantō | [TEPCO](https://example.org/data) | 2016-present | "
+            "5 min | 🟢 [CC-BY 4.0](https://example.org/licence) 🔒 | ✅ |"
+        ),
+    ]
+
+
+def test_tables_are_folded_by_continent(data_dir: Path) -> None:
+    """Fold each continent under its numbers, below the legend."""
+    text = build.readme_sources(registry.load(data_dir))
+    assert text.startswith(f"<sub>{build.LEGEND}</sub>")
+    assert (
+        "### Africa\n\n<details open><summary>1 countries · 2 time "
+        "series</summary>"
+    ) in text
+    assert "| Resolution | Terms | DemandCast |" in text
+    assert text.count("</details>") == len(registry.CONTINENTS)
+
+
+def test_subdivisions_share_a_row(data_dir: Path) -> None:
+    """Join the subdivisions of a source with the same years."""
+    write_source(
+        data_dir,
+        "cenace",
+        source(
+            [
+                entity(
+                    subdivision_code=code,
+                    subdivision_name=name,
+                    url=f"https://example.org/{code}",
+                )
+                for code, name in (("A", "Alger"), ("B", "Batna"))
+            ]
+            + [entity(subdivision_code="C", subdivision_name="Constantine")],
+            name="CENACE",
+        ),
     )
-    assert rows[0].endswith("| Generation, proxy for demand |")
-    assert rows[1].startswith("|  | Kantō | [TEPCO](https://example.org/data)")
-    assert "| 2016-present | 5 min |" in rows[1]
-    assert rows[1].endswith("| Access on request |")
+    (data_dir / "demandcast.yaml").write_text(
+        "sources:\n  cenace:\n  - DZA-A\n  - DZA-B\n", encoding="utf-8"
+    )
+    text = build.readme_sources(registry.load(data_dir))
+    rows = [line for line in text.splitlines() if "CENACE" in line]
+    assert rows == [
+        (
+            "|  | <details><summary>3 subdivisions</summary>Alger, Batna, "
+            "Constantine</details> | [CENACE](https://example.org/data) | "
+            "2010-2019 | hourly | 🟢 [CC-BY 4.0](https://example.org/licence)"
+            " | ✅ 2/3 |"
+        )
+    ]
+
+
+def test_group_url_is_shared_or_of_the_source(data_dir: Path) -> None:
+    """Link the shared page of a group, or the page of its source."""
+    japan = registry.load(data_dir)[-1]
+    groups = build.group_series(japan.series)
+    assert [build.group_url(g) for g in groups] == [
+        "https://example.org/a|b(c)",
+        "https://example.org/data",
+    ]
+    mixed = [groups[0][0], groups[0][0].model_copy(update={"url": "x"})]
+    assert build.group_url(mixed) == groups[0][0].source_url
 
 
 def test_link_encodes_pipes_and_parentheses() -> None:
@@ -99,6 +161,7 @@ def test_years_by_resolution(data_dir: Path) -> None:
 
 def test_years_of_subdivisions_count_once(data_dir: Path) -> None:
     """Count the years of a country once for all its subdivisions."""
+    (data_dir / "demandcast.yaml").unlink()
     write_source(
         data_dir,
         "sonelgaz",
@@ -129,6 +192,12 @@ def test_build_site(data_dir: Path, tmp_path: Path) -> None:
         "TEPCO",
     ]
     assert rows[0]["source_id"] == "sonelgaz"
+    assert [r["demandcast"] for r in rows] == [
+        "True",
+        "False",
+        "False",
+        "True",
+    ]
     data = json.loads((site / "sources.json").read_text(encoding="utf-8"))
     assert data["countries"]["EGY"] == {
         "name": "Egypt",

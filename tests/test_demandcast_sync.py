@@ -313,6 +313,52 @@ def test_licence(
     assert bool(result) == divergence
 
 
+def test_marks_follow_demandcast(data_dir: Path, dc_dir: Path) -> None:
+    """Report the marks that DemandCast no longer supports, or lacks."""
+    write_dc(dc_dir, "entsoe", [dc_entity()], redistribute=False)
+    (data_dir / "demandcast.yaml").write_text(
+        "sources:\n  sonelgaz:\n  - DZA\n", encoding="utf-8"
+    )
+    result = [f for f in findings(data_dir, dc_dir) if f.check == "mark"]
+    assert [(f.source, f.entity) for f in result] == [
+        ("entsoe", "DZA"),
+        ("tepco", "JPN-Kantō"),
+    ]
+    assert all("does not mark it" in f.message for f in result)
+    (data_dir / "demandcast.yaml").write_text(
+        "sources:\n  sonelgaz:\n  - DZA\n  tepco:\n  - JPN-Kantō\n"
+        "  entsoe:\n  - DZA\n  - JPN\n",
+        encoding="utf-8",
+    )
+    result = [f for f in findings(data_dir, dc_dir) if f.check == "mark"]
+    assert [(f.source, f.entity, f.is_open) for f in result] == [
+        ("entsoe", "JPN", True)
+    ]
+    assert "does not retrieve it" in result[0].message
+
+
+def test_update_marks_writes_the_file(
+    data_dir: Path, dc_dir: Path, tmp_path: Path
+) -> None:
+    """Write the marks of the series that DemandCast retrieves."""
+    (data_dir / "demandcast.yaml").unlink()
+    code = sync.main(
+        [
+            "--demandcast",
+            str(dc_dir),
+            "--output",
+            str(tmp_path / "out"),
+            "--data",
+            str(data_dir),
+            "--update-marks",
+        ]
+    )
+    assert code == 0
+    assert yaml.safe_load(
+        (data_dir / "demandcast.yaml").read_text(encoding="utf-8")
+    ) == {"sources": {"sonelgaz": ["DZA"], "tepco": ["JPN-Kantō"]}}
+
+
 def test_licence_url_note_ignores_trailing_slash(
     data_dir: Path, dc_dir: Path
 ) -> None:
@@ -422,6 +468,9 @@ def test_pull_request_comment_and_annotations(
     write_source(data_dir, "sonelgaz", source([entity(start=2005)]))
     write_source(
         data_dir, "tepco", source([entity(country_code="JPN")], name="TEPCO")
+    )
+    (data_dir / "demandcast.yaml").write_text(
+        "sources:\n  sonelgaz:\n  - DZA\n", encoding="utf-8"
     )
     output = tmp_path / "report"
     code = sync.main(
