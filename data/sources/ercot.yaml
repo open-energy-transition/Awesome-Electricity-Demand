@@ -1,0 +1,15 @@
+name: ERCOT
+url: https://www.ercot.com/gridinfo/load/load_hist
+access: public
+licence:
+  name: Reuse and redistribution allowed
+  url: https://www.ercot.com/help/terms
+  category: open
+entities:
+  - country_code: USA
+    subdivision_code: TEX
+    subdivision_name: Texas
+    start: 1995
+    end: present
+    resolution: 60
+    note: By weather zone from 2002, by control area before; no data for 2001

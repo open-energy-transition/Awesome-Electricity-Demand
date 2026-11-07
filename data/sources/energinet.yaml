@@ -1,0 +1,46 @@
+name: Energi Data Service
+url: https://www.energidataservice.dk/
+access: public
+licence:
+  name: CC-BY 4.0
+  url: https://www.energidataservice.dk/terms-and-conditions
+  category: open
+entities:
+  - country_code: DNK
+    subdivision_code: DK1
+    subdivision_name: Western Denmark
+    start: 2005
+    end: present
+    resolution: 60
+    url: https://www.energidataservice.dk/tso-electricity/ProductionConsumptionSettlement
+    note: Gross consumption with grid losses, from settlement data
+  - country_code: DNK
+    subdivision_code: DK2
+    subdivision_name: Eastern Denmark
+    start: 2005
+    end: present
+    resolution: 60
+    url: https://www.energidataservice.dk/tso-electricity/ProductionConsumptionSettlement
+    note: Gross consumption with grid losses, from settlement data
+  - country_code: DNK
+    subdivision_code: DK1
+    subdivision_name: Western Denmark
+    start: 2015
+    end: present
+    resolution: 60
+    url: https://www.energidataservice.dk/tso-electricity/GenerationProdTypeExchange
+    note: Gross consumption, near real time
+  - country_code: DNK
+    subdivision_code: DK2
+    subdivision_name: Eastern Denmark
+    start: 2015
+    end: present
+    resolution: 60
+    url: https://www.energidataservice.dk/tso-electricity/GenerationProdTypeExchange
+    note: Gross consumption, near real time
+  - country_code: DNK
+    start: 2021
+    end: present
+    resolution: 60
+    url: https://www.energidataservice.dk/search/consumption
+    note: By grid area, region and consumer category, industry, and household heating
