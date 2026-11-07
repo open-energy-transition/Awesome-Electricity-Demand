@@ -29,7 +29,6 @@ def test_load_groups_entities_by_country(data_dir: Path) -> None:
         "sonelgaz",
     ]
     assert {s.source_id for s in japan.series} == {"entsoe", "tepco"}
-    assert not countries[1].searched
 
 
 def test_series_take_the_fields_of_their_source(data_dir: Path) -> None:
@@ -207,13 +206,6 @@ def test_invalid_file_name_is_rejected(data_dir: Path) -> None:
     """Reject a data file whose name is not a source identifier."""
     write_source(data_dir, "ENTSO-E", source([entity()]))
     with pytest.raises(registry.RegistryError, match="lower-case letters"):
-        registry.load(data_dir)
-
-
-def test_country_with_data_must_be_searched(data_dir: Path) -> None:
-    """Reject a country with data that is marked as not searched."""
-    write_source(data_dir, "sonelgaz", source([entity(country_code="AGO")]))
-    with pytest.raises(registry.RegistryError, match="searched must be yes"):
         registry.load(data_dir)
 
 

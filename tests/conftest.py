@@ -12,11 +12,11 @@ if TYPE_CHECKING:
     from pathlib import Path
 
 COUNTRIES = """\
-code,name,continent,population_millions,land_area_km2,searched
-DZA,Algeria,Africa,40,2000,yes
-EGY,Egypt,Africa,60,1000,yes
-AGO,Angola,Africa,100,7000,no
-JPN,Japan,Asia,120,300,yes
+code,name,continent,population_millions,land_area_km2
+DZA,Algeria,Africa,40,2000
+EGY,Egypt,Africa,60,1000
+AGO,Angola,Africa,100,7000
+JPN,Japan,Asia,120,300
 """
 
 

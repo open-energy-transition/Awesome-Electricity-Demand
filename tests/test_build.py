@@ -22,9 +22,6 @@ TEMPLATE = """\
 old
 <!-- summary:end -->
 
-<!-- searched:start -->
-<!-- searched:end -->
-
 <!-- sources:start -->
 old
 lines
@@ -47,7 +44,6 @@ def test_render_readme_replaces_each_block(data_dir: Path) -> None:
         "**4 time series** from **3 data sources** for **2 countries**" in text
     )
     assert "- [North America](#north-america) (0 countries)" in text
-    assert "- **Africa:** Egypt\n<!-- searched:end -->" in text
     assert build.render_readme(text, registry.load(data_dir)) == text
 
 
@@ -169,7 +165,6 @@ def test_build_site(data_dir: Path, tmp_path: Path) -> None:
     assert data["countries"]["EGY"] == {
         "name": "Egypt",
         "continent": "Africa",
-        "searched": True,
         "years": 0,
         "series": [],
     }

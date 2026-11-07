@@ -2,8 +2,8 @@
 
 The data files are read and validated by `registry`. The README has
 blocks between ``<!-- <name>:start -->`` and ``<!-- <name>:end -->``
-that are replaced with the summary, the tables of data sources and the
-countries searched without success. The site for GitHub Pages is the
+that are replaced with the summary and the tables of data sources. The
+site for GitHub Pages is the
 map of ``demand-data-map/``, the list as CSV and JSON, and the figures.
 
 Usage::
@@ -395,34 +395,8 @@ def readme_sources(countries: list[Country]) -> str:
     return "\n\n".join(blocks)
 
 
-def readme_searched(countries: list[Country]) -> str:
-    """Write the countries searched without finding data, by continent.
-
-    Parameters
-    ----------
-    countries : list of Country
-        Every country of the list.
-
-    Returns
-    -------
-    str
-        Markdown list with one item per continent.
-    """
-    lines = []
-    for continent in CONTINENTS:
-        names = [
-            c.name
-            for c in countries
-            if c.continent == continent and c.searched and not c.series
-        ]
-        if names:
-            lines.append(f"- **{continent}:** {', '.join(names)}")
-    return "\n".join(lines) or "None yet."
-
-
 BLOCKS: dict[str, Callable[[list[Country]], str]] = {
     "summary": readme_summary,
-    "searched": readme_searched,
     "sources": readme_sources,
 }
 
@@ -519,8 +493,8 @@ def build_site(
 
     Notes
     -----
-    ``sources.json`` has every country, with whether it has been
-    searched and the number of years with data, which the map colours.
+    ``sources.json`` has every country, with the number of years with
+    data, which the map colours.
     """
     import figures  # noqa: PLC0415 - Matplotlib is only needed here.
 
@@ -544,7 +518,6 @@ def build_site(
             country.code: {
                 "name": country.name,
                 "continent": country.continent,
-                "searched": country.searched,
                 "years": country.years,
                 "series": [
                     {k: v for k, v in r.items() if k not in country_fields}

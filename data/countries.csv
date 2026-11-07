@@ -1,199 +1,199 @@
-code,name,continent,population_millions,land_area_km2,searched
-DZA,Algeria,Africa,47.435,2381740,yes
-AGO,Angola,Africa,39.04,1246700,yes
-BEN,Benin,Africa,14.814,112760,yes
-BWA,Botswana,Africa,2.562,566730,no
-BFA,Burkina Faso,Africa,24.075,273600,no
-BDI,Burundi,Africa,14.39,25680,no
-CPV,Cabo Verde,Africa,0.527,4030,no
-CMR,Cameroon,Africa,29.879,472710,yes
-CAF,Central African Republic,Africa,5.513,622980,no
-TCD,Chad,Africa,21.004,1259200,no
-COM,Comoros,Africa,0.883,1861,no
-COG,Congo (Brazzaville),Africa,6.484,341500,no
-COD,Congo (Kinshasa),Africa,112.832,2267050,no
-CIV,Côte d'Ivoire,Africa,32.712,318000,no
-DJI,Djibouti,Africa,1.184,23180,no
-EGY,Egypt,Africa,118.366,995450,yes
-GNQ,Equatorial Guinea,Africa,1.938,28050,no
-ERI,Eritrea,Africa,3.607,101000,no
-SWZ,Eswatini,Africa,1.256,17200,no
-ETH,Ethiopia,Africa,135.472,1000000,no
-GAB,Gabon,Africa,2.593,257670,no
-GMB,Gambia,Africa,2.822,10120,no
-GHA,Ghana,Africa,35.064,227540,no
-GIN,Guinea,Africa,15.1,245720,no
-GNB,Guinea-Bissau,Africa,2.25,28120,no
-KEN,Kenya,Africa,57.532,569140,no
-LSO,Lesotho,Africa,2.363,30360,no
-LBR,Liberia,Africa,5.731,96320,no
-LBY,Libya,Africa,7.459,1759540,yes
-MDG,Madagascar,Africa,32.741,581795,no
-MWI,Malawi,Africa,22.216,94280,no
-MLI,Mali,Africa,25.199,1220190,no
-MRT,Mauritania,Africa,5.315,1030700,no
-MUS,Mauritius,Africa,1.268,2030,yes
-MAR,Morocco,Africa,38.431,446300,no
-MOZ,Mozambique,Africa,35.632,786380,no
-NAM,Namibia,Africa,3.093,823290,no
-NER,Niger,Africa,27.918,1266700,no
-NGA,Nigeria,Africa,237.528,910770,yes
-RWA,Rwanda,Africa,14.569,24670,no
-SEN,Senegal,Africa,18.932,192530,no
-SYC,Seychelles,Africa,0.133,460,no
-SLE,Sierra Leone,Africa,8.82,72180,no
-SOM,Somalia,Africa,19.655,627340,yes
-ZAF,South Africa,Africa,64.747,1213090,yes
-SSD,South Sudan,Africa,12.189,610952,no
-SDN,Sudan,Africa,51.662,1765048,no
-STP,São Tomé and Príncipe,Africa,0.24,960,no
-TZA,Tanzania,Africa,70.546,885800,no
-TGO,Togo,Africa,9.722,54390,no
-TUN,Tunisia,Africa,12.349,155360,no
-UGA,Uganda,Africa,51.385,199810,no
-ZMB,Zambia,Africa,21.914,743390,no
-ZWE,Zimbabwe,Africa,16.951,386850,no
-AFG,Afghanistan,Asia,43.844,652860,no
-ARM,Armenia,Asia,2.952,28470,no
-AZE,Azerbaijan,Asia,10.398,82658,no
-BHR,Bahrain,Asia,1.643,760,no
-BGD,Bangladesh,Asia,175.687,130170,yes
-BTN,Bhutan,Asia,0.797,38117,no
-BRN,Brunei,Asia,0.466,5270,no
-KHM,Cambodia,Asia,17.848,176520,no
-CHN,China,Asia,1416.1,9388211,yes
-HKG,Hong Kong,Asia,7.4,1050,no
-IND,India,Asia,1463.87,2973190,yes
-IDN,Indonesia,Asia,285.721,1811570,no
-IRN,Iran,Asia,92.418,1628550,no
-IRQ,Iraq,Asia,47.021,434320,no
-ISR,Israel,Asia,9.517,21640,no
-JPN,Japan,Asia,123.103,364555,yes
-JOR,Jordan,Asia,11.521,88780,no
-KAZ,Kazakhstan,Asia,20.844,2699700,no
-KWT,Kuwait,Asia,5.026,17820,no
-KGZ,Kyrgyzstan,Asia,7.295,191800,no
-LAO,Laos,Asia,7.873,230800,no
-LBN,Lebanon,Asia,5.849,10230,no
-MYS,Malaysia,Asia,35.978,328550,yes
-MDV,Maldives,Asia,0.53,300,no
-MNG,Mongolia,Asia,3.517,1553560,no
-MMR,Myanmar,Asia,54.851,653290,no
-NPL,Nepal,Asia,29.618,143350,yes
-PRK,North Korea,Asia,26.571,120410,no
-OMN,Oman,Asia,5.495,309500,no
-PAK,Pakistan,Asia,255.22,770880,yes
-PSE,Palestine,Asia,5.59,6020,no
-PHL,Philippines,Asia,116.787,298170,yes
-QAT,Qatar,Asia,3.116,11610,no
-RUS,Russia,Asia,143.997,16376870,no
-SAU,Saudi Arabia,Asia,34.566,2149690,no
-SGP,Singapore,Asia,5.871,700,yes
-KOR,South Korea,Asia,51.667,97230,yes
-LKA,Sri Lanka,Asia,23.229,62710,yes
-SYR,Syria,Asia,25.62,183630,no
-TWN,Taiwan,Asia,23.112,35410,yes
-TJK,Tajikistan,Asia,10.787,139960,no
-THA,Thailand,Asia,71.62,510890,yes
-TLS,Timor-Leste,Asia,1.419,14870,no
-TUR,Turkey,Asia,87.685,769630,yes
-TKM,Turkmenistan,Asia,7.619,469930,no
-ARE,United Arab Emirates,Asia,11.346,83600,no
-UZB,Uzbekistan,Asia,37.053,425400,no
-VNM,Vietnam,Asia,101.599,310070,no
-YEM,Yemen,Asia,41.774,527970,no
-ALB,Albania,Europe,2.772,27400,yes
-AND,Andorra,Europe,0.083,470,no
-AUT,Austria,Europe,9.114,82409,yes
-BLR,Belarus,Europe,8.998,202910,no
-BEL,Belgium,Europe,11.759,30280,yes
-BIH,Bosnia and Herzegovina,Europe,3.14,51000,yes
-BGR,Bulgaria,Europe,6.715,108560,yes
-HRV,Croatia,Europe,3.848,55960,yes
-CYP,Cyprus,Europe,1.371,9240,yes
-CZE,Czech Republic,Europe,10.609,77240,yes
-DNK,Denmark,Europe,6.003,42430,yes
-EST,Estonia,Europe,1.344,42390,yes
-FIN,Finland,Europe,5.623,303890,yes
-FRA,France,Europe,66.651,547557,yes
-GEO,Georgia,Europe,3.807,69490,yes
-DEU,Germany,Europe,84.075,348560,yes
-GRC,Greece,Europe,9.939,128900,yes
-HUN,Hungary,Europe,9.632,90530,yes
-ISL,Iceland,Europe,0.398,100250,no
-IRL,Ireland,Europe,5.308,68890,yes
-ITA,Italy,Europe,59.146,294140,yes
-XKX,Kosovo,Europe,1.772,10887,yes
-LVA,Latvia,Europe,1.854,62200,yes
-LIE,Liechtenstein,Europe,0.04,160,no
-LTU,Lithuania,Europe,2.83,62674,yes
-LUX,Luxembourg,Europe,0.68,2590,yes
-MLT,Malta,Europe,0.545,320,no
-MDA,Moldova,Europe,2.996,32850,yes
-MCO,Monaco,Europe,0.038,1,no
-MNE,Montenegro,Europe,0.633,13450,yes
-NLD,Netherlands,Europe,18.347,33720,yes
-MKD,North Macedonia,Europe,1.814,25220,yes
-NOR,Norway,Europe,5.623,365268,yes
-POL,Poland,Europe,38.141,306230,yes
-PRT,Portugal,Europe,10.412,91590,yes
-ROU,Romania,Europe,18.909,230170,yes
-SMR,San Marino,Europe,0.034,60,no
-SRB,Serbia,Europe,6.689,87460,yes
-SVK,Slovakia,Europe,5.475,48088,yes
-SVN,Slovenia,Europe,2.117,20140,yes
-ESP,Spain,Europe,47.89,498800,yes
-SWE,Sweden,Europe,10.657,410340,yes
-CHE,Switzerland,Europe,8.967,39516,yes
-UKR,Ukraine,Europe,38.98,579320,yes
-GBR,United Kingdom,Europe,69.551,241930,yes
-ATG,Antigua and Barbuda,North America,0.094,440,no
-BHS,Bahamas,North America,0.403,10010,no
-BRB,Barbados,North America,0.283,430,no
-BLZ,Belize,North America,0.423,22810,no
-CAN,Canada,North America,40.127,9093510,yes
-CRI,Costa Rica,North America,5.153,51060,yes
-CUB,Cuba,North America,10.937,106440,no
-DMA,Dominica,North America,0.066,750,no
-DOM,Dominican Republic,North America,11.52,48320,no
-SLV,El Salvador,North America,6.366,20720,no
-GRD,Grenada,North America,0.117,340,no
-GTM,Guatemala,North America,18.688,107160,no
-HTI,Haiti,North America,11.906,27560,no
-HND,Honduras,North America,11.006,111890,no
-JAM,Jamaica,North America,2.837,10830,no
-MEX,Mexico,North America,131.947,1943950,yes
-NIC,Nicaragua,North America,7.008,120340,no
-PAN,Panama,North America,4.571,74340,yes
-PRI,Puerto Rico,North America,3.235,8870,no
-KNA,Saint Kitts and Nevis,North America,0.047,260,no
-LCA,Saint Lucia,North America,0.18,610,no
-VCT,Saint Vincent and the Grenadines,North America,0.1,390,no
-TTO,Trinidad and Tobago,North America,1.511,5130,no
-USA,United States,North America,347.276,9147420,yes
-AUS,Australia,Oceania,26.974,7682300,yes
-FSM,Federated States of Micronesia,Oceania,0.114,700,no
-FJI,Fiji,Oceania,0.933,18270,no
-KIR,Kiribati,Oceania,0.137,810,no
-MHL,Marshall Islands,Oceania,0.036,180,no
-NRU,Nauru,Oceania,0.012,20,no
-NZL,New Zealand,Oceania,5.252,263310,yes
-PLW,Palau,Oceania,0.018,460,no
-PNG,Papua New Guinea,Oceania,10.763,452860,no
-WSM,Samoa,Oceania,0.219,2830,no
-SLB,Solomon Islands,Oceania,0.839,27990,no
-TON,Tonga,Oceania,0.104,720,no
-TUV,Tuvalu,Oceania,0.009,30,no
-VUT,Vanuatu,Oceania,0.335,12190,no
-ARG,Argentina,South America,45.851,2736690,yes
-BOL,Bolivia,South America,12.582,1083300,no
-BRA,Brazil,South America,212.812,8358140,yes
-CHL,Chile,South America,19.86,743532,yes
-COL,Colombia,South America,53.426,1109500,yes
-ECU,Ecuador,South America,18.29,248360,no
-GUY,Guyana,South America,0.836,196850,no
-PRY,Paraguay,South America,7.013,397300,no
-PER,Peru,South America,34.577,1280000,yes
-SUR,Suriname,South America,0.64,156000,no
-URY,Uruguay,South America,3.385,175020,yes
-VEN,Venezuela,South America,28.517,882050,no
+code,name,continent,population_millions,land_area_km2
+DZA,Algeria,Africa,47.435,2381740
+AGO,Angola,Africa,39.04,1246700
+BEN,Benin,Africa,14.814,112760
+BWA,Botswana,Africa,2.562,566730
+BFA,Burkina Faso,Africa,24.075,273600
+BDI,Burundi,Africa,14.39,25680
+CPV,Cabo Verde,Africa,0.527,4030
+CMR,Cameroon,Africa,29.879,472710
+CAF,Central African Republic,Africa,5.513,622980
+TCD,Chad,Africa,21.004,1259200
+COM,Comoros,Africa,0.883,1861
+COG,Congo (Brazzaville),Africa,6.484,341500
+COD,Congo (Kinshasa),Africa,112.832,2267050
+CIV,Côte d'Ivoire,Africa,32.712,318000
+DJI,Djibouti,Africa,1.184,23180
+EGY,Egypt,Africa,118.366,995450
+GNQ,Equatorial Guinea,Africa,1.938,28050
+ERI,Eritrea,Africa,3.607,101000
+SWZ,Eswatini,Africa,1.256,17200
+ETH,Ethiopia,Africa,135.472,1000000
+GAB,Gabon,Africa,2.593,257670
+GMB,Gambia,Africa,2.822,10120
+GHA,Ghana,Africa,35.064,227540
+GIN,Guinea,Africa,15.1,245720
+GNB,Guinea-Bissau,Africa,2.25,28120
+KEN,Kenya,Africa,57.532,569140
+LSO,Lesotho,Africa,2.363,30360
+LBR,Liberia,Africa,5.731,96320
+LBY,Libya,Africa,7.459,1759540
+MDG,Madagascar,Africa,32.741,581795
+MWI,Malawi,Africa,22.216,94280
+MLI,Mali,Africa,25.199,1220190
+MRT,Mauritania,Africa,5.315,1030700
+MUS,Mauritius,Africa,1.268,2030
+MAR,Morocco,Africa,38.431,446300
+MOZ,Mozambique,Africa,35.632,786380
+NAM,Namibia,Africa,3.093,823290
+NER,Niger,Africa,27.918,1266700
+NGA,Nigeria,Africa,237.528,910770
+RWA,Rwanda,Africa,14.569,24670
+SEN,Senegal,Africa,18.932,192530
+SYC,Seychelles,Africa,0.133,460
+SLE,Sierra Leone,Africa,8.82,72180
+SOM,Somalia,Africa,19.655,627340
+ZAF,South Africa,Africa,64.747,1213090
+SSD,South Sudan,Africa,12.189,610952
+SDN,Sudan,Africa,51.662,1765048
+STP,São Tomé and Príncipe,Africa,0.24,960
+TZA,Tanzania,Africa,70.546,885800
+TGO,Togo,Africa,9.722,54390
+TUN,Tunisia,Africa,12.349,155360
+UGA,Uganda,Africa,51.385,199810
+ZMB,Zambia,Africa,21.914,743390
+ZWE,Zimbabwe,Africa,16.951,386850
+AFG,Afghanistan,Asia,43.844,652860
+ARM,Armenia,Asia,2.952,28470
+AZE,Azerbaijan,Asia,10.398,82658
+BHR,Bahrain,Asia,1.643,760
+BGD,Bangladesh,Asia,175.687,130170
+BTN,Bhutan,Asia,0.797,38117
+BRN,Brunei,Asia,0.466,5270
+KHM,Cambodia,Asia,17.848,176520
+CHN,China,Asia,1416.1,9388211
+HKG,Hong Kong,Asia,7.4,1050
+IND,India,Asia,1463.87,2973190
+IDN,Indonesia,Asia,285.721,1811570
+IRN,Iran,Asia,92.418,1628550
+IRQ,Iraq,Asia,47.021,434320
+ISR,Israel,Asia,9.517,21640
+JPN,Japan,Asia,123.103,364555
+JOR,Jordan,Asia,11.521,88780
+KAZ,Kazakhstan,Asia,20.844,2699700
+KWT,Kuwait,Asia,5.026,17820
+KGZ,Kyrgyzstan,Asia,7.295,191800
+LAO,Laos,Asia,7.873,230800
+LBN,Lebanon,Asia,5.849,10230
+MYS,Malaysia,Asia,35.978,328550
+MDV,Maldives,Asia,0.53,300
+MNG,Mongolia,Asia,3.517,1553560
+MMR,Myanmar,Asia,54.851,653290
+NPL,Nepal,Asia,29.618,143350
+PRK,North Korea,Asia,26.571,120410
+OMN,Oman,Asia,5.495,309500
+PAK,Pakistan,Asia,255.22,770880
+PSE,Palestine,Asia,5.59,6020
+PHL,Philippines,Asia,116.787,298170
+QAT,Qatar,Asia,3.116,11610
+RUS,Russia,Asia,143.997,16376870
+SAU,Saudi Arabia,Asia,34.566,2149690
+SGP,Singapore,Asia,5.871,700
+KOR,South Korea,Asia,51.667,97230
+LKA,Sri Lanka,Asia,23.229,62710
+SYR,Syria,Asia,25.62,183630
+TWN,Taiwan,Asia,23.112,35410
+TJK,Tajikistan,Asia,10.787,139960
+THA,Thailand,Asia,71.62,510890
+TLS,Timor-Leste,Asia,1.419,14870
+TUR,Turkey,Asia,87.685,769630
+TKM,Turkmenistan,Asia,7.619,469930
+ARE,United Arab Emirates,Asia,11.346,83600
+UZB,Uzbekistan,Asia,37.053,425400
+VNM,Vietnam,Asia,101.599,310070
+YEM,Yemen,Asia,41.774,527970
+ALB,Albania,Europe,2.772,27400
+AND,Andorra,Europe,0.083,470
+AUT,Austria,Europe,9.114,82409
+BLR,Belarus,Europe,8.998,202910
+BEL,Belgium,Europe,11.759,30280
+BIH,Bosnia and Herzegovina,Europe,3.14,51000
+BGR,Bulgaria,Europe,6.715,108560
+HRV,Croatia,Europe,3.848,55960
+CYP,Cyprus,Europe,1.371,9240
+CZE,Czech Republic,Europe,10.609,77240
+DNK,Denmark,Europe,6.003,42430
+EST,Estonia,Europe,1.344,42390
+FIN,Finland,Europe,5.623,303890
+FRA,France,Europe,66.651,547557
+GEO,Georgia,Europe,3.807,69490
+DEU,Germany,Europe,84.075,348560
+GRC,Greece,Europe,9.939,128900
+HUN,Hungary,Europe,9.632,90530
+ISL,Iceland,Europe,0.398,100250
+IRL,Ireland,Europe,5.308,68890
+ITA,Italy,Europe,59.146,294140
+XKX,Kosovo,Europe,1.772,10887
+LVA,Latvia,Europe,1.854,62200
+LIE,Liechtenstein,Europe,0.04,160
+LTU,Lithuania,Europe,2.83,62674
+LUX,Luxembourg,Europe,0.68,2590
+MLT,Malta,Europe,0.545,320
+MDA,Moldova,Europe,2.996,32850
+MCO,Monaco,Europe,0.038,1
+MNE,Montenegro,Europe,0.633,13450
+NLD,Netherlands,Europe,18.347,33720
+MKD,North Macedonia,Europe,1.814,25220
+NOR,Norway,Europe,5.623,365268
+POL,Poland,Europe,38.141,306230
+PRT,Portugal,Europe,10.412,91590
+ROU,Romania,Europe,18.909,230170
+SMR,San Marino,Europe,0.034,60
+SRB,Serbia,Europe,6.689,87460
+SVK,Slovakia,Europe,5.475,48088
+SVN,Slovenia,Europe,2.117,20140
+ESP,Spain,Europe,47.89,498800
+SWE,Sweden,Europe,10.657,410340
+CHE,Switzerland,Europe,8.967,39516
+UKR,Ukraine,Europe,38.98,579320
+GBR,United Kingdom,Europe,69.551,241930
+ATG,Antigua and Barbuda,North America,0.094,440
+BHS,Bahamas,North America,0.403,10010
+BRB,Barbados,North America,0.283,430
+BLZ,Belize,North America,0.423,22810
+CAN,Canada,North America,40.127,9093510
+CRI,Costa Rica,North America,5.153,51060
+CUB,Cuba,North America,10.937,106440
+DMA,Dominica,North America,0.066,750
+DOM,Dominican Republic,North America,11.52,48320
+SLV,El Salvador,North America,6.366,20720
+GRD,Grenada,North America,0.117,340
+GTM,Guatemala,North America,18.688,107160
+HTI,Haiti,North America,11.906,27560
+HND,Honduras,North America,11.006,111890
+JAM,Jamaica,North America,2.837,10830
+MEX,Mexico,North America,131.947,1943950
+NIC,Nicaragua,North America,7.008,120340
+PAN,Panama,North America,4.571,74340
+PRI,Puerto Rico,North America,3.235,8870
+KNA,Saint Kitts and Nevis,North America,0.047,260
+LCA,Saint Lucia,North America,0.18,610
+VCT,Saint Vincent and the Grenadines,North America,0.1,390
+TTO,Trinidad and Tobago,North America,1.511,5130
+USA,United States,North America,347.276,9147420
+AUS,Australia,Oceania,26.974,7682300
+FSM,Federated States of Micronesia,Oceania,0.114,700
+FJI,Fiji,Oceania,0.933,18270
+KIR,Kiribati,Oceania,0.137,810
+MHL,Marshall Islands,Oceania,0.036,180
+NRU,Nauru,Oceania,0.012,20
+NZL,New Zealand,Oceania,5.252,263310
+PLW,Palau,Oceania,0.018,460
+PNG,Papua New Guinea,Oceania,10.763,452860
+WSM,Samoa,Oceania,0.219,2830
+SLB,Solomon Islands,Oceania,0.839,27990
+TON,Tonga,Oceania,0.104,720
+TUV,Tuvalu,Oceania,0.009,30
+VUT,Vanuatu,Oceania,0.335,12190
+ARG,Argentina,South America,45.851,2736690
+BOL,Bolivia,South America,12.582,1083300
+BRA,Brazil,South America,212.812,8358140
+CHL,Chile,South America,19.86,743532
+COL,Colombia,South America,53.426,1109500
+ECU,Ecuador,South America,18.29,248360
+GUY,Guyana,South America,0.836,196850
+PRY,Paraguay,South America,7.013,397300
+PER,Peru,South America,34.577,1280000
+SUR,Suriname,South America,0.64,156000
+URY,Uruguay,South America,3.385,175020
+VEN,Venezuela,South America,28.517,882050

@@ -6,8 +6,8 @@ of use and the countries and subdivisions (the entities) that it has
 data for. The identifier of a source is that of its YAML file in
 DemandCast, when DemandCast retrieves it. ``countries.csv`` holds every
 country that the list considers, with its continent, its population in
-millions and land area in km² (estimates for 2025), and whether it has
-been searched for data. ``demandcast.yaml`` lists, for each source,
+millions and land area in km² (estimates for 2025).
+``demandcast.yaml`` lists, for each source,
 the entities whose series DemandCast retrieves, which the list marks.
 ``shapes.geojson`` holds the outlines of the countries and of the
 subdivisions of the list, for the map of the figures. The README, the
@@ -333,8 +333,6 @@ class Country(StrictModel):
         Population in millions.
     land_area_km2 : int
         Land area in km².
-    searched : bool
-        Whether the country has been searched for data.
     series : tuple of Series
         Time series of the country and of its subdivisions.
     """
@@ -344,7 +342,6 @@ class Country(StrictModel):
     continent: Continent
     population_millions: float = Field(gt=0)
     land_area_km2: int = Field(gt=0)
-    searched: bool
     series: tuple[Series, ...] = ()
 
     @property
@@ -727,22 +724,12 @@ def load(data_dir: Path = DATA_DIR) -> list[Country]:
 
     countries = []
     for code, (location, row) in rows.items():
-        if row.get("searched") not in {"yes", "no"}:
-            problems.append(f"{location}: searched must be yes or no")
-            continue
-        values = row | {
-            "searched": row["searched"] == "yes",
-            "series": tuple(series.get(code, ())),
-        }
+        values = row | {"series": tuple(series.get(code, ()))}
         try:
             country = Country.model_validate(values)
         except ValidationError as e:
             problems.extend(_describe(location, e))
             continue
-        if country.series and not country.searched:
-            problems.append(
-                f"{location}: {code} has data, so searched must be yes"
-            )
         countries.append(country)
 
     if problems:
