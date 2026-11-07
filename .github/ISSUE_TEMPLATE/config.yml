@@ -1,0 +1,8 @@
+# New-issue page: the issue forms, blank issues for questions, and a link
+# to the guide for adding a data source with a pull request.
+
+blank_issues_enabled: true
+contact_links:
+  - name: Add a data source yourself
+    url: https://github.com/open-energy-transition/Awesome-Electricity-Demand/blob/main/CONTRIBUTING.md#adding-or-changing-a-data-source
+    about: Add or change a data file in data/sources/ with a pull request.
