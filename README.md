@@ -45,14 +45,6 @@ The share of the countries of each continent with data, and of their population 
 
 The figures are rebuilt from the list every time it changes, and every month.
 
-### Searched Without Success
-
-These countries have been searched for hourly or sub-hourly electricity demand data, but none has been found yet. They are listed to help other researchers avoid duplicating effort and to build a shared knowledge base. If you know of a source for any of them, please contribute it!
-
-<!-- searched:start: generated from data/ by scripts/build.py, do not edit -->
-- **Africa:** Angola, Benin, Cameroon, Egypt, Libya, Mauritius, Somalia
-<!-- searched:end -->
-
 ## Contributions
 
 Contributions are welcome in the form of new links to websites that provide hourly or sub-hourly electricity demand data, including information on data availability timelines and licensing conditions.

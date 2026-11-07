@@ -10,12 +10,10 @@ const COUNTRY_SHAPES =
 // Codes of the shapes that differ from the codes of the list.
 const SHAPE_CODES = { "CS-KM": "XKX" };
 
-const NOT_SEARCHED = "#aaaaaa";
-const NONE_FOUND = "#e0e0e0";
+const NO_DATA = "#e0e0e0";
 
 function colour(country) {
-  if (!country) return NOT_SEARCHED;
-  if (country.years === 0) return country.searched ? NONE_FOUND : NOT_SEARCHED;
+  if (!country || country.years === 0) return NO_DATA;
   if (country.years < 5) return "#b2d8b2";
   if (country.years < 10) return "#67b367";
   if (country.years < 20) return "#267326";
@@ -40,14 +38,7 @@ function popupContent(country) {
   const content = element("div");
   content.append(element("h4", country.name));
   if (country.series.length === 0) {
-    content.append(
-      element(
-        "p",
-        country.searched
-          ? "Searched, but no hourly data has been found yet."
-          : "Not searched yet.",
-      ),
-    );
+    content.append(element("p", "No data in the list yet."));
     return content;
   }
   const list = element("ul");
@@ -110,7 +101,6 @@ map.on("load", async () => {
     const feature = event.features[0];
     const country = list.countries[feature.properties.code] ?? {
       name: feature.properties.name,
-      searched: false,
       series: [],
     };
     new maplibregl.Popup({ maxWidth: "420px" })
