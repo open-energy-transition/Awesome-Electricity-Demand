@@ -2,12 +2,12 @@ name: CEN
 url: https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/
 access: public
 licence:
-  name: Open data
+  name: Personal or academic use with attribution
   url: https://www.coordinador.cl/terminos-y-condiciones/
-  category: open
+  category: non-commercial
 entities:
   - country_code: CHL
     start: 1999
-    end: present
+    end: 2026
     resolution: 60
-    note: Until 2015, the central system (SIC) only, about 30% less
+    note: Until 2015, the central system (SIC) only, about 30% less. The API of the page has no data after 13 May 2026
