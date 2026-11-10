@@ -10,4 +10,4 @@ entities:
     start: 1999
     end: present
     resolution: 60
-    note: Until 2015, the central system (SIC) only, about 30% less
+    note: Until 2015, the central system (SIC) only, about 30% less. The API of the public information system ends on 13 May 2026; since then, the page has only the last three months or so, in a Qlik app, each month published from the 20th of the next
