@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **243 time series** from **47 data sources** for **68 countries** and their subdivisions in:
+The list has **244 time series** from **48 data sources** for **68 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (14 countries)
@@ -191,7 +191,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### South America
 
-<details open><summary>6 countries · 32 time series</summary>
+<details open><summary>6 countries · 33 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
@@ -199,7 +199,8 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | <details><summary>22 subdivisions</summary>Buenos Aires and Ciudad Autónoma de Buenos Aires, Catamarca, Chaco, Chubut, Corrientes, Córdoba, Entre Ríos, Formosa, Jujuy, La Pampa, La Rioja, Mendoza, Misiones, Neuquén, Río Negro, Salta, San Juan, San Luis, Santa Cruz, Santa Fe, Santiago del Estero, Tucumán</details> | [Cammesa](https://cammesaweb.cammesa.com/)<br><sub>The API keeps only about the last 7 to 8 months</sub> | 2026-present | 5 min | 🔴 [Use with authorization](https://cammesaweb.cammesa.com/politicas-de-acceso/) | ✅ |
 | **Brazil** | National | [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | hourly | 🟢 [CC-BY](https://dados.ons.org.br/dataset/curva-carga) |  |
 |  | <details><summary>4 subdivisions</summary>North, North-East, South, South-East</details> | [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | hourly | 🟢 [CC-BY](https://dados.ons.org.br/dataset/curva-carga) | ✅ |
-| **Chile** | National | [CEN](https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/)<br><sub>Until 2015, the central system (SIC) only, about 30% less. The API of the public information system ends on 13 May 2026; since then, the page has only the last three months or so, in a Qlik app, each month published from the 20th of the next</sub> | 1999-present | hourly | 🟢 [Open data](https://www.coordinador.cl/terminos-y-condiciones/) | ✅ |
+| **Chile** | National | [CEN](https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/)<br><sub>Until 2015, the central system (SIC) only, about 30% less. The API of the page has no data after 13 May 2026</sub> | 1999-2026 | hourly | 🟢 [Open data](https://www.coordinador.cl/terminos-y-condiciones/) | ✅ |
+|  | National | [CEN (Qlik app)](https://qap-prd.coordinador.cl/ext/extensions/mashup_demanda_real/mashup_demanda_real.html)<br><sub>Only the last three months or so, each month published from the 20th of the next</sub> | 2026-present | hourly | 🟢 [Open data](https://www.coordinador.cl/terminos-y-condiciones/) |  |
 | **Colombia** | National | [XM](https://www.energiadecolombia.com/consulta) | 2000-present | hourly | 🔴 [All rights reserved](https://www.xm.com.co/legales/terminos-legales-del-sitio-web) | ✅ |
 | **Peru** | National | [COES](https://www.coes.org.pe/Portal/portalinformacion/demanda)<br><sub>Until 1999, hourly values about 20% lower</sub> | 1997-present | 30 min | 🟡 [Non-commercial use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones) | ✅ |
 | **Uruguay** | National | [ADME](https://adme.com.uy/controlpanel.php) | 2019-present | hourly | 🟢 [Open data](https://adme.com.uy/datosabiertos.html) | ✅ |
