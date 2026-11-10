@@ -2,9 +2,9 @@ name: CEN (Qlik app)
 url: https://qap-prd.coordinador.cl/ext/extensions/mashup_demanda_real/mashup_demanda_real.html
 access: public
 licence:
-  name: Open data
+  name: Personal or academic use with attribution
   url: https://www.coordinador.cl/terminos-y-condiciones/
-  category: open
+  category: non-commercial
 entities:
   - country_code: CHL
     start: 2026
