@@ -2,7 +2,7 @@ name: GSO
 url: https://www.gso.org.my/SystemData/SystemDemand.aspx
 access: public
 licence:
-  name: All rights reserved
+  name: Use with authorisation
   url: https://www.gso.org.my/TermsConditions.aspx
   category: restricted
 entities:
