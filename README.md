@@ -203,7 +203,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | National | [CEN (Qlik app)](https://qap-prd.coordinador.cl/ext/extensions/mashup_demanda_real/mashup_demanda_real.html)<br><sub>Only the last three months or so, each month published from the 20th of the next</sub> | 2026-present | hourly | 🟡 [Personal or academic use with attribution](https://www.coordinador.cl/terminos-y-condiciones/) |  |
 | **Colombia** | National | [XM](https://www.energiadecolombia.com/consulta) | 2000-present | hourly | 🔴 [All rights reserved](https://www.xm.com.co/legales/terminos-legales-del-sitio-web) | ✅ |
 | **Peru** | National | [COES](https://www.coes.org.pe/Portal/portalinformacion/demanda)<br><sub>Until 1999, hourly values about 20% lower</sub> | 1997-present | 30 min | 🟡 [Non-commercial use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones) | ✅ |
-| **Uruguay** | National | [ADME](https://adme.com.uy/controlpanel.php) | 2019-present | hourly | 🟢 [Open data](https://adme.com.uy/datosabiertos.html) | ✅ |
+| **Uruguay** | National | [ADME](https://adme.com.uy/controlpanel.php) | 2019-present | hourly | 🟢 [Any use with attribution](https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/sites/agencia-gobierno-electronico-sociedad-informacion-conocimiento/files/documentos/publicaciones/licencia_de_datos_abiertos_0.pdf) | ✅ |
 
 </details>
 
@@ -213,9 +213,9 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
-| **Australia** | <details><summary>4 subdivisions</summary>New South Wales, Queensland, South Australia, Victoria</details> | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30 min | 🟢 [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) | ✅ |
-|  | <details><summary>5 subdivisions</summary>New South Wales, Queensland, South Australia, Tasmania, Victoria</details> | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5 min | 🟢 [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) | ✅ |
-|  | Tasmania | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2005-2021 | 30 min | 🟢 [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) | ✅ |
+| **Australia** | <details><summary>4 subdivisions</summary>New South Wales, Queensland, South Australia, Victoria</details> | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 1998-2021 | 30 min | 🟢 [Any use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) | ✅ |
+|  | <details><summary>5 subdivisions</summary>New South Wales, Queensland, South Australia, Tasmania, Victoria</details> | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2021-present | 5 min | 🟢 [Any use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) | ✅ |
+|  | Tasmania | [AEMO](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data) | 2005-2021 | 30 min | 🟢 [Any use with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) | ✅ |
 |  | Western Australia | [AEMO](https://data.wa.aemo.com.au/datafiles/operational-demand/) | 2006-2023 | 30 min | 🟢 [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) | ✅ |
 |  | Western Australia | [AEMO](https://data.wa.aemo.com.au/public/market-data/wemde/operationalDemandWithdrawal/dailyFiles/) | 2023-present | 5 min | 🟢 [Use for any purpose with attribution](https://aemo.com.au/privacy-and-legal-notices/copyright-permissions) | ✅ |
 | **New Zealand** | National | [EMI](https://www.emi.ea.govt.nz/Wholesale/Reports/W_GD_C) | 2005-present | 30 min | 🟢 [CC-BY 4.0](https://www.emi.ea.govt.nz/LegalInformation) | ✅ |

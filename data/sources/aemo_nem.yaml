@@ -2,7 +2,7 @@ name: AEMO
 url: https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data
 access: public
 licence:
-  name: Use for any purpose with attribution
+  name: Any use with attribution
   url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
   category: open
 entities:

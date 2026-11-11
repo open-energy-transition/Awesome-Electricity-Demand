@@ -2,8 +2,8 @@ name: ADME
 url: https://adme.com.uy/controlpanel.php
 access: public
 licence:
-  name: Open data
-  url: https://adme.com.uy/datosabiertos.html
+  name: Any use with attribution
+  url: https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/sites/agencia-gobierno-electronico-sociedad-informacion-conocimiento/files/documentos/publicaciones/licencia_de_datos_abiertos_0.pdf
   category: open
 entities:
   - country_code: URY
