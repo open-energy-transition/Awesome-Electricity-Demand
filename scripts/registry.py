@@ -57,19 +57,24 @@ EntityLabel = Annotated[str, StringConstraints(pattern=r"^[A-Z]{3}(-\S+)?$")]
 Access = Literal["public", "on-request"]
 LicenceCategory = Literal["open", "non-commercial", "restricted"]
 # The words of the terms of use in each category: the short name of a
-# licence, matched as a pattern, or what the terms allow.
+# licence, matched as a pattern, or what the terms allow. A version of a
+# Creative Commons licence before 4.0 can be ported to a country, such
+# as "CC BY 3.0 AU", or be the IGO version.
+CC_VERSION = r"( \d\.\d( [A-Z]{2}| IGO)?)?"
 LICENCE_NAMES: dict[str, re.Pattern[str]] = {
     "open": re.compile(
-        r"(CC0 1\.0|CC BY(-SA)?( \d\.\d)?|ODbL 1\.0|ODC-By 1\.0|PDDL 1\.0"
+        rf"(CC0 1\.0|PDM 1\.0|CC BY(-SA)?{CC_VERSION}"
+        r"|ODbL 1\.0|ODC-By 1\.0|PDDL 1\.0"
         r"|Any use with attribution|Any use)"
     ),
     "non-commercial": re.compile(
-        r"(CC BY-NC(-SA|-ND)?( \d\.\d)?"
+        rf"(CC BY-NC(-SA)?{CC_VERSION}"
         r"|Non-commercial use( with attribution)?"
         r"|Personal or academic use( with attribution)?)"
     ),
     "restricted": re.compile(
-        r"(Personal use|Any use with attribution, no redistribution"
+        rf"(CC BY(-NC)?-ND{CC_VERSION}|Personal use"
+        r"|Any use with attribution, no (redistribution|derivatives)"
         r"|Use with authorisation|No terms found)"
     ),
 }
