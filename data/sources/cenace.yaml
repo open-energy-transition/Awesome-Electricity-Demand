@@ -2,7 +2,7 @@ name: CENACE
 url: https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx
 access: public
 licence:
-  name: All rights reserved
+  name: Personal use
   url: https://www.gob.mx/terminos
   category: restricted
 entities:
