@@ -40,7 +40,7 @@ name: CENACE
 url: https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx
 access: public
 licence:
-  name: All rights reserved
+  name: Personal use
   url: https://www.gob.mx/terminos
   category: restricted
 entities:
@@ -59,8 +59,8 @@ The fields of a source are:
 | `name`             | yes      | Name of the source, as shown in the list.                                        |
 | `url`              | yes      | Where to download or request the data.                                           |
 | `access`           | no       | `public` (the default), or `on-request` if a request or registration is needed. |
-| `licence.name`     | yes      | Short description of the terms of use, as shown in the list.                     |
-| `licence.url`      | yes      | Page with the full terms.                                                        |
+| `licence.name`     | yes      | What the terms allow, in the words of the list (see below).                      |
+| `licence.url`      | yes      | Page where the source states its terms, or the record of a dataset with its licence. |
 | `licence.category` | yes      | `open`, `non-commercial` or `restricted` (see below).                            |
 | `entities`         | yes      | The countries and subdivisions with data, with the fields below.                 |
 
@@ -77,10 +77,15 @@ The fields of an entity are:
 | `note`                                 | no       | Remark shown in the list, such as "Generation, proxy for demand".                |
 
 - `subdivision_code` is the [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code without the country prefix (`NSW` for New South Wales). For grid regions without one, use the code that DemandCast uses (`CAL` for the California region of the EIA), so that the two lists can be compared.
-- `licence.category` sorts the terms:
-  - `open`: any use, possibly with attribution (CC-BY, CC0, open data licences);
-  - `non-commercial`: only non-commercial use (CC BY-NC, non-commercial reproduction);
-  - `restricted`: personal use, all rights reserved, or use only with an authorisation.
+- `licence.category` sorts the terms, and `licence.name` says what they allow, in one of these words:
+
+  | Category         | Terms                                                                      | `licence.name`                                                                                                                         |
+  | ---------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+  | `open`           | Any use, including commercial use and redistribution, possibly with attribution | A Creative Commons or Open Data Commons licence by its short name (`CC BY 4.0`, `CC BY-SA 4.0`, `CC0 1.0`), else `Any use with attribution` or `Any use` |
+  | `non-commercial` | Only non-commercial use                                                    | `CC BY-NC 4.0` and the like, else `Non-commercial use with attribution`, `Non-commercial use`, `Personal or academic use with attribution` or `Personal or academic use` |
+  | `restricted`     | Personal use, no redistribution, or no use without permission               | `Personal use`, `Any use with attribution, no redistribution`, `Use with authorisation` (also for a bare "all rights reserved") or `No terms found` |
+
+  "with attribution" is added when the terms require citing the source, not when they only ask for it. The terms of a dataset on Zenodo, Mendeley Data or an open data portal are those of its record; for other licences, such as national open data licences, `licence.name` says what they allow.
 - Only hourly or sub-hourly data belongs to the list, so `resolution` must divide 60 minutes.
 - If the data of an entity changes resolution over time, list each period as a separate entity.
 
