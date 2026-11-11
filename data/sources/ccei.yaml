@@ -2,7 +2,7 @@ name: CCEI
 url: https://energy-information.canada.ca/en/resources/high-frequency-electricity-data
 access: public
 licence:
-  name: Non-commercial reproduction
+  name: Non-commercial use with attribution
   url: https://www.canada.ca/en/transparency/terms.html
   category: non-commercial
 entities:

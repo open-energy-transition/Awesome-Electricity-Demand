@@ -2,7 +2,7 @@ name: Cammesa
 url: https://cammesaweb.cammesa.com/
 access: public
 licence:
-  name: Use with authorization
+  name: Use with authorisation
   url: https://cammesaweb.cammesa.com/politicas-de-acceso/
   category: restricted
 entities:
