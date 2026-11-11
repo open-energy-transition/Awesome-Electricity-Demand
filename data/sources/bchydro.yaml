@@ -2,9 +2,9 @@ name: BCHYDRO
 url: https://www.bchydro.com/energy-in-bc/operations/transmission/transmission-system/balancing-authority-load-data/historical-transmission-data.html
 access: public
 licence:
-  name: Non-commercial use offline only
+  name: Use with authorisation
   url: https://www.bchydro.com/siteinfo/legal.html
-  category: non-commercial
+  category: restricted
 entities:
   - country_code: CAN
     subdivision_code: BC

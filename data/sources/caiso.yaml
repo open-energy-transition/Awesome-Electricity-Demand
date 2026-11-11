@@ -2,7 +2,7 @@ name: CAISO
 url: https://www.caiso.com/library/historical-ems-hourly-load
 access: public
 licence:
-  name: Use for any purpose with attribution
+  name: Any use with attribution
   url: https://www.caiso.com/privacy-terms-of-use
   category: open
 entities:
