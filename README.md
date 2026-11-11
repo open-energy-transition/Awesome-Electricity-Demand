@@ -90,7 +90,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 | **Nepal** | National | [Open Data Nepal](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | 2017-2018 | hourly | 🟢 [CC BY 4.0](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | ✅ |
 | **Pakistan** | National | [NTDC](https://zenodo.org/records/24023127)<br><sub>Copy on Zenodo of the dataset removed from Kaggle in 2026</sub> | 2015-2020 | hourly | 🟢 [CC0 1.0](https://zenodo.org/records/24023127) | ✅ |
 |  | National | [ISMO](https://www.ismo.gov.pk/library/hourly-system-demand)<br><sub>Without K-Electric, which supplies Karachi</sub> | 2024-2025 | hourly | 🔴 [Personal use](https://www.ismo.gov.pk/terms-and-conditions) | ✅ |
-| **Philippines** | National | [NGCP](https://www.ngcp.ph/operations#operations) | 2013-2025 | hourly | 🔴 [All rights reserved](https://ngcp.ph) | ✅ |
+| **Philippines** | National | [NGCP](https://www.ngcp.ph/operations#operations) | 2013-2025 | hourly | 🔴 [Use with authorisation](https://ngcp.ph) | ✅ |
 | **Singapore** | National | [EMA](https://www.ema.gov.sg/resources/statistics/half-hourly-system-demand-data) | 2014-present | 30 min | 🟢 [Any use with attribution](https://www.ema.gov.sg/terms-of-use) | ✅ |
 | **South Korea** | National | [KROGD](https://www.data.go.kr/data/15065266/fileData.do) | 2013-2025 | hourly | 🟢 [Any use](https://www.data.go.kr/data/15065266/fileData.do) | ✅ |
 | **Sri Lanka** | National | [PUCSL](https://gendata.pucsl.gov.lk/generation-profile)<br><sub>Generation, proxy for demand</sub> | 2023-present | 15 min | 🔴 [All rights reserved](https://www.pucsl.gov.lk/) | ✅ |
@@ -149,7 +149,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 | **Sweden** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 | **Switzerland** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2014-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 | **Ukraine** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2017-2022 | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
-| **United Kingdom** | Great Britain | [NESO](https://www.neso.energy/data-portal/historic-demand-data) | 2001-present | 30 min | 🟢 [Use for any purpose with attribution](https://www.neso.energy/data-portal/neso-open-licence) | ✅ |
+| **United Kingdom** | Great Britain | [NESO](https://www.neso.energy/data-portal/historic-demand-data) | 2001-present | 30 min | 🟢 [Any use with attribution](https://www.neso.energy/data-portal/neso-open-licence) | ✅ |
 |  | Great Britain | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-2021 | 30 min | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 |  | Northern Ireland | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-2025 | 30 min | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 

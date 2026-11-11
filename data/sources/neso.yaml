@@ -2,7 +2,7 @@ name: NESO
 url: https://www.neso.energy/data-portal/historic-demand-data
 access: public
 licence:
-  name: Use for any purpose with attribution
+  name: Any use with attribution
   url: https://www.neso.energy/data-portal/neso-open-licence
   category: open
 entities:
