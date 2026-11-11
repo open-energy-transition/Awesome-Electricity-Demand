@@ -2,7 +2,7 @@ name: IESO
 url: https://www.ieso.ca/Power-Data/Data-Directory
 access: public
 licence:
-  name: Limited license
+  name: Any use with attribution, no redistribution
   url: https://www.ieso.ca/Terms-of-Use
   category: restricted
 entities:
