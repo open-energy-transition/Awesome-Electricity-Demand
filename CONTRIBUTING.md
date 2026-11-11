@@ -80,7 +80,7 @@ The fields of an entity are:
 - Only hourly or sub-hourly data belongs to the list, so `resolution` must divide 60 minutes.
 - If the data of an entity changes resolution over time, list each period as a separate entity.
 
-The checks reject unknown fields and countries, years in the wrong order or in the future, entities listed twice, entity URLs that repeat the URL of their source, and subdivision codes with two names, and list every problem at once.
+The checks reject unknown fields and countries, years in the wrong order or in the future, entities listed twice, entity URLs that repeat the URL of their source, subdivision codes with two names, and terms of use not written in the words of their category (see below), and list every problem at once.
 
 ### Terms of use
 
