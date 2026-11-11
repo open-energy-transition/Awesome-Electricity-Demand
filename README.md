@@ -92,7 +92,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | National | [ISMO](https://www.ismo.gov.pk/library/hourly-system-demand)<br><sub>Without K-Electric, which supplies Karachi</sub> | 2024-2025 | hourly | 🔴 [Personal use](https://www.ismo.gov.pk/terms-and-conditions) | ✅ |
 | **Philippines** | National | [NGCP](https://www.ngcp.ph/operations#operations) | 2013-2025 | hourly | 🔴 [All rights reserved](https://ngcp.ph) | ✅ |
 | **Singapore** | National | [EMA](https://www.ema.gov.sg/resources/statistics/half-hourly-system-demand-data) | 2014-present | 30 min | 🟢 [Any use with attribution](https://www.ema.gov.sg/terms-of-use) | ✅ |
-| **South Korea** | National | [KROGD](https://www.data.go.kr/data/15065266/fileData.do) | 2013-2025 | hourly | 🟢 [Open data](https://www.data.go.kr/data/15065266/fileData.do) | ✅ |
+| **South Korea** | National | [KROGD](https://www.data.go.kr/data/15065266/fileData.do) | 2013-2025 | hourly | 🟢 [Any use](https://www.data.go.kr/data/15065266/fileData.do) | ✅ |
 | **Sri Lanka** | National | [PUCSL](https://gendata.pucsl.gov.lk/generation-profile)<br><sub>Generation, proxy for demand</sub> | 2023-present | 15 min | 🔴 [All rights reserved](https://www.pucsl.gov.lk/) | ✅ |
 | **Taiwan** | National | [Zenodo](https://zenodo.org/records/7537890) | 2017-2022 | 10 min | 🟢 [CC-BY 4.0](https://zenodo.org/records/7537890) | ✅ |
 | **Thailand** | National | [Zenodo](https://doi.org/10.5281/zenodo.17109911) | 2023-2024 | hourly | 🟢 [CC BY 4.0](https://zenodo.org/records/17109911) | ✅ |
