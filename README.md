@@ -65,7 +65,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
-| **Algeria** | National | [Sonelgaz](https://data.mendeley.com/datasets/z5x2d3mhw7/1) | 2008-2020 | hourly | 🟢 [CC-BY 4.0](https://data.mendeley.com/datasets/z5x2d3mhw7/1) | ✅ |
+| **Algeria** | National | [Sonelgaz](https://data.mendeley.com/datasets/z5x2d3mhw7/1) | 2008-2020 | hourly | 🟢 [CC BY 4.0](https://data.mendeley.com/datasets/z5x2d3mhw7/1) | ✅ |
 | **Nigeria** | National | [Mendeley](https://data.mendeley.com/datasets/pxvdm26rn7/2)<br><sub>Reconstructed demand without power outages</sub> | 2016 | hourly | 🟢 [CC BY 4.0](https://data.mendeley.com/datasets/pxvdm26rn7/2) | ✅ |
 | **South Africa** | National | [ESKOM](https://www.eskom.co.za/dataportal/data-request-form/) | 2021-present | hourly | 🟡 [Non-commercial use](https://www.eskom.co.za/wp-content/uploads/2021/10/WEBSITE-TERMS-AND-CONDITIONS_Sep2021.pdf) 🔒 | ✅ |
 
@@ -94,7 +94,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 | **Singapore** | National | [EMA](https://www.ema.gov.sg/resources/statistics/half-hourly-system-demand-data) | 2014-present | 30 min | 🟢 [Any use with attribution](https://www.ema.gov.sg/terms-of-use) | ✅ |
 | **South Korea** | National | [KROGD](https://www.data.go.kr/data/15065266/fileData.do) | 2013-2025 | hourly | 🟢 [Any use](https://www.data.go.kr/data/15065266/fileData.do) | ✅ |
 | **Sri Lanka** | National | [PUCSL](https://gendata.pucsl.gov.lk/generation-profile)<br><sub>Generation, proxy for demand</sub> | 2023-present | 15 min | 🔴 [Use with authorisation](https://www.pucsl.gov.lk/) | ✅ |
-| **Taiwan** | National | [Zenodo](https://zenodo.org/records/7537890) | 2017-2022 | 10 min | 🟢 [CC-BY 4.0](https://zenodo.org/records/7537890) | ✅ |
+| **Taiwan** | National | [Zenodo](https://zenodo.org/records/7537890) | 2017-2022 | 10 min | 🟢 [CC BY 4.0](https://zenodo.org/records/7537890) | ✅ |
 | **Thailand** | National | [Zenodo](https://doi.org/10.5281/zenodo.17109911) | 2023-2024 | hourly | 🟢 [CC BY 4.0](https://zenodo.org/records/17109911) | ✅ |
 | **Turkey** | National | [EPIAS](https://kayit.epias.com.tr/epias-transparency-platform-registration-form) | 2016-present | hourly | 🟢 [Any use with attribution](https://seffaflik.epias.com.tr/about/about) 🔒 | ✅ |
 
