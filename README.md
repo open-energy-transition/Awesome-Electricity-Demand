@@ -95,7 +95,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 | **South Korea** | National | [KROGD](https://www.data.go.kr/data/15065266/fileData.do) | 2013-2025 | hourly | 🟢 [Open data](https://www.data.go.kr/data/15065266/fileData.do) | ✅ |
 | **Sri Lanka** | National | [PUCSL](https://gendata.pucsl.gov.lk/generation-profile)<br><sub>Generation, proxy for demand</sub> | 2023-present | 15 min | 🔴 [All rights reserved](https://www.pucsl.gov.lk/) | ✅ |
 | **Taiwan** | National | [Zenodo](https://zenodo.org/records/7537890) | 2017-2022 | 10 min | 🟢 [CC-BY 4.0](https://zenodo.org/records/7537890) | ✅ |
-| **Thailand** | National | [Zenodo](https://doi.org/10.5281/zenodo.17109911) | 2023-2024 | hourly | 🟢 [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode) | ✅ |
+| **Thailand** | National | [Zenodo](https://doi.org/10.5281/zenodo.17109911) | 2023-2024 | hourly | 🟢 [CC BY 4.0](https://zenodo.org/records/17109911) | ✅ |
 | **Turkey** | National | [EPIAS](https://kayit.epias.com.tr/epias-transparency-platform-registration-form) | 2016-present | hourly | 🟢 [Use with attribution](https://seffaflik.epias.com.tr/about/about) 🔒 | ✅ |
 
 </details>
@@ -202,7 +202,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 | **Chile** | National | [CEN](https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/)<br><sub>Until 2015, the central system (SIC) only, about 30% less. The API of the page has no data after 13 May 2026</sub> | 1999-2026 | hourly | 🟡 [Personal or academic use with attribution](https://www.coordinador.cl/terminos-y-condiciones/) | ✅ |
 |  | National | [CEN (Qlik app)](https://qap-prd.coordinador.cl/ext/extensions/mashup_demanda_real/mashup_demanda_real.html)<br><sub>Only the last three months or so, each month published from the 20th of the next</sub> | 2026-present | hourly | 🟡 [Personal or academic use with attribution](https://www.coordinador.cl/terminos-y-condiciones/) |  |
 | **Colombia** | National | [XM](https://www.energiadecolombia.com/consulta) | 2000-present | hourly | 🔴 [All rights reserved](https://www.xm.com.co/legales/terminos-legales-del-sitio-web) | ✅ |
-| **Peru** | National | [COES](https://www.coes.org.pe/Portal/portalinformacion/demanda)<br><sub>Until 1999, hourly values about 20% lower</sub> | 1997-present | 30 min | 🟡 [Non-commercial use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones) | ✅ |
+| **Peru** | National | [COES](https://www.coes.org.pe/Portal/portalinformacion/demanda)<br><sub>Until 1999, hourly values about 20% lower</sub> | 1997-present | 30 min | 🔴 [Personal use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones) | ✅ |
 | **Uruguay** | National | [ADME](https://adme.com.uy/controlpanel.php) | 2019-present | hourly | 🟢 [Any use with attribution](https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/sites/agencia-gobierno-electronico-sociedad-informacion-conocimiento/files/documentos/publicaciones/licencia_de_datos_abiertos_0.pdf) | ✅ |
 
 </details>
