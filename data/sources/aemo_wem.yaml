@@ -2,7 +2,7 @@ name: AEMO
 url: https://data.wa.aemo.com.au/public/market-data/wemde/operationalDemandWithdrawal/dailyFiles/
 access: public
 licence:
-  name: Use for any purpose with attribution
+  name: Any use with attribution
   url: https://aemo.com.au/privacy-and-legal-notices/copyright-permissions
   category: open
 entities:
