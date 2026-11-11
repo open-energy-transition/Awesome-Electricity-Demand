@@ -2,7 +2,7 @@ name: TSOC
 url: https://tsoc.org.cy/electrical-system/archive-total-daily-system-generation-on-the-transmission-system/
 access: public
 licence:
-  name: Use with authorization
+  name: Use with authorisation
   url: https://tsoc.org.cy/
   category: restricted
 entities:
