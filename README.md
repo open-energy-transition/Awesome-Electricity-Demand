@@ -185,7 +185,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | California | [CAISO](https://www.caiso.com/library/historical-ems-hourly-load) | 2019-present | hourly | 🟢 [Any use with attribution](https://www.caiso.com/privacy-terms-of-use) | ✅ |
 |  | <details><summary>13 subdivisions</summary>California, Carolinas, Central, Florida, Mid-Atlantic, Midwest, New England, New York, Northwest, Southeast, Southwest, Tennessee, Texas</details> | [EIA](https://www.eia.gov/electricity/gridmonitor/) | 2020-present | hourly | 🟢 [Any use](https://www.eia.gov/about/copyrights_reuse.php) | ✅ |
 |  | New England | [ISO-NE](https://webservices.iso-ne.com/docs/v1.1/) | 2019-present | hourly | 🔴 [Personal use](https://www.iso-ne.com/legal-privacy) 🔒 | ✅ |
-|  | Texas | [ERCOT](https://www.ercot.com/gridinfo/load/load_hist)<br><sub>By weather zone from 2002, by control area before; no data for 2001</sub> | 1995-present | hourly | 🟢 [Reuse and redistribution allowed](https://www.ercot.com/help/terms) |  |
+|  | Texas | [ERCOT](https://www.ercot.com/gridinfo/load/load_hist)<br><sub>By weather zone from 2002, by control area before; no data for 2001</sub> | 1995-present | hourly | 🟢 [Any use](https://www.ercot.com/help/terms) |  |
 
 </details>
 
