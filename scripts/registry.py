@@ -55,6 +55,29 @@ Text = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]
 CountryCode = Annotated[str, StringConstraints(pattern=r"^[A-Z]{3}$")]
 EntityLabel = Annotated[str, StringConstraints(pattern=r"^[A-Z]{3}(-\S+)?$")]
 Access = Literal["public", "on-request"]
+LicenceCategory = Literal["open", "non-commercial", "restricted"]
+# The words of the terms of use in each category: the short name of a
+# licence, matched as a pattern, or what the terms allow. A version of a
+# Creative Commons licence before 4.0 can be ported to a country, such
+# as "CC BY 3.0 AU", or be the IGO version.
+CC_VERSION = r"( \d\.\d( [A-Z]{2}| IGO)?)?"
+LICENCE_NAMES: dict[str, re.Pattern[str]] = {
+    "open": re.compile(
+        rf"(CC0 1\.0|PDM 1\.0|CC BY(-SA)?{CC_VERSION}"
+        r"|ODbL 1\.0|ODC-By 1\.0|PDDL 1\.0"
+        r"|Any use with attribution|Any use)"
+    ),
+    "non-commercial": re.compile(
+        rf"(CC BY-NC(-SA)?{CC_VERSION}"
+        r"|Non-commercial use( with attribution)?"
+        r"|Personal or academic use( with attribution)?)"
+    ),
+    "restricted": re.compile(
+        rf"(CC BY(-NC)?-ND{CC_VERSION}|Personal use"
+        r"|Any use with attribution, no (redistribution|derivatives)"
+        r"|Use with authorisation|No terms found)"
+    ),
+}
 
 
 def current_year() -> int:
@@ -80,19 +103,44 @@ class Licence(StrictModel):
     Attributes
     ----------
     name : str
-        Short description of the terms, as shown in the list.
+        What the terms allow, as shown in the list, in the words that
+        CONTRIBUTING.md gives for the category.
     url : str
-        Page with the full terms.
+        Page where the source states its terms, or the record of a
+        dataset with its licence.
     category : {"open", "non-commercial", "restricted"}
-        ``open``: any use, possibly with attribution.
+        ``open``: any use, including commercial use and redistribution,
+        possibly with attribution.
         ``non-commercial``: only non-commercial use.
-        ``restricted``: personal use, all rights reserved, or use only
-        with an authorisation.
+        ``restricted``: personal use only, no redistribution, or no use
+        without permission.
     """
 
     name: Text
     url: Url
-    category: Literal["open", "non-commercial", "restricted"]
+    category: LicenceCategory
+
+    @model_validator(mode="after")
+    def _check_name(self) -> Licence:
+        """Check that the name is one of the words of its category.
+
+        Returns
+        -------
+        Licence
+            The licence, unchanged.
+
+        Raises
+        ------
+        ValueError
+            If the name is not one of the words that `LICENCE_NAMES`
+            allows in the category.
+        """
+        if not LICENCE_NAMES[self.category].fullmatch(self.name):
+            raise ValueError(
+                f"{self.name!r} is not a name of {self.category} terms: "
+                "see the terms of use in CONTRIBUTING.md"
+            )
+        return self
 
 
 class Entity(StrictModel):

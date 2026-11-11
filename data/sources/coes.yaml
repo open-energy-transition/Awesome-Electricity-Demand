@@ -2,9 +2,9 @@ name: COES
 url: https://www.coes.org.pe/Portal/portalinformacion/demanda
 access: public
 licence:
-  name: Non-commercial use
+  name: Personal use
   url: https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones
-  category: non-commercial
+  category: restricted
 entities:
   - country_code: PER
     start: 1997

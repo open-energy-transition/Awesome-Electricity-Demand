@@ -2,7 +2,7 @@ name: NBPOWER
 url: https://tso.nbpower.com/Public/en/system_information_archive.aspx
 access: public
 licence:
-  name: All rights reserved
+  name: Use with authorisation
   url: https://www.nbpower.com/en/terms-of-use
   category: restricted
 entities:

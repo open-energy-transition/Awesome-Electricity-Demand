@@ -2,7 +2,7 @@ name: PUCSL
 url: https://gendata.pucsl.gov.lk/generation-profile
 access: public
 licence:
-  name: All rights reserved
+  name: Use with authorisation
   url: https://www.pucsl.gov.lk/
   category: restricted
 entities:

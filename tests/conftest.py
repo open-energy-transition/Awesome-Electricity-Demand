@@ -61,7 +61,7 @@ def source(entities: list[Any], **changes: Any) -> dict[str, Any]:
         "name": "Sonelgaz",
         "url": "https://example.org/data",
         "licence": {
-            "name": "CC-BY 4.0",
+            "name": "CC BY 4.0",
             "url": "https://example.org/licence",
             "category": "open",
         },

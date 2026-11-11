@@ -2,7 +2,7 @@ name: KROGD
 url: https://www.data.go.kr/data/15065266/fileData.do
 access: public
 licence:
-  name: Open data
+  name: Any use
   url: https://www.data.go.kr/data/15065266/fileData.do
   category: open
 entities:

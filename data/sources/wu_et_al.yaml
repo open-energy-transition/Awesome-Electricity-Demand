@@ -2,7 +2,7 @@ name: Zenodo
 url: https://zenodo.org/records/8322210
 access: public
 licence:
-  name: CC-BY 4.0
+  name: CC BY 4.0
   url: https://zenodo.org/records/8322210
   category: open
 entities:

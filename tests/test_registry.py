@@ -130,6 +130,65 @@ def test_invalid_entity_is_rejected(
 
 
 @pytest.mark.parametrize(
+    ("category", "name"),
+    [
+        ("open", "CC BY 4.0"),
+        ("open", "CC BY"),
+        ("open", "CC BY-SA 4.0"),
+        ("open", "CC BY 3.0 AU"),
+        ("open", "CC BY 3.0 IGO"),
+        ("open", "CC0 1.0"),
+        ("open", "PDM 1.0"),
+        ("open", "ODbL 1.0"),
+        ("open", "Any use with attribution"),
+        ("open", "Any use"),
+        ("non-commercial", "CC BY-NC 4.0"),
+        ("non-commercial", "CC BY-NC-SA 2.5 DK"),
+        ("non-commercial", "Non-commercial use with attribution"),
+        ("non-commercial", "Personal or academic use"),
+        ("restricted", "CC BY-ND 4.0"),
+        ("restricted", "CC BY-NC-ND 3.0 IGO"),
+        ("restricted", "Personal use"),
+        ("restricted", "Any use with attribution, no redistribution"),
+        ("restricted", "Any use with attribution, no derivatives"),
+        ("restricted", "Use with authorisation"),
+        ("restricted", "No terms found"),
+    ],
+)
+def test_licence_names_of_each_category(category: str, name: str) -> None:
+    """Accept the words of the terms of use of each category."""
+    licence = registry.Licence.model_validate(
+        {"name": name, "url": "https://x.org", "category": category}
+    )
+    assert licence.name == name
+
+
+@pytest.mark.parametrize(
+    ("category", "name"),
+    [
+        ("open", "Open data"),
+        ("open", "CC-BY 4.0"),
+        ("open", "CC BY-NC 4.0"),
+        ("open", "CC BY-ND 4.0"),
+        ("open", "CC BY 3.0 Australia"),
+        ("non-commercial", "CC BY 4.0"),
+        ("non-commercial", "CC BY-NC-ND 4.0"),
+        ("restricted", "All rights reserved"),
+        ("restricted", "Use with authorization"),
+        ("restricted", "Any use"),
+    ],
+)
+def test_other_licence_names_are_rejected(
+    data_dir: Path, category: str, name: str
+) -> None:
+    """Reject terms that are not in the words of their category."""
+    licence = {"name": name, "url": "https://x.org", "category": category}
+    write_source(data_dir, "sonelgaz", source([entity()], licence=licence))
+    with pytest.raises(registry.RegistryError, match="is not a name of"):
+        registry.load(data_dir)
+
+
+@pytest.mark.parametrize(
     ("changes", "message"),
     [
         ({"access": "paid"}, "'public' or 'on-request'"),

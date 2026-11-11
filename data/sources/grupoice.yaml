@@ -2,8 +2,8 @@ name: GrupoICE
 url: https://apps.grupoice.com/CenceWeb
 access: public
 licence:
-  name: Open data
-  url: https://www.grupoice.com/wps/portal/ICE/Transparencia/datos-abiertos
+  name: CC BY-SA 4.0
+  url: https://web.archive.org/web/20250207024012/https://www.grupoice.com/wps/portal/ICE/Transparencia/datos-abiertos
   category: open
 entities:
   - country_code: CRI

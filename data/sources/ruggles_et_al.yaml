@@ -2,8 +2,8 @@ name: EIA (Ruggles et al.)
 url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data
 access: public
 licence:
-  name: Use for any purpose with attribution
-  url: https://www.eia.gov/about/copyrights_reuse.php
+  name: CC BY 4.0
+  url: https://github.com/truggles/EIA_Cleaned_Hourly_Electricity_Demand_Data
   category: open
 entities:
   - country_code: USA

@@ -172,7 +172,8 @@ def readme_summary(countries: list[Country]) -> str:
 
 LICENCE_MARKS = {"open": "🟢", "non-commercial": "🟡", "restricted": "🔴"}
 LEGEND = (
-    "🟢 open · 🟡 non-commercial · 🔴 restricted terms · 🔒 access on "
+    "🟢 open · 🟡 non-commercial · 🔴 restricted "
+    "[terms](CONTRIBUTING.md#terms-of-use) · 🔒 access on "
     "request · ✅ retrieved by "
     "[DemandCast](https://github.com/open-energy-transition/demandcast)"
 )

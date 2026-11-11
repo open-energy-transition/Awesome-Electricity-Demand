@@ -2,9 +2,9 @@ name: NITI
 url: https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve
 access: public
 licence:
-  name: Open data
-  url: https://iced.niti.gov.in/about-us
-  category: open
+  name: Use with authorisation
+  url: https://www.niti.gov.in/website-policy
+  category: restricted
 entities:
   - country_code: IND
     start: 2017

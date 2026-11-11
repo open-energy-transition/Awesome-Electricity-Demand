@@ -2,7 +2,7 @@ name: EIA
 url: https://www.eia.gov/electricity/gridmonitor/
 access: public
 licence:
-  name: Use for any purpose with attribution
+  name: Any use
   url: https://www.eia.gov/about/copyrights_reuse.php
   category: open
 entities:

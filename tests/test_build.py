@@ -61,7 +61,7 @@ def test_tables_list_national_sources_first(data_dir: Path) -> None:
         ),
         (
             "|  | Kantō | [TEPCO](https://example.org/data) | 2016-present | "
-            "5 min | 🟢 [CC-BY 4.0](https://example.org/licence) 🔒 | ✅ |"
+            "5 min | 🟢 [CC BY 4.0](https://example.org/licence) 🔒 | ✅ |"
         ),
     ]
 
@@ -105,7 +105,7 @@ def test_subdivisions_share_a_row(data_dir: Path) -> None:
         (
             "|  | <details><summary>3 subdivisions</summary>Alger, Batna, "
             "Constantine</details> | [CENACE](https://example.org/data) | "
-            "2010-2019 | hourly | 🟢 [CC-BY 4.0](https://example.org/licence)"
+            "2010-2019 | hourly | 🟢 [CC BY 4.0](https://example.org/licence)"
             " | ✅ 2/3 |"
         )
     ]

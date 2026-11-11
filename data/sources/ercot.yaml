@@ -2,7 +2,7 @@ name: ERCOT
 url: https://www.ercot.com/gridinfo/load/load_hist
 access: public
 licence:
-  name: Reuse and redistribution allowed
+  name: Any use
   url: https://www.ercot.com/help/terms
   category: open
 entities:

@@ -2,9 +2,9 @@ name: OCCTO
 url: https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login
 access: public
 licence:
-  name: No terms of use found
-  url: https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login
-  category: restricted
+  name: Any use with attribution
+  url: https://www.occto.or.jp/chosakuken.html
+  category: open
 entities:
   - country_code: JPN
     subdivision_code: Hokkaidō

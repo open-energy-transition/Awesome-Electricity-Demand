@@ -2,7 +2,7 @@ name: EMA
 url: https://www.ema.gov.sg/resources/statistics/half-hourly-system-demand-data
 access: public
 licence:
-  name: Open data
+  name: Any use with attribution
   url: https://www.ema.gov.sg/terms-of-use
   category: open
 entities:

@@ -302,7 +302,11 @@ def test_licence(
         source(
             [entity()],
             licence={
-                "name": "Terms",
+                "name": {
+                    "open": "Any use",
+                    "non-commercial": "Non-commercial use",
+                    "restricted": "Personal use",
+                }[category],
                 "url": "https://example.org/licence",
                 "category": category,
             },

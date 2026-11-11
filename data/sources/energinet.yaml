@@ -2,7 +2,7 @@ name: Energi Data Service
 url: https://www.energidataservice.dk/
 access: public
 licence:
-  name: CC-BY 4.0
+  name: CC BY 4.0
   url: https://www.energidataservice.dk/terms-and-conditions
   category: open
 entities:
