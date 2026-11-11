@@ -2,7 +2,7 @@ name: ENTSO-E
 url: https://transparency.entsoe.eu/
 access: public
 licence:
-  name: Re-use with the agreement of the TSOs
+  name: Use with authorisation
   url: https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions
   category: restricted
 entities:
