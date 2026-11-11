@@ -80,14 +80,17 @@ class Licence(StrictModel):
     Attributes
     ----------
     name : str
-        Short description of the terms, as shown in the list.
+        What the terms allow, as shown in the list, in the words that
+        CONTRIBUTING.md gives for the category.
     url : str
-        Page with the full terms.
+        Page where the source states its terms, or the record of a
+        dataset with its licence.
     category : {"open", "non-commercial", "restricted"}
-        ``open``: any use, possibly with attribution.
+        ``open``: any use, including commercial use and redistribution,
+        possibly with attribution.
         ``non-commercial``: only non-commercial use.
-        ``restricted``: personal use, all rights reserved, or use only
-        with an authorisation.
+        ``restricted``: personal use only, no redistribution, or no use
+        without permission.
     """
 
     name: Text

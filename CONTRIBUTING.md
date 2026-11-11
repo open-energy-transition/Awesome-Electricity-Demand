@@ -22,7 +22,7 @@ From these files, `scripts/build.py` generates:
 ## Adding or changing a data source
 
 1. Fork the repository and create a branch.
-2. Add the countries or subdivisions to the file of the source, or create the file of a new source. Keep the file free of comments; a remark for readers goes in `note`.
+2. Add the countries or subdivisions to the file of the source, or create the file of a new source. Keep the file free of comments; a remark for readers goes in `note`. Write its terms of use as [described below](#terms-of-use).
 3. Update README.md and check the data with:
 
    ```bash
@@ -31,7 +31,7 @@ From these files, `scripts/build.py` generates:
 
    This needs [uv](https://docs.astral.sh/uv/getting-started/installation/). If you cannot run it, say so in the pull request, and a maintainer will update README.md.
 
-5. Open a pull request, with a link to where the licence or terms of use are stated.
+4. Open a pull request, with a link to where the terms of use are stated and the sentences of the terms that decide their category, in their language and translated if needed.
 
 For example, `data/sources/cenace.yaml` starts with:
 
@@ -77,19 +77,27 @@ The fields of an entity are:
 | `note`                                 | no       | Remark shown in the list, such as "Generation, proxy for demand".                |
 
 - `subdivision_code` is the [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code without the country prefix (`NSW` for New South Wales). For grid regions without one, use the code that DemandCast uses (`CAL` for the California region of the EIA), so that the two lists can be compared.
-- `licence.category` sorts the terms, and `licence.name` says what they allow, in one of these words:
-
-  | Category         | Terms                                                                      | `licence.name`                                                                                                                         |
-  | ---------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-  | `open`           | Any use, including commercial use and redistribution, possibly with attribution | A Creative Commons or Open Data Commons licence by its short name (`CC BY 4.0`, `CC BY-SA 4.0`, `CC0 1.0`), else `Any use with attribution` or `Any use` |
-  | `non-commercial` | Only non-commercial use                                                    | `CC BY-NC 4.0` and the like, else `Non-commercial use with attribution`, `Non-commercial use`, `Personal or academic use with attribution` or `Personal or academic use` |
-  | `restricted`     | Personal use, no redistribution, or no use without permission               | `Personal use`, `Any use with attribution, no redistribution`, `Use with authorisation` (also for a bare "all rights reserved") or `No terms found` |
-
-  "with attribution" is added when the terms require citing the source, not when they only ask for it. The terms of a dataset on Zenodo, Mendeley Data or an open data portal are those of its record; for other licences, such as national open data licences, `licence.name` says what they allow.
 - Only hourly or sub-hourly data belongs to the list, so `resolution` must divide 60 minutes.
 - If the data of an entity changes resolution over time, list each period as a separate entity.
 
 The checks reject unknown fields and countries, years in the wrong order or in the future, entities listed twice, entity URLs that repeat the URL of their source, and subdivision codes with two names, and list every problem at once.
+
+### Terms of use
+
+Read the terms where the source states them: its terms of use, legal notice or copyright page, or the record of a dataset on Zenodo, Mendeley Data or an open data portal, whose licence takes precedence over the terms of the website. `licence.url` links to that page, and the pull request quotes the sentences that decide the category.
+
+`licence.category` sorts the terms, and `licence.name` says what they allow, in one of these words:
+
+| Category         | Terms                                                                      | `licence.name`                                                                                                                         |
+| ---------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `open`           | Any use, including commercial use and redistribution, possibly with attribution | A Creative Commons or Open Data Commons licence by its short name (`CC BY 4.0`, `CC BY-SA 4.0`, `CC0 1.0`), else `Any use with attribution` or `Any use` |
+| `non-commercial` | Only non-commercial use                                                    | `CC BY-NC 4.0` and the like, else `Non-commercial use with attribution`, `Non-commercial use`, `Personal or academic use with attribution` or `Personal or academic use` |
+| `restricted`     | Personal use, no redistribution, or no use without permission               | `Personal use`, `Any use with attribution, no redistribution`, `Use with authorisation` (also for a bare "all rights reserved") or `No terms found` |
+
+- A Creative Commons or Open Data Commons licence keeps its short name. Other licences, such as national open data licences, are written as what they allow.
+- "with attribution" is added when the terms require citing the source, not when they only ask for it.
+- `Use with authorisation` is for terms that grant no use, or no reuse, without permission, including a bare "all rights reserved". `No terms found` is for a source with no terms and no copyright notice at all.
+- When the data of a source is collected from others, whose terms also apply, say so in `note`.
 
 ## Keeping the list in sync with DemandCast
 

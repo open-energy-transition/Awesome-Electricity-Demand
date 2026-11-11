@@ -57,7 +57,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 ## List of data sources
 
 <!-- sources:start: generated from data/ by scripts/build.py, do not edit -->
-<sub>🟢 open · 🟡 non-commercial · 🔴 restricted terms · 🔒 access on request · ✅ retrieved by [DemandCast](https://github.com/open-energy-transition/demandcast)</sub>
+<sub>🟢 open · 🟡 non-commercial · 🔴 restricted [terms](CONTRIBUTING.md#terms-of-use) · 🔒 access on request · ✅ retrieved by [DemandCast](https://github.com/open-energy-transition/demandcast)</sub>
 
 ### Africa
 

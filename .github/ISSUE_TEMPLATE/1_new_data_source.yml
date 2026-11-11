@@ -64,7 +64,7 @@ body:
   - type: textarea
     attributes:
       label: Licence and terms of use
-      description: Under which terms is the data published, with a link to where they are stated?
+      description: Under which terms is the data published? Give a link to where they are stated (the record of a dataset, or the terms of use of the website) and quote the sentences that say what can be done with the data.
     validations:
       required: true
 
