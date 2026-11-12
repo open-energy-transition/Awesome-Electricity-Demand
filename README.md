@@ -3,11 +3,11 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **244 time series** from **48 data sources** for **68 countries** and their subdivisions in:
+The list has **245 time series** from **49 data sources** for **69 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (14 countries)
-- [Europe](#europe) (38 countries)
+- [Europe](#europe) (39 countries)
 - [North America](#north-america) (5 countries)
 - [South America](#south-america) (6 countries)
 - [Oceania](#oceania) (2 countries)
@@ -102,7 +102,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### Europe
 
-<details open><summary>38 countries · 48 time series</summary>
+<details open><summary>39 countries · 49 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
@@ -128,6 +128,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 | **Germany** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 15 min | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 | **Greece** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 | **Hungary** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 15 min | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Iceland** | National | [Orkustofnun](https://gogn.orkustofnun.is/Talnaefni/Raforka2023/OS-2023-T004-02.xlsx)<br><sub>Large industry and general consumption, separately; the sheet of 2022 repeats the data of 2021</sub> | 2021 | hourly | 🔴 [Use with authorisation](https://orkustofnun.is/en/information/numerical_data/electricity) |  |
 | **Ireland** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 30 min | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 | **Italy** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 | **Kosovo** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2021-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
