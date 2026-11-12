@@ -3,8 +3,8 @@
 The data files are read and validated by `registry`. The README has
 blocks between ``<!-- <name>:start -->`` and ``<!-- <name>:end -->``
 that are replaced with the summary and the tables of data sources. The
-site for GitHub Pages is the
-map of ``demand-data-map/``, the list as CSV and JSON, and the figures.
+site for GitHub Pages is the interactive map of ``site/``, with the
+outlines that it draws, the list as CSV and JSON, and the figures.
 
 Usage::
 
@@ -36,7 +36,7 @@ from registry import (
 )
 
 README = ROOT / "README.md"
-MAP_DIR = ROOT / "demand-data-map"
+STATIC_DIR = ROOT / "site"
 CSV_FIELDS = (
     "country_code",
     "country_name",
@@ -488,23 +488,21 @@ def build_site(
         Every country of the list.
     shapes : dict
         The outlines of the countries and subdivisions, by label, for
-        the map of the figures.
+        the interactive map and the map of the figures.
     site_dir : Path
         Folder of the site, created if needed.
 
     Notes
     -----
-    ``sources.json`` has every country, with the number of years with
-    data, which the map colours.
+    The site is the content of ``site/``, with ``sources.csv`` and
+    ``sources.json``, which list every time series, ``map.geojson``,
+    the outlines that the interactive map draws with their years of
+    data, and the figures. The map shows the data sources of a country
+    or subdivision from ``sources.json``.
     """
     import figures  # noqa: PLC0415 - Matplotlib is only needed here.
 
-    shutil.copytree(
-        MAP_DIR,
-        site_dir,
-        dirs_exist_ok=True,
-        ignore=shutil.ignore_patterns("README.md"),
-    )
+    shutil.copytree(STATIC_DIR, site_dir, dirs_exist_ok=True)
     rows = records(countries)
     with (site_dir / "sources.csv").open(
         "w", encoding="utf-8", newline=""
@@ -531,6 +529,12 @@ def build_site(
     }
     (site_dir / "sources.json").write_text(
         json.dumps(data, ensure_ascii=False, indent=1) + "\n",
+        encoding="utf-8",
+    )
+    (site_dir / "map.geojson").write_text(
+        json.dumps(
+            figures.map_features(countries, shapes), separators=(",", ":")
+        ),
         encoding="utf-8",
     )
     figures.plot_all(countries, shapes, site_dir / "figures")

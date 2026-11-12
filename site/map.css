@@ -1,0 +1,175 @@
+/* Layout and colours of the interactive map, its legend and the popups
+   that list the data sources of a country or subdivision. The colours of
+   the classes of years and of the land are those of the map of the
+   figures, in a light and a dark theme; map.js reads them from here. */
+
+:root {
+  --sea: #fcfcfb;
+  --land: #d3d3d3;
+  --border: #fcfcfb;
+  --panel: #ffffff;
+  --ink: #0b0b0b;
+  --ink2: #52514e;
+  --link: #1c5cab;
+  --shadow: rgba(0, 0, 0, 0.25);
+  --class-0: #86b6ef;
+  --class-1: #3987e5;
+  --class-2: #1c5cab;
+  --class-3: #0d366b;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sea: #1a1a19;
+    --border: #1a1a19;
+    --panel: #242422;
+    --ink: #f0efec;
+    --ink2: #c3c2b7;
+    --link: #86b6ef;
+    --shadow: rgba(0, 0, 0, 0.6);
+    color-scheme: dark;
+  }
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--sea);
+  font-family: system-ui, sans-serif;
+}
+
+#map {
+  width: 100%;
+  height: 100vh;
+}
+
+#legend {
+  position: absolute;
+  bottom: 28px;
+  left: 12px;
+  z-index: 1;
+  max-width: 260px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 13px;
+  box-shadow: 0 1px 6px var(--shadow);
+}
+
+#legend h1 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+#legend h2 {
+  margin: 10px 0 6px;
+  font-size: 13px;
+}
+
+#legend p {
+  margin: 0;
+  color: var(--ink2);
+}
+
+#legend ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+  color: var(--ink2);
+}
+
+#legend .links {
+  margin-top: 10px;
+}
+
+.swatch {
+  display: inline-block;
+  width: 22px;
+  height: 14px;
+  margin-right: 8px;
+  border-radius: 2px;
+}
+
+.swatch[data-class="0"] {
+  background: var(--class-0);
+}
+
+.swatch[data-class="1"] {
+  background: var(--class-1);
+}
+
+.swatch[data-class="2"] {
+  background: var(--class-2);
+}
+
+.swatch[data-class="3"] {
+  background: var(--class-3);
+}
+
+.swatch[data-class="-1"] {
+  background: var(--land);
+}
+
+a {
+  color: var(--link);
+}
+
+.maplibregl-popup {
+  z-index: 2;
+}
+
+.maplibregl-popup-content {
+  box-sizing: border-box;
+  max-height: 45vh;
+  overflow-y: auto;
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.maplibregl-popup-tip {
+  border-top-color: var(--panel) !important;
+  border-bottom-color: var(--panel) !important;
+}
+
+.maplibregl-popup-content h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
+.maplibregl-popup-content p {
+  margin: 6px 0 0;
+  color: var(--ink2);
+}
+
+.maplibregl-popup-content ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+@media (max-width: 600px) {
+  #legend {
+    top: 12px;
+    bottom: auto;
+    max-width: none;
+    right: 56px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  #legend ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 10px;
+  }
+}

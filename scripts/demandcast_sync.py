@@ -14,7 +14,7 @@ of DemandCast; a mark that the files of DemandCast no longer support,
 or a series that they support and the file does not mark, is a
 divergence too. So is an entity without an outline in
 ``data/shapes.geojson``, which ``scripts/shapes.py`` writes with the
-code of DemandCast, as the map of the figures cannot draw it.
+code of DemandCast, as the maps of the site cannot draw it.
 
 Each difference is a finding: a divergence, which one of the two
 repositories should resolve, or a note. Nothing fails: the divergences

@@ -115,6 +115,26 @@ def test_plot_all(data_dir: Path, tmp_path: Path) -> None:
     ]
 
 
+def test_map_features(data_dir: Path) -> None:
+    """Give each outline its codes, years and class, countries first."""
+    shapes = registry.load_shapes(data_dir)
+    shapes["EGY"] = []
+    collection = figures.map_features(registry.load(data_dir), shapes)
+    properties = [f["properties"] for f in collection["features"]]
+    assert [(p["country"], p["subdivision"]) for p in properties] == [
+        ("AGO", None),
+        ("DZA", None),
+        ("JPN", None),
+        ("JPN", "Kantō"),
+    ]
+    assert [(p["years"], p["class"]) for p in properties[:3]] == [
+        (0, -1),
+        (10, 2),
+        (3, 0),
+    ]
+    assert collection["features"][1]["geometry"]["type"] == "MultiPolygon"
+
+
 def test_map_leaves_out_entities_without_a_shape(
     data_dir: Path, tmp_path: Path
 ) -> None:

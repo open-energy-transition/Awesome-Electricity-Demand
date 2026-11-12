@@ -1,0 +1,49 @@
+<!doctype html>
+<!--
+  Interactive map of the electricity demand data of the list. map.js
+  draws the outlines of map.geojson, coloured by their years of data, and
+  lists the data sources of a country or subdivision from sources.json.
+  scripts/build.py generates both files next to this page.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Electricity Demand · Map</title>
+    <link
+      href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="map.css" />
+  </head>
+  <body>
+    <main
+      id="map"
+      aria-label="Map of the countries and subdivisions with electricity demand data. Select one to list its data sources."
+    ></main>
+    <aside id="legend">
+      <h1>Awesome Electricity Demand</h1>
+      <p>
+        Hourly and sub-hourly electricity demand data. Select a country or
+        subdivision to list its data sources.
+      </p>
+      <h2>Years of data</h2>
+      <ul>
+        <li><span class="swatch" data-class="0"></span>1–4</li>
+        <li><span class="swatch" data-class="1"></span>5–9</li>
+        <li><span class="swatch" data-class="2"></span>10–19</li>
+        <li><span class="swatch" data-class="3"></span>20+</li>
+        <li><span class="swatch" data-class="-1"></span>No data yet</li>
+      </ul>
+      <p class="links">
+        <a
+          href="https://github.com/open-energy-transition/Awesome-Electricity-Demand"
+          >The list</a
+        >
+        · <a href="sources.csv">CSV</a> · <a href="sources.json">JSON</a>
+      </p>
+    </aside>
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <script src="map.js"></script>
+  </body>
+</html>

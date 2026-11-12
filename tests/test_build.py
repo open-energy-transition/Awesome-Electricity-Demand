@@ -139,12 +139,15 @@ def test_render_readme_needs_every_block(data_dir: Path) -> None:
 
 
 def test_build_site(data_dir: Path, tmp_path: Path) -> None:
-    """Write the map, the CSV and JSON lists and the figures."""
+    """Write the map with its outlines, the lists and the figures."""
     site = tmp_path / "site"
     build.build_site(
         registry.load(data_dir), registry.load_shapes(data_dir), site
     )
-    assert (site / "index.html").exists()
+    for name in ("index.html", "map.js", "map.css"):
+        assert (site / name).exists()
+    outlines = json.loads((site / "map.geojson").read_text(encoding="utf-8"))
+    assert len(outlines["features"]) == 5
     assert (site / "figures" / "map_dark.png").exists()
     with (site / "sources.csv").open(encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
