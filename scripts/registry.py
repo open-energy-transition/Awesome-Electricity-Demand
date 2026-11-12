@@ -10,7 +10,7 @@ millions and land area in km² (estimates for 2025).
 ``demandcast.yaml`` lists, for each source,
 the entities whose series DemandCast retrieves, which the list marks.
 ``shapes.geojson`` holds the outlines of the countries and of the
-subdivisions of the list, for the map of the figures. The README, the
+subdivisions of the list, for the maps of the site. The README, the
 map and the figures are generated from them.
 """
 

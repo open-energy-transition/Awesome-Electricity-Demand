@@ -64,7 +64,7 @@ def natural_earth(name: str, resolution: str) -> Any:
     return geopandas.read_file(path)
 
 
-def feature(label: str, geometry: Any) -> dict[str, Any]:
+def feature(label: str, geometry: Any) -> dict[str, Any] | None:
     """Simplify a shape into a GeoJSON feature of an entity.
 
     Parameters
@@ -76,12 +76,15 @@ def feature(label: str, geometry: Any) -> dict[str, Any]:
 
     Returns
     -------
-    dict
+    dict or None
         The feature, with its exterior rings anticlockwise and its holes
-        clockwise, as the map fills them.
+        clockwise, as the maps fill them, or None if nothing is left of
+        the shape on the grid, as for the smallest territories.
     """
     geometry = shapely.simplify(geometry, TOLERANCE, preserve_topology=True)
     geometry = shapely.set_precision(geometry, GRID)
+    if geometry.is_empty:
+        return None
     geometry = shapely.orient_polygons(geometry)
     return {
         "type": "Feature",
@@ -96,8 +99,8 @@ def country_features() -> list[dict[str, Any]]:
     Returns
     -------
     list of dict
-        A feature for each country but Antarctica, under the code of
-        the list.
+        A feature for each country but Antarctica and those too small
+        to be left on the grid, under the code of the list.
     """
     countries = natural_earth("admin_0_countries", "50m")
     features = []
@@ -105,7 +108,9 @@ def country_features() -> list[dict[str, Any]]:
         countries["ADM0_A3"], countries.geometry, strict=True
     ):
         if code != "ATA":
-            features.append(feature(COUNTRY_CODES.get(code, code), geometry))
+            shape = feature(COUNTRY_CODES.get(code, code), geometry)
+            if shape is not None:
+                features.append(shape)
     return features
 
 
@@ -142,7 +147,11 @@ def subdivision_features() -> tuple[list[dict[str, Any]], list[str]]:
         except Exception as e:  # noqa: BLE001 - list every missing shape.
             missing.append(f"{label}: {type(e).__name__}: {e}")
             continue
-        features.append(feature(label, geometry))
+        shape = feature(label, geometry)
+        if shape is None:
+            missing.append(f"{label}: empty after simplification")
+            continue
+        features.append(shape)
     return features, missing
 
 

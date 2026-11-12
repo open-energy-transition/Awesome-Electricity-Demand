@@ -6,14 +6,16 @@ countries and subdivisions with data, coloured by their years of data;
 the years of data of each continent by time resolution; and the share
 of the countries, population and land area of each continent that have
 data. Each figure is drawn twice, as ``<name>_light.png`` and
-``<name>_dark.png``, for the light and dark themes of the reader.
+``<name>_dark.png``, for the light and dark themes of the reader. The
+outlines of the interactive map of the site come with the class of
+their years of data, as in the map of the figures.
 """
 
 from __future__ import annotations
 
 import bisect
 import dataclasses
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -278,6 +280,60 @@ def year_class(years: int) -> int:
         Index of the class in `YEAR_LABELS`.
     """
     return bisect.bisect_right(YEAR_CLASSES, years)
+
+
+def map_features(
+    countries: list[Country], shapes: dict[str, list[Polygon]]
+) -> dict[str, Any]:
+    """Return the outlines of the interactive map, with their years.
+
+    Parameters
+    ----------
+    countries : list of Country
+        Every country of the list.
+    shapes : dict
+        The outlines of the countries and subdivisions, by label.
+
+    Returns
+    -------
+    dict
+        A GeoJSON feature collection with a feature for each outline,
+        whose properties are the code of its country, the code of its
+        subdivision or None, its years of data and the index of their
+        class in `YEAR_LABELS`, or -1 without data.
+
+    Notes
+    -----
+    The countries come first and the subdivisions after them, so that
+    the map draws each subdivision over its country, as `plot_map` does.
+    The outlines that are empty, as those of the smallest territories
+    after their simplification, are left out, since the map cannot draw
+    them.
+    """
+    years = years_by_entity(countries)
+    features = []
+    for label in sorted(shapes, key=lambda label: ("-" in label, label)):
+        country, _, subdivision = label.partition("-")
+        polygons = [polygon for polygon in shapes[label] if polygon]
+        if not polygons:
+            continue
+        n = years.get(label, 0)
+        features.append(
+            {
+                "type": "Feature",
+                "properties": {
+                    "country": country,
+                    "subdivision": subdivision or None,
+                    "years": n,
+                    "class": year_class(n) if n else -1,
+                },
+                "geometry": {
+                    "type": "MultiPolygon",
+                    "coordinates": polygons,
+                },
+            }
+        )
+    return {"type": "FeatureCollection", "features": features}
 
 
 def ramp(colours: tuple[str, ...], n: int) -> list[str]:
