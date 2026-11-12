@@ -1,10 +1,12 @@
 /* Layout and colours of the interactive map, its legend and the popups
    that list the data sources of a country or subdivision. The colours of
    the classes of years and of the land are those of the map of the
-   figures, in a light and a dark theme; map.js reads them from here. */
+   figures, in a light and a dark theme; the sea of the globe is a shade
+   apart from the space around it. map.js reads them from here. */
 
 :root {
-  --sea: #fcfcfb;
+  --space: #fcfcfb;
+  --sea: #eef1f4;
   --land: #d3d3d3;
   --border: #fcfcfb;
   --panel: #ffffff;
@@ -21,7 +23,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --sea: #1a1a19;
+    --space: #1a1a19;
+    --sea: #2a3138;
     --border: #1a1a19;
     --panel: #242422;
     --ink: #f0efec;
@@ -37,7 +40,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: var(--sea);
+  background: var(--space);
   font-family: system-ui, sans-serif;
 }
 
