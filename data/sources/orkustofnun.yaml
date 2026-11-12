@@ -1,0 +1,14 @@
+name: Orkustofnun
+url: https://orkustofnun.is/en/information/numerical_data/electricity
+access: public
+licence:
+  name: Use with authorisation
+  url: https://orkustofnun.is/en/information/numerical_data/electricity
+  category: restricted
+entities:
+  - country_code: ISL
+    start: 2021
+    end: 2021
+    resolution: 60
+    url: https://gogn.orkustofnun.is/Talnaefni/Raforka2023/OS-2023-T004-02.xlsx
+    note: Large industry and general consumption, separately; the sheet of 2022 repeats the data of 2021
