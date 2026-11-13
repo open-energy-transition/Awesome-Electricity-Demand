@@ -10,4 +10,10 @@ entities:
     start: 2015
     end: present
     resolution: 60
-    note: Seven interconnected power systems and two price zones, separately; without the isolated power systems
+    note: Seven interconnected power systems and two price zones, separately; without the isolated power systems; reachable only from Russia
+  - country_code: RUS
+    start: 2001
+    end: present
+    resolution: 60
+    url: https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/
+    note: Whole system and seven interconnected power systems, separately, the East from 2002; consumption hidden in the page, which shows only generation since October 2022; without the isolated power systems
