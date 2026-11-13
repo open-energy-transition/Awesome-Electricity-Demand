@@ -7,10 +7,6 @@ licence:
   category: open
 entities:
   - country_code: BRA
-    start: 2000
-    end: present
-    resolution: 60
-  - country_code: BRA
     subdivision_code: N
     subdivision_name: North
     start: 2000
