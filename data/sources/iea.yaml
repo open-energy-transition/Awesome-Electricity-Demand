@@ -290,7 +290,7 @@ entities:
     start: 2021
     end: 2026
     resolution: 60
-    note: From ATS, whose terms also apply
+    note: From ATS, whose terms also apply; 2-6% below the actual consumption of SO UES
   - country_code: SGP
     start: 2016
     end: present
