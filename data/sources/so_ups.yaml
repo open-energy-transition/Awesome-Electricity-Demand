@@ -1,0 +1,13 @@
+name: SO UES
+url: https://br.so-ups.ru/BR/GenConsum
+access: public
+licence:
+  name: Non-commercial use with attribution, no derivatives
+  url: https://www.so-ups.ru/responsibility/
+  category: restricted
+entities:
+  - country_code: RUS
+    start: 2015
+    end: present
+    resolution: 60
+    note: Seven interconnected power systems and two price zones, separately; without the isolated power systems

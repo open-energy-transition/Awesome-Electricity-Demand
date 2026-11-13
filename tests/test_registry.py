@@ -151,6 +151,7 @@ def test_invalid_entity_is_rejected(
         ("restricted", "Personal use"),
         ("restricted", "Any use with attribution, no redistribution"),
         ("restricted", "Any use with attribution, no derivatives"),
+        ("restricted", "Non-commercial use with attribution, no derivatives"),
         ("restricted", "Use with authorisation"),
         ("restricted", "No terms found"),
     ],
@@ -175,6 +176,10 @@ def test_licence_names_of_each_category(category: str, name: str) -> None:
         ("non-commercial", "CC BY-NC-ND 4.0"),
         ("restricted", "All rights reserved"),
         ("restricted", "Use with authorization"),
+        (
+            "non-commercial",
+            "Non-commercial use with attribution, no derivatives",
+        ),
         ("restricted", "Any use"),
     ],
 )
