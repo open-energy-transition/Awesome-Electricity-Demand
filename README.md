@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **389 time series** from **51 data sources** for **76 countries** and their subdivisions in:
+The list has **397 time series** from **51 data sources** for **76 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (16 countries)
@@ -75,7 +75,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### Asia
 
-<details open><summary>16 countries · 131 time series</summary>
+<details open><summary>16 countries · 139 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
@@ -105,8 +105,12 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 | **Nepal** | National | [Open Data Nepal](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | 2017-2018 | hourly | 🟢 [CC BY 4.0](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | ✅ |
 | **Pakistan** | National | [NTDC](https://zenodo.org/records/24023127)<br><sub>Copy on Zenodo of the dataset removed from Kaggle in 2026</sub> | 2015-2020 | hourly | 🟢 [CC0 1.0](https://zenodo.org/records/24023127) | ✅ |
 |  | National | [ISMO](https://www.ismo.gov.pk/library/hourly-system-demand)<br><sub>Without K-Electric, which supplies Karachi</sub> | 2024-2025 | hourly | 🔴 [Personal use](https://www.ismo.gov.pk/terms-and-conditions) | ✅ |
-| **Philippines** | National | [NGCP](https://www.ngcp.ph/operations#operations) | 2013-2025 | hourly | 🔴 [Use with authorisation](https://ngcp.ph) | ✅ |
-|  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From IEMOP, whose terms also apply</sub> | 2020-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
+| **Philippines** | <details><summary>5 subdivisions</summary>Bohol, Cebu, Leyte-Samar, Negros, Panay</details> | [NGCP](https://www.ngcp.ph/operations#operations)<br><sub>NGCP also publishes their total for the Visayas</sub> | 2013-2025 | hourly | 🔴 [Use with authorisation](https://ngcp.ph) |  |
+|  | Luzon | [NGCP](https://www.ngcp.ph/operations#operations)<br><sub>Without the off-grid islands, such as Mindoro, Palawan and Masbate</sub> | 2013-2025 | hourly | 🔴 [Use with authorisation](https://ngcp.ph) |  |
+|  | Luzon | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From IEMOP, whose terms also apply; without the off-grid islands, such as Mindoro, Palawan and Masbate</sub> | 2020-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
+|  | Mindanao | [NGCP](https://www.ngcp.ph/operations#operations)<br><sub>Without the off-grid islands of Basilan, Sulu and Tawi-Tawi</sub> | 2013-2025 | hourly | 🔴 [Use with authorisation](https://ngcp.ph) |  |
+|  | Mindanao | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From IEMOP, whose terms also apply; without the off-grid islands of Basilan, Sulu and Tawi-Tawi</sub> | 2020-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
+|  | Visayas | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From IEMOP, whose terms also apply; without the off-grid island of Siquijor</sub> | 2020-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 | **Russia** | <details><summary>6 subdivisions</summary>Centre, Middle Volga, North-West, Siberia, South, Urals</details> | [SO UES](https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/)<br><sub>Consumption hidden in the page, which shows only generation since October 2022; the page also has their total</sub> | 2001-present | hourly | 🔴 [Non-commercial use with attribution, no derivatives](https://www.so-ups.ru/responsibility/) |  |
 |  | <details><summary>6 subdivisions</summary>Centre, Middle Volga, North-West, Siberia, South, Urals</details> | [SO UES](https://br.so-ups.ru/BR/GenConsum)<br><sub>Reachable only from Russia</sub> | 2015-present | hourly | 🔴 [Non-commercial use with attribution, no derivatives](https://www.so-ups.ru/responsibility/) |  |
 |  | <details><summary>6 subdivisions</summary>Centre, Middle Volga, North-West, Siberia, South, Urals</details> | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ATS, whose terms also apply</sub> | 2022-2026 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |

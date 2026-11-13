@@ -584,10 +584,26 @@ entities:
     resolution: 60
     note: From COES, whose terms also apply
   - country_code: PHL
+    subdivision_code: LUZON
+    subdivision_name: Luzon
     start: 2020
     end: present
     resolution: 60
-    note: From IEMOP, whose terms also apply
+    note: From IEMOP, whose terms also apply; without the off-grid islands, such as Mindoro, Palawan and Masbate
+  - country_code: PHL
+    subdivision_code: VISAYAS
+    subdivision_name: Visayas
+    start: 2020
+    end: present
+    resolution: 60
+    note: From IEMOP, whose terms also apply; without the off-grid island of Siquijor
+  - country_code: PHL
+    subdivision_code: MINDANAO
+    subdivision_name: Mindanao
+    start: 2020
+    end: present
+    resolution: 60
+    note: From IEMOP, whose terms also apply; without the off-grid islands of Basilan, Sulu and Tawi-Tawi
   - country_code: POL
     start: 2014
     end: present
