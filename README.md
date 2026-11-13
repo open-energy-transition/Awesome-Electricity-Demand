@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **397 time series** from **51 data sources** for **76 countries** and their subdivisions in:
+The list has **398 time series** from **51 data sources** for **76 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (16 countries)
@@ -100,11 +100,11 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | Okinawa | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From Okiden, whose terms also apply</sub> | 2016-2026 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 |  | Shikoku | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From Yonden, whose terms also apply</sub> | 2016-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 |  | Tōhoku | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From Tohoku EPCO, whose terms also apply</sub> | 2016-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
-| **Malaysia** | National | [GSO](https://www.gso.org.my/SystemData/SystemDemand.aspx)<br><sub>Peninsular Malaysia only, without Sabah and Sarawak</sub> | 2016-present | 10 min | 🔴 [Use with authorisation](https://www.gso.org.my/TermsConditions.aspx) |  |
-|  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From GSO, whose terms also apply</sub> | 2017-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
+| **Malaysia** | Peninsular Malaysia | [GSO](https://www.gso.org.my/SystemData/SystemDemand.aspx) | 2016-present | 10 min | 🔴 [Use with authorisation](https://www.gso.org.my/TermsConditions.aspx) |  |
+|  | Peninsular Malaysia | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From GSO, whose terms also apply</sub> | 2017-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 | **Nepal** | National | [Open Data Nepal](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | 2017-2018 | hourly | 🟢 [CC BY 4.0](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | ✅ |
-| **Pakistan** | National | [NTDC](https://zenodo.org/records/24023127)<br><sub>Copy on Zenodo of the dataset removed from Kaggle in 2026</sub> | 2015-2020 | hourly | 🟢 [CC0 1.0](https://zenodo.org/records/24023127) | ✅ |
-|  | National | [ISMO](https://www.ismo.gov.pk/library/hourly-system-demand)<br><sub>Without K-Electric, which supplies Karachi</sub> | 2024-2025 | hourly | 🔴 [Personal use](https://www.ismo.gov.pk/terms-and-conditions) | ✅ |
+| **Pakistan** | NTDC grid | [NTDC](https://zenodo.org/records/24023127)<br><sub>Copy on Zenodo of the dataset removed from Kaggle in 2026; without K-Electric, which supplies Karachi, and Gilgit-Baltistan</sub> | 2015-2020 | hourly | 🟢 [CC0 1.0](https://zenodo.org/records/24023127) |  |
+|  | NTDC grid | [ISMO](https://www.ismo.gov.pk/library/hourly-system-demand)<br><sub>Without K-Electric, which supplies Karachi, and Gilgit-Baltistan</sub> | 2024-2025 | hourly | 🔴 [Personal use](https://www.ismo.gov.pk/terms-and-conditions) |  |
 | **Philippines** | <details><summary>5 subdivisions</summary>Bohol, Cebu, Leyte-Samar, Negros, Panay</details> | [NGCP](https://www.ngcp.ph/operations#operations)<br><sub>NGCP also publishes their total for the Visayas</sub> | 2013-2025 | hourly | 🔴 [Use with authorisation](https://ngcp.ph) |  |
 |  | Luzon | [NGCP](https://www.ngcp.ph/operations#operations)<br><sub>Without the off-grid islands, such as Mindoro, Palawan and Masbate</sub> | 2013-2025 | hourly | 🔴 [Use with authorisation](https://ngcp.ph) |  |
 |  | Luzon | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From IEMOP, whose terms also apply; without the off-grid islands, such as Mindoro, Palawan and Masbate</sub> | 2020-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
@@ -279,7 +279,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### South America
 
-<details open><summary>7 countries · 49 time series</summary>
+<details open><summary>7 countries · 50 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
@@ -290,9 +290,10 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | <details><summary>7 subdivisions</summary>Chuquisaca, Cochabamba, La Paz, Oruro, Potosí, Santa Cruz, Tarija</details> | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From CNDC, whose terms also apply; with gaps</sub> | 2015-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 | **Brazil** | <details><summary>4 subdivisions</summary>North, North-East, South, South-East</details> | [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | hourly | 🟢 [CC BY](https://dados.ons.org.br/dataset/curva-carga) | ✅ |
 |  | <details><summary>4 subdivisions</summary>North, North-East, South, South-East</details> | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ONS, whose terms also apply</sub> | 2010-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
-| **Chile** | National | [CEN](https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/)<br><sub>Until 2015, the central system (SIC) only, about 30% less. The API of the page has no data after 13 May 2026</sub> | 1999-2026 | hourly | 🟡 [Personal or academic use with attribution](https://www.coordinador.cl/terminos-y-condiciones/) | ✅ |
-|  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From CEN, whose terms also apply</sub> | 2018-2026 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
-|  | National | [CEN (Qlik app)](https://qap-prd.coordinador.cl/ext/extensions/mashup_demanda_real/mashup_demanda_real.html)<br><sub>Only the last three months or so, each month published from the 20th of the next</sub> | 2026-present | hourly | 🟡 [Personal or academic use with attribution](https://www.coordinador.cl/terminos-y-condiciones/) |  |
+| **Chile** | Central Interconnected System | [CEN](https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/) | 1999-2015 | hourly | 🟡 [Personal or academic use with attribution](https://www.coordinador.cl/terminos-y-condiciones/) |  |
+|  | National Electric System | [CEN](https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/)<br><sub>The API of the page has no data after 13 May 2026</sub> | 2016-2026 | hourly | 🟡 [Personal or academic use with attribution](https://www.coordinador.cl/terminos-y-condiciones/) |  |
+|  | National Electric System | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From CEN, whose terms also apply</sub> | 2018-2026 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
+|  | National Electric System | [CEN (Qlik app)](https://qap-prd.coordinador.cl/ext/extensions/mashup_demanda_real/mashup_demanda_real.html)<br><sub>Only the last three months or so, each month published from the 20th of the next</sub> | 2026-present | hourly | 🟡 [Personal or academic use with attribution](https://www.coordinador.cl/terminos-y-condiciones/) |  |
 | **Colombia** | National | [XM](https://www.energiadecolombia.com/consulta) | 2000-present | hourly | 🔴 [Use with authorisation](https://www.xm.com.co/legales/terminos-legales-del-sitio-web) | ✅ |
 |  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From XM, whose terms also apply</sub> | 2017-2025 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 | **Peru** | National | [COES](https://www.coes.org.pe/Portal/portalinformacion/demanda)<br><sub>Until 1999, hourly values about 20% lower</sub> | 1997-present | 30 min | 🔴 [Personal use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones) | ✅ |

@@ -7,7 +7,9 @@ licence:
   category: restricted
 entities:
   - country_code: PAK
+    subdivision_code: NTDC
+    subdivision_name: NTDC grid
     start: 2024
     end: 2025
     resolution: 60
-    note: Without K-Electric, which supplies Karachi
+    note: Without K-Electric, which supplies Karachi, and Gilgit-Baltistan

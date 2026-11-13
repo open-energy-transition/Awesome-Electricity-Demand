@@ -1,8 +1,4 @@
 differences:
-  - source: cen
-    check: list_years
-    entity: CHL
-    reason: Until 2015 the data covers the central system (SIC) only, about 30% less, so DemandCast starts in 2016 (cen.py).
   - source: coes
     check: list_years
     entity: PER

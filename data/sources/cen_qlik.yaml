@@ -7,6 +7,8 @@ licence:
   category: non-commercial
 entities:
   - country_code: CHL
+    subdivision_code: SEN
+    subdivision_name: National Electric System
     start: 2026
     end: present
     resolution: 60

@@ -7,7 +7,15 @@ licence:
   category: non-commercial
 entities:
   - country_code: CHL
+    subdivision_code: SIC
+    subdivision_name: Central Interconnected System
     start: 1999
+    end: 2015
+    resolution: 60
+  - country_code: CHL
+    subdivision_code: SEN
+    subdivision_name: National Electric System
+    start: 2016
     end: 2026
     resolution: 60
-    note: Until 2015, the central system (SIC) only, about 30% less. The API of the page has no data after 13 May 2026
+    note: The API of the page has no data after 13 May 2026
