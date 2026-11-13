@@ -17,10 +17,54 @@ entities:
     resolution: 60
     note: From Cammesa, whose terms also apply
   - country_code: AUS
+    subdivision_code: NSW
+    subdivision_name: New South Wales
     start: 2015
     end: present
     resolution: 60
-    note: From AEMO and NTESMO, whose terms also apply
+    note: From AEMO, whose terms also apply
+  - country_code: AUS
+    subdivision_code: NT
+    subdivision_name: Northern Territory
+    start: 2015
+    end: 2026
+    resolution: 60
+    note: From NTESMO, whose terms also apply
+  - country_code: AUS
+    subdivision_code: QLD
+    subdivision_name: Queensland
+    start: 2015
+    end: present
+    resolution: 60
+    note: From AEMO, whose terms also apply
+  - country_code: AUS
+    subdivision_code: SA
+    subdivision_name: South Australia
+    start: 2015
+    end: present
+    resolution: 60
+    note: From AEMO, whose terms also apply
+  - country_code: AUS
+    subdivision_code: TAS
+    subdivision_name: Tasmania
+    start: 2015
+    end: present
+    resolution: 60
+    note: From AEMO, whose terms also apply
+  - country_code: AUS
+    subdivision_code: VIC
+    subdivision_name: Victoria
+    start: 2015
+    end: present
+    resolution: 60
+    note: From AEMO, whose terms also apply
+  - country_code: AUS
+    subdivision_code: WA
+    subdivision_name: Western Australia
+    start: 2020
+    end: present
+    resolution: 60
+    note: From AEMO, whose terms also apply
   - country_code: AUT
     start: 2014
     end: present
@@ -47,20 +91,159 @@ entities:
     resolution: 60
     note: From ENTSO-E, whose terms also apply
   - country_code: BOL
+    subdivision_code: B
+    subdivision_name: Beni
+    start: 2020
+    end: present
+    resolution: 60
+    note: From CNDC, whose terms also apply; with gaps
+  - country_code: BOL
+    subdivision_code: C
+    subdivision_name: Cochabamba
+    start: 2015
+    end: present
+    resolution: 60
+    note: From CNDC, whose terms also apply; with gaps
+  - country_code: BOL
+    subdivision_code: H
+    subdivision_name: Chuquisaca
+    start: 2015
+    end: present
+    resolution: 60
+    note: From CNDC, whose terms also apply; with gaps
+  - country_code: BOL
+    subdivision_code: L
+    subdivision_name: La Paz
+    start: 2015
+    end: present
+    resolution: 60
+    note: From CNDC, whose terms also apply; with gaps
+  - country_code: BOL
+    subdivision_code: O
+    subdivision_name: Oruro
+    start: 2015
+    end: present
+    resolution: 60
+    note: From CNDC, whose terms also apply; with gaps
+  - country_code: BOL
+    subdivision_code: P
+    subdivision_name: Potosí
+    start: 2015
+    end: present
+    resolution: 60
+    note: From CNDC, whose terms also apply; with gaps
+  - country_code: BOL
+    subdivision_code: S
+    subdivision_name: Santa Cruz
+    start: 2015
+    end: present
+    resolution: 60
+    note: From CNDC, whose terms also apply; with gaps
+  - country_code: BOL
+    subdivision_code: T
+    subdivision_name: Tarija
     start: 2015
     end: present
     resolution: 60
     note: From CNDC, whose terms also apply; with gaps
   - country_code: BRA
+    subdivision_code: N
+    subdivision_name: North
+    start: 2010
+    end: present
+    resolution: 60
+    note: From ONS, whose terms also apply
+  - country_code: BRA
+    subdivision_code: NE
+    subdivision_name: North-East
+    start: 2010
+    end: present
+    resolution: 60
+    note: From ONS, whose terms also apply
+  - country_code: BRA
+    subdivision_code: S
+    subdivision_name: South
+    start: 2010
+    end: present
+    resolution: 60
+    note: From ONS, whose terms also apply
+  - country_code: BRA
+    subdivision_code: SE
+    subdivision_name: South-East
     start: 2010
     end: present
     resolution: 60
     note: From ONS, whose terms also apply
   - country_code: CAN
+    subdivision_code: AB
+    subdivision_name: Alberta
+    start: 2026
+    end: present
+    resolution: 60
+    note: From the CCEI, whose terms also apply
+  - country_code: CAN
+    subdivision_code: BC
+    subdivision_name: British Columbia
+    start: 2026
+    end: present
+    resolution: 60
+    note: From BC Hydro, whose terms also apply
+  - country_code: CAN
+    subdivision_code: NB
+    subdivision_name: New Brunswick
+    start: 2026
+    end: present
+    resolution: 60
+    note: From NB Power, whose terms also apply
+  - country_code: CAN
+    subdivision_code: NL
+    subdivision_name: Newfoundland and Labrador
+    start: 2026
+    end: present
+    resolution: 60
+    note: From NL Hydro, whose terms also apply; with gaps
+  - country_code: CAN
+    subdivision_code: NS
+    subdivision_name: Nova Scotia
+    start: 2026
+    end: present
+    resolution: 60
+    note: From NS Power, whose terms also apply
+  - country_code: CAN
+    subdivision_code: "ON"
+    subdivision_name: Ontario
     start: 2022
     end: present
     resolution: 60
-    note: From the operators of nine provinces and Yukon, whose terms also apply
+    note: From IESO, whose terms also apply
+  - country_code: CAN
+    subdivision_code: PE
+    subdivision_name: Prince Edward Island
+    start: 2026
+    end: present
+    resolution: 60
+    note: From the CCEI, whose terms also apply
+  - country_code: CAN
+    subdivision_code: QC
+    subdivision_name: Quebec
+    start: 2022
+    end: present
+    resolution: 60
+    note: From Hydro-Québec, whose terms also apply
+  - country_code: CAN
+    subdivision_code: SK
+    subdivision_name: Saskatchewan
+    start: 2026
+    end: present
+    resolution: 60
+    note: From the CCEI, whose terms also apply; with gaps
+  - country_code: CAN
+    subdivision_code: YT
+    subdivision_name: Yukon
+    start: 2026
+    end: present
+    resolution: 60
+    note: From Yukon Energy, whose terms also apply; with gaps
   - country_code: CHE
     start: 2014
     end: present
@@ -122,6 +305,8 @@ entities:
     resolution: 60
     note: From ENTSO-E, whose terms also apply
   - country_code: GBR
+    subdivision_code: GB
+    subdivision_name: Great Britain
     start: 2015
     end: present
     resolution: 60
@@ -177,10 +362,75 @@ entities:
     resolution: 60
     note: From ENTSO-E, whose terms also apply
   - country_code: JPN
+    subdivision_code: Chūbu
+    subdivision_name: Chūbu
+    start: 2017
+    end: present
+    resolution: 60
+    note: From Chubu Electric Power Grid, whose terms also apply
+  - country_code: JPN
+    subdivision_code: Chūgoku
+    subdivision_name: Chūgoku
+    start: 2017
+    end: present
+    resolution: 60
+    note: From Energia, whose terms also apply
+  - country_code: JPN
+    subdivision_code: Hokkaidō
+    subdivision_name: Hokkaidō
     start: 2016
     end: present
     resolution: 60
-    note: From the ten transmission and distribution companies, whose terms also apply
+    note: From HEPCO, whose terms also apply
+  - country_code: JPN
+    subdivision_code: Hokuriku
+    subdivision_name: Hokuriku
+    start: 2016
+    end: present
+    resolution: 60
+    note: From Rikuden, whose terms also apply
+  - country_code: JPN
+    subdivision_code: Kansai
+    subdivision_name: Kansai
+    start: 2016
+    end: present
+    resolution: 60
+    note: From Kansai TD, whose terms also apply
+  - country_code: JPN
+    subdivision_code: Kantō
+    subdivision_name: Kantō
+    start: 2016
+    end: present
+    resolution: 60
+    note: From TEPCO, whose terms also apply
+  - country_code: JPN
+    subdivision_code: Kyūshū
+    subdivision_name: Kyūshū
+    start: 2016
+    end: present
+    resolution: 60
+    note: From Kyuden, whose terms also apply
+  - country_code: JPN
+    subdivision_code: Okinawa
+    subdivision_name: Okinawa
+    start: 2016
+    end: 2026
+    resolution: 60
+    note: From Okiden, whose terms also apply
+  - country_code: JPN
+    subdivision_code: Shikoku
+    subdivision_name: Shikoku
+    start: 2016
+    end: present
+    resolution: 60
+    note: From Yonden, whose terms also apply
+  - country_code: JPN
+    subdivision_code: Tōhoku
+    subdivision_name: Tōhoku
+    start: 2016
+    end: present
+    resolution: 60
+    note: From Tohoku EPCO, whose terms also apply
   - country_code: KOR
     start: 2017
     end: present
@@ -212,6 +462,64 @@ entities:
     resolution: 60
     note: From ENERGO, whose terms also apply
   - country_code: MEX
+    subdivision_code: BCA
+    subdivision_name: Baja California
+    start: 2020
+    end: 2026
+    resolution: 60
+    note: From CENACE, whose terms also apply
+  - country_code: MEX
+    subdivision_code: BCS
+    subdivision_name: Baja California Sur
+    start: 2020
+    end: 2026
+    resolution: 60
+    note: From CENACE, whose terms also apply
+  - country_code: MEX
+    subdivision_code: CEN
+    subdivision_name: Central
+    start: 2020
+    end: 2026
+    resolution: 60
+    note: From CENACE, whose terms also apply
+  - country_code: MEX
+    subdivision_code: NES
+    subdivision_name: Noreste
+    start: 2020
+    end: 2026
+    resolution: 60
+    note: From CENACE, whose terms also apply
+  - country_code: MEX
+    subdivision_code: NOR
+    subdivision_name: Noroeste
+    start: 2020
+    end: 2026
+    resolution: 60
+    note: From CENACE, whose terms also apply
+  - country_code: MEX
+    subdivision_code: NTE
+    subdivision_name: Norte
+    start: 2020
+    end: 2026
+    resolution: 60
+    note: From CENACE, whose terms also apply
+  - country_code: MEX
+    subdivision_code: OCC
+    subdivision_name: Occidental
+    start: 2020
+    end: 2026
+    resolution: 60
+    note: From CENACE, whose terms also apply
+  - country_code: MEX
+    subdivision_code: ORI
+    subdivision_name: Oriental
+    start: 2020
+    end: 2026
+    resolution: 60
+    note: From CENACE, whose terms also apply
+  - country_code: MEX
+    subdivision_code: PEN
+    subdivision_name: Peninsular
     start: 2020
     end: 2026
     resolution: 60
@@ -252,6 +560,15 @@ entities:
     resolution: 60
     note: From ENTSO-E, whose terms also apply
   - country_code: NZL
+    subdivision_code: NI
+    subdivision_name: North Island
+    start: 2020
+    end: present
+    resolution: 60
+    note: From Transpower, whose terms also apply
+  - country_code: NZL
+    subdivision_code: SI
+    subdivision_name: South Island
     start: 2020
     end: present
     resolution: 60
@@ -391,6 +708,92 @@ entities:
     resolution: 60
     note: From ADME, whose terms also apply
   - country_code: USA
+    subdivision_code: CAL
+    subdivision_name: California
+    start: 2018
+    end: present
+    resolution: 60
+    note: From EIA, whose terms also apply
+  - country_code: USA
+    subdivision_code: CAR
+    subdivision_name: Carolinas
+    start: 2018
+    end: present
+    resolution: 60
+    note: From EIA, whose terms also apply
+  - country_code: USA
+    subdivision_code: CENT
+    subdivision_name: Central
+    start: 2018
+    end: present
+    resolution: 60
+    note: From EIA, whose terms also apply
+  - country_code: USA
+    subdivision_code: FLA
+    subdivision_name: Florida
+    start: 2018
+    end: present
+    resolution: 60
+    note: From EIA, whose terms also apply
+  - country_code: USA
+    subdivision_code: MIDA
+    subdivision_name: Mid-Atlantic
+    start: 2018
+    end: present
+    resolution: 60
+    note: From EIA, whose terms also apply
+  - country_code: USA
+    subdivision_code: MIDW
+    subdivision_name: Midwest
+    start: 2018
+    end: present
+    resolution: 60
+    note: From EIA, whose terms also apply
+  - country_code: USA
+    subdivision_code: NE
+    subdivision_name: New England
+    start: 2018
+    end: present
+    resolution: 60
+    note: From EIA, whose terms also apply
+  - country_code: USA
+    subdivision_code: NW
+    subdivision_name: Northwest
+    start: 2018
+    end: present
+    resolution: 60
+    note: From EIA, whose terms also apply
+  - country_code: USA
+    subdivision_code: NY
+    subdivision_name: New York
+    start: 2018
+    end: present
+    resolution: 60
+    note: From EIA, whose terms also apply
+  - country_code: USA
+    subdivision_code: SE
+    subdivision_name: Southeast
+    start: 2018
+    end: present
+    resolution: 60
+    note: From EIA, whose terms also apply
+  - country_code: USA
+    subdivision_code: SW
+    subdivision_name: Southwest
+    start: 2018
+    end: present
+    resolution: 60
+    note: From EIA, whose terms also apply
+  - country_code: USA
+    subdivision_code: TEN
+    subdivision_name: Tennessee
+    start: 2018
+    end: present
+    resolution: 60
+    note: From EIA, whose terms also apply
+  - country_code: USA
+    subdivision_code: TEX
+    subdivision_name: Texas
     start: 2018
     end: present
     resolution: 60
