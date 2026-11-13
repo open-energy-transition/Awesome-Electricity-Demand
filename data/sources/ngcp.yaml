@@ -7,6 +7,51 @@ licence:
   category: restricted
 entities:
   - country_code: PHL
+    subdivision_code: LUZON
+    subdivision_name: Luzon
     start: 2013
     end: 2025
     resolution: 60
+    note: Without the off-grid islands, such as Mindoro, Palawan and Masbate
+  - country_code: PHL
+    subdivision_code: BOHOL
+    subdivision_name: Bohol
+    start: 2013
+    end: 2025
+    resolution: 60
+    note: NGCP also publishes their total for the Visayas
+  - country_code: PHL
+    subdivision_code: CEBU
+    subdivision_name: Cebu
+    start: 2013
+    end: 2025
+    resolution: 60
+    note: NGCP also publishes their total for the Visayas
+  - country_code: PHL
+    subdivision_code: LEYTE-SAMAR
+    subdivision_name: Leyte-Samar
+    start: 2013
+    end: 2025
+    resolution: 60
+    note: NGCP also publishes their total for the Visayas
+  - country_code: PHL
+    subdivision_code: NEGROS
+    subdivision_name: Negros
+    start: 2013
+    end: 2025
+    resolution: 60
+    note: NGCP also publishes their total for the Visayas
+  - country_code: PHL
+    subdivision_code: PANAY
+    subdivision_name: Panay
+    start: 2013
+    end: 2025
+    resolution: 60
+    note: NGCP also publishes their total for the Visayas
+  - country_code: PHL
+    subdivision_code: MINDANAO
+    subdivision_name: Mindanao
+    start: 2013
+    end: 2025
+    resolution: 60
+    note: Without the off-grid islands of Basilan, Sulu and Tawi-Tawi

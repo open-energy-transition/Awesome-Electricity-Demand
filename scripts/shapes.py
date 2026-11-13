@@ -42,8 +42,12 @@ COUNTRY_CODES = {"KOS": "XKX", "SDS": "SSD", "PSX": "PSE"}
 # Natural Earth at 1:10m, by their ISO 3166-2 codes: the departments of
 # Bolivia, which its layer at 1:50m does not have, the price areas of
 # Denmark, the North and South Islands of New Zealand, without the
-# Chatham and outlying islands, and the interconnected power systems of
-# Russia, whose regions SO UES lists on the page of each system.
+# Chatham and outlying islands, the grids of the Philippines, without
+# the provinces on off-grid islands (Basilan, Batanes, Catanduanes,
+# Marinduque, Masbate, Mindoro, Palawan, Romblon, Siquijor, Sulu and
+# Tawi-Tawi), with the five grids of the Visayas, and the
+# interconnected power systems of Russia, whose regions SO UES lists on
+# the page of each system.
 COMPOSITES = {
     "BOL-B": "BO-B",
     "BOL-C": "BO-C",
@@ -59,6 +63,26 @@ COMPOSITES = {
         "NZ-AUK NZ-BOP NZ-GIS NZ-HKB NZ-MWT NZ-NTL NZ-TKI NZ-WGN NZ-WKO"
     ),
     "NZL-SI": "NZ-CAN NZ-MBH NZ-NSN NZ-OTA NZ-STL NZ-TAS NZ-WTC",
+    "PHL-BOHOL": "PH-BOH",
+    "PHL-CEBU": "PH-CEB PH-LAP PH-MDE",
+    "PHL-LEYTE-SAMAR": "PH-BIL PH-EAS PH-LEY PH-NSA PH-SLE PH-WSA",
+    "PHL-LUZON": (
+        "PH-ABR PH-ALB PH-APA PH-AUR PH-BAN PH-BEN PH-BTG PH-BUL PH-CAG "
+        "PH-CAN PH-CAS PH-CAV PH-IFU PH-ILN PH-ILS PH-ISA PH-KAL PH-LAG "
+        "PH-LUN PH-MNL PH-MOU PH-NUE PH-NUV PH-PAM PH-PAN PH-QUE PH-QUI "
+        "PH-RIZ PH-SOR PH-TAR PH-ZMB"
+    ),
+    "PHL-MINDANAO": (
+        "PH-AGN PH-AGS PH-BUK PH-CAM PH-COM PH-DAO PH-DAS PH-DAV PH-LAN "
+        "PH-LAS PH-MAG PH-MSC PH-MSR PH-NCO PH-SAR PH-SCO PH-SUK PH-SUN "
+        "PH-SUR PH-ZAN PH-ZAS PH-ZSI"
+    ),
+    "PHL-NEGROS": "PH-BCD PH-NEC PH-NER",
+    "PHL-PANAY": "PH-AKL PH-ANT PH-CAP PH-GUI PH-ILI",
+    "PHL-VISAYAS": (
+        "PH-AKL PH-ANT PH-BCD PH-BIL PH-BOH PH-CAP PH-CEB PH-EAS PH-GUI "
+        "PH-ILI PH-LAP PH-LEY PH-MDE PH-NEC PH-NER PH-NSA PH-SLE PH-WSA"
+    ),
     "RUS-CENTER": (
         "RU-BEL RU-BRY RU-IVA RU-KLU RU-KOS RU-KRS RU-LIP RU-MOS RU-MOW "
         "RU-ORL RU-RYA RU-SMO RU-TAM RU-TUL RU-TVE RU-VLA RU-VLG RU-VOR "
