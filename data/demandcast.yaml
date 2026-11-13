@@ -198,8 +198,6 @@ sources:
     - BGD
   pucsl:
     - LKA
-  sonelgaz:
-    - DZA
   taipower:
     - TWN
   tepco:
@@ -238,5 +236,3 @@ sources:
     - CHN-XZ
     - CHN-YN
     - CHN-ZJ
-  xm:
-    - COL

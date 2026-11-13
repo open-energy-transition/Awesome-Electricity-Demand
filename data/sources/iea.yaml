@@ -257,10 +257,12 @@ entities:
     resolution: 60
     note: From CEN, whose terms also apply
   - country_code: COL
+    subdivision_code: SIN
+    subdivision_name: National Interconnected System
     start: 2017
     end: 2025
     resolution: 60
-    note: From XM, whose terms also apply
+    note: From XM, whose terms also apply; without the non-interconnected zones
   - country_code: CRI
     start: 2014
     end: present
