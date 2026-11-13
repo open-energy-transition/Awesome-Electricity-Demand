@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **391 time series** from **51 data sources** for **76 countries** and their subdivisions in:
+The list has **389 time series** from **51 data sources** for **76 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (16 countries)
@@ -75,14 +75,13 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### Asia
 
-<details open><summary>16 countries · 132 time series</summary>
+<details open><summary>16 countries · 131 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
 | **Bangladesh** | National | [PGCB](https://erp.powergrid.gov.bd/w/report/eyJpdiI6IldsU2ZQTGkvbkRnQU9FMjZ5UHhmeGc9PSIsInZhbHVlIjoiQzhONVl5ZGxRY3E3T3ZVNCtLZGt1Zz09IiwibWFjIjoiN2JiNTI5MzNhOWIxZDVjY2NkMmFlZWU4ZDU1N2I4OWZlYjNlZWM1ZGU4NzRiNWU4ZjQ3ZDc1ODRlMTk3MDc0YyIsInRhZyI6IiJ9/show_report) | 2014-present | 30 min | 🔴 [Personal use](https://web.archive.org/web/20260713163535/https://pgcb.gov.bd/pages/static-pages/%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%B0-%E0%A6%B6%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%AC%E0%A6%B2%E0%A7%80-qe03sl-697704dab42ad83461b56617) | ✅ |
 |  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From PGCB, whose terms also apply</sub> | 2015-2026 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
-| **China** | National | [Zenodo](https://zenodo.org/records/8322210)<br><sub>Modelled from the highest and lowest load of each day</sub> | 2018 | hourly | 🟢 [CC BY 4.0](https://zenodo.org/records/8322210) |  |
-|  | <details><summary>31 subdivisions</summary>Anhui, Beijing, Chongqing, Fujian, Gansu, Guangdong, Guangxi, Guizhou, Hainan, Hebei, Heilongjiang, Henan, Hubei, Hunan, Inner Mongolia, Jiangsu, Jiangxi, Jilin, Liaoning, Ningxia, Qinghai, Shaanxi, Shandong, Shanghai, Shanxi, Sichuan, Tianjin, Tibet, Xinjiang, Yunnan, Zhejiang</details> | [Zenodo](https://zenodo.org/records/8322210)<br><sub>Modelled from the highest and lowest load of each day</sub> | 2018 | hourly | 🟢 [CC BY 4.0](https://zenodo.org/records/8322210) | ✅ |
+| **China** | <details><summary>31 subdivisions</summary>Anhui, Beijing, Chongqing, Fujian, Gansu, Guangdong, Guangxi, Guizhou, Hainan, Hebei, Heilongjiang, Henan, Hubei, Hunan, Inner Mongolia, Jiangsu, Jiangxi, Jilin, Liaoning, Ningxia, Qinghai, Shaanxi, Shandong, Shanghai, Shanxi, Sichuan, Tianjin, Tibet, Xinjiang, Yunnan, Zhejiang</details> | [Zenodo](https://zenodo.org/records/8322210)<br><sub>Modelled from the highest and lowest load of each day</sub> | 2018 | hourly | 🟢 [CC BY 4.0](https://zenodo.org/records/8322210) | ✅ |
 | **India** | National | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2024 | 30 min | 🔴 [Use with authorisation](https://www.niti.gov.in/website-policy) |  |
 |  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From MERIT India, whose terms also apply</sub> | 2018-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 |  | <details><summary>32 subdivisions</summary>Andhra Pradesh, Arunachal Pradesh, Assam, Bihar, Chandigarh, Chhattisgarh, Dadra and Nagar Haveli and Daman and Diu, Delhi, Goa, Gujarat, Haryana, Himachal Pradesh, Jammu and Kashmir and Ladakh, Jharkhand and West Bengal, Karnataka, Kerala, Madhya Pradesh, Maharashtra, Manipur, Meghalaya, Mizoram, Nagaland, Odisha, Puducherry, Punjab, Rajasthan, Sikkim, Tamil Nadu, Telangana, Tripura, Uttar Pradesh, Uttarakhand</details> | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | hourly | 🔴 [Use with authorisation](https://www.niti.gov.in/website-policy) | ✅ |
@@ -276,7 +275,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### South America
 
-<details open><summary>7 countries · 50 time series</summary>
+<details open><summary>7 countries · 49 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
@@ -285,8 +284,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | <details><summary>22 subdivisions</summary>Buenos Aires and Ciudad Autónoma de Buenos Aires, Catamarca, Chaco, Chubut, Corrientes, Córdoba, Entre Ríos, Formosa, Jujuy, La Pampa, La Rioja, Mendoza, Misiones, Neuquén, Río Negro, Salta, San Juan, San Luis, Santa Cruz, Santa Fe, Santiago del Estero, Tucumán</details> | [Cammesa](https://cammesaweb.cammesa.com/)<br><sub>The API keeps only about the last 7 to 8 months</sub> | 2026-present | 5 min | 🔴 [Use with authorisation](https://cammesaweb.cammesa.com/politicas-de-acceso/) | ✅ |
 | **Bolivia** | Beni | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From CNDC, whose terms also apply; with gaps</sub> | 2020-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 |  | <details><summary>7 subdivisions</summary>Chuquisaca, Cochabamba, La Paz, Oruro, Potosí, Santa Cruz, Tarija</details> | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From CNDC, whose terms also apply; with gaps</sub> | 2015-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
-| **Brazil** | National | [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | hourly | 🟢 [CC BY](https://dados.ons.org.br/dataset/curva-carga) |  |
-|  | <details><summary>4 subdivisions</summary>North, North-East, South, South-East</details> | [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | hourly | 🟢 [CC BY](https://dados.ons.org.br/dataset/curva-carga) | ✅ |
+| **Brazil** | <details><summary>4 subdivisions</summary>North, North-East, South, South-East</details> | [ONS](https://dados.ons.org.br/dataset/curva-carga) | 2000-present | hourly | 🟢 [CC BY](https://dados.ons.org.br/dataset/curva-carga) | ✅ |
 |  | <details><summary>4 subdivisions</summary>North, North-East, South, South-East</details> | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ONS, whose terms also apply</sub> | 2010-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 | **Chile** | National | [CEN](https://www.coordinador.cl/operacion/graficos/operacion-real/demanda-real/)<br><sub>Until 2015, the central system (SIC) only, about 30% less. The API of the page has no data after 13 May 2026</sub> | 1999-2026 | hourly | 🟡 [Personal or academic use with attribution](https://www.coordinador.cl/terminos-y-condiciones/) | ✅ |
 |  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From CEN, whose terms also apply</sub> | 2018-2026 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
