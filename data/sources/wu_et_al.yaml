@@ -7,11 +7,6 @@ licence:
   category: open
 entities:
   - country_code: CHN
-    start: 2018
-    end: 2018
-    resolution: 60
-    note: Modelled from the highest and lowest load of each day
-  - country_code: CHN
     subdivision_code: BJ
     subdivision_name: Beijing
     start: 2018
