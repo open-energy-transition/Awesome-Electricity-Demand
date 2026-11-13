@@ -152,8 +152,8 @@ class Entity(StrictModel):
     country_code : str
         ISO 3166-1 alpha-3 code of the country, or XKX for Kosovo.
     subdivision_code, subdivision_name : str or None
-        Code and name of the subdivision or grid region that the data
-        covers, or None for the whole country.
+        Code and name of the subdivision, standard or non-standard,
+        that the data covers, or None for the whole country.
     start : int
         First year with data.
     end : int or "present"
@@ -169,9 +169,10 @@ class Entity(StrictModel):
 
     Notes
     -----
-    The subdivision code is the ISO 3166-2 code without the country
-    prefix, or for grid regions without one, the code that DemandCast
-    uses, so that the two lists can be compared.
+    The code of a standard subdivision is its ISO 3166-2 code without
+    the country prefix; that of a non-standard one, such as the area of
+    a grid, is the code that DemandCast uses, so that the two lists can
+    be compared, or a short readable code when DemandCast has none.
     """
 
     country_code: CountryCode
