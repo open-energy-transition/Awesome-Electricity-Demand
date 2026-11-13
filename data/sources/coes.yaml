@@ -7,7 +7,22 @@ licence:
   category: restricted
 entities:
   - country_code: PER
+    subdivision_code: SICN
+    subdivision_name: Central-North Interconnected System
     start: 1997
+    end: 1999
+    resolution: 60
+  - country_code: PER
+    subdivision_code: SEIN-2000
+    subdivision_name: National Interconnected System of 2000
+    start: 2000
+    end: 2010
+    resolution: 30
+    note: With Pucallpa and Aguaytía from 2002, Puerto Maldonado from 2008, Bagua and Jaén from 2009, and San Martín and Yurimaguas from December 2010
+  - country_code: PER
+    subdivision_code: SEIN
+    subdivision_name: National Interconnected System
+    start: 2011
     end: present
     resolution: 30
-    note: Until 1999, hourly values about 20% lower
+    note: Without the isolated systems of Loreto, but Yurimaguas, and of Atalaya and Purús
