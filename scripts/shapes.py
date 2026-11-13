@@ -38,13 +38,27 @@ TOLERANCE = 0.05
 GRID = 0.01
 # Codes of Natural Earth that differ from those of the list.
 COUNTRY_CODES = {"KOS": "XKX", "SDS": "SSD", "PSX": "PSE"}
-# Grid regions without a shape in DemandCast, as unions of regions,
-# by their ISO 3166-2 codes: the price areas of Denmark, and the
-# interconnected power systems of Russia, whose regions SO UES lists
-# on the page of each system.
+# Subdivisions without a shape in DemandCast, as unions of regions of
+# Natural Earth at 1:10m, by their ISO 3166-2 codes: the departments of
+# Bolivia, which its layer at 1:50m does not have, the price areas of
+# Denmark, the North and South Islands of New Zealand, without the
+# Chatham and outlying islands, and the interconnected power systems of
+# Russia, whose regions SO UES lists on the page of each system.
 COMPOSITES = {
+    "BOL-B": "BO-B",
+    "BOL-C": "BO-C",
+    "BOL-H": "BO-H",
+    "BOL-L": "BO-L",
+    "BOL-O": "BO-O",
+    "BOL-P": "BO-P",
+    "BOL-S": "BO-S",
+    "BOL-T": "BO-T",
     "DNK-DK1": "DK-81 DK-82 DK-83",
     "DNK-DK2": "DK-84 DK-85",
+    "NZL-NI": (
+        "NZ-AUK NZ-BOP NZ-GIS NZ-HKB NZ-MWT NZ-NTL NZ-TKI NZ-WGN NZ-WKO"
+    ),
+    "NZL-SI": "NZ-CAN NZ-MBH NZ-NSN NZ-OTA NZ-STL NZ-TAS NZ-WTC",
     "RUS-CENTER": (
         "RU-BEL RU-BRY RU-IVA RU-KLU RU-KOS RU-KRS RU-LIP RU-MOS RU-MOW "
         "RU-ORL RU-RYA RU-SMO RU-TAM RU-TUL RU-TVE RU-VLA RU-VLG RU-VOR "
