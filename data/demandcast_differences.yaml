@@ -1,5 +1,1 @@
-differences:
-  - source: coes
-    check: list_years
-    entity: PER
-    reason: Until 1999 the values are hourly and about 20% lower, so DemandCast starts in 2000 (coes.py).
+differences: []

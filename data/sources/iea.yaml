@@ -585,6 +585,8 @@ entities:
     resolution: 60
     note: From EOR, whose terms also apply
   - country_code: PER
+    subdivision_code: SEIN
+    subdivision_name: National Interconnected System
     start: 2017
     end: present
     resolution: 60

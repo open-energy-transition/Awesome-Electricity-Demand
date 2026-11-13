@@ -55,6 +55,10 @@ COUNTRY_CODES = {"KOS": "XKX", "SDS": "SSD", "PSX": "PSE"}
 #   outlying islands;
 # - the grid of NTDC in Pakistan, without Gilgit-Baltistan, which has
 #   no connection to it, and the area of K-Electric;
+# - the systems of Peru: the central-north system (SICN) until 1999,
+#   with the southern system (SEIN-2000) from 2000, and the national
+#   system today (SEIN), without Loreto but Alto Amazonas, Atalaya
+#   and Purús;
 # - the grids of the Philippines, without the provinces on off-grid
 #   islands (Basilan, Batanes, Catanduanes, Marinduque, Masbate,
 #   Mindoro, Palawan, Romblon, Siquijor, Sulu and Tawi-Tawi), with the
@@ -101,6 +105,20 @@ COMPOSITES = {
     ),
     "NZL-SI": "NZ-CAN NZ-MBH NZ-NSN NZ-OTA NZ-STL NZ-TAS NZ-WTC",
     "PAK-NTDC": "PK-BA PK-IS PK-JK PK-KP PK-PB PK-SD PK-TA",
+    "PER-SEIN": (
+        "PE-AMA PE-ANC PE-APU PE-ARE PE-AYA PE-CAJ PE-CAL PE-CUS PE-HUC "
+        "PE-HUV PE-ICA PE-JUN PE-LAL PE-LAM PE-LIM PE-LOR PE-MDD PE-MOQ "
+        "PE-PAS PE-PIU PE-PUN PE-SAM PE-TAC PE-TUM PE-UCA"
+    ),
+    "PER-SEIN-2000": (
+        "PE-ANC PE-APU PE-ARE PE-AYA PE-CAJ PE-CAL PE-CUS PE-HUC PE-HUV "
+        "PE-ICA PE-JUN PE-LAL PE-LAM PE-LIM PE-MOQ PE-PAS PE-PIU PE-PUN "
+        "PE-TAC PE-TUM"
+    ),
+    "PER-SICN": (
+        "PE-ANC PE-AYA PE-CAJ PE-CAL PE-HUC PE-HUV PE-ICA PE-JUN PE-LAL "
+        "PE-LAM PE-LIM PE-PAS PE-PIU PE-TUM"
+    ),
     "PHL-BOHOL": "PH-BOH",
     "PHL-CEBU": "PH-CEB PH-LAP PH-MDE",
     "PHL-LEYTE-SAMAR": "PH-BIL PH-EAS PH-LEY PH-NSA PH-SLE PH-WSA",
@@ -204,6 +222,15 @@ K_ELECTRIC = (
     "67.25 25.6, 67.6 25.2, 67.68 24.85, 67.68 24.65, 66.65 24.75, "
     "66.55 25.35, 66.45 25.85, 66.2 26.35))"
 )
+# Loreto, Peru, outside Alto Amazonas, its province on the SEIN.
+LORETO = (
+    "POLYGON ((-79 1, -69 1, -69 -10, -79 -10, -79 1), (-76.8 -6, "
+    "-76.4 -6, -76.1 -6.2, -75.7 -6.2, -75.5 -5.9, -75.4 -5.6, "
+    "-75.6 -5.5, -75.6 -5.4, -75.6 -5.2, -75.4 -5, -75.7 -4.9, "
+    "-75.8 -4.7, -75.8 -4.4, -76 -4.3, -76.1 -4, -76.3 -3.7, -76.4 -3.9, "
+    "-76.2 -4.3, -76.4 -4.4, -76.2 -4.8, -75.8 -5, -76 -5.1, -76.5 -5, "
+    "-76.7 -5.4, -76.9 -5.5, -76.9 -5.7, -76.8 -6))"
+)
 # The communes of Los Lagos, Chile, with medium systems of their own:
 # Cochamó, Hualaihué, Chaitén, Futaleufú and Palena.
 LOS_LAGOS = (
@@ -244,6 +271,16 @@ TAIMYR = (
     "99.7 69.9, 103.8 69.3, 106.4 69.5, 131.4 69.5, 131.4 82, "
     "67.7 82, 67.7 68.4))"
 )
+# Atalaya and Purús, in Ucayali, Peru, isolated from the SEIN.
+UCAYALI = (
+    "POLYGON ((-74.8 -11.1, -74.9 -10.9, -74.8 -10.7, -74.5 -10.5, "
+    "-74.7 -10, -74.5 -9.6, -74.4 -10, -74.1 -9.7, -73.7 -9.5, "
+    "-73.2 -10.1, -73 -10, -73.2 -9.7, -73.2 -9.4, -72.9 -9.1, "
+    "-72.2 -9.2, -71.9 -9.7, -71.4 -9.7, -70.6 -9.1, -70.4 -9.1, "
+    "-70.2 -9.3, -70.2 -9.8, -70.5 -10.4, -70.9 -10.8, -71.2 -11.2, "
+    "-71.9 -11.3, -72.1 -11.6, -72.5 -11.7, -73.1 -11.6, -73.4 -11.7, "
+    "-73.8 -11.5, -74.5 -11.3, -74.8 -11.1))"
+)
 # The 13 Arctic districts of Yakutia, Russia, outside the western,
 # central and south Yakutian energy districts of the East.
 YAKUTIA = (
@@ -268,6 +305,7 @@ CUTS = {
     },
     "DZA-RIN": {"DZ-08": BECHAR, "DZ-30": OUARGLA, "DZ-47": GHARDAIA},
     "PAK-NTDC": {"PK-BA": K_ELECTRIC, "PK-SD": K_ELECTRIC},
+    "PER-SEIN": {"PE-LOR": LORETO, "PE-UCA": UCAYALI},
     "RUS-EAST": {"RU-SA": YAKUTIA},
     "RUS-SIBERIA": {"RU-KYA": TAIMYR},
 }

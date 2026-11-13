@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **398 time series** from **51 data sources** for **76 countries** and their subdivisions in:
+The list has **400 time series** from **51 data sources** for **76 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (16 countries)
@@ -279,7 +279,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### South America
 
-<details open><summary>7 countries · 50 time series</summary>
+<details open><summary>7 countries · 52 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
@@ -296,8 +296,10 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | National Electric System | [CEN (Qlik app)](https://qap-prd.coordinador.cl/ext/extensions/mashup_demanda_real/mashup_demanda_real.html)<br><sub>Only the last three months or so, each month published from the 20th of the next</sub> | 2026-present | hourly | 🟡 [Personal or academic use with attribution](https://www.coordinador.cl/terminos-y-condiciones/) |  |
 | **Colombia** | National Interconnected System | [XM](https://www.energiadecolombia.com/consulta)<br><sub>Without the non-interconnected zones; with the Pacific coast of Cauca and Nariño from about 2019 to 2021</sub> | 2000-present | hourly | 🔴 [Use with authorisation](https://www.xm.com.co/legales/terminos-legales-del-sitio-web) |  |
 |  | National Interconnected System | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From XM, whose terms also apply; without the non-interconnected zones</sub> | 2017-2025 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
-| **Peru** | National | [COES](https://www.coes.org.pe/Portal/portalinformacion/demanda)<br><sub>Until 1999, hourly values about 20% lower</sub> | 1997-present | 30 min | 🔴 [Personal use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones) | ✅ |
-|  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From COES, whose terms also apply</sub> | 2017-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
+| **Peru** | Central-North Interconnected System | [COES](https://www.coes.org.pe/Portal/portalinformacion/demanda) | 1997-1999 | hourly | 🔴 [Personal use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones) |  |
+|  | National Interconnected System | [COES](https://www.coes.org.pe/Portal/portalinformacion/demanda)<br><sub>Without the isolated systems of Loreto, but Yurimaguas, and of Atalaya and Purús</sub> | 2011-present | 30 min | 🔴 [Personal use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones) |  |
+|  | National Interconnected System | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From COES, whose terms also apply</sub> | 2017-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
+|  | National Interconnected System of 2000 | [COES](https://www.coes.org.pe/Portal/portalinformacion/demanda)<br><sub>With Pucallpa and Aguaytía from 2002, Puerto Maldonado from 2008, Bagua and Jaén from 2009, and San Martín and Yurimaguas from December 2010</sub> | 2000-2010 | 30 min | 🔴 [Personal use](https://www.coes.org.pe/Portal/Organizacion/TerminosyCondiciones) |  |
 | **Uruguay** | National | [ADME](https://adme.com.uy/controlpanel.php) | 2019-present | hourly | 🟢 [Any use with attribution](https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/sites/agencia-gobierno-electronico-sociedad-informacion-conocimiento/files/documentos/publicaciones/licencia_de_datos_abiertos_0.pdf) | ✅ |
 |  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ADME, whose terms also apply</sub> | 2020-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 
