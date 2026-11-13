@@ -74,19 +74,20 @@ The fields of an entity are:
 | Field                                  | Required | Meaning                                                                          |
 | -------------------------------------- | -------- | -------------------------------------------------------------------------------- |
 | `country_code`                         | yes      | [ISO 3166-1 alpha-3 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) of the country, such as `DEU`; Kosovo uses `XKX`. |
-| `subdivision_code`, `subdivision_name` | no       | The subdivision or grid region covered, for data of only part of the country.   |
+| `subdivision_code`, `subdivision_name` | no       | The subdivision covered, for data of only part of the country (see below).      |
 | `start`                                | yes      | First year with data.                                                            |
 | `end`                                  | yes      | Last year with data, or `present` if the data is still updated.                  |
 | `resolution`                           | yes      | Time step in minutes, such as 5, 15, 30 or 60.                                   |
 | `url`                                  | no       | Page of the data of this entity, if it is not the `url` of the source.          |
 | `note`                                 | no       | Remark shown in the list, such as "Generation, proxy for demand".                |
 
+- An entity is a country or a subdivision of a country. A subdivision is either standard, with an [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code, such as a state or a province, or non-standard, such as the area of a grid or of a bidding zone.
+- `subdivision_code` is the ISO 3166-2 code of a standard subdivision, without the country prefix (`NSW` for New South Wales). A non-standard subdivision takes a code and a name that are commonly accepted and recognizable, such as those of its operator (`CAL` and California for the region of the EIA, `QLD1` and Queensland region of the NEM, `SIN` and National Interconnected System for Colombia). DemandCast uses the same code, so that the two lists can be compared.
 - An entity is the area whose demand its data measures, so that neither the list nor its map claims more:
-  - An entity without a subdivision covers the whole country. Data of only part of a country, even of most of it, is listed by the subdivisions or grid regions it covers.
-  - A part of the country left out of the data does not count if it has less than 1% of the demand of the country (or of its population, when the demand is not known) and less than 1% of its land, or is too scattered to draw on a map of the world, such as isolated villages or small islands. The note names it when it is known, such as "Without the isolated systems of the Amazon".
-  - When a source publishes several regions and their total, list the regions, with a note that says the source also publishes their total. List the total only for the years or the resolution that the regions do not have, or when it covers more than them.
-  - When the area of the data changes over time beyond these limits, as when a region joins the grid, list each period as a separate entity. A smaller change goes in the note.
-- `subdivision_code` is the [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code without the country prefix (`NSW` for New South Wales). For grid regions without one, use the code that DemandCast uses (`CAL` for the California region of the EIA), so that the two lists can be compared.
+  - A country covers all of it. Data of only part of a country, even of most of it, belongs to the subdivision it covers, standard or non-standard.
+  - An entity can still include an area left out of the data if that area has less than 1% of the demand of the country (or of its population, when the demand is not known) and less than 1% of its land, or if it is too scattered to draw on a map of the world, such as isolated villages or small islands. The note names the area when it is known, such as "Without the isolated systems of the Amazon".
+  - When a source publishes data for several subdivisions and for their total, list the subdivisions, with a note that says the source also publishes their total. List the total only for the years or the resolution that the subdivisions do not have, or when it covers more than them.
+  - When the area of the data changes over time beyond these limits, as when an isolated system joins the grid, list each period as a separate entity, with its own subdivision. A smaller change goes in the note.
 - Only hourly or sub-hourly data belongs to the list, so `resolution` must divide 60 minutes.
 - If the data of an entity changes resolution over time, list each period as a separate entity.
 
@@ -134,13 +135,13 @@ uv run scripts/demandcast_sync.py --demandcast ../demandcast/demandcast/retrieva
 uv run scripts/build.py readme
 ```
 
-The comparison also reports the countries and subdivisions without an outline in `data/shapes.geojson`, which the maps leave out. A new subdivision needs one: write the file with the code of DemandCast, which finds the shapes in Natural Earth or in its own shapes of grid regions, from the `demandcast` folder of a copy of DemandCast, in its environment:
+The comparison also reports the countries and subdivisions without an outline in `data/shapes.geojson`, which the maps leave out. A new subdivision needs one: write the file with the code of DemandCast, which finds the shapes of standard subdivisions in Natural Earth and those of non-standard subdivisions in its own shapes, from the `demandcast` folder of a copy of DemandCast, in its environment:
 
 ```bash
 PYTHONPATH=. uv run --locked python ../../Awesome-Electricity-Demand/scripts/shapes.py
 ```
 
-The command lists the subdivisions that still have no shape. A grid region needs a shape in DemandCast first, or, made from regions of Natural Earth, an entry in `COMPOSITES` in `scripts/shapes.py`, with a polygon in `CUTS` for the part of a region outside the grid region, drawn by hand along the borders of its districts.
+The command lists the subdivisions that still have no shape. A non-standard subdivision needs a shape in DemandCast first, or an entry in `COMPOSITES` in `scripts/shapes.py`, as a union of standard subdivisions of Natural Earth, with a polygon in `CUTS` for the part of any of them outside it, drawn by hand along the borders of their districts.
 
 A divergence that is deliberate, such as a retriever that takes only some years of a source, goes in `data/demandcast_differences.yaml`, with the check, the entity if any, and a reason:
 
