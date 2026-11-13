@@ -7,19 +7,13 @@ licence:
   category: restricted
 entities:
   - country_code: RUS
-    start: 2001
-    end: present
-    resolution: 60
-    url: https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/
-    note: Consumption hidden in the page, which shows only generation since October 2022; without the isolated power systems
-  - country_code: RUS
     subdivision_code: CENTER
     subdivision_name: Centre
     start: 2001
     end: present
     resolution: 60
     url: https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/
-    note: Consumption hidden in the page, which shows only generation since October 2022
+    note: Consumption hidden in the page, which shows only generation since October 2022; the page also has their total
   - country_code: RUS
     subdivision_code: CENTER
     subdivision_name: Centre
@@ -34,7 +28,7 @@ entities:
     end: present
     resolution: 60
     url: https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/
-    note: Consumption hidden in the page, which shows only generation since October 2022
+    note: Consumption hidden in the page, which shows only generation since October 2022; the page also has their total
   - country_code: RUS
     subdivision_code: NORTHWEST
     subdivision_name: North-West
@@ -49,7 +43,7 @@ entities:
     end: present
     resolution: 60
     url: https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/
-    note: Consumption hidden in the page, which shows only generation since October 2022
+    note: Consumption hidden in the page, which shows only generation since October 2022; the page also has their total
   - country_code: RUS
     subdivision_code: VOLGA
     subdivision_name: Middle Volga
@@ -64,7 +58,7 @@ entities:
     end: present
     resolution: 60
     url: https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/
-    note: Consumption hidden in the page, which shows only generation since October 2022
+    note: Consumption hidden in the page, which shows only generation since October 2022; the page also has their total
   - country_code: RUS
     subdivision_code: SOUTH
     subdivision_name: South
@@ -79,7 +73,7 @@ entities:
     end: present
     resolution: 60
     url: https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/
-    note: Consumption hidden in the page, which shows only generation since October 2022
+    note: Consumption hidden in the page, which shows only generation since October 2022; the page also has their total
   - country_code: RUS
     subdivision_code: URALS
     subdivision_name: Urals
@@ -94,7 +88,7 @@ entities:
     end: present
     resolution: 60
     url: https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/
-    note: Consumption hidden in the page, which shows only generation since October 2022
+    note: Consumption hidden in the page, which shows only generation since October 2022; the page also has their total
   - country_code: RUS
     subdivision_code: SIBERIA
     subdivision_name: Siberia
@@ -109,7 +103,7 @@ entities:
     end: present
     resolution: 60
     url: https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/
-    note: Consumption hidden in the page, which shows only generation since October 2022; with the western and central districts of Yakutia since 2019
+    note: Consumption hidden in the page, which shows only generation since October 2022; the page also has their total; with the western and central districts of Yakutia since 2019
   - country_code: RUS
     subdivision_code: EAST
     subdivision_name: East
