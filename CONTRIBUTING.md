@@ -81,7 +81,11 @@ The fields of an entity are:
 | `url`                                  | no       | Page of the data of this entity, if it is not the `url` of the source.          |
 | `note`                                 | no       | Remark shown in the list, such as "Generation, proxy for demand".                |
 
-- An entity without a subdivision covers the whole country. Data of only part of a country, even of most of it, is listed by the subdivisions or grid regions it covers, so that neither the list nor its map claims the whole country.
+- An entity is the area whose demand its data measures, so that neither the list nor its map claims more:
+  - An entity without a subdivision covers the whole country. Data of only part of a country, even of most of it, is listed by the subdivisions or grid regions it covers.
+  - A part of the country left out of the data does not count if it has less than 1% of the demand of the country (or of its population, when the demand is not known) and less than 1% of its land, or is too scattered to draw on a map of the world, such as isolated villages or small islands. The note names it when it is known, such as "Without the isolated systems of the Amazon".
+  - When a source publishes several regions and their total, list the regions, with a note that says the source also publishes their total. List the total only for the years or the resolution that the regions do not have, or when it covers more than them.
+  - When the area of the data changes over time beyond these limits, as when a region joins the grid, list each period as a separate entity. A smaller change goes in the note.
 - `subdivision_code` is the [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code without the country prefix (`NSW` for New South Wales). For grid regions without one, use the code that DemandCast uses (`CAL` for the California region of the EIA), so that the two lists can be compared.
 - Only hourly or sub-hourly data belongs to the list, so `resolution` must divide 60 minutes.
 - If the data of an entity changes resolution over time, list each period as a separate entity.
