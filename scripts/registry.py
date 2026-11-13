@@ -170,9 +170,10 @@ class Entity(StrictModel):
     Notes
     -----
     The code of a standard subdivision is its ISO 3166-2 code without
-    the country prefix; that of a non-standard one, such as the area of
-    a grid, is the code that DemandCast uses, so that the two lists can
-    be compared, or a short readable code when DemandCast has none.
+    the country prefix. A non-standard one, such as the area of a grid,
+    takes a code and a name that are commonly accepted and
+    recognizable, such as those of its operator, and DemandCast uses
+    the same code, so that the two lists can be compared.
     """
 
     country_code: CountryCode
