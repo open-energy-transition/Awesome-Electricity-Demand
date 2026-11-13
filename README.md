@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **317 time series** from **51 data sources** for **76 countries** and their subdivisions in:
+The list has **318 time series** from **51 data sources** for **76 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (16 countries)
@@ -75,7 +75,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### Asia
 
-<details open><summary>16 countries · 104 time series</summary>
+<details open><summary>16 countries · 105 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
@@ -99,7 +99,8 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | National | [ISMO](https://www.ismo.gov.pk/library/hourly-system-demand)<br><sub>Without K-Electric, which supplies Karachi</sub> | 2024-2025 | hourly | 🔴 [Personal use](https://www.ismo.gov.pk/terms-and-conditions) | ✅ |
 | **Philippines** | National | [NGCP](https://www.ngcp.ph/operations#operations) | 2013-2025 | hourly | 🔴 [Use with authorisation](https://ngcp.ph) | ✅ |
 |  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From IEMOP, whose terms also apply</sub> | 2020-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
-| **Russia** | National | [SO UES](https://br.so-ups.ru/BR/GenConsum)<br><sub>Seven interconnected power systems and two price zones, separately; without the isolated power systems</sub> | 2015-present | hourly | 🔴 [Non-commercial use with attribution, no derivatives](https://www.so-ups.ru/responsibility/) |  |
+| **Russia** | National | [SO UES](https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/)<br><sub>Whole system and seven interconnected power systems, separately, the East from 2002; consumption hidden in the page, which shows only generation since October 2022; without the isolated power systems</sub> | 2001-present | hourly | 🔴 [Non-commercial use with attribution, no derivatives](https://www.so-ups.ru/responsibility/) |  |
+|  | National | [SO UES](https://br.so-ups.ru/BR/GenConsum)<br><sub>Seven interconnected power systems and two price zones, separately; without the isolated power systems; reachable only from Russia</sub> | 2015-present | hourly | 🔴 [Non-commercial use with attribution, no derivatives](https://www.so-ups.ru/responsibility/) |  |
 |  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ATS, whose terms also apply</sub> | 2021-2026 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 | **Singapore** | National | [EMA](https://www.ema.gov.sg/resources/statistics/half-hourly-system-demand-data) | 2014-present | 30 min | 🟢 [Any use with attribution](https://www.ema.gov.sg/terms-of-use) | ✅ |
 |  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From EMC, whose terms also apply</sub> | 2016-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
