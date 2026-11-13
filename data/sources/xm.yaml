@@ -7,6 +7,9 @@ licence:
   category: restricted
 entities:
   - country_code: COL
+    subdivision_code: SIN
+    subdivision_name: National Interconnected System
     start: 2000
     end: present
     resolution: 60
+    note: Without the non-interconnected zones; with the Pacific coast of Cauca and Nariño from about 2019 to 2021

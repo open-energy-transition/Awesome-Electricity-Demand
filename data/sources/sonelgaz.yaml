@@ -7,6 +7,9 @@ licence:
   category: open
 entities:
   - country_code: DZA
+    subdivision_code: RIN
+    subdivision_name: Northern interconnected grid
     start: 2008
     end: 2020
     resolution: 60
+    note: Without the isolated grids of the south

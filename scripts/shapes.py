@@ -43,7 +43,13 @@ COUNTRY_CODES = {"KOS": "XKX", "SDS": "SSD", "PSX": "PSE"}
 # - the departments of Bolivia, which its layer at 1:50m does not have;
 # - the national (SEN) and central (SIC) systems of Chile, without
 #   Aysén, Magallanes and the medium systems of Los Lagos;
+# - the national interconnected system (SIN) of Colombia, without the
+#   departments of Amazonas, Guainía, Vaupés and Vichada, the islands
+#   of San Andrés and the municipalities whose seats are off it;
 # - the price areas of Denmark;
+# - the northern interconnected grid (RIN) of Algeria, without Adrar,
+#   Illizi, Tamanrasset, Tindouf, the south of Béchar, El Menia and
+#   El Borma;
 # - Peninsular Malaysia, without Sabah, Sarawak and Labuan;
 # - the North and South Islands of New Zealand, without the Chatham and
 #   outlying islands;
@@ -71,6 +77,18 @@ COMPOSITES = {
     "CHL-SIC": (
         "CL-AN CL-AR CL-AT CL-BI CL-CO CL-LI CL-LL CL-LR CL-ML CL-NB CL-RM "
         "CL-VS"
+    ),
+    "COL-SIN": (
+        "CO-ANT CO-ARA CO-ATL CO-BOL CO-BOY CO-CAL CO-CAQ CO-CAS CO-CAU "
+        "CO-CES CO-CHO CO-COR CO-CUN CO-GUV CO-HUI CO-LAG CO-MAG CO-MET "
+        "CO-NAR CO-NSA CO-PUT CO-QUI CO-RIS CO-SAN CO-SUC CO-TOL CO-VAC"
+    ),
+    "DZA-RIN": (
+        "DZ-02 DZ-03 DZ-04 DZ-05 DZ-06 DZ-07 DZ-08 DZ-09 DZ-10 DZ-12 "
+        "DZ-13 DZ-14 DZ-15 DZ-16 DZ-17 DZ-18 DZ-19 DZ-20 DZ-21 DZ-22 "
+        "DZ-23 DZ-24 DZ-25 DZ-26 DZ-27 DZ-28 DZ-29 DZ-30 DZ-31 DZ-32 "
+        "DZ-34 DZ-35 DZ-36 DZ-38 DZ-39 DZ-40 DZ-41 DZ-42 DZ-43 DZ-44 "
+        "DZ-45 DZ-46 DZ-47 DZ-48"
     ),
     "DNK-DK1": "DK-81 DK-82 DK-83",
     "DNK-DK2": "DK-84 DK-85",
@@ -134,6 +152,51 @@ ANTOFAGASTA = (
     "-69.2 -25.2, -69 -25.4, -69 -26.5, -66 -26.5, -66 -17, -72 -17, "
     "-72 -24.5, -70.6 -24.5))"
 )
+# Béchar, Algeria, outside its northern communes on the RIN.
+BECHAR = (
+    "POLYGON ((-5.4 30.2, -4.5 30.8, -4 30.9, -4.1 31.2, -3.9 31.8, "
+    "-3.7 32, -3.2 32, -3.2 32.2, -3 32.3, -2.5 32.4, -1.5 32.4, "
+    "-1.4 32.5, -1.1 32.5, -0.8 32.4, -0.1 32.6, 0.2 32.4, 0.2 32.2, "
+    "-0.1 31.5, 0.6 30.9, 0.7 30.6, 0 29.6, -0.6 28.8, -0.9 28.6, "
+    "-1.8 28.5, -2.8 28, -3.1 28, -3.6 28.3, -5.3 27.9, -5.5 28.1, "
+    "-6.3 29.6, -6.1 29.8, -5.6 29.9, -5.4 30.2), (-3.8 31.1, -3.7 31.1, "
+    "-3.6 31, -3.7 30.7, -3.6 30.3, -3.1 30.1, -2.3 30.2, -1.6 30.8, "
+    "-0.6 30.9, -0.3 30.7, 0.4 30.7, -0.2 31.2, -0.2 31.3, -0.4 31.4, "
+    "-0.4 32, -0.2 32.1, -0.2 32.3, -0.7 32.3, -1 32.2, -1.2 32.4, "
+    "-1.3 32.2, -1.2 32.1, -1.9 32.2, -1.9 32.1, -2.1 32, -2.3 32, "
+    "-2.3 32.2, -2.9 32.1, -3 32, -2.8 31.8, -3.7 31.7, -3.7 31.4, "
+    "-3.8 31.3, -3.8 31.1))"
+)
+# The municipalities of Chocó, Colombia, whose seats are off the
+# SIN: Acandí, Unguía, Juradó, Bahía Solano, Nuquí, Alto and Bajo
+# Baudó, Litoral del San Juan, Bojayá and Medio Atrato.
+CHOCO = (
+    "MULTIPOLYGON (((-76.1 6.4, -76 6.2, -76 6.1, -76.2 6, -76.2 6.2, "
+    "-76.8 5.8, -77 6.1, -76.7 6.1, -76.7 6.2, -76.8 6.4, -76.9 6.3, "
+    "-77.1 6.3, -77.2 6, -77 5.7, -77 5.5, -76.9 5.4, -77.1 5.2, -77.3 5, "
+    "-77.1 5, -77.1 4.9, -77 4.9, -77 4.8, -77.2 4.5, -76.6 4.3, "
+    "-76.3 4.5, -76.2 4.3, -76.2 4.1, -76.5 3.7, -77.2 3.9, -77.5 3.8, "
+    "-77.7 4, -77.8 4.2, -77.6 4.6, -77.6 5.3, -77.8 5.5, -77.6 5.8, "
+    "-77.7 6.1, -77.7 6.4, -77.9 6.7, -78.1 7.2, -78 7.6, -77.8 7.7, "
+    "-77.6 6.7, -77.4 6.8, -76.8 6.8, -76.8 7, -76.7 7, -76.5 6.4, "
+    "-76.1 6.4)), ((-77.5 7.6, -77.6 7.5, -77.7 7.7, -77.5 7.6)), "
+    "((-76.9 7.6, -77.1 7.8, -77.1 7.9, -77.3 7.9, -77.4 7.8, -77.4 7.9, "
+    "-77.7 8.5, -77.5 8.9, -77.2 8.9, -76.8 8.4, -76.7 8.1, -76.9 7.6)))"
+)
+# El Menia and Hassi Gara, in Ghardaïa, Algeria, off the RIN.
+GHARDAIA = (
+    "POLYGON ((2 32.2, 2 32.8, 2.2 33, 4.2 33.3, 5.1 33.1, 5.3 32.9, "
+    "5.2 32.7, 5 32.3, 4.6 32.1, 4.4 31.8, 4.5 32.2, 4.8 32.5, 5 32.9, "
+    "4.1 33, 4.1 32.7, 3 32.9, 2.2 32.8, 2.3 32.3, 2.2 32.2, 3.6 31.4, "
+    "4.1 31.2, 4.3 31.3, 4.1 29.9, 3.7 29.5, 3.6 29.1, 3.1 28.8, "
+    "2.1 28.7, 1.8 28.9, 1.6 30.1, 1.8 31.7, 2 32.2))"
+)
+# Miraflores, in Guaviare, Colombia, whose seat is off the SIN.
+GUAVIARE = (
+    "POLYGON ((-72.9 1, -72.8 1.1, -72.7 1.1, -72.6 1.4, -72.4 1.4, "
+    "-72.3 1.5, -72.4 1.8, -72 2, -71.3 1.6, -71.1 1.7, -71.3 0.9, "
+    "-71.9 0.4, -72.2 0.5, -72.9 1))"
+)
 # The area that K-Electric supplies, Pakistan: Karachi, Gharo and
 # Dhabeji, and Hub, Uthal, Vinder and Bela.
 K_ELECTRIC = (
@@ -146,6 +209,32 @@ K_ELECTRIC = (
 LOS_LAGOS = (
     "POLYGON ((-72.6 -41.7, -72.4 -41.5, -72.4 -41.4, -72.3 -41.5, "
     "-70 -41.5, -70 -45, -73.2 -45, -73.2 -41.7, -72.6 -41.7))"
+)
+# Mapiripán, in Meta, Colombia, whose seat is off the SIN.
+META = (
+    "POLYGON ((-70.8 3.4, -70.8 2.8, -71 2.6, -72.5 2.5, -72.6 2.5, "
+    "-72.7 2.6, -72.6 2.6, -72.4 2.8, -72.8 3, -72.9 2.9, -72.9 3.2, "
+    "-72.4 3.4, -72.2 3.3, -71.6 3.5, -71.2 3.4, -71.1 3.3, -71 3.7, "
+    "-70.8 3.4))"
+)
+# Ouargla, Algeria, outside its communes on the RIN: El Borma,
+# and the parts of Illizi in the Ouargla of Natural Earth.
+OUARGLA = (
+    "POLYGON ((3.5 30.1, 3.8 31.9, 4.1 32.5, 4.7 32.9, 4.7 33.6, 5 33.7, "
+    "6 33.7, 6.1 33.4, 5.2 33.4, 5.1 33.5, 4.9 33.3, 5 32.9, 4.4 32.2, "
+    "4.4 31.6, 3.7 29.8, 3.4 29.2, 3 29.1, 3.7 28.5, 5.7 29.7, 6.5 30.1, "
+    "7.1 30.1, 6.7 31.1, 6.6 31.6, 6.6 32.8, 6.4 33.1, 6.5 33.2, "
+    "6.3 33.6, 6.6 33.5, 7 32.6, 7.2 32.3, 9.1 32.3, 9.3 32.2, 9.8 30.2, "
+    "9.5 29.8, 7.3 28.6, 6.8 28.6, 6 28.2, 4.7 28.2, 3.7 28.3, 2.7 29, "
+    "2.7 29.3, 3.1 29.5, 3.5 30.1))"
+)
+# Puerto Leguízamo, in Putumayo, Colombia, whose seat is off the
+# SIN.
+PUTUMAYO = (
+    "POLYGON ((-76.3 0.4, -76.2 0.4, -75.4 0.5, -75.2 0.7, -75.5 0.8, "
+    "-75.2 1, -74.7 0.5, -74.5 0.4, -74.4 0.2, -73.7 -0.2, -73.6 -0.5, "
+    "-73.7 -0.6, -74.5 -0.8, -75.2 -0.4, -75.5 -0.3, -75.9 -0.2, "
+    "-76.4 0.3, -76.3 0.4))"
 )
 # Taimyr and Norilsk, an isolated power system in Krasnoyarsk Krai,
 # Russia.
@@ -171,6 +260,13 @@ YAKUTIA = (
 CUTS = {
     "CHL-SEN": {"CL-LL": LOS_LAGOS},
     "CHL-SIC": {"CL-AN": ANTOFAGASTA, "CL-LL": LOS_LAGOS},
+    "COL-SIN": {
+        "CO-CHO": CHOCO,
+        "CO-GUV": GUAVIARE,
+        "CO-MET": META,
+        "CO-PUT": PUTUMAYO,
+    },
+    "DZA-RIN": {"DZ-08": BECHAR, "DZ-30": OUARGLA, "DZ-47": GHARDAIA},
     "PAK-NTDC": {"PK-BA": K_ELECTRIC, "PK-SD": K_ELECTRIC},
     "RUS-EAST": {"RU-SA": YAKUTIA},
     "RUS-SIBERIA": {"RU-KYA": TAIMYR},
