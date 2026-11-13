@@ -287,10 +287,54 @@ entities:
     resolution: 60
     note: From ENTSO-E, whose terms also apply
   - country_code: RUS
-    start: 2021
+    subdivision_code: CENTER
+    subdivision_name: Centre
+    start: 2022
     end: 2026
     resolution: 60
-    note: From ATS, whose terms also apply; 2-6% below the actual consumption of SO UES
+    note: From ATS, whose terms also apply
+  - country_code: RUS
+    subdivision_code: NORTHWEST
+    subdivision_name: North-West
+    start: 2022
+    end: 2026
+    resolution: 60
+    note: From ATS, whose terms also apply
+  - country_code: RUS
+    subdivision_code: VOLGA
+    subdivision_name: Middle Volga
+    start: 2022
+    end: 2026
+    resolution: 60
+    note: From ATS, whose terms also apply
+  - country_code: RUS
+    subdivision_code: SOUTH
+    subdivision_name: South
+    start: 2022
+    end: 2026
+    resolution: 60
+    note: From ATS, whose terms also apply
+  - country_code: RUS
+    subdivision_code: URALS
+    subdivision_name: Urals
+    start: 2022
+    end: 2026
+    resolution: 60
+    note: From ATS, whose terms also apply
+  - country_code: RUS
+    subdivision_code: SIBERIA
+    subdivision_name: Siberia
+    start: 2022
+    end: 2026
+    resolution: 60
+    note: From ATS, whose terms also apply
+  - country_code: RUS
+    subdivision_code: EAST
+    subdivision_name: East
+    start: 2026
+    end: 2026
+    resolution: 60
+    note: From ATS, whose terms also apply
   - country_code: SGP
     start: 2016
     end: present

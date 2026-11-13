@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **329 time series** from **51 data sources** for **76 countries** and their subdivisions in:
+The list has **334 time series** from **51 data sources** for **76 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (16 countries)
@@ -75,7 +75,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### Asia
 
-<details open><summary>16 countries · 117 time series</summary>
+<details open><summary>16 countries · 122 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
@@ -98,12 +98,12 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | National | [ISMO](https://www.ismo.gov.pk/library/hourly-system-demand)<br><sub>Without K-Electric, which supplies Karachi</sub> | 2024-2025 | hourly | 🔴 [Personal use](https://www.ismo.gov.pk/terms-and-conditions) | ✅ |
 | **Philippines** | National | [NGCP](https://www.ngcp.ph/operations#operations) | 2013-2025 | hourly | 🔴 [Use with authorisation](https://ngcp.ph) | ✅ |
 |  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From IEMOP, whose terms also apply</sub> | 2020-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
-| **Russia** | National | [SO UES](https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/)<br><sub>Consumption hidden in the page, which shows only generation since October 2022; without the isolated power systems</sub> | 2001-present | hourly | 🔴 [Non-commercial use with attribution, no derivatives](https://www.so-ups.ru/responsibility/) |  |
-|  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ATS, whose terms also apply; 2-6% below the actual consumption of SO UES</sub> | 2021-2026 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
-|  | <details><summary>6 subdivisions</summary>Centre, Middle Volga, North-West, Siberia, South, Urals</details> | [SO UES](https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/)<br><sub>Consumption hidden in the page, which shows only generation since October 2022</sub> | 2001-present | hourly | 🔴 [Non-commercial use with attribution, no derivatives](https://www.so-ups.ru/responsibility/) |  |
+| **Russia** | <details><summary>6 subdivisions</summary>Centre, Middle Volga, North-West, Siberia, South, Urals</details> | [SO UES](https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/)<br><sub>Consumption hidden in the page, which shows only generation since October 2022; the page also has their total</sub> | 2001-present | hourly | 🔴 [Non-commercial use with attribution, no derivatives](https://www.so-ups.ru/responsibility/) |  |
 |  | <details><summary>6 subdivisions</summary>Centre, Middle Volga, North-West, Siberia, South, Urals</details> | [SO UES](https://br.so-ups.ru/BR/GenConsum)<br><sub>Reachable only from Russia</sub> | 2015-present | hourly | 🔴 [Non-commercial use with attribution, no derivatives](https://www.so-ups.ru/responsibility/) |  |
-|  | East | [SO UES](https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/)<br><sub>Consumption hidden in the page, which shows only generation since October 2022; with the western and central districts of Yakutia since 2019</sub> | 2001-present | hourly | 🔴 [Non-commercial use with attribution, no derivatives](https://www.so-ups.ru/responsibility/) |  |
+|  | <details><summary>6 subdivisions</summary>Centre, Middle Volga, North-West, Siberia, South, Urals</details> | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ATS, whose terms also apply</sub> | 2022-2026 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
+|  | East | [SO UES](https://www.so-ups.ru/functioning/ees/ees-indicators/ees-gen-consump-hour/)<br><sub>Consumption hidden in the page, which shows only generation since October 2022; the page also has their total; with the western and central districts of Yakutia since 2019</sub> | 2001-present | hourly | 🔴 [Non-commercial use with attribution, no derivatives](https://www.so-ups.ru/responsibility/) |  |
 |  | East | [SO UES](https://br.so-ups.ru/BR/GenConsum)<br><sub>Reachable only from Russia; with the western and central districts of Yakutia since 2019</sub> | 2015-present | hourly | 🔴 [Non-commercial use with attribution, no derivatives](https://www.so-ups.ru/responsibility/) |  |
+|  | East | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ATS, whose terms also apply</sub> | 2026 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 | **Singapore** | National | [EMA](https://www.ema.gov.sg/resources/statistics/half-hourly-system-demand-data) | 2014-present | 30 min | 🟢 [Any use with attribution](https://www.ema.gov.sg/terms-of-use) | ✅ |
 |  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From EMC, whose terms also apply</sub> | 2016-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 | **South Korea** | National | [KROGD](https://www.data.go.kr/data/15065266/fileData.do) | 2013-2025 | hourly | 🟢 [Any use](https://www.data.go.kr/data/15065266/fileData.do) | ✅ |
