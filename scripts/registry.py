@@ -75,6 +75,7 @@ LICENCE_NAMES: dict[str, re.Pattern[str]] = {
     "restricted": re.compile(
         rf"(CC BY(-NC)?-ND{CC_VERSION}|Personal use"
         r"|Any use with attribution, no (redistribution|derivatives)"
+        r"|Non-commercial use with attribution, no derivatives"
         r"|Use with authorisation|No terms found)"
     ),
 }

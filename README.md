@@ -3,10 +3,10 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **245 time series** from **49 data sources** for **69 countries** and their subdivisions in:
+The list has **246 time series** from **50 data sources** for **70 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
-- [Asia](#asia) (14 countries)
+- [Asia](#asia) (15 countries)
 - [Europe](#europe) (39 countries)
 - [North America](#north-america) (5 countries)
 - [South America](#south-america) (6 countries)
@@ -73,7 +73,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### Asia
 
-<details open><summary>14 countries · 90 time series</summary>
+<details open><summary>15 countries · 91 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
@@ -91,6 +91,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 | **Pakistan** | National | [NTDC](https://zenodo.org/records/24023127)<br><sub>Copy on Zenodo of the dataset removed from Kaggle in 2026</sub> | 2015-2020 | hourly | 🟢 [CC0 1.0](https://zenodo.org/records/24023127) | ✅ |
 |  | National | [ISMO](https://www.ismo.gov.pk/library/hourly-system-demand)<br><sub>Without K-Electric, which supplies Karachi</sub> | 2024-2025 | hourly | 🔴 [Personal use](https://www.ismo.gov.pk/terms-and-conditions) | ✅ |
 | **Philippines** | National | [NGCP](https://www.ngcp.ph/operations#operations) | 2013-2025 | hourly | 🔴 [Use with authorisation](https://ngcp.ph) | ✅ |
+| **Russia** | National | [SO UES](https://br.so-ups.ru/BR/GenConsum)<br><sub>Seven interconnected power systems and two price zones, separately; without the isolated power systems</sub> | 2015-present | hourly | 🔴 [Non-commercial use with attribution, no derivatives](https://www.so-ups.ru/responsibility/) |  |
 | **Singapore** | National | [EMA](https://www.ema.gov.sg/resources/statistics/half-hourly-system-demand-data) | 2014-present | 30 min | 🟢 [Any use with attribution](https://www.ema.gov.sg/terms-of-use) | ✅ |
 | **South Korea** | National | [KROGD](https://www.data.go.kr/data/15065266/fileData.do) | 2013-2025 | hourly | 🟢 [Any use](https://www.data.go.kr/data/15065266/fileData.do) | ✅ |
 | **Sri Lanka** | National | [PUCSL](https://gendata.pucsl.gov.lk/generation-profile)<br><sub>Generation, proxy for demand</sub> | 2023-present | 15 min | 🔴 [Use with authorisation](https://www.pucsl.gov.lk/) | ✅ |
