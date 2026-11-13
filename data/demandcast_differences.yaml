@@ -7,7 +7,3 @@ differences:
     check: list_years
     entity: PER
     reason: Until 1999 the values are hourly and about 20% lower, so DemandCast starts in 2000 (coes.py).
-  - source: ngcp
-    check: entity
-    entity: PHL
-    reason: NGCP publishes the grids of Luzon, the Visayas and Mindanao, which leave out off-grid islands such as Mindoro and Palawan, so the list has the grids and DemandCast their sum (ngcp.py).
