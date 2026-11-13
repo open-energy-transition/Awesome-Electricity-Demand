@@ -1,0 +1,363 @@
+name: IEA
+url: https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker
+access: public
+licence:
+  name: CC BY 4.0
+  url: https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker
+  category: open
+entities:
+  - country_code: ALB
+    start: 2015
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply; with gaps
+  - country_code: ARG
+    start: 2015
+    end: present
+    resolution: 60
+    note: From Cammesa, whose terms also apply
+  - country_code: AUS
+    start: 2015
+    end: present
+    resolution: 60
+    note: From AEMO and NTESMO, whose terms also apply
+  - country_code: AUT
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: BEL
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: BGD
+    start: 2015
+    end: 2026
+    resolution: 60
+    note: From PGCB, whose terms also apply
+  - country_code: BGR
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: BIH
+    start: 2017
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: BOL
+    start: 2015
+    end: present
+    resolution: 60
+    note: From CNDC, whose terms also apply; with gaps
+  - country_code: BRA
+    start: 2010
+    end: present
+    resolution: 60
+    note: From ONS, whose terms also apply
+  - country_code: CAN
+    start: 2022
+    end: present
+    resolution: 60
+    note: From the operators of nine provinces and Yukon, whose terms also apply
+  - country_code: CHE
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: CHL
+    start: 2018
+    end: 2026
+    resolution: 60
+    note: From CEN, whose terms also apply
+  - country_code: COL
+    start: 2017
+    end: 2025
+    resolution: 60
+    note: From XM, whose terms also apply
+  - country_code: CRI
+    start: 2014
+    end: present
+    resolution: 60
+    note: From CENCE, whose terms also apply
+  - country_code: CYP
+    start: 2016
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply; with gaps
+  - country_code: CZE
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: DEU
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: DNK
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: ESP
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: EST
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: FIN
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: FRA
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: GBR
+    start: 2015
+    end: present
+    resolution: 60
+    note: From Elexon, whose terms also apply
+  - country_code: GEO
+    start: 2022
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply; with gaps
+  - country_code: GRC
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: GTM
+    start: 2024
+    end: present
+    resolution: 60
+    note: From EOR, whose terms also apply
+  - country_code: HND
+    start: 2024
+    end: present
+    resolution: 60
+    note: From EOR, whose terms also apply
+  - country_code: HRV
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: HUN
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: IND
+    start: 2018
+    end: present
+    resolution: 60
+    note: From MERIT India, whose terms also apply
+  - country_code: IRL
+    start: 2015
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply; with gaps
+  - country_code: IRN
+    start: 2014
+    end: 2026
+    resolution: 60
+    note: From IREMA, whose terms also apply
+  - country_code: ITA
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: JPN
+    start: 2016
+    end: present
+    resolution: 60
+    note: From the ten transmission and distribution companies, whose terms also apply
+  - country_code: KOR
+    start: 2017
+    end: present
+    resolution: 60
+    note: From KPX, whose terms also apply
+  - country_code: LKA
+    start: 2023
+    end: present
+    resolution: 60
+    note: From CEB, whose terms also apply
+  - country_code: LTU
+    start: 2015
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: LUX
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: LVA
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: MDA
+    start: 2018
+    end: present
+    resolution: 60
+    note: From ENERGO, whose terms also apply
+  - country_code: MEX
+    start: 2020
+    end: 2026
+    resolution: 60
+    note: From CENACE, whose terms also apply
+  - country_code: MKD
+    start: 2015
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: MNE
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: MYS
+    start: 2017
+    end: present
+    resolution: 60
+    note: From GSO, whose terms also apply
+  - country_code: NGA
+    start: 2021
+    end: present
+    resolution: 60
+    note: From TCN, whose terms also apply
+  - country_code: NIC
+    start: 2009
+    end: present
+    resolution: 60
+    note: From CNDC, whose terms also apply
+  - country_code: NLD
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: NOR
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: NZL
+    start: 2020
+    end: present
+    resolution: 60
+    note: From Transpower, whose terms also apply
+  - country_code: PAN
+    start: 2024
+    end: present
+    resolution: 60
+    note: From EOR, whose terms also apply
+  - country_code: PER
+    start: 2017
+    end: present
+    resolution: 60
+    note: From COES, whose terms also apply
+  - country_code: PHL
+    start: 2020
+    end: present
+    resolution: 60
+    note: From IEMOP, whose terms also apply
+  - country_code: POL
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: PRT
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: ROU
+    start: 2015
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: RUS
+    start: 2021
+    end: 2026
+    resolution: 60
+    note: From ATS, whose terms also apply
+  - country_code: SGP
+    start: 2016
+    end: present
+    resolution: 60
+    note: From EMC, whose terms also apply
+  - country_code: SLV
+    start: 2024
+    end: present
+    resolution: 60
+    note: From EOR, whose terms also apply
+  - country_code: SRB
+    start: 2015
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: SVK
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: SVN
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: SWE
+    start: 2014
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: THA
+    start: 2025
+    end: present
+    resolution: 60
+    note: From EGAT, whose terms also apply
+  - country_code: TUR
+    start: 2015
+    end: present
+    resolution: 60
+    note: From EPIAS, whose terms also apply
+  - country_code: TWN
+    start: 2025
+    end: present
+    resolution: 60
+    note: From Taipower, whose terms also apply
+  - country_code: UKR
+    start: 2015
+    end: 2022
+    resolution: 60
+    note: From Ukrenergo, whose terms also apply
+  - country_code: URY
+    start: 2020
+    end: present
+    resolution: 60
+    note: From ADME, whose terms also apply
+  - country_code: USA
+    start: 2018
+    end: present
+    resolution: 60
+    note: From EIA, whose terms also apply
+  - country_code: XKX
+    start: 2022
+    end: present
+    resolution: 60
+    note: From ENTSO-E, whose terms also apply
+  - country_code: ZAF
+    start: 2017
+    end: present
+    resolution: 60
+    note: From ESKOM, whose terms also apply
