@@ -24,26 +24,26 @@ entities:
     resolution: 60
     note: From AEMO, whose terms also apply
   - country_code: AUS
-    subdivision_code: NT
-    subdivision_name: Northern Territory
+    subdivision_code: DKIS
+    subdivision_name: Darwin-Katherine Interconnected System
     start: 2015
     end: 2026
     resolution: 60
     note: From NTESMO, whose terms also apply
   - country_code: AUS
-    subdivision_code: QLD
-    subdivision_name: Queensland
+    subdivision_code: QLD1
+    subdivision_name: Queensland region of the NEM
     start: 2015
     end: present
     resolution: 60
-    note: From AEMO, whose terms also apply
+    note: From AEMO, whose terms also apply; without north-west Queensland, around Mount Isa, the Gulf and Channel Country towns, Cape York and the Torres Strait
   - country_code: AUS
-    subdivision_code: SA
-    subdivision_name: South Australia
+    subdivision_code: SA1
+    subdivision_name: South Australia region of the NEM
     start: 2015
     end: present
     resolution: 60
-    note: From AEMO, whose terms also apply
+    note: From AEMO, whose terms also apply; without the remote north and west, such as Coober Pedy, Oodnadatta and the APY lands
   - country_code: AUS
     subdivision_code: TAS
     subdivision_name: Tasmania
@@ -59,8 +59,8 @@ entities:
     resolution: 60
     note: From AEMO, whose terms also apply
   - country_code: AUS
-    subdivision_code: WA
-    subdivision_name: Western Australia
+    subdivision_code: SWIS
+    subdivision_name: South West Interconnected System
     start: 2020
     end: present
     resolution: 60

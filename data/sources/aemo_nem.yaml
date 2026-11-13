@@ -19,29 +19,33 @@ entities:
     end: present
     resolution: 5
   - country_code: AUS
-    subdivision_code: QLD
-    subdivision_name: Queensland
+    subdivision_code: QLD1
+    subdivision_name: Queensland region of the NEM
     start: 1998
     end: 2021
     resolution: 30
+    note: Without north-west Queensland, around Mount Isa, the Gulf and Channel Country towns, Cape York and the Torres Strait
   - country_code: AUS
-    subdivision_code: QLD
-    subdivision_name: Queensland
+    subdivision_code: QLD1
+    subdivision_name: Queensland region of the NEM
     start: 2021
     end: present
     resolution: 5
+    note: Without north-west Queensland, around Mount Isa, the Gulf and Channel Country towns, Cape York and the Torres Strait
   - country_code: AUS
-    subdivision_code: SA
-    subdivision_name: South Australia
+    subdivision_code: SA1
+    subdivision_name: South Australia region of the NEM
     start: 1998
     end: 2021
     resolution: 30
+    note: Without the remote north and west, such as Coober Pedy, Oodnadatta and the APY lands
   - country_code: AUS
-    subdivision_code: SA
-    subdivision_name: South Australia
+    subdivision_code: SA1
+    subdivision_name: South Australia region of the NEM
     start: 2021
     end: present
     resolution: 5
+    note: Without the remote north and west, such as Coober Pedy, Oodnadatta and the APY lands
   - country_code: AUS
     subdivision_code: TAS
     subdivision_name: Tasmania

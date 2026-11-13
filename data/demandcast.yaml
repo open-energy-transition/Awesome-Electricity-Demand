@@ -3,12 +3,8 @@ sources:
     - URY
   aemo_nem:
     - AUS-NSW
-    - AUS-QLD
-    - AUS-SA
     - AUS-TAS
     - AUS-VIC
-  aemo_wem:
-    - AUS-WA
   aeso:
     - CAN-AB
   bchydro:
