@@ -39,15 +39,22 @@ GRID = 0.01
 # Codes of Natural Earth that differ from those of the list.
 COUNTRY_CODES = {"KOS": "XKX", "SDS": "SSD", "PSX": "PSE"}
 # Subdivisions without a shape in DemandCast, as unions of regions of
-# Natural Earth at 1:10m, by their ISO 3166-2 codes: the departments of
-# Bolivia, which its layer at 1:50m does not have, the price areas of
-# Denmark, the North and South Islands of New Zealand, without the
-# Chatham and outlying islands, the grids of the Philippines, without
-# the provinces on off-grid islands (Basilan, Batanes, Catanduanes,
-# Marinduque, Masbate, Mindoro, Palawan, Romblon, Siquijor, Sulu and
-# Tawi-Tawi), with the five grids of the Visayas, and the
-# interconnected power systems of Russia, whose regions SO UES lists on
-# the page of each system.
+# Natural Earth at 1:10m, by their ISO 3166-2 codes:
+# - the departments of Bolivia, which its layer at 1:50m does not have;
+# - the national (SEN) and central (SIC) systems of Chile, without
+#   Aysén, Magallanes and the medium systems of Los Lagos;
+# - the price areas of Denmark;
+# - Peninsular Malaysia, without Sabah, Sarawak and Labuan;
+# - the North and South Islands of New Zealand, without the Chatham and
+#   outlying islands;
+# - the grid of NTDC in Pakistan, without Gilgit-Baltistan, which has
+#   no connection to it, and the area of K-Electric;
+# - the grids of the Philippines, without the provinces on off-grid
+#   islands (Basilan, Batanes, Catanduanes, Marinduque, Masbate,
+#   Mindoro, Palawan, Romblon, Siquijor, Sulu and Tawi-Tawi), with the
+#   five grids of the Visayas;
+# - the interconnected power systems of Russia, whose regions SO UES
+#   lists on the page of each system.
 COMPOSITES = {
     "BOL-B": "BO-B",
     "BOL-C": "BO-C",
@@ -57,12 +64,25 @@ COMPOSITES = {
     "BOL-P": "BO-P",
     "BOL-S": "BO-S",
     "BOL-T": "BO-T",
+    "CHL-SEN": (
+        "CL-AN CL-AP CL-AR CL-AT CL-BI CL-CO CL-LI CL-LL CL-LR CL-ML "
+        "CL-NB CL-RM CL-TA CL-VS"
+    ),
+    "CHL-SIC": (
+        "CL-AN CL-AR CL-AT CL-BI CL-CO CL-LI CL-LL CL-LR CL-ML CL-NB CL-RM "
+        "CL-VS"
+    ),
     "DNK-DK1": "DK-81 DK-82 DK-83",
     "DNK-DK2": "DK-84 DK-85",
+    "MYS-PENINSULAR": (
+        "MY-01 MY-02 MY-03 MY-04 MY-05 MY-06 MY-07 MY-08 MY-09 MY-10 "
+        "MY-11 MY-14 MY-16"
+    ),
     "NZL-NI": (
         "NZ-AUK NZ-BOP NZ-GIS NZ-HKB NZ-MWT NZ-NTL NZ-TKI NZ-WGN NZ-WKO"
     ),
     "NZL-SI": "NZ-CAN NZ-MBH NZ-NSN NZ-OTA NZ-STL NZ-TAS NZ-WTC",
+    "PAK-NTDC": "PK-BA PK-IS PK-JK PK-KP PK-PB PK-SD PK-TA",
     "PHL-BOHOL": "PH-BOH",
     "PHL-CEBU": "PH-CEB PH-LAP PH-MDE",
     "PHL-LEYTE-SAMAR": "PH-BIL PH-EAS PH-LEY PH-NSA PH-SLE PH-WSA",
@@ -106,28 +126,54 @@ COMPOSITES = {
     ),
     "RUS-VOLGA": "RU-CU RU-ME RU-MO RU-NIZ RU-PNZ RU-SAM RU-SAR RU-TA RU-ULY",
 }
-# Parts of regions outside their grid region, as polygons of longitude
-# and latitude in WKT, drawn along the borders of their districts: the
-# 13 Arctic districts of Yakutia, outside the western, central and
-# south Yakutian energy districts of the East, and Taimyr and Norilsk,
-# an isolated power system in Krasnoyarsk Krai.
+# Parts of regions outside a grid region, as polygons of longitude and
+# latitude in WKT, drawn by hand along the borders of their districts.
+# Antofagasta, Chile, but Taltal, its commune in the central system.
+ANTOFAGASTA = (
+    "POLYGON ((-70.6 -24.5, -70.4 -24.6, -69.2 -24.7, -69.1 -24.9, "
+    "-69.2 -25.2, -69 -25.4, -69 -26.5, -66 -26.5, -66 -17, -72 -17, "
+    "-72 -24.5, -70.6 -24.5))"
+)
+# The area that K-Electric supplies, Pakistan: Karachi, Gharo and
+# Dhabeji, and Hub, Uthal, Vinder and Bela.
+K_ELECTRIC = (
+    "POLYGON ((66.2 26.35, 66.45 26.35, 66.75 25.85, 66.85 25.5, "
+    "67.25 25.6, 67.6 25.2, 67.68 24.85, 67.68 24.65, 66.65 24.75, "
+    "66.55 25.35, 66.45 25.85, 66.2 26.35))"
+)
+# The communes of Los Lagos, Chile, with medium systems of their own:
+# Cochamó, Hualaihué, Chaitén, Futaleufú and Palena.
+LOS_LAGOS = (
+    "POLYGON ((-72.6 -41.7, -72.4 -41.5, -72.4 -41.4, -72.3 -41.5, "
+    "-70 -41.5, -70 -45, -73.2 -45, -73.2 -41.7, -72.6 -41.7))"
+)
+# Taimyr and Norilsk, an isolated power system in Krasnoyarsk Krai,
+# Russia.
+TAIMYR = (
+    "POLYGON ((67.7 68.4, 82.7 68.4, 84.8 67.2, 85.7 68, 86.4 68.1, "
+    "87.5 67.3, 90.6 67.4, 93 68.4, 94.2 68.4, 95.4 69.3, 98 69.8, "
+    "99.7 69.9, 103.8 69.3, 106.4 69.5, 131.4 69.5, 131.4 82, "
+    "67.7 82, 67.7 68.4))"
+)
+# The 13 Arctic districts of Yakutia, Russia, outside the western,
+# central and south Yakutian energy districts of the East.
+YAKUTIA = (
+    "POLYGON ((91.3 66.5, 106.3 66.5, 108 66.4, 108.8 66.8, "
+    "109.5 66.1, 112.7 66.6, 113.5 65.9, 112.3 65.6, 112.8 65.5, "
+    "112.6 65.1, 114.1 64.6, 117.2 65.3, 118.3 66.1, 118.1 66.4, "
+    "119.2 66.7, 119 66.9, 120.3 66.5, 120.5 65.7, 121.2 65.3, "
+    "123.4 64.7, 127 65.6, 127.6 66, 126.9 66.2, 127.3 66.6, "
+    "128.5 66.7, 130 66.5, 130.1 66.2, 131.7 65.7, 131.5 65.5, "
+    "132.4 64.6, 132.8 64.6, 133.2 65.3, 136.8 66.2, 144.2 65, "
+    "146.4 64.2, 171.4 64.2, 171.4 82, 91.3 82, 91.3 66.5))"
+)
+# The cut of each region of a composite.
 CUTS = {
-    "RU-SA": (
-        "POLYGON ((91.3 66.5, 106.3 66.5, 108 66.4, 108.8 66.8, "
-        "109.5 66.1, 112.7 66.6, 113.5 65.9, 112.3 65.6, 112.8 65.5, "
-        "112.6 65.1, 114.1 64.6, 117.2 65.3, 118.3 66.1, 118.1 66.4, "
-        "119.2 66.7, 119 66.9, 120.3 66.5, 120.5 65.7, 121.2 65.3, "
-        "123.4 64.7, 127 65.6, 127.6 66, 126.9 66.2, 127.3 66.6, "
-        "128.5 66.7, 130 66.5, 130.1 66.2, 131.7 65.7, 131.5 65.5, "
-        "132.4 64.6, 132.8 64.6, 133.2 65.3, 136.8 66.2, 144.2 65, "
-        "146.4 64.2, 171.4 64.2, 171.4 82, 91.3 82, 91.3 66.5))"
-    ),
-    "RU-KYA": (
-        "POLYGON ((67.7 68.4, 82.7 68.4, 84.8 67.2, 85.7 68, 86.4 68.1, "
-        "87.5 67.3, 90.6 67.4, 93 68.4, 94.2 68.4, 95.4 69.3, 98 69.8, "
-        "99.7 69.9, 103.8 69.3, 106.4 69.5, 131.4 69.5, 131.4 82, "
-        "67.7 82, 67.7 68.4))"
-    ),
+    "CHL-SEN": {"CL-LL": LOS_LAGOS},
+    "CHL-SIC": {"CL-AN": ANTOFAGASTA, "CL-LL": LOS_LAGOS},
+    "PAK-NTDC": {"PK-BA": K_ELECTRIC, "PK-SD": K_ELECTRIC},
+    "RUS-EAST": {"RU-SA": YAKUTIA},
+    "RUS-SIBERIA": {"RU-KYA": TAIMYR},
 }
 
 
@@ -202,23 +248,24 @@ def country_features() -> list[dict[str, Any]]:
     return features
 
 
-def composite(regions: Any, codes: list[str]) -> Any:
+def composite(regions: Any, label: str) -> Any:
     """Return the regions of a grid region, without their cut parts.
 
     Parameters
     ----------
     regions : geopandas.GeoDataFrame
         The regions of Natural Earth.
-    codes : list of str
-        The ISO 3166-2 codes of the regions of the grid region.
+    label : str
+        Label of the grid region, a key of ``COMPOSITES``.
 
     Returns
     -------
     geopandas.GeoDataFrame
-        The regions, each without the polygon of ``CUTS`` it has.
+        Its regions, each without its polygon in ``CUTS``, if any.
     """
+    codes = COMPOSITES[label].split()
     shape = regions[regions["iso_3166_2"].isin(codes)].copy()
-    for code, cut in CUTS.items():
+    for code, cut in CUTS.get(label, {}).items():
         rows = shape["iso_3166_2"] == code
         shape.loc[rows, "geometry"] = shape.loc[rows, "geometry"].difference(
             shapely.from_wkt(cut)
@@ -249,7 +296,7 @@ def subdivision_features() -> tuple[list[dict[str, Any]], list[str]]:
     for label in labels:
         try:
             if label in COMPOSITES:
-                shape = composite(regions, COMPOSITES[label].split())
+                shape = composite(regions, label)
             else:
                 shape = utils.shapes.get_entity_shape(
                     label.replace("-", "_", 1), make_plot=False

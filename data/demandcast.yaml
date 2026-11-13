@@ -47,8 +47,6 @@ sources:
     - CAN-PE
     - CAN-QC
     - CAN-YT
-  cen:
-    - CHL
   cenace:
     - MEX-BCA
     - MEX-BCS
@@ -133,8 +131,6 @@ sources:
     - CAN-QC
   ieso:
     - CAN-ON
-  ismo:
-    - PAK
   isone:
     - USA-NE
   kansaitd:
@@ -180,8 +176,6 @@ sources:
     - IND-TR
     - IND-UP
     - IND-UT
-  ntdc:
-    - PAK
   occto:
     - JPN-Chūbu
     - JPN-Chūgoku

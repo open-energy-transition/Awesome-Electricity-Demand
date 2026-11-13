@@ -250,6 +250,8 @@ entities:
     resolution: 60
     note: From ENTSO-E, whose terms also apply
   - country_code: CHL
+    subdivision_code: SEN
+    subdivision_name: National Electric System
     start: 2018
     end: 2026
     resolution: 60
@@ -535,6 +537,8 @@ entities:
     resolution: 60
     note: From ENTSO-E, whose terms also apply
   - country_code: MYS
+    subdivision_code: PENINSULAR
+    subdivision_name: Peninsular Malaysia
     start: 2017
     end: present
     resolution: 60

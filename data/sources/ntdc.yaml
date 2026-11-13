@@ -7,7 +7,9 @@ licence:
   category: open
 entities:
   - country_code: PAK
+    subdivision_code: NTDC
+    subdivision_name: NTDC grid
     start: 2015
     end: 2020
     resolution: 60
-    note: Copy on Zenodo of the dataset removed from Kaggle in 2026
+    note: Copy on Zenodo of the dataset removed from Kaggle in 2026; without K-Electric, which supplies Karachi, and Gilgit-Baltistan
