@@ -5,11 +5,12 @@ its years of data. ``data/shapes.geojson`` holds their outlines, one
 feature per line, each with the label of its entity: every country of
 Natural Earth at 1:50m, under its code, and each subdivision of the
 list, under its country code and subdivision code, as DemandCast draws
-it, from Natural Earth or from the shapes of grid regions of DemandCast.
-Grid regions without a shape in DemandCast are unions of regions of
-Natural Earth, without the parts of some regions outside the grid,
-which hand-drawn polygons mark. The outlines are simplified and rounded
-to 0.01 degrees, enough for a map of the world.
+it: a standard subdivision from Natural Earth, and a non-standard one,
+such as the area of a grid, from the shapes of DemandCast. Non-standard
+subdivisions without a shape in DemandCast are unions of standard
+subdivisions of Natural Earth, without the parts of some of them that
+hand-drawn polygons mark. The outlines are simplified and rounded to
+0.01 degrees, enough for a map of the world.
 
 The script runs in the environment of DemandCast, whose code finds the
 shapes, from the folder ``demandcast`` of its repository::
@@ -38,8 +39,8 @@ TOLERANCE = 0.05
 GRID = 0.01
 # Codes of Natural Earth that differ from those of the list.
 COUNTRY_CODES = {"KOS": "XKX", "SDS": "SSD", "PSX": "PSE"}
-# Subdivisions without a shape in DemandCast, as unions of regions of
-# Natural Earth at 1:10m, by their ISO 3166-2 codes:
+# Subdivisions without a shape in DemandCast, as unions of standard
+# subdivisions of Natural Earth at 1:10m, by their ISO 3166-2 codes:
 # - the markets of Australia smaller than their states: the South
 #   West Interconnected System (SWIS), the Queensland (QLD1) and
 #   South Australia (SA1) regions of the NEM, and the Darwin-Katherine
@@ -170,8 +171,9 @@ COMPOSITES = {
     ),
     "RUS-VOLGA": "RU-CU RU-ME RU-MO RU-NIZ RU-PNZ RU-SAM RU-SAR RU-TA RU-ULY",
 }
-# Parts of regions outside a grid region, as polygons of longitude and
-# latitude in WKT, drawn by hand along the borders of their districts.
+# Parts of standard subdivisions outside a composite, as polygons of
+# longitude and latitude in WKT, drawn by hand along the borders of
+# their districts.
 # Antofagasta, Chile, but Taltal, its commune in the central system.
 ANTOFAGASTA = (
     "POLYGON ((-70.6 -24.5, -70.4 -24.6, -69.2 -24.7, -69.1 -24.9, "
@@ -438,19 +440,20 @@ def country_features() -> list[dict[str, Any]]:
 
 
 def composite(regions: Any, label: str) -> Any:
-    """Return the regions of a grid region, without their cut parts.
+    """Return the standard subdivisions of a composite, without cuts.
 
     Parameters
     ----------
     regions : geopandas.GeoDataFrame
-        The regions of Natural Earth.
+        The standard subdivisions of Natural Earth.
     label : str
-        Label of the grid region, a key of ``COMPOSITES``.
+        Label of the composite, a key of ``COMPOSITES``.
 
     Returns
     -------
     geopandas.GeoDataFrame
-        Its regions, each without its polygon in ``CUTS``, if any.
+        Its standard subdivisions, each without its polygon in
+        ``CUTS``, if any.
     """
     codes = COMPOSITES[label].split()
     shape = regions[regions["iso_3166_2"].isin(codes)].copy()
