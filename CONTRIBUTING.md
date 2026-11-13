@@ -135,7 +135,7 @@ The comparison also reports the countries and subdivisions without an outline in
 PYTHONPATH=. uv run --locked python ../../Awesome-Electricity-Demand/scripts/shapes.py
 ```
 
-The command lists the subdivisions that still have no shape. A grid region needs a shape in DemandCast first, or, made from regions of Natural Earth, an entry in `COMPOSITES` in `scripts/shapes.py`.
+The command lists the subdivisions that still have no shape. A grid region needs a shape in DemandCast first, or, made from regions of Natural Earth, an entry in `COMPOSITES` in `scripts/shapes.py`, with a polygon in `CUTS` for the part of a region outside the grid region, drawn by hand along the borders of its districts.
 
 A divergence that is deliberate, such as a retriever that takes only some years of a source, goes in `data/demandcast_differences.yaml`, with the check, the entity if any, and a reason:
 

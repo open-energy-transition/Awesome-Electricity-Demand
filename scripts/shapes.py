@@ -6,8 +6,10 @@ feature per line, each with the label of its entity: every country of
 Natural Earth at 1:50m, under its code, and each subdivision of the
 list, under its country code and subdivision code, as DemandCast draws
 it, from Natural Earth or from the shapes of grid regions of DemandCast.
-The outlines are simplified and rounded to 0.01 degrees, enough for a
-map of the world.
+Grid regions without a shape in DemandCast are unions of regions of
+Natural Earth, without the parts of some regions outside the grid,
+which hand-drawn polygons mark. The outlines are simplified and rounded
+to 0.01 degrees, enough for a map of the world.
 
 The script runs in the environment of DemandCast, whose code finds the
 shapes, from the folder ``demandcast`` of its repository::
@@ -36,10 +38,58 @@ TOLERANCE = 0.05
 GRID = 0.01
 # Codes of Natural Earth that differ from those of the list.
 COUNTRY_CODES = {"KOS": "XKX", "SDS": "SSD", "PSX": "PSE"}
-# Price areas without a shape in DemandCast, as unions of regions.
+# Grid regions without a shape in DemandCast, as unions of regions,
+# by their ISO 3166-2 codes: the price areas of Denmark, and the
+# interconnected power systems of Russia, whose regions SO UES lists
+# on the page of each system.
 COMPOSITES = {
-    "DNK-DK1": ["DK-81", "DK-82", "DK-83"],
-    "DNK-DK2": ["DK-84", "DK-85"],
+    "DNK-DK1": "DK-81 DK-82 DK-83",
+    "DNK-DK2": "DK-84 DK-85",
+    "RUS-CENTER": (
+        "RU-BEL RU-BRY RU-IVA RU-KLU RU-KOS RU-KRS RU-LIP RU-MOS RU-MOW "
+        "RU-ORL RU-RYA RU-SMO RU-TAM RU-TUL RU-TVE RU-VLA RU-VLG RU-VOR "
+        "RU-YAR"
+    ),
+    "RUS-EAST": "RU-AMU RU-KHA RU-PRI RU-SA RU-YEV",
+    "RUS-NORTHWEST": (
+        "RU-ARK RU-KGD RU-KO RU-KR RU-LEN RU-MUR RU-NEN RU-NGR RU-PSK RU-SPE"
+    ),
+    "RUS-SIBERIA": (
+        "RU-AL RU-ALT RU-BU RU-IRK RU-KEM RU-KK RU-KYA RU-NVS RU-OMS "
+        "RU-TOM RU-TY RU-ZAB"
+    ),
+    "RUS-SOUTH": (
+        "RU-AD RU-AST RU-CE RU-DA RU-IN RU-KB RU-KC RU-KDA RU-KL RU-ROS "
+        "RU-SE RU-STA RU-VGG UA-40 UA-43"
+    ),
+    "RUS-URALS": (
+        "RU-BA RU-CHE RU-KGN RU-KHM RU-KIR RU-ORE RU-PER RU-SVE RU-TYU "
+        "RU-UD RU-YAN"
+    ),
+    "RUS-VOLGA": "RU-CU RU-ME RU-MO RU-NIZ RU-PNZ RU-SAM RU-SAR RU-TA RU-ULY",
+}
+# Parts of regions outside their grid region, as polygons of longitude
+# and latitude in WKT, drawn along the borders of their districts: the
+# 13 Arctic districts of Yakutia, outside the western, central and
+# south Yakutian energy districts of the East, and Taimyr and Norilsk,
+# an isolated power system in Krasnoyarsk Krai.
+CUTS = {
+    "RU-SA": (
+        "POLYGON ((91.3 66.5, 106.3 66.5, 108 66.4, 108.8 66.8, "
+        "109.5 66.1, 112.7 66.6, 113.5 65.9, 112.3 65.6, 112.8 65.5, "
+        "112.6 65.1, 114.1 64.6, 117.2 65.3, 118.3 66.1, 118.1 66.4, "
+        "119.2 66.7, 119 66.9, 120.3 66.5, 120.5 65.7, 121.2 65.3, "
+        "123.4 64.7, 127 65.6, 127.6 66, 126.9 66.2, 127.3 66.6, "
+        "128.5 66.7, 130 66.5, 130.1 66.2, 131.7 65.7, 131.5 65.5, "
+        "132.4 64.6, 132.8 64.6, 133.2 65.3, 136.8 66.2, 144.2 65, "
+        "146.4 64.2, 171.4 64.2, 171.4 82, 91.3 82, 91.3 66.5))"
+    ),
+    "RU-KYA": (
+        "POLYGON ((67.7 68.4, 82.7 68.4, 84.8 67.2, 85.7 68, 86.4 68.1, "
+        "87.5 67.3, 90.6 67.4, 93 68.4, 94.2 68.4, 95.4 69.3, 98 69.8, "
+        "99.7 69.9, 103.8 69.3, 106.4 69.5, 131.4 69.5, 131.4 82, "
+        "67.7 82, 67.7 68.4))"
+    ),
 }
 
 
@@ -114,6 +164,30 @@ def country_features() -> list[dict[str, Any]]:
     return features
 
 
+def composite(regions: Any, codes: list[str]) -> Any:
+    """Return the regions of a grid region, without their cut parts.
+
+    Parameters
+    ----------
+    regions : geopandas.GeoDataFrame
+        The regions of Natural Earth.
+    codes : list of str
+        The ISO 3166-2 codes of the regions of the grid region.
+
+    Returns
+    -------
+    geopandas.GeoDataFrame
+        The regions, each without the polygon of ``CUTS`` it has.
+    """
+    shape = regions[regions["iso_3166_2"].isin(codes)].copy()
+    for code, cut in CUTS.items():
+        rows = shape["iso_3166_2"] == code
+        shape.loc[rows, "geometry"] = shape.loc[rows, "geometry"].difference(
+            shapely.from_wkt(cut)
+        )
+    return shape
+
+
 def subdivision_features() -> tuple[list[dict[str, Any]], list[str]]:
     """Return the shapes of the subdivisions of the list.
 
@@ -137,7 +211,7 @@ def subdivision_features() -> tuple[list[dict[str, Any]], list[str]]:
     for label in labels:
         try:
             if label in COMPOSITES:
-                shape = regions[regions["iso_3166_2"].isin(COMPOSITES[label])]
+                shape = composite(regions, COMPOSITES[label].split())
             else:
                 shape = utils.shapes.get_entity_shape(
                     label.replace("-", "_", 1), make_plot=False
