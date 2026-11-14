@@ -91,12 +91,12 @@ entities:
     resolution: 60
     note: From ENTSO-E, whose terms also apply
   - country_code: BOL
-    subdivision_code: B
-    subdivision_name: Beni
+    subdivision_code: SIN-B
+    subdivision_name: National Interconnected System in Beni
     start: 2020
     end: present
     resolution: 60
-    note: From CNDC, whose terms also apply; with gaps
+    note: From CNDC, whose terms also apply; with gaps; without the isolated systems of Riberalta, Guayaramerín, Baures, Huacaraje and Exaltación
   - country_code: BOL
     subdivision_code: C
     subdivision_name: Cochabamba
@@ -133,26 +133,47 @@ entities:
     resolution: 60
     note: From CNDC, whose terms also apply; with gaps
   - country_code: BOL
-    subdivision_code: S
-    subdivision_name: Santa Cruz
+    subdivision_code: SIN-S
+    subdivision_name: National Interconnected System in Santa Cruz
     start: 2015
     end: present
     resolution: 60
-    note: From CNDC, whose terms also apply; with gaps
+    note: From CNDC, whose terms also apply; with gaps; without the isolated systems of Germán Busch, Velasco, Concepción, Chiquitos, San Matías, Charagua and the Valles Cruceños; with Ascensión de Guarayos from January 2022 and Camiri from September 2022
   - country_code: BOL
     subdivision_code: T
     subdivision_name: Tarija
     start: 2015
     end: present
     resolution: 60
-    note: From CNDC, whose terms also apply; with gaps
+    note: From CNDC, whose terms also apply; with gaps; without the isolated system of Entre Ríos, and of Bermejo until 2022
+  - country_code: BRA
+    subdivision_code: N-2000
+    subdivision_name: North of 2000
+    start: 2010
+    end: 2012
+    resolution: 60
+    note: From ONS, whose terms also apply; without Amazonas, Amapá and Roraima, and the isolated systems of Pará, such as those of Marajó and of the Lower Amazon; with Breves and Portel from 2011
+  - country_code: BRA
+    subdivision_code: N-2013
+    subdivision_name: North of 2013
+    start: 2013
+    end: 2014
+    resolution: 60
+    note: From ONS, whose terms also apply; with Manaus from July 2013; without the rest of Amazonas, Amapá, Roraima and the isolated systems of Pará
+  - country_code: BRA
+    subdivision_code: N-2015
+    subdivision_name: North of 2015
+    start: 2015
+    end: 2024
+    resolution: 60
+    note: From ONS, whose terms also apply; with Amapá but Oiapoque from September 2015, Óbidos and Oriximiná by 2018, Alenquer, Almeirim and Monte Alegre by 2022, and Itacoatiara, Juruti and Parintins from 2023; without Amazonas but Manaus, Roraima and the other isolated systems of Pará
   - country_code: BRA
     subdivision_code: N
     subdivision_name: North
-    start: 2010
+    start: 2025
     end: present
     resolution: 60
-    note: From ONS, whose terms also apply
+    note: From ONS, whose terms also apply; with Roraima but Amajari, Pacaraima and Uiramutã from September 2025; without Amazonas but Manaus, Itacoatiara and Parintins, Oiapoque, and the isolated systems of Pará, such as those of western Marajó
   - country_code: BRA
     subdivision_code: NE
     subdivision_name: North-East
@@ -161,15 +182,22 @@ entities:
     resolution: 60
     note: From ONS, whose terms also apply
   - country_code: BRA
-    subdivision_code: S
-    subdivision_name: South
+    subdivision_code: SE-2009
+    subdivision_name: South-East/Centre-West of 2009
     start: 2010
-    end: present
+    end: 2022
     resolution: 60
-    note: From ONS, whose terms also apply
+    note: From ONS, whose terms also apply; without the isolated systems of western Acre, of northern Rondônia and of north-western Mato Grosso, which joined from about 2014 to 2023
   - country_code: BRA
     subdivision_code: SE
-    subdivision_name: South-East
+    subdivision_name: South-East/Centre-West
+    start: 2023
+    end: present
+    resolution: 60
+    note: From ONS, whose terms also apply; without the isolated systems of western Acre, such as Cruzeiro do Sul until December 2024
+  - country_code: BRA
+    subdivision_code: S
+    subdivision_name: South
     start: 2010
     end: present
     resolution: 60
