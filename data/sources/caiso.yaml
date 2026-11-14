@@ -7,8 +7,9 @@ licence:
   category: open
 entities:
   - country_code: USA
-    subdivision_code: CAL
-    subdivision_name: California
+    subdivision_code: CAISO
+    subdivision_name: CAISO balancing area
     start: 2019
     end: present
     resolution: 60
+    note: Without the balancing areas of BANC, LADWP, IID and TID, and the north of California

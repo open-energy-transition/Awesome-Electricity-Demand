@@ -9,8 +9,6 @@ sources:
     - CAN-AB
   bchydro:
     - CAN-BC
-  caiso:
-    - USA-CAL
   cammesa:
     - ARG-A
     - ARG-BA
