@@ -317,10 +317,12 @@ entities:
     resolution: 60
     note: From ENTSO-E, whose terms also apply
   - country_code: ESP
+    subdivision_code: PENINSULAR
+    subdivision_name: Peninsular Spain
     start: 2014
     end: present
     resolution: 60
-    note: From ENTSO-E, whose terms also apply
+    note: From ENTSO-E, whose terms also apply; without the Balearic and Canary Islands, Ceuta and Melilla
   - country_code: EST
     start: 2014
     end: present
@@ -332,10 +334,12 @@ entities:
     resolution: 60
     note: From ENTSO-E, whose terms also apply
   - country_code: FRA
+    subdivision_code: CONTINENTAL
+    subdivision_name: Continental France
     start: 2014
     end: present
     resolution: 60
-    note: From ENTSO-E, whose terms also apply
+    note: From ENTSO-E, whose terms also apply; without Corsica
   - country_code: GBR
     subdivision_code: GB
     subdivision_name: Great Britain
@@ -349,10 +353,12 @@ entities:
     resolution: 60
     note: From ENTSO-E, whose terms also apply; with gaps
   - country_code: GRC
+    subdivision_code: INTERCONNECTED
+    subdivision_name: Interconnected System of Greece
     start: 2014
     end: present
     resolution: 60
-    note: From ENTSO-E, whose terms also apply
+    note: From ENTSO-E, whose terms also apply; without the non-interconnected islands, such as Crete, the Dodecanese, the North Aegean and some of the Cyclades; with Syros, Mykonos, Paros and Naxos from 2018
   - country_code: GTM
     start: 2024
     end: present
@@ -589,10 +595,12 @@ entities:
     resolution: 60
     note: From ENTSO-E, whose terms also apply
   - country_code: NOR
+    subdivision_code: MAINLAND
+    subdivision_name: Mainland Norway
     start: 2014
     end: present
     resolution: 60
-    note: From ENTSO-E, whose terms also apply
+    note: From ENTSO-E, whose terms also apply; without Svalbard and Jan Mayen
   - country_code: NZL
     subdivision_code: NI
     subdivision_name: North Island
@@ -646,10 +654,12 @@ entities:
     resolution: 60
     note: From ENTSO-E, whose terms also apply
   - country_code: PRT
+    subdivision_code: MAINLAND
+    subdivision_name: Mainland Portugal
     start: 2014
     end: present
     resolution: 60
-    note: From ENTSO-E, whose terms also apply
+    note: From ENTSO-E, whose terms also apply; without the Azores and Madeira
   - country_code: ROU
     start: 2015
     end: present

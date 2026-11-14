@@ -3,7 +3,8 @@ r"""Write the shapes of the map of the list, with DemandCast's code.
 The map of the site colours each country and subdivision of the list by
 its years of data. ``data/shapes.geojson`` holds their outlines, one
 feature per line, each with the label of its entity: every country of
-Natural Earth at 1:50m, under its code, and each subdivision of the
+Natural Earth at 1:50m, under its code, France as metropolitan France,
+as in the totals of the list, and each subdivision of the
 list, under its country code and subdivision code, as DemandCast draws
 it: a standard subdivision from Natural Earth, and a non-standard one,
 such as the area of a grid, from the shapes of DemandCast. Non-standard
@@ -59,6 +60,9 @@ EARTH_RADIUS = 6371.0088
 SLIVER = 0.04
 # Codes of Natural Earth that differ from those of the list.
 COUNTRY_CODES = {"KOS": "XKX", "SDS": "SSD", "PSX": "PSE"}
+# Countries whose totals in the list are those of one map unit of
+# Natural Earth: metropolitan France, without its overseas departments.
+COUNTRY_UNITS = {"FRA": "FXX"}
 # Subdivisions without a shape in DemandCast, as unions of standard
 # subdivisions of Natural Earth at 1:10m, by their ISO 3166-2 codes:
 # - the markets of Australia smaller than their states: the South
@@ -77,6 +81,12 @@ COUNTRY_CODES = {"KOS": "XKX", "SDS": "SSD", "PSX": "PSE"}
 #   departments of Amazonas, Guainía, Vaupés and Vichada, the islands
 #   of San Andrés and the municipalities whose seats are off it;
 # - the price areas of Denmark;
+# - the mainland systems of ENTSO-E: Peninsular Spain, without the
+#   Balearic and Canary Islands, Ceuta and Melilla; Continental
+#   France, without Corsica; the Interconnected System of Greece,
+#   without Crete, the North Aegean and the Dodecanese; Mainland
+#   Norway, without Svalbard; and Mainland Portugal, without the
+#   Azores and Madeira;
 # - the northern interconnected grid (RIN) of Algeria, without Adrar,
 #   Illizi, Tamanrasset, Tindouf, the south of Béchar, El Menia and
 #   El Borma;
@@ -141,9 +151,34 @@ COMPOSITES = {
     ),
     "DNK-DK1": "DK-81 DK-82 DK-83",
     "DNK-DK2": "DK-84 DK-85",
+    "ESP-PENINSULAR": (
+        "ES-A ES-AB ES-AL ES-AV ES-B ES-BA ES-BI ES-BU ES-C ES-CA ES-CC "
+        "ES-CO ES-CR ES-CS ES-CU ES-GI ES-GR ES-GU ES-H ES-HU ES-J ES-L "
+        "ES-LE ES-LO ES-LU ES-M ES-MA ES-MU ES-NA ES-O ES-OR ES-P ES-PO "
+        "ES-S ES-SA ES-SE ES-SG ES-SO ES-SS ES-T ES-TE ES-TO ES-V ES-VA "
+        "ES-VI ES-Z ES-ZA"
+    ),
+    "FRA-CONTINENTAL": (
+        "FR-01 FR-02 FR-03 FR-04 FR-05 FR-06 FR-07 FR-08 FR-09 FR-10 FR-11 "
+        "FR-12 FR-13 FR-14 FR-15 FR-16 FR-17 FR-18 FR-19 FR-21 FR-22 FR-23 "
+        "FR-24 FR-25 FR-26 FR-27 FR-28 FR-29 FR-30 FR-31 FR-32 FR-33 FR-34 "
+        "FR-35 FR-36 FR-37 FR-38 FR-39 FR-40 FR-41 FR-42 FR-43 FR-44 FR-45 "
+        "FR-46 FR-47 FR-48 FR-49 FR-50 FR-51 FR-52 FR-53 FR-54 FR-55 FR-56 "
+        "FR-57 FR-58 FR-59 FR-60 FR-61 FR-62 FR-63 FR-64 FR-65 FR-66 FR-67 "
+        "FR-68 FR-69 FR-70 FR-71 FR-72 FR-73 FR-74 FR-75 FR-76 FR-77 FR-78 "
+        "FR-79 FR-80 FR-81 FR-82 FR-83 FR-84 FR-85 FR-86 FR-87 FR-88 FR-89 "
+        "FR-90 FR-91 FR-92 FR-93 FR-94 FR-95"
+    ),
+    "GRC-INTERCONNECTED": (
+        "GR-69 GR-A GR-A1 GR-B GR-C GR-D GR-E GR-F GR-G GR-H GR-J GR-L"
+    ),
     "MYS-PENINSULAR": (
         "MY-01 MY-02 MY-03 MY-04 MY-05 MY-06 MY-07 MY-08 MY-09 MY-10 "
         "MY-11 MY-14 MY-16"
+    ),
+    "NOR-MAINLAND": (
+        "NO-01 NO-02 NO-03 NO-04 NO-05 NO-06 NO-07 NO-08 NO-09 NO-10 NO-11 "
+        "NO-12 NO-14 NO-15 NO-16 NO-17 NO-18 NO-19 NO-20"
     ),
     "NZL-NI": (
         "NZ-AUK NZ-BOP NZ-GIS NZ-HKB NZ-MWT NZ-NTL NZ-TKI NZ-WGN NZ-WKO"
@@ -183,6 +218,10 @@ COMPOSITES = {
     "PHL-VISAYAS": (
         "PH-AKL PH-ANT PH-BCD PH-BIL PH-BOH PH-CAP PH-CEB PH-EAS PH-GUI "
         "PH-ILI PH-LAP PH-LEY PH-MDE PH-NEC PH-NER PH-NSA PH-SLE PH-WSA"
+    ),
+    "PRT-MAINLAND": (
+        "PT-01 PT-02 PT-03 PT-04 PT-05 PT-06 PT-07 PT-08 PT-09 PT-10 PT-11 "
+        "PT-12 PT-13 PT-14 PT-15 PT-16 PT-17 PT-18"
     ),
     "RUS-CENTER": (
         "RU-BEL RU-BRY RU-IVA RU-KLU RU-KOS RU-KRS RU-LIP RU-MOS RU-MOW "
@@ -339,6 +378,8 @@ CHOCO = (
     "((-76.9 7.6, -77.1 7.8, -77.1 7.9, -77.3 7.9, -77.4 7.8, -77.4 7.9, "
     "-77.7 8.5, -77.5 8.9, -77.2 8.9, -76.8 8.4, -76.7 8.1, -76.9 7.6)))"
 )
+# The Dodecanese, in the South Aegean, Greece, east of the Cyclades.
+DODECANESE = "POLYGON ((26.2 35, 30 35, 30 38, 26.2 38, 26.2 35))"
 # El Menia and Hassi Gara, in Ghardaïa, Algeria, off the RIN.
 GHARDAIA = (
     "POLYGON ((2 32.2, 2 32.8, 2.2 33, 4.2 33.3, 5.1 33.1, 5.3 32.9, "
@@ -774,6 +815,7 @@ CUTS = {
         "CO-PUT": PUTUMAYO,
     },
     "DZA-RIN": {"DZ-08": BECHAR, "DZ-30": OUARGLA, "DZ-47": GHARDAIA},
+    "GRC-INTERCONNECTED": {"GR-L": DODECANESE},
     "PAK-NTDC": {"PK-BA": K_ELECTRIC, "PK-SD": K_ELECTRIC},
     "PER-SEIN": {"PE-LOR": LORETO, "PE-UCA": UCAYALI},
     "RUS-EAST": {"RU-SA": YAKUTIA},
@@ -838,15 +880,21 @@ def country_features() -> list[dict[str, Any]]:
     -------
     list of dict
         A feature for each country but Antarctica and those too small
-        to be left on the grid, under the code of the list.
+        to be left on the grid, under the code of the list, as one map
+        unit for those of `COUNTRY_UNITS`.
     """
     countries = natural_earth("admin_0_countries", "50m")
+    units = natural_earth("admin_0_map_units", "50m")
     features = []
     for code, geometry in zip(
         countries["ADM0_A3"], countries.geometry, strict=True
     ):
+        outline = geometry
+        if code in COUNTRY_UNITS:
+            unit = units["SU_A3"] == COUNTRY_UNITS[code]
+            outline = shapely.union_all(units.geometry[unit].to_numpy())
         if code != "ATA":
-            shape = feature(COUNTRY_CODES.get(code, code), geometry)
+            shape = feature(COUNTRY_CODES.get(code, code), outline)
             if shape is not None:
                 features.append(shape)
     return features
@@ -1013,6 +1061,49 @@ def land(geometry: Any) -> float:
     )
 
 
+def left_out(whole: Any, covered: Any, regions: Any) -> Any:
+    """Return the part of a country outside its subdivisions.
+
+    Parameters
+    ----------
+    whole : shapely.Geometry
+        Outline of the country.
+    covered : shapely.Geometry
+        Union of the outlines of its subdivisions.
+    regions : shapely.Geometry
+        Union of its standard subdivisions of Natural Earth.
+
+    Returns
+    -------
+    shapely.Geometry
+        The polygons of the country outside its subdivisions.
+
+    Notes
+    -----
+    The outlines of the countries and of their subdivisions are drawn
+    at different scales, and disagree along the coasts. So the parts
+    of the country outside its standard subdivisions, such as islands
+    that only the outline of the country has, go to the nearer of the
+    subdivisions and of the rest; and the strips narrower than twice
+    `SLIVER`, about 8 km, stay inside, or the coastal cities would be
+    left out.
+    """
+    excluded = shapely.union_all(
+        polygons(whole.difference(covered).intersection(regions))
+    )
+    stray = polygons(whole.difference(covered).difference(regions))
+    far = [
+        part
+        for part in stray
+        if not excluded.is_empty
+        and part.distance(covered) > part.distance(excluded)
+    ]
+    outside = shapely.union_all([excluded, *far])
+    return shapely.union_all(
+        polygons(outside.buffer(-SLIVER).buffer(SLIVER).intersection(outside))
+    )
+
+
 def add_shares(features: list[dict[str, Any]]) -> None:
     """Add the shares inside its subdivisions to each country feature.
 
@@ -1023,15 +1114,9 @@ def add_shares(features: list[dict[str, Any]]) -> None:
         with subdivisions gets the shares of its people and of its land
         inside the union of their outlines, as ``people`` and ``land``,
         rounded to 4 digits.
-
-    Notes
-    -----
-    The parts of a country outside its subdivisions narrower than
-    twice `SLIVER`, about 8 km, count as inside them: they are where
-    the outlines of the country and of its subdivisions, drawn at
-    different scales, disagree along the coasts, which would leave out
-    coastal cities.
     """
+    regions = natural_earth("admin_1_states_provinces", "10m")
+    natural_earth_codes = {v: k for k, v in COUNTRY_CODES.items()}
     shapes = {
         f["properties"]["label"]: shapely.geometry.shape(f["geometry"])
         for f in features
@@ -1047,8 +1132,12 @@ def add_shares(features: list[dict[str, Any]]) -> None:
             if code not in parts:
                 continue
             whole = shapes[code]
-            outside = whole.difference(shapely.union_all(parts[code]))
-            outside = outside.buffer(-SLIVER).buffer(SLIVER) & outside
+            own = regions["adm0_a3"] == natural_earth_codes.get(code, code)
+            outside = left_out(
+                whole,
+                shapely.union_all(parts[code]),
+                shapely.union_all(regions.geometry[own].to_numpy()),
+            )
             inside = whole.difference(outside)
             f["properties"]["people"] = round(
                 people(grid, inside) / people(grid, whole), 4
