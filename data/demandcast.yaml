@@ -37,12 +37,9 @@ sources:
   ccei:
     - CAN-AB
     - CAN-NB
-    - CAN-NL
     - CAN-NS
     - CAN-ON
     - CAN-PE
-    - CAN-QC
-    - CAN-YT
   cenace:
     - MEX-BCA
     - MEX-BCS
@@ -116,8 +113,6 @@ sources:
     - ZAF
   grupoice:
     - CRI
-  hydroquebec:
-    - CAN-QC
   ieso:
     - CAN-ON
   isone:

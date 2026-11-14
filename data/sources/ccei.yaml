@@ -12,14 +12,14 @@ entities:
     start: 2023
     end: present
     resolution: 5
-    note: Collected from the provincial or territorial utility, whose terms also apply
+    note: Collected from the provincial or territorial utility, whose terms also apply; with the area of Fort Nelson, in British Columbia
   - country_code: CAN
     subdivision_code: BC
     subdivision_name: British Columbia
     start: 2001
     end: 2024
     resolution: 60
-    note: Collected from the provincial or territorial utility, whose terms also apply
+    note: Collected from the provincial or territorial utility, whose terms also apply; without the non-integrated areas, such as Haida Gwaii, and the area of Fort Nelson, which is in the data of Alberta
   - country_code: CAN
     subdivision_code: NB
     subdivision_name: New Brunswick
@@ -35,12 +35,12 @@ entities:
     resolution: 5
     note: Collected from the provincial or territorial utility, whose terms also apply
   - country_code: CAN
-    subdivision_code: NL
-    subdivision_name: Newfoundland and Labrador
+    subdivision_code: NL-ISLAND
+    subdivision_name: Island Interconnected System
     start: 2022
     end: present
     resolution: 5
-    note: Collected from the provincial or territorial utility, whose terms also apply
+    note: Collected from the provincial or territorial utility, whose terms also apply; without Labrador and the isolated communities of the island
   - country_code: CAN
     subdivision_code: NS
     subdivision_name: Nova Scotia
@@ -61,7 +61,7 @@ entities:
     start: 2002
     end: present
     resolution: 60
-    note: Collected from the provincial or territorial utility, whose terms also apply
+    note: Collected from the provincial or territorial utility, whose terms also apply; without about ten remote First Nations off the grid, such as Fort Severn and Webequie
   - country_code: CAN
     subdivision_code: PE
     subdivision_name: Prince Edward Island
@@ -70,16 +70,16 @@ entities:
     resolution: 15
     note: Collected from the provincial or territorial utility, whose terms also apply
   - country_code: CAN
-    subdivision_code: QC
-    subdivision_name: Quebec
+    subdivision_code: QC-INTEGRATED
+    subdivision_name: Integrated network of Québec
     start: 2021
     end: present
     resolution: 15
-    note: Collected from the provincial or territorial utility, whose terms also apply
+    note: Collected from the provincial or territorial utility, whose terms also apply; without the off-grid networks, such as those of Nunavik, the Basse-Côte-Nord, Anticosti and the Îles-de-la-Madeleine
   - country_code: CAN
-    subdivision_code: YT
-    subdivision_name: Yukon
+    subdivision_code: YT-INTEGRATED
+    subdivision_name: Yukon Integrated System
     start: 2024
     end: present
     resolution: 5
-    note: Collected from the provincial or territorial utility, whose terms also apply
+    note: Collected from the provincial or territorial utility, whose terms also apply; without the off-grid communities of Watson Lake, Old Crow, Beaver Creek and Burwash Landing
