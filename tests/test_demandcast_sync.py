@@ -352,6 +352,18 @@ def test_entities_without_a_shape(data_dir: Path, dc_dir: Path) -> None:
     assert "run scripts/shapes.py" in result[0].message
 
 
+def test_stale_shapes(data_dir: Path, dc_dir: Path) -> None:
+    """Report each outline of a subdivision that the list lacks."""
+    write_shapes(
+        data_dir, ["DZA", "EGY", "AGO", "JPN", "JPN-Kantō", "JPN-Old"]
+    )
+    result = [f for f in findings(data_dir, dc_dir) if f.check == "shape"]
+    assert [(f.source, f.entity, f.is_open) for f in result] == [
+        ("", "JPN-Old", True)
+    ]
+    assert "which the list does not have" in result[0].message
+
+
 def test_update_marks_writes_the_file(
     data_dir: Path, dc_dir: Path, tmp_path: Path
 ) -> None:

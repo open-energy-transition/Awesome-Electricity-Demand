@@ -142,7 +142,10 @@ def test_build_site(data_dir: Path, tmp_path: Path) -> None:
     """Write the map with its outlines, the lists and the figures."""
     site = tmp_path / "site"
     build.build_site(
-        registry.load(data_dir), registry.load_shapes(data_dir), site
+        registry.load(data_dir),
+        registry.load_shapes(data_dir),
+        registry.load_shares(data_dir),
+        site,
     )
     for name in ("index.html", "map.js", "map.css"):
         assert (site / name).exists()

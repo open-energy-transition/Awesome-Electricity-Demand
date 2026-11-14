@@ -4,13 +4,15 @@ The list is kept in the data folder. ``sources/<id>.yaml`` holds one
 data source, such as the ENTSO-E Transparency Platform, with its terms
 of use and the countries and subdivisions (the entities) that it has
 data for. The identifier of a source is that of its YAML file in
-DemandCast, when DemandCast retrieves it. ``countries.csv`` holds every
-country that the list considers, with its continent, its population in
-millions and land area in km² (estimates for 2025).
+DemandCast, when DemandCast retrieves it. ``country_totals.csv`` holds
+every country that the list considers, with its continent, and its
+population in millions and land area in km² (estimates for 2025).
 ``demandcast.yaml`` lists, for each source,
 the entities whose series DemandCast retrieves, which the list marks.
 ``shapes.geojson`` holds the outlines of the countries and of the
-subdivisions of the list, for the maps of the site. The README, the
+subdivisions of the list, for the maps of the site, and for each
+country with subdivisions, the shares of its people and land inside
+their outlines. The README, the
 map and the figures are generated from them.
 """
 
@@ -36,6 +38,7 @@ from pydantic import (
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
+COUNTRIES_FILE = "country_totals.csv"
 DEMANDCAST_FILE = "demandcast.yaml"
 SHAPES_FILE = "shapes.geojson"
 SOURCE_ID = re.compile(r"^[a-z0-9]+(_[a-z0-9]+)*$")
@@ -53,6 +56,7 @@ CONTINENTS: tuple[Continent, ...] = get_args(Continent)
 Url = Annotated[str, StringConstraints(pattern=r"^https?://\S+$")]
 Text = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]
 CountryCode = Annotated[str, StringConstraints(pattern=r"^[A-Z]{3}$")]
+Share = Annotated[float, Field(ge=0, le=1)]
 EntityLabel = Annotated[str, StringConstraints(pattern=r"^[A-Z]{3}(-\S+)?$")]
 Access = Literal["public", "on-request"]
 LicenceCategory = Literal["open", "non-commercial", "restricted"]
@@ -422,17 +426,49 @@ class MultiPolygonShape(StrictModel):
     coordinates: list[Polygon]
 
 
-class ShapeLabel(StrictModel):
-    """Properties of a shape: the label of its entity."""
+class ShapeProperties(StrictModel):
+    """Properties of a shape: the label of its entity, and its shares.
+
+    Attributes
+    ----------
+    label : str
+        Label of the entity.
+    people, land : float or None
+        For a country with subdivisions, the shares of its people and
+        of its land inside the outlines of its subdivisions, from 0
+        to 1.
+    """
 
     label: EntityLabel
+    people: Share | None = None
+    land: Share | None = None
+
+    @model_validator(mode="after")
+    def _check_shares(self) -> ShapeProperties:
+        """Check that only a country has shares, and both of them.
+
+        Returns
+        -------
+        ShapeProperties
+            The properties, unchanged.
+
+        Raises
+        ------
+        ValueError
+            If a subdivision has shares, or a country only one.
+        """
+        if (self.people is None) != (self.land is None):
+            raise ValueError("people and land go together")
+        if self.people is not None and "-" in self.label:
+            raise ValueError(f"{self.label} is a subdivision, with no shares")
+        return self
 
 
 class ShapeFeature(StrictModel):
     """GeoJSON feature with the outline of a country or subdivision."""
 
     type: Literal["Feature"]
-    properties: ShapeLabel
+    properties: ShapeProperties
     geometry: Annotated[
         PolygonShape | MultiPolygonShape, Field(discriminator="type")
     ]
@@ -474,12 +510,12 @@ def _describe(prefix: str, error: ValidationError) -> list[str]:
 def _read_countries(
     path: Path,
 ) -> tuple[dict[str, tuple[str, dict[str, str]]], list[str]]:
-    """Read the rows of the countries file.
+    """Read the rows of the file of country totals.
 
     Parameters
     ----------
     path : Path
-        The countries file.
+        The file of country totals.
 
     Returns
     -------
@@ -596,7 +632,7 @@ def _series(
     sources : dict
         The sources, by identifier.
     codes : set of str
-        Codes of the countries in the countries file.
+        Codes of the countries in the file of country totals.
     marks : set of tuple
         The source and entity of each series that DemandCast retrieves.
 
@@ -616,7 +652,7 @@ def _series(
             code = entity.country_code
             if code not in codes:
                 problems.append(
-                    f"{prefix}: {code} is not a country code of countries.csv"
+                    f"{prefix}: {code} is not a country code of {COUNTRIES_FILE}"
                 )
                 continue
             if entity.subdivision_code is not None:
@@ -698,6 +734,67 @@ def load_demandcast(
     return marks
 
 
+def _read_shapes(data_dir: Path) -> list[ShapeFeature]:
+    """Read and validate the features of the shapes file.
+
+    Parameters
+    ----------
+    data_dir : Path
+        Folder with the shapes file.
+
+    Returns
+    -------
+    list of ShapeFeature
+        The features, each with a different label.
+
+    Raises
+    ------
+    RegistryError
+        If the shapes file is missing or invalid, or has a label twice.
+    """
+    path = data_dir / SHAPES_FILE
+    try:
+        collection = ShapeCollection.model_validate_json(
+            path.read_bytes(), strict=True
+        )
+    except OSError as e:
+        raise RegistryError(f"{SHAPES_FILE}: {e.strerror}") from e
+    except ValidationError as e:
+        raise RegistryError("\n".join(_describe(SHAPES_FILE, e))) from e
+    labels = Counter(f.properties.label for f in collection.features)
+    twice = sorted(label for label, n in labels.items() if n > 1)
+    if twice:
+        raise RegistryError(f"{SHAPES_FILE}: duplicate shape {twice[0]}")
+    return collection.features
+
+
+def load_shares(data_dir: Path = DATA_DIR) -> dict[str, tuple[float, float]]:
+    """Load the shares of the countries inside their subdivisions.
+
+    Parameters
+    ----------
+    data_dir : Path, default DATA_DIR
+        Folder with the shapes file.
+
+    Returns
+    -------
+    dict
+        The shares of the people and of the land of each country with
+        subdivisions inside their outlines, by country code.
+
+    Notes
+    -----
+    ``scripts/shapes.py`` computes the shares from the outlines and
+    from a grid of the density of population. A shapes file that is
+    missing or invalid, or has a label twice, raises `RegistryError`.
+    """
+    return {
+        f.properties.label: (f.properties.people, f.properties.land)
+        for f in _read_shapes(data_dir)
+        if f.properties.people is not None and f.properties.land is not None
+    }
+
+
 def load_shapes(data_dir: Path = DATA_DIR) -> dict[str, list[Polygon]]:
     """Load the outlines of the countries and subdivisions of the map.
 
@@ -712,30 +809,16 @@ def load_shapes(data_dir: Path = DATA_DIR) -> dict[str, list[Polygon]]:
         The polygons of each country and subdivision, in degrees of
         longitude and latitude, by label of the entity.
 
-    Raises
-    ------
-    RegistryError
-        If the shapes file is missing or invalid, or has a label twice.
-
     Notes
     -----
     The file is written by ``scripts/shapes.py``. A polygon is a list
-    of rings: the exterior anticlockwise, then the holes clockwise.
+    of rings: the exterior anticlockwise, then the holes clockwise. A
+    shapes file that is missing or invalid, or has a label twice,
+    raises `RegistryError`.
     """
-    path = data_dir / SHAPES_FILE
-    try:
-        collection = ShapeCollection.model_validate_json(
-            path.read_bytes(), strict=True
-        )
-    except OSError as e:
-        raise RegistryError(f"{SHAPES_FILE}: {e.strerror}") from e
-    except ValidationError as e:
-        raise RegistryError("\n".join(_describe(SHAPES_FILE, e))) from e
     shapes: dict[str, list[Polygon]] = {}
-    for feature in collection.features:
+    for feature in _read_shapes(data_dir):
         label = feature.properties.label
-        if label in shapes:
-            raise RegistryError(f"{SHAPES_FILE}: duplicate shape {label}")
         geometry = feature.geometry
         shapes[label] = (
             [geometry.coordinates]
@@ -751,7 +834,7 @@ def load(data_dir: Path = DATA_DIR) -> list[Country]:
     Parameters
     ----------
     data_dir : Path, default DATA_DIR
-        Folder with ``countries.csv`` and the ``sources`` folder.
+        Folder with ``country_totals.csv`` and the ``sources`` folder.
 
     Returns
     -------
@@ -765,7 +848,7 @@ def load(data_dir: Path = DATA_DIR) -> list[Country]:
         If any data file is invalid. The message lists every problem,
         so that they can all be fixed at once.
     """
-    rows, problems = _read_countries(data_dir / "countries.csv")
+    rows, problems = _read_countries(data_dir / COUNTRIES_FILE)
     sources, source_problems = _read_sources(data_dir / "sources")
     marks, mark_problems = _read_demandcast(
         data_dir / DEMANDCAST_FILE, sources

@@ -39,5 +39,13 @@ plugins = ["pydantic.mypy"]
 # scripts/shapes.py runs in the environment of DemandCast, with its
 # geographic libraries and code, which this project does not install.
 [[tool.mypy.overrides]]
-module = ["cartopy.*", "geopandas.*", "shapely.*", "utils.*"]
+module = [
+    "cartopy.*",
+    "geopandas.*",
+    "pyproj.*",
+    "rasterio.*",
+    "retrievals.*",
+    "shapely.*",
+    "utils.*",
+]
 ignore_missing_imports = true

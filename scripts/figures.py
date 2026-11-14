@@ -1,11 +1,12 @@
 """Draw the figures of the coverage of the list.
 
 The figures are computed from the countries and time series loaded by
-`registry`, and from the outlines of its shapes file: a map of the
-countries and subdivisions with data, coloured by their years of data;
-the years of data of each continent by time resolution; and the share
-of the countries, population and land area of each continent that have
-data. Each figure is drawn twice, as ``<name>_light.png`` and
+`registry`, and from the outlines of its shapes file and the shares
+of the countries inside them: a map of the countries and subdivisions
+with data, coloured by their years of data; the years of data of each
+continent by time resolution; and the share of the countries of each
+continent with data, and of the population and land area that their
+data covers. Each figure is drawn twice, as ``<name>_light.png`` and
 ``<name>_dark.png``, for the light and dark themes of the reader. The
 outlines of the interactive map of the site come with the class of
 their years of data, as in the map of the figures.
@@ -162,6 +163,7 @@ def percent(part: float, whole: float) -> float:
 
 def coverage_by_continent(
     countries: list[Country],
+    inside: dict[str, tuple[float, float]],
 ) -> dict[str, list[float]]:
     """Compute the share of each continent that has data.
 
@@ -169,6 +171,9 @@ def coverage_by_continent(
     ----------
     countries : list of Country
         Every country of the list.
+    inside : dict
+        The shares of the people and of the land of each country with
+        subdivisions inside their outlines, by country code.
 
     Returns
     -------
@@ -180,7 +185,9 @@ def coverage_by_continent(
     Notes
     -----
     A country counts as covered if it has any time series, even one
-    for only some of its subdivisions.
+    for only some of its subdivisions. Its population and land count
+    whole if it has a national series, and otherwise in the shares
+    inside the outlines of its subdivisions, or whole if it has none.
     """
     shares: dict[str, list[float]] = {
         "countries": [],
@@ -190,18 +197,24 @@ def coverage_by_continent(
     for continent in CONTINENTS:
         members = [c for c in countries if c.continent == continent]
         covered = [c for c in members if c.series]
+        people, land = 0.0, 0.0
+        for country in covered:
+            national = any(
+                s.entity.subdivision_code is None for s in country.series
+            )
+            share = (
+                (1.0, 1.0)
+                if national
+                else inside.get(country.code, (1.0, 1.0))
+            )
+            people += country.population_millions * share[0]
+            land += country.land_area_km2 * share[1]
         shares["countries"].append(percent(len(covered), len(members)))
         shares["population"].append(
-            percent(
-                sum(c.population_millions for c in covered),
-                sum(c.population_millions for c in members),
-            )
+            percent(people, sum(c.population_millions for c in members))
         )
         shares["land"].append(
-            percent(
-                sum(c.land_area_km2 for c in covered),
-                sum(c.land_area_km2 for c in members),
-            )
+            percent(land, sum(c.land_area_km2 for c in members))
         )
     return shares
 
@@ -687,13 +700,21 @@ def plot_years(countries: list[Country], theme: Theme, path: Path) -> None:
     _save(fig, path)
 
 
-def plot_coverage(countries: list[Country], theme: Theme, path: Path) -> None:
+def plot_coverage(
+    countries: list[Country],
+    inside: dict[str, tuple[float, float]],
+    theme: Theme,
+    path: Path,
+) -> None:
     """Draw the share of each continent that has data.
 
     Parameters
     ----------
     countries : list of Country
         Every country of the list.
+    inside : dict
+        The shares of the people and of the land of each country with
+        subdivisions inside their outlines, by country code.
     theme : Theme
         Colours of the figure.
     path : Path
@@ -705,7 +726,7 @@ def plot_coverage(countries: list[Country], theme: Theme, path: Path) -> None:
     their range, and written in columns on the right, whose headers are
     the legend.
     """
-    shares = coverage_by_continent(countries)
+    shares = coverage_by_continent(countries, inside)
     columns = (1.17, 1.41, 1.65)
     fig = _figure(theme, 3.6)
     ax = fig.add_axes((0.16, 0.12, 0.42, 0.58))
@@ -779,7 +800,8 @@ def plot_coverage(countries: list[Country], theme: Theme, path: Path) -> None:
         fig,
         theme,
         "Share of each continent with demand data",
-        "Countries with any data source, and their population and land area",
+        "Countries with any data source, and the people and land that "
+        "their data covers",
     )
     _save(fig, path)
 
@@ -787,6 +809,7 @@ def plot_coverage(countries: list[Country], theme: Theme, path: Path) -> None:
 def plot_all(
     countries: list[Country],
     shapes: dict[str, list[Polygon]],
+    inside: dict[str, tuple[float, float]],
     directory: Path,
 ) -> None:
     """Draw every figure, in both themes, into a folder.
@@ -797,6 +820,9 @@ def plot_all(
         Every country of the list.
     shapes : dict
         The outlines of the countries and subdivisions, by label.
+    inside : dict
+        The shares of the people and of the land of each country with
+        subdivisions inside their outlines, by country code.
     directory : Path
         Folder of the figures, created if needed.
     """
@@ -810,6 +836,7 @@ def plot_all(
         )
         plot_coverage(
             countries,
+            inside,
             theme,
             directory / f"coverage_by_continent_{theme.name}.png",
         )

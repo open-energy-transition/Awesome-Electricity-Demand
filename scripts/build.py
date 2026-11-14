@@ -478,6 +478,7 @@ def records(
 def build_site(
     countries: list[Country],
     shapes: dict[str, list[Polygon]],
+    inside: dict[str, tuple[float, float]],
     site_dir: Path,
 ) -> None:
     """Build the site for GitHub Pages.
@@ -489,6 +490,10 @@ def build_site(
     shapes : dict
         The outlines of the countries and subdivisions, by label, for
         the interactive map and the map of the figures.
+    inside : dict
+        The shares of the people and of the land of each country with
+        subdivisions inside their outlines, by country code, for the
+        figure of the coverage.
     site_dir : Path
         Folder of the site, created if needed.
 
@@ -537,7 +542,7 @@ def build_site(
         ),
         encoding="utf-8",
     )
-    figures.plot_all(countries, shapes, site_dir / "figures")
+    figures.plot_all(countries, shapes, inside, site_dir / "figures")
     logger.info("Site built in %s", site_dir)
 
 
@@ -569,12 +574,13 @@ def main(argv: list[str] | None = None) -> int:
     try:
         countries = registry.load()
         shapes = registry.load_shapes()
+        inside = registry.load_shares()
     except RegistryError as e:
         logger.error("The data files have errors:\n%s", e)  # noqa: TRY400
         return 1
 
     if args.command == "site":
-        build_site(countries, shapes, args.directory)
+        build_site(countries, shapes, inside, args.directory)
         return 0
 
     current = README.read_text(encoding="utf-8")

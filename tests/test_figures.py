@@ -17,11 +17,43 @@ if TYPE_CHECKING:
 
 def test_coverage_by_continent(data_dir: Path) -> None:
     """Compute the shares of countries, population and land covered."""
-    shares = figures.coverage_by_continent(registry.load(data_dir))
+    shares = figures.coverage_by_continent(registry.load(data_dir), {})
     assert shares["countries"][0] == pytest.approx(100 / 3)
     assert shares["population"][0] == pytest.approx(20)
     assert shares["land"][0] == pytest.approx(20)
     assert shares["countries"][1] == pytest.approx(100)
+
+
+def test_coverage_counts_the_shares_inside_subdivisions(
+    data_dir: Path,
+) -> None:
+    """Count a country with only subdivisions by its shares inside them.
+
+    Notes
+    -----
+    Egypt has 60 of the 200 million people of Africa and 1,000 of its
+    10,000 km², and Japan a national series, which counts whole.
+    """
+    write_source(
+        data_dir,
+        "eetc",
+        source(
+            [
+                entity(
+                    country_code="EGY",
+                    subdivision_code="X",
+                    subdivision_name="X",
+                )
+            ],
+            name="EETC",
+        ),
+    )
+    inside = {"EGY": (0.5, 0.25), "JPN": (0.5, 0.5)}
+    shares = figures.coverage_by_continent(registry.load(data_dir), inside)
+    assert shares["countries"][0] == pytest.approx(200 / 3)
+    assert shares["population"][0] == pytest.approx(100 * (40 + 30) / 200)
+    assert shares["land"][0] == pytest.approx(100 * (2000 + 250) / 10000)
+    assert shares["population"][1] == pytest.approx(100)
 
 
 def test_years_by_resolution(data_dir: Path) -> None:
@@ -106,7 +138,10 @@ def test_plot_all(data_dir: Path, tmp_path: Path) -> None:
     """Draw each figure in a light and a dark version."""
     directory = tmp_path / "figures"
     figures.plot_all(
-        registry.load(data_dir), registry.load_shapes(data_dir), directory
+        registry.load(data_dir),
+        registry.load_shapes(data_dir),
+        registry.load_shares(data_dir),
+        directory,
     )
     assert sorted(p.name for p in directory.iterdir()) == [
         f"{name}_{theme}.png"

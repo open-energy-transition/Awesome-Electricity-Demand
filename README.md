@@ -36,7 +36,7 @@ The years of data of each continent, by time resolution:
   <img src="https://open-energy-transition.github.io/Awesome-Electricity-Demand/figures/years_by_continent_light.png" alt="Horizontal bars of the years of demand data of each continent, stacked by time resolution" width="100%">
 </picture>
 
-The share of the countries of each continent with data, and of their population and land area:
+The share of the countries of each continent with data, and of the population and land area that their data covers:
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://open-energy-transition.github.io/Awesome-Electricity-Demand/figures/coverage_by_continent_dark.png">
