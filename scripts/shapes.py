@@ -12,6 +12,12 @@ subdivisions of Natural Earth, without the parts of some of them that
 hand-drawn polygons mark. The outlines are simplified and rounded to
 0.01 degrees, enough for a map of the world.
 
+Each country with subdivisions also gets the shares of its people and
+of its land inside the union of their outlines, for the figure of the
+coverage: the people from the density of population of SEDAC (GPW
+v4.11) in 2020 at 30 arc-seconds, which DemandCast downloads into its
+data folder, and the land from geodesic areas.
+
 The script runs in the environment of DemandCast, whose code finds the
 shapes, from the folder ``demandcast`` of its repository::
 
@@ -24,12 +30,19 @@ It lists the subdivisions of the list without a shape.
 from __future__ import annotations
 
 import json
+import os
 import sys
 from typing import Any
 
 import cartopy.io.shapereader
 import geopandas
+import numpy as np
+import pyproj
+import rasterio
+import rasterio.mask
+import retrievals.gridded_population
 import shapely
+import utils.paths
 import utils.shapes
 
 import registry
@@ -37,6 +50,13 @@ import registry
 SHAPES_FILE = registry.DATA_DIR / registry.SHAPES_FILE
 TOLERANCE = 0.05
 GRID = 0.01
+POPULATION_YEAR = 2020
+GEOD = pyproj.Geod(ellps="WGS84")
+# Radius of the sphere of the grid of population, in km.
+EARTH_RADIUS = 6371.0088
+# Half the width, in degrees, of the strips of a country outside its
+# subdivisions that count as inside them.
+SLIVER = 0.04
 # Codes of Natural Earth that differ from those of the list.
 COUNTRY_CODES = {"KOS": "XKX", "SDS": "SSD", "PSX": "PSE"}
 # Subdivisions without a shape in DemandCast, as unions of standard
@@ -899,6 +919,143 @@ def subdivision_features() -> tuple[list[dict[str, Any]], list[str]]:
     return features, missing
 
 
+def population_grid() -> str:
+    """Return the grid of the density of population, downloading it.
+
+    Returns
+    -------
+    str
+        Path of the GeoTIFF of the density of population of SEDAC in
+        `POPULATION_YEAR`, in people per km², in the data folder of
+        DemandCast, which downloads it if it is not there.
+    """
+    folder = utils.paths.get_gridded_folder("population", "raw")
+    os.makedirs(folder, exist_ok=True)
+    retrievals.gridded_population._download_historical_gridded_population_density(
+        folder, POPULATION_YEAR
+    )
+    return os.path.join(folder, f"{POPULATION_YEAR}.tif")
+
+
+def polygons(geometry: Any) -> list[Any]:
+    """Return the polygons of a shape, without its lines and points.
+
+    Parameters
+    ----------
+    geometry : shapely.Geometry
+        The shape.
+
+    Returns
+    -------
+    list of shapely.Polygon
+        Its polygons.
+    """
+    return [
+        part
+        for part in shapely.get_parts(geometry)
+        if part.geom_type == "Polygon"
+    ]
+
+
+def people(grid: Any, geometry: Any) -> float:
+    """Count the people of a shape on the grid of density of population.
+
+    Parameters
+    ----------
+    grid : rasterio.DatasetReader
+        The grid of the density of population, in people per km².
+    geometry : shapely.Geometry
+        The shape, in degrees.
+
+    Returns
+    -------
+    float
+        The people of the cells whose centres are inside the shape.
+
+    Notes
+    -----
+    Each polygon is read on its own, as the box of a whole country
+    across the antimeridian, such as Russia, would be too large. The
+    cells without data have a negative value.
+    """
+    total = 0.0
+    for polygon in polygons(geometry):
+        data, transform = rasterio.mask.mask(
+            grid, [polygon], crop=True, filled=True, nodata=0
+        )
+        density = np.clip(data[0], 0, None)
+        edges = transform.f + transform.e * np.arange(density.shape[0] + 1)
+        areas = (
+            EARTH_RADIUS**2
+            * np.radians(abs(transform.a))
+            * np.abs(np.diff(np.sin(np.radians(edges))))
+        )
+        total += float((density * areas[:, None]).sum())
+    return total
+
+
+def land(geometry: Any) -> float:
+    """Return the geodesic area of a shape.
+
+    Parameters
+    ----------
+    geometry : shapely.Geometry
+        The shape, in degrees.
+
+    Returns
+    -------
+    float
+        Its area on the ellipsoid of WGS 84, in m².
+    """
+    return sum(
+        abs(float(GEOD.geometry_area_perimeter(polygon)[0]))
+        for polygon in polygons(geometry)
+    )
+
+
+def add_shares(features: list[dict[str, Any]]) -> None:
+    """Add the shares inside its subdivisions to each country feature.
+
+    Parameters
+    ----------
+    features : list of dict
+        The features of the countries and subdivisions. Each country
+        with subdivisions gets the shares of its people and of its land
+        inside the union of their outlines, as ``people`` and ``land``,
+        rounded to 4 digits.
+
+    Notes
+    -----
+    The parts of a country outside its subdivisions narrower than
+    twice `SLIVER`, about 8 km, count as inside them: they are where
+    the outlines of the country and of its subdivisions, drawn at
+    different scales, disagree along the coasts, which would leave out
+    coastal cities.
+    """
+    shapes = {
+        f["properties"]["label"]: shapely.geometry.shape(f["geometry"])
+        for f in features
+    }
+    parts: dict[str, list[Any]] = {}
+    for label, shape in shapes.items():
+        country, _, subdivision = label.partition("-")
+        if subdivision:
+            parts.setdefault(country, []).append(shape)
+    with rasterio.open(population_grid()) as grid:
+        for f in features:
+            code = f["properties"]["label"]
+            if code not in parts:
+                continue
+            whole = shapes[code]
+            outside = whole.difference(shapely.union_all(parts[code]))
+            outside = outside.buffer(-SLIVER).buffer(SLIVER) & outside
+            inside = whole.difference(outside)
+            f["properties"]["people"] = round(
+                people(grid, inside) / people(grid, whole), 4
+            )
+            f["properties"]["land"] = round(land(inside) / land(whole), 4)
+
+
 def main() -> int:
     """Write the shapes file and list the subdivisions without a shape.
 
@@ -909,6 +1066,7 @@ def main() -> int:
     """
     subdivisions, missing = subdivision_features()
     features = country_features() + subdivisions
+    add_shares(features)
     lines = [json.dumps(f, separators=(",", ":")) for f in features]
     SHAPES_FILE.write_text(
         '{"type":"FeatureCollection","features":[\n'

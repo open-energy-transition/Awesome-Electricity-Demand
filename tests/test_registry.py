@@ -283,9 +283,53 @@ def test_every_problem_is_reported(data_dir: Path) -> None:
 
 
 def test_repository_shapes_are_valid() -> None:
-    """Load the shapes of the repository, one for every country."""
+    """Load the shapes of the repository, one for every country.
+
+    Notes
+    -----
+    Every country with only subdivisions needs its shares inside them
+    for the figure of the coverage.
+    """
     shapes = registry.load_shapes()
-    assert {c.code for c in registry.load()} <= set(shapes)
+    countries = registry.load()
+    assert {c.code for c in countries} <= set(shapes)
+    only_subdivisions = {
+        c.code
+        for c in countries
+        if c.series
+        and all(s.entity.subdivision_code is not None for s in c.series)
+    }
+    assert only_subdivisions <= set(registry.load_shares())
+
+
+def test_load_shares(data_dir: Path) -> None:
+    """Load the shares of the countries that have them."""
+    write_shapes(data_dir, ["DZA", "JPN", "JPN-Kantō"], {"JPN": (0.5, 0.2)})
+    assert registry.load_shares(data_dir) == {"JPN": (0.5, 0.2)}
+
+
+@pytest.mark.parametrize(
+    ("properties", "message"),
+    [
+        ('"label": "JPN", "people": 0.5', "people and land go together"),
+        (
+            '"label": "JPN-Kantō", "people": 0.5, "land": 0.5',
+            "is a subdivision, with no shares",
+        ),
+        ('"label": "JPN", "people": 2, "land": 0.5', "less than or equal"),
+    ],
+)
+def test_invalid_shares(data_dir: Path, properties: str, message: str) -> None:
+    """Reject shares of a subdivision, alone, or out of range."""
+    ring = [[0, 0], [1, 0], [1, 1], [0, 0]]
+    (data_dir / "shapes.geojson").write_text(
+        '{"type": "FeatureCollection", "features": [{"type": "Feature", '
+        f'"properties": {{{properties}}}, "geometry": {{"type": '
+        f'"Polygon", "coordinates": [{ring}]}}}}]}}',
+        encoding="utf-8",
+    )
+    with pytest.raises(registry.RegistryError, match=message):
+        registry.load_shares(data_dir)
 
 
 def test_load_shapes(data_dir: Path) -> None:

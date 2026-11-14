@@ -10,9 +10,9 @@ Thank you for helping to improve the list! You can contribute in two ways:
 The list is kept in the [`data/`](data/) folder, and everything else is generated from it:
 
 - `data/sources/<id>.yaml` has one data source, such as `entsoe.yaml` for the ENTSO-E Transparency Platform: its name, page and terms of use, and the countries and subdivisions (the entities) that it has data for, with their years and resolution. A source that [DemandCast](https://github.com/open-energy-transition/demandcast) retrieves has the identifier of its YAML file in DemandCast's `retrievals/electricity_demand_data_sources/` folder; a new one gets a short identifier in lower case, such as the acronym of the provider, or `<first author>_et_al` for the dataset of a paper.
-- `data/countries.csv` has every country that the list considers, with its name, continent, population in millions and land area in km² (estimates for 2025).
+- `data/country_totals.csv` has every country that the list considers, with its name, continent, and its population in millions and land area in km² (estimates for 2025).
 - `data/demandcast.yaml` lists, for each source, the countries and subdivisions whose series [DemandCast](https://github.com/open-energy-transition/demandcast) retrieves, which the list marks with ✅. It is written by a command (see below), not by hand.
-- `data/shapes.geojson` has the outlines of every country and of each subdivision of the list, for the interactive map and the map of the figures. It is written by a command (see below), not by hand.
+- `data/shapes.geojson` has the outlines of every country and of each subdivision of the list, for the interactive map and the map of the figures, and for each country with subdivisions, the shares of its people and of its land inside their outlines, for the figure of the coverage. It is written by a command (see below), not by hand.
 
 From these files, `scripts/build.py` generates:
 
@@ -135,13 +135,13 @@ uv run scripts/demandcast_sync.py --demandcast ../demandcast/demandcast/retrieva
 uv run scripts/build.py readme
 ```
 
-The comparison also reports the countries and subdivisions without an outline in `data/shapes.geojson`, which the maps leave out. A new subdivision needs one: write the file with the code of DemandCast, which finds the shapes of standard subdivisions in Natural Earth and those of non-standard subdivisions in its own shapes, from the `demandcast` folder of a copy of DemandCast, in its environment:
+The comparison also reports the countries and subdivisions without an outline in `data/shapes.geojson`, which the maps leave out, and the outlines of subdivisions that the list no longer has, which the shares of their country still count. A new or removed subdivision needs the file written again: write the file with the code of DemandCast, which finds the shapes of standard subdivisions in Natural Earth and those of non-standard subdivisions in its own shapes, from the `demandcast` folder of a copy of DemandCast, in its environment:
 
 ```bash
 PYTHONPATH=. uv run --locked python ../../Awesome-Electricity-Demand/scripts/shapes.py
 ```
 
-The command lists the subdivisions that still have no shape. A non-standard subdivision needs a shape in DemandCast first, or an entry in `COMPOSITES` in `scripts/shapes.py`, as a union of standard subdivisions of Natural Earth, with a polygon in `CUTS` for the part of any of them outside it, drawn by hand along the borders of their districts.
+The command also computes the shares of each country with subdivisions: its people inside their outlines from the density of population of [SEDAC](https://doi.org/10.7927/H49C6VHW) in 2020, which DemandCast downloads into its data folder (about 400 MB) if it is not there, and its land from geodesic areas. It lists the subdivisions that still have no shape. A non-standard subdivision needs a shape in DemandCast first, or an entry in `COMPOSITES` in `scripts/shapes.py`, as a union of standard subdivisions of Natural Earth, with a polygon in `CUTS` for the part of any of them outside it, drawn by hand along the borders of their districts.
 
 A divergence that is deliberate, such as a retriever that takes only some years of a source, goes in `data/demandcast_differences.yaml`, with the check, the entity if any, and a reason:
 

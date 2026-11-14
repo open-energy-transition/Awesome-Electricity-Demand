@@ -88,7 +88,11 @@ def write_source(data_dir: Path, source_id: str, content: Any) -> None:
     )
 
 
-def write_shapes(data_dir: Path, labels: list[str]) -> None:
+def write_shapes(
+    data_dir: Path,
+    labels: list[str],
+    shares: dict[str, tuple[float, float]] | None = None,
+) -> None:
     """Write a shapes file with a square for each entity.
 
     Parameters
@@ -98,6 +102,9 @@ def write_shapes(data_dir: Path, labels: list[str]) -> None:
     labels : list of str
         Labels of the entities, each with a square of 10 degrees along
         the equator, the first with a square hole.
+    shares : dict, optional
+        The shares of the people and of the land of some countries
+        inside their subdivisions, by country code.
     """
     features = []
     for i, label in enumerate(labels):
@@ -105,10 +112,13 @@ def write_shapes(data_dir: Path, labels: list[str]) -> None:
         rings = [[[x, 0.0], [x + 9, 0.0], [x + 9, 9.0], [x, 9.0], [x, 0.0]]]
         if i == 0:
             rings.append([[2, 2], [2, 4], [4, 4], [4, 2], [2, 2]])
+        properties: dict[str, Any] = {"label": label}
+        if shares and label in shares:
+            properties["people"], properties["land"] = shares[label]
         features.append(
             {
                 "type": "Feature",
-                "properties": {"label": label},
+                "properties": properties,
                 "geometry": {"type": "Polygon", "coordinates": rings},
             }
         )
@@ -140,7 +150,7 @@ def data_dir(tmp_path: Path) -> Path:
     country and the subdivision have a shape.
     """
     (tmp_path / "sources").mkdir()
-    (tmp_path / "countries.csv").write_text(COUNTRIES, encoding="utf-8")
+    (tmp_path / "country_totals.csv").write_text(COUNTRIES, encoding="utf-8")
     write_source(tmp_path, "sonelgaz", source([entity()]))
     write_source(
         tmp_path,

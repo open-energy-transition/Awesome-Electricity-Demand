@@ -14,7 +14,9 @@ of DemandCast; a mark that the files of DemandCast no longer support,
 or a series that they support and the file does not mark, is a
 divergence too. So is an entity without an outline in
 ``data/shapes.geojson``, which ``scripts/shapes.py`` writes with the
-code of DemandCast, as the maps of the site cannot draw it.
+code of DemandCast, as the maps of the site cannot draw it, and an
+outline of a subdivision that the list no longer has, which the shares
+of its country in the same file still count.
 
 Each difference is a finding: a divergence, which one of the two
 repositories should resolve, or a note. Nothing fails: the divergences
@@ -183,13 +185,14 @@ class Finding:
     Attributes
     ----------
     source : str
-        Identifier of the data source.
+        Identifier of the data source, empty for a stale outline.
     check : str
         What differs: the presence of the source, an entity, the name
         of a subdivision, the years, the licence or the page of the
         terms; "backlog" for a source that DemandCast does not retrieve,
         "accepted" for an accepted difference that is not found, "mark"
-        for a mark of the list and "shape" for a missing outline.
+        for a mark of the list and "shape" for a missing or stale
+        outline.
     entity : str or None
         Country code, and subdivision code after a dash.
     message : str
@@ -655,7 +658,7 @@ def _row(finding: Finding) -> str:
         The source, the entity, the check and the message.
     """
     cells = [
-        f"`{finding.source}`",
+        f"`{finding.source}`" if finding.source else "",
         finding.entity or "",
         finding.check,
         finding.message,
@@ -1005,7 +1008,7 @@ def compare_marks(
 def compare_shapes(
     sources: dict[str, Source], shapes: set[str]
 ) -> list[Finding]:
-    """Find the entities of the list without an outline for the map.
+    """Find the entities without an outline, and the stale outlines.
 
     Parameters
     ----------
@@ -1017,9 +1020,33 @@ def compare_shapes(
     Returns
     -------
     list of Finding
-        A divergence for each entity of a source without an outline.
+        A divergence for each entity of a source without an outline,
+        and for each outline of a subdivision that no source has, with
+        no source.
+
+    Notes
+    -----
+    The shares of a country inside its subdivisions, in the same file,
+    count the outline of a subdivision that the list no longer has.
     """
-    return [
+    labels = {
+        entity.label
+        for source in sources.values()
+        for entity in source.entities
+    }
+    stale = [
+        Finding(
+            source="",
+            check="shape",
+            entity=label,
+            message="data/shapes.geojson has an outline of it, which the "
+            "list does not have: run scripts/shapes.py",
+            severity="divergence",
+        )
+        for label in sorted(shapes)
+        if "-" in label and label not in labels
+    ]
+    return stale + [
         Finding(
             source=source_id,
             check="shape",
