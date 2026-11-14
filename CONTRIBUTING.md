@@ -141,7 +141,7 @@ The comparison also reports the countries and subdivisions without an outline in
 PYTHONPATH=. uv run --locked python ../../Awesome-Electricity-Demand/scripts/shapes.py
 ```
 
-The command also computes the shares of each country with subdivisions: its people inside their outlines from the density of population of [SEDAC](https://doi.org/10.7927/H49C6VHW) in 2020, which DemandCast downloads into its data folder (about 400 MB) if it is not there, and its land from geodesic areas. It lists the subdivisions that still have no shape. A non-standard subdivision needs a shape in DemandCast first, or an entry in `COMPOSITES` in `scripts/shapes.py`, as a union of standard subdivisions of Natural Earth, with a polygon in `CUTS` for the part of any of them outside it, drawn by hand along the borders of their districts.
+The command also computes the shares of each country with subdivisions: its people inside their outlines from the density of population of [SEDAC](https://doi.org/10.7927/H49C6VHW) in 2020, which DemandCast downloads into its data folder (about 400 MB) if it is not there, and its land from geodesic areas. It lists the subdivisions that still have no shape. A non-standard subdivision needs a shape in DemandCast first: an entry in its `demandcast/shapes/composites.yaml`, as a union of standard subdivisions of Natural Earth, with a polygon for the part of any of them outside it, drawn by hand along the borders of their districts, or a shapefile made by a script in the same folder.
 
 A divergence that is deliberate, such as a retriever that takes only some years of a source, goes in `data/demandcast_differences.yaml`, with the check, the entity if any, and a reason:
 
