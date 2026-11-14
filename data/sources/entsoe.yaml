@@ -55,9 +55,12 @@ entities:
     end: present
     resolution: 60
   - country_code: ESP
+    subdivision_code: PENINSULAR
+    subdivision_name: Peninsular Spain
     start: 2015
     end: present
     resolution: 60
+    note: Without the Balearic and Canary Islands, Ceuta and Melilla
   - country_code: EST
     start: 2015
     end: present
@@ -67,9 +70,12 @@ entities:
     end: present
     resolution: 60
   - country_code: FRA
+    subdivision_code: CONTINENTAL
+    subdivision_name: Continental France
     start: 2015
     end: present
     resolution: 60
+    note: Without Corsica
   - country_code: GBR
     subdivision_code: GB
     subdivision_name: Great Britain
@@ -87,9 +93,12 @@ entities:
     end: present
     resolution: 60
   - country_code: GRC
+    subdivision_code: INTERCONNECTED
+    subdivision_name: Interconnected System of Greece
     start: 2015
     end: present
     resolution: 60
+    note: Without the non-interconnected islands, such as Crete, the Dodecanese, the North Aegean and some of the Cyclades; with Syros, Mykonos, Paros and Naxos from 2018
   - country_code: HRV
     start: 2015
     end: present
@@ -135,17 +144,23 @@ entities:
     end: present
     resolution: 15
   - country_code: NOR
+    subdivision_code: MAINLAND
+    subdivision_name: Mainland Norway
     start: 2015
     end: present
     resolution: 60
+    note: Without Svalbard and Jan Mayen
   - country_code: POL
     start: 2015
     end: present
     resolution: 60
   - country_code: PRT
+    subdivision_code: MAINLAND
+    subdivision_name: Mainland Portugal
     start: 2015
     end: present
     resolution: 60
+    note: Without the Azores and Madeira
   - country_code: ROU
     start: 2015
     end: present
