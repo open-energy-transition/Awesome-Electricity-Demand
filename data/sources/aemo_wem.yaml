@@ -7,15 +7,15 @@ licence:
   category: open
 entities:
   - country_code: AUS
-    subdivision_code: WA
-    subdivision_name: Western Australia
+    subdivision_code: SWIS
+    subdivision_name: South West Interconnected System
     start: 2006
     end: 2023
     resolution: 30
     url: https://data.wa.aemo.com.au/datafiles/operational-demand/
   - country_code: AUS
-    subdivision_code: WA
-    subdivision_name: Western Australia
+    subdivision_code: SWIS
+    subdivision_name: South West Interconnected System
     start: 2023
     end: present
     resolution: 5

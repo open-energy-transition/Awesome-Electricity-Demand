@@ -41,6 +41,10 @@ GRID = 0.01
 COUNTRY_CODES = {"KOS": "XKX", "SDS": "SSD", "PSX": "PSE"}
 # Subdivisions without a shape in DemandCast, as unions of standard
 # subdivisions of Natural Earth at 1:10m, by their ISO 3166-2 codes:
+# - the markets of Australia smaller than their states: the South
+#   West Interconnected System (SWIS), the Queensland (QLD1) and
+#   South Australia (SA1) regions of the NEM, and the Darwin-Katherine
+#   Interconnected System (DKIS);
 # - the departments of Bolivia, which its layer at 1:50m does not have;
 # - the national (SEN) and central (SIC) systems of Chile, without
 #   Aysén, Magallanes and the medium systems of Los Lagos;
@@ -67,6 +71,10 @@ COUNTRY_CODES = {"KOS": "XKX", "SDS": "SSD", "PSX": "PSE"}
 # - the interconnected power systems of Russia, whose regions SO UES
 #   lists on the page of each system.
 COMPOSITES = {
+    "AUS-DKIS": "AU-NT",
+    "AUS-QLD1": "AU-QLD",
+    "AUS-SA1": "AU-SA",
+    "AUS-SWIS": "AU-WA",
     "BOL-B": "BO-B",
     "BOL-C": "BO-C",
     "BOL-H": "BO-H",
@@ -246,6 +254,15 @@ META = (
     "-72.4 3.4, -72.2 3.3, -71.6 3.5, -71.2 3.4, -71.1 3.3, -71 3.7, "
     "-70.8 3.4))"
 )
+# The Northern Territory, Australia, outside the Darwin-Katherine
+# Interconnected System.
+NORTHERN_TERRITORY = (
+    "POLYGON ((128 -10, 139 -10, 139 -27, 128 -27, 128 -10), (130.7 -13, "
+    "130.9 -13.5, 131.5 -14, 132 -14.8, 132.8 -14.9, 133 -15.7, "
+    "133.4 -15.7, 133.3 -14.3, 132.5 -14.2, 132.1 -13.6, 131.5 -13.2, "
+    "131.9 -13.1, 131.9 -12.6, 131.3 -12.2, 130.2 -12.2, 130.2 -12.9, "
+    "130.7 -13))"
+)
 # Ouargla, Algeria, outside its communes on the RIN: El Borma,
 # and the parts of Illizi in the Ouargla of Natural Earth.
 OUARGLA = (
@@ -265,6 +282,28 @@ PUTUMAYO = (
     "-73.7 -0.6, -74.5 -0.8, -75.2 -0.4, -75.5 -0.3, -75.9 -0.2, "
     "-76.4 0.3, -76.3 0.4))"
 )
+# Queensland, Australia, outside the NEM: the north-west around
+# Mount Isa, the Gulf and Channel Country towns, Cape York and the
+# Torres Strait.
+QUEENSLAND = (
+    "MULTIPOLYGON (((137.9 -16, 140.5 -16, 140.6 -17.3, 140.7 -17.6, "
+    "140.8 -19, 141.1 -20, 141.3 -20.6, 141.5 -21.6, 142.3 -22.6, "
+    "143.4 -23.9, 143.6 -25.5, 143.5 -26.4, 143.5 -29.1, 137.9 -29.1, "
+    "137.9 -16)), ((140.9 -16.6, 141.6 -16.4, 142.6 -16.2, 143.6 -16, "
+    "144.2 -15.8, 144.5 -15.3, 145 -14.9, 145.4 -14.8, 145.6 -14.5, "
+    "144.8 -13.3, 143.9 -11.5, 143.5 -10.2, 143.2 -9.1, 141.9 -9.1, "
+    "141 -9.6, 141.2 -10.5, 141 -12.5, 141 -15, 140.9 -16.6)))"
+)
+# South Australia outside the NEM: the remote north and west.
+SOUTH_AUSTRALIA = (
+    "POLYGON ((128 -25, 142 -25, 142 -39, 128 -39, 128 -25), (134.4 -34, "
+    "135.5 -35.3, 136.4 -36.3, 138.5 -36.3, 139.5 -37.3, 141.1 -38.3, "
+    "141.1 -33.8, 140.4 -33.6, 139.4 -33.2, 139.3 -32.6, 138.8 -31.6, "
+    "138.6 -30.4, 138.2 -30.4, 138 -31.4, 137.6 -31.2, 137.4 -30.4, "
+    "137 -30.2, 135.6 -29.5, 135.4 -29.8, 136.6 -30.6, 136.5 -31.3, "
+    "136.3 -32.5, 135.6 -32.6, 134.6 -32.3, 133.4 -31.6, 132.4 -31.9, "
+    "132.4 -32.4, 133.6 -32.8, 134.4 -34))"
+)
 # Taimyr and Norilsk, an isolated power system in Krasnoyarsk Krai,
 # Russia.
 TAIMYR = (
@@ -283,6 +322,18 @@ UCAYALI = (
     "-71.9 -11.3, -72.1 -11.6, -72.5 -11.7, -73.1 -11.6, -73.4 -11.7, "
     "-73.8 -11.5, -74.5 -11.3, -74.8 -11.1))"
 )
+# Western Australia outside the South West Interconnected System.
+WESTERN_AUSTRALIA = (
+    "POLYGON ((112 -13, 130 -13, 130 -36, 112 -36, 112 -13), (115 -34.6, "
+    "116.5 -35.3, 118 -35.3, 119.6 -34.6, 119.5 -34.2, 119 -34, "
+    "120.2 -33.6, 119.6 -32.7, 119.6 -32.1, 119.1 -32.1, 119.3 -31.9, "
+    "119.3 -31.7, 120.7 -31.2, 121 -31.1, 121.4 -31.4, 121.8 -31.2, "
+    "121.6 -30.9, 121.7 -30.6, 121.3 -30.4, 121.1 -30, 120.4 -30.1, "
+    "120.9 -30.9, 120.4 -31.1, 119.4 -31.2, 118.7 -30.9, 118.6 -30.4, "
+    "118.2 -30.2, 117.7 -30, 117.4 -30, 117.2 -29.6, 116.7 -29.8, "
+    "116.6 -29.3, 116.3 -29.2, 115.9 -28.4, 115.4 -28.2, 115.2 -27.8, "
+    "114.8 -27.8, 114.6 -27.6, 113.6 -27.6, 114.6 -34.4, 115 -34.6))"
+)
 # The 13 Arctic districts of Yakutia, Russia, outside the western,
 # central and south Yakutian energy districts of the East.
 YAKUTIA = (
@@ -297,6 +348,10 @@ YAKUTIA = (
 )
 # The cut of each region of a composite.
 CUTS = {
+    "AUS-DKIS": {"AU-NT": NORTHERN_TERRITORY},
+    "AUS-QLD1": {"AU-QLD": QUEENSLAND},
+    "AUS-SA1": {"AU-SA": SOUTH_AUSTRALIA},
+    "AUS-SWIS": {"AU-WA": WESTERN_AUSTRALIA},
     "CHL-SEN": {"CL-LL": LOS_LAGOS},
     "CHL-SIC": {"CL-AN": ANTOFAGASTA, "CL-LL": LOS_LAGOS},
     "COL-SIN": {
