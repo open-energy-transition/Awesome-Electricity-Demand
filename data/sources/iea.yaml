@@ -348,10 +348,12 @@ entities:
     resolution: 60
     note: From Elexon, whose terms also apply
   - country_code: GEO
+    subdivision_code: GSE
+    subdivision_name: Power system of GSE
     start: 2022
     end: present
     resolution: 60
-    note: From ENTSO-E, whose terms also apply; with gaps
+    note: From ENTSO-E, whose terms also apply; with gaps; with Abkhazia; without the Tskhinvali region, supplied from Russia
   - country_code: GRC
     subdivision_code: INTERCONNECTED
     subdivision_name: Interconnected System of Greece
@@ -760,10 +762,19 @@ entities:
     resolution: 60
     note: From Taipower, whose terms also apply
   - country_code: UKR
+    subdivision_code: IPS
+    subdivision_name: Integrated Power System of Ukraine
     start: 2015
     end: 2022
     resolution: 60
-    note: From Ukrenergo, whose terms also apply
+    note: From Ukrenergo, whose terms also apply; without Crimea and the occupied parts of Donetsk and Luhansk; until February 2022
+  - country_code: UKR
+    subdivision_code: IPS-2022
+    subdivision_name: Integrated Power System of Ukraine of 2022
+    start: 2022
+    end: 2022
+    resolution: 60
+    note: From Ukrenergo, whose terms also apply; from March to October 2022, without Crimea and the areas occupied since 2014 and 2022
   - country_code: URY
     start: 2020
     end: present

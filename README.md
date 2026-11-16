@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **409 time series** from **51 data sources** for **76 countries** and their subdivisions in:
+The list has **410 time series** from **51 data sources** for **76 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (16 countries)
@@ -134,7 +134,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### Europe
 
-<details open><summary>39 countries · 87 time series</summary>
+<details open><summary>39 countries · 88 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
@@ -168,8 +168,8 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 | **France** | Continental France | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ENTSO-E, whose terms also apply; without Corsica</sub> | 2014-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 |  | Continental France | [ENTSO-E](https://transparency.entsoe.eu/)<br><sub>Without Corsica</sub> | 2015-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
-| **Georgia** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2022-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
-|  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ENTSO-E, whose terms also apply; with gaps</sub> | 2022-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
+| **Georgia** | Power system of GSE | [ENTSO-E](https://transparency.entsoe.eu/)<br><sub>With Abkhazia; without the Tskhinvali region, supplied from Russia</sub> | 2022-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
+|  | Power system of GSE | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ENTSO-E, whose terms also apply; with gaps; with Abkhazia; without the Tskhinvali region, supplied from Russia</sub> | 2022-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 | **Germany** | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ENTSO-E, whose terms also apply</sub> | 2014-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 |  | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | 15 min | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 | **Greece** | Interconnected System of Greece | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ENTSO-E, whose terms also apply; without the non-interconnected islands, such as Crete, the Dodecanese, the North Aegean and some of the Cyclades; with Syros, Mykonos, Paros and Naxos from 2018</sub> | 2014-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
@@ -217,8 +217,9 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 | **Switzerland** | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2014-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 |  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ENTSO-E, whose terms also apply</sub> | 2014-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
-| **Ukraine** | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From Ukrenergo, whose terms also apply</sub> | 2015-2022 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
-|  | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2017-2022 | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+| **Ukraine** | Integrated Power System of Ukraine | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From Ukrenergo, whose terms also apply; without Crimea and the occupied parts of Donetsk and Luhansk; until February 2022</sub> | 2015-2022 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
+|  | Integrated Power System of Ukraine | [ENTSO-E](https://transparency.entsoe.eu/)<br><sub>Without Crimea and the occupied parts of Donetsk and Luhansk</sub> | 2017-2022 | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) |  |
+|  | Integrated Power System of Ukraine of 2022 | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From Ukrenergo, whose terms also apply; from March to October 2022, without Crimea and the areas occupied since 2014 and 2022</sub> | 2022 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 | **United Kingdom** | Great Britain | [NESO](https://www.neso.energy/data-portal/historic-demand-data) | 2001-present | 30 min | 🟢 [Any use with attribution](https://www.neso.energy/data-portal/neso-open-licence) | ✅ |
 |  | Great Britain | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-2021 | 30 min | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 |  | Great Britain | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From Elexon, whose terms also apply</sub> | 2015-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |

@@ -89,9 +89,12 @@ entities:
     end: 2025
     resolution: 30
   - country_code: GEO
+    subdivision_code: GSE
+    subdivision_name: Power system of GSE
     start: 2022
     end: present
     resolution: 60
+    note: With Abkhazia; without the Tskhinvali region, supplied from Russia
   - country_code: GRC
     subdivision_code: INTERCONNECTED
     subdivision_name: Interconnected System of Greece
@@ -182,9 +185,12 @@ entities:
     end: present
     resolution: 60
   - country_code: UKR
+    subdivision_code: IPS
+    subdivision_name: Integrated Power System of Ukraine
     start: 2017
     end: 2022
     resolution: 60
+    note: Without Crimea and the occupied parts of Donetsk and Luhansk
   - country_code: XKX
     start: 2021
     end: present

@@ -62,6 +62,9 @@ COUNTRY_CODES = {"KOS": "XKX", "SDS": "SSD", "PSX": "PSE"}
 # Countries whose totals in the list are those of one map unit of
 # Natural Earth: metropolitan France, without its overseas departments.
 COUNTRY_UNITS = {"FRA": "FXX"}
+# Standard subdivisions that the totals of the list count in a country
+# and Natural Earth puts in another one: Crimea and Sevastopol.
+COUNTRY_REGIONS = {"UKR": ("UA-40", "UA-43")}
 
 
 def natural_earth(name: str, resolution: str) -> Any:
@@ -325,8 +328,20 @@ def add_shares(features: list[dict[str, Any]]) -> None:
         with subdivisions gets the shares of its people and of its land
         inside the union of their outlines, as ``people`` and ``land``,
         rounded to 4 digits.
+
+    Notes
+    -----
+    The shares are of the area of the country that its totals in the
+    list count: its outline, with its standard subdivisions of
+    `COUNTRY_REGIONS`, and without those of other countries.
     """
     regions = natural_earth("admin_1_states_provinces", "10m")
+    moved = {
+        country: shapely.union_all(
+            regions.geometry[regions["iso_3166_2"].isin(codes)].to_numpy()
+        )
+        for country, codes in COUNTRY_REGIONS.items()
+    }
     natural_earth_codes = {v: k for k, v in COUNTRY_CODES.items()}
     shapes = {
         f["properties"]["label"]: shapely.geometry.shape(f["geometry"])
@@ -342,13 +357,18 @@ def add_shares(features: list[dict[str, Any]]) -> None:
             code = f["properties"]["label"]
             if code not in parts:
                 continue
-            whole = shapes[code]
             own = regions["adm0_a3"] == natural_earth_codes.get(code, code)
-            outside = left_out(
-                whole,
-                shapely.union_all(parts[code]),
-                shapely.union_all(regions.geometry[own].to_numpy()),
-            )
+            known = shapely.union_all(regions.geometry[own].to_numpy())
+            whole = shapes[code]
+            for country, area in moved.items():
+                if country == code:
+                    whole, known = whole.union(area), known.union(area)
+                else:
+                    whole, known = (
+                        whole.difference(area),
+                        known.difference(area),
+                    )
+            outside = left_out(whole, shapely.union_all(parts[code]), known)
             inside = whole.difference(outside)
             f["properties"]["people"] = round(
                 people(grid, inside) / people(grid, whole), 4

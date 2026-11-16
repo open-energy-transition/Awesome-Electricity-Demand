@@ -85,7 +85,6 @@ sources:
     - FIN
     - GBR-GB
     - GBR-NIR
-    - GEO
     - HRV
     - HUN
     - IRL
@@ -103,7 +102,6 @@ sources:
     - SVK
     - SVN
     - SWE
-    - UKR
     - XKX
   epias:
     - TUR
