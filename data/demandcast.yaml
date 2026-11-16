@@ -48,8 +48,6 @@ sources:
     - MEX-OCC
     - MEX-ORI
     - MEX-PEN
-  cnd:
-    - PAN
   egat:
     - THA
   eia:
@@ -119,8 +117,6 @@ sources:
     - KOR
   nbpower:
     - CAN-NB
-  nea:
-    - NPL
   neso:
     - GBR-GB
   niti:

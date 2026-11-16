@@ -367,10 +367,12 @@ entities:
     resolution: 60
     note: From EOR, whose terms also apply
   - country_code: HND
+    subdivision_code: SIN
+    subdivision_name: National Interconnected System
     start: 2024
     end: present
     resolution: 60
-    note: From EOR, whose terms also apply
+    note: From EOR, whose terms also apply; without Gracias a Dios and the Bay Islands
   - country_code: HRV
     start: 2014
     end: present
@@ -618,10 +620,12 @@ entities:
     resolution: 60
     note: From Transpower, whose terms also apply
   - country_code: PAN
+    subdivision_code: SIN
+    subdivision_name: National Interconnected System
     start: 2024
     end: present
     resolution: 60
-    note: From EOR, whose terms also apply
+    note: From EOR, whose terms also apply; without Darién, the Emberá-Wounaan and Guna Yala comarcas, the Pearl Islands, Taboga and Tortí
   - country_code: PER
     subdivision_code: SEIN
     subdivision_name: National Interconnected System

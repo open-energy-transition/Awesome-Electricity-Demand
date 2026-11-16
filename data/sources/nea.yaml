@@ -7,6 +7,9 @@ licence:
   category: open
 entities:
   - country_code: NPL
+    subdivision_code: INPS
+    subdivision_name: Integrated Nepal Power System
     start: 2017
     end: 2018
     resolution: 60
+    note: Without the districts that the grid did not reach, Humla, Mugu, Dolpa, Jumla, Kalikot, Bajura, Bajhang, Darchula, Manang, Solukhumbu and Rukum East
