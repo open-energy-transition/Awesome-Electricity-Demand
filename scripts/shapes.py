@@ -8,8 +8,9 @@ as in the totals of the list, and each subdivision of the
 list, under its country code and subdivision code, as DemandCast draws
 it: a standard subdivision from Natural Earth, and a non-standard one,
 such as the area of a grid, from the shapes of DemandCast, either a
-shapefile or a union of standard subdivisions of Natural Earth in its
-``composites.yaml``. The outlines are simplified and rounded to 0.01
+shapefile or a definition by the standard subdivisions of Natural Earth
+that make it, in the file of its country in its folder
+``subdivisions``. The outlines are simplified and rounded to 0.01
 degrees, enough for a map of the world.
 
 Each country with subdivisions also gets the shares of its people and
