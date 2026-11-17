@@ -582,10 +582,26 @@ entities:
     resolution: 60
     note: From TCN, whose terms also apply
   - country_code: NIC
+    subdivision_code: SIN-2009
+    subdivision_name: National Interconnected System of 2009
     start: 2009
+    end: 2010
+    resolution: 60
+    note: From CNDC, whose terms also apply; without Puerto Cabezas, Waspam, Corn Island, Desembocadura de Río Grande, El Ayote, San Juan de Nicaragua and Ometepe, and Rosita and Bonanza until 2009 or 2010
+  - country_code: NIC
+    subdivision_code: SIN-2011
+    subdivision_name: National Interconnected System of 2011
+    start: 2011
+    end: 2021
+    resolution: 60
+    note: From CNDC, whose terms also apply; without Puerto Cabezas, Waspam, Corn Island, Desembocadura de Río Grande and San Juan de Nicaragua, and El Ayote until June 2012 and Ometepe until 2016
+  - country_code: NIC
+    subdivision_code: SIN
+    subdivision_name: National Interconnected System
+    start: 2022
     end: present
     resolution: 60
-    note: From CNDC, whose terms also apply
+    note: From CNDC, whose terms also apply; without Corn Island, Desembocadura de Río Grande and San Juan de Nicaragua
   - country_code: NLD
     start: 2014
     end: present
