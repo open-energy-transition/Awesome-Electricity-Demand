@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **410 time series** from **51 data sources** for **76 countries** and their subdivisions in:
+The list has **409 time series** from **51 data sources** for **76 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (16 countries)
@@ -229,7 +229,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### North America
 
-<details open><summary>9 countries · 95 time series</summary>
+<details open><summary>9 countries · 94 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
@@ -257,7 +257,6 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | Ontario | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From IESO, whose terms also apply; without about ten remote First Nations off the grid, such as Fort Severn and Webequie</sub> | 2022-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 |  | Prince Edward Island | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data)<br><sub>Collected from the provincial or territorial utility, whose terms also apply</sub> | 2012-present | 15 min | 🟡 [Non-commercial use with attribution](https://www.canada.ca/en/transparency/terms.html) | ✅ |
 |  | Prince Edward Island | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From the CCEI, whose terms also apply</sub> | 2026-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
-|  | Saskatchewan | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From the CCEI, whose terms also apply; with gaps</sub> | 2026-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 |  | Yukon Integrated System | [CCEI](https://energy-information.canada.ca/en/resources/high-frequency-electricity-data)<br><sub>Collected from the provincial or territorial utility, whose terms also apply; without the off-grid communities of Watson Lake, Old Crow, Beaver Creek and Burwash Landing</sub> | 2024-present | 5 min | 🟡 [Non-commercial use with attribution](https://www.canada.ca/en/transparency/terms.html) |  |
 |  | Yukon Integrated System | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From Yukon Energy, whose terms also apply; with gaps; without the off-grid communities of Watson Lake, Old Crow, Beaver Creek and Burwash Landing</sub> | 2026-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 | **Costa Rica** | National | [GrupoICE](https://apps.grupoice.com/CenceWeb) | 2012-present | 15 min | 🟢 [CC BY-SA 4.0](https://web.archive.org/web/20250207024012/https://www.grupoice.com/wps/portal/ICE/Transparencia/datos-abiertos) | ✅ |
