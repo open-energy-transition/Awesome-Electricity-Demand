@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **409 time series** from **51 data sources** for **76 countries** and their subdivisions in:
+The list has **411 time series** from **51 data sources** for **76 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (16 countries)
@@ -229,7 +229,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### North America
 
-<details open><summary>9 countries · 94 time series</summary>
+<details open><summary>9 countries · 96 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
@@ -266,7 +266,9 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 | **Honduras** | National Interconnected System | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From EOR, whose terms also apply; without Gracias a Dios and the Bay Islands</sub> | 2024-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 | **Mexico** | <details><summary>9 subdivisions</summary>Baja California, Baja California Sur, Central, Noreste, Noroeste, Norte, Occidental, Oriental, Peninsular</details> | [CENACE](https://www.cenace.gob.mx/Paginas/SIM/Reportes/EstimacionDemandaReal.aspx) | 2016-present | hourly | 🔴 [Personal use](https://www.gob.mx/terminos) | ✅ |
 |  | <details><summary>9 subdivisions</summary>Baja California, Baja California Sur, Central, Noreste, Noroeste, Norte, Occidental, Oriental, Peninsular</details> | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From CENACE, whose terms also apply</sub> | 2020-2026 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
-| **Nicaragua** | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From CNDC, whose terms also apply</sub> | 2009-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
+| **Nicaragua** | National Interconnected System | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From CNDC, whose terms also apply; without Corn Island, Desembocadura de Río Grande and San Juan de Nicaragua</sub> | 2022-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
+|  | National Interconnected System of 2009 | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From CNDC, whose terms also apply; without Puerto Cabezas, Waspam, Corn Island, Desembocadura de Río Grande, El Ayote, San Juan de Nicaragua and Ometepe, and Rosita and Bonanza until 2009 or 2010</sub> | 2009-2010 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
+|  | National Interconnected System of 2011 | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From CNDC, whose terms also apply; without Puerto Cabezas, Waspam, Corn Island, Desembocadura de Río Grande and San Juan de Nicaragua, and El Ayote until June 2012 and Ometepe until 2016</sub> | 2011-2021 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 | **Panama** | National Interconnected System | [Mendeley](https://data.mendeley.com/datasets/tcmmj4t6f4/1)<br><sub>Without Darién, the Emberá-Wounaan and Guna Yala comarcas, the Pearl Islands, Taboga, Tortí and the islands of Bocas del Toro</sub> | 2016-2020 | hourly | 🟢 [CC BY 4.0](https://data.mendeley.com/datasets/tcmmj4t6f4/1) |  |
 |  | National Interconnected System | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From EOR, whose terms also apply; without Darién, the Emberá-Wounaan and Guna Yala comarcas, the Pearl Islands, Taboga and Tortí</sub> | 2024-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
 | **United States** | CAISO balancing area | [CAISO](https://www.caiso.com/library/historical-ems-hourly-load)<br><sub>Without the balancing areas of BANC, LADWP, IID and TID, and the north of California</sub> | 2019-present | hourly | 🟢 [Any use with attribution](https://www.caiso.com/privacy-terms-of-use) |  |
