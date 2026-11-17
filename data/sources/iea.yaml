@@ -259,13 +259,6 @@ entities:
     resolution: 60
     note: From Hydro-Québec, whose terms also apply; without the off-grid networks, such as those of Nunavik, the Basse-Côte-Nord, Anticosti and the Îles-de-la-Madeleine
   - country_code: CAN
-    subdivision_code: SK
-    subdivision_name: Saskatchewan
-    start: 2026
-    end: present
-    resolution: 60
-    note: From the CCEI, whose terms also apply; with gaps
-  - country_code: CAN
     subdivision_code: YT-INTEGRATED
     subdivision_name: Yukon Integrated System
     start: 2026
