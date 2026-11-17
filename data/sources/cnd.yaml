@@ -7,6 +7,9 @@ licence:
   category: open
 entities:
   - country_code: PAN
+    subdivision_code: SIN
+    subdivision_name: National Interconnected System
     start: 2016
     end: 2020
     resolution: 60
+    note: Without Darién, the Emberá-Wounaan and Guna Yala comarcas, the Pearl Islands, Taboga, Tortí and the islands of Bocas del Toro
