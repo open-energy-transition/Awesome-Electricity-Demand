@@ -7,9 +7,9 @@ licence:
   category: restricted
 entities:
   - country_code: CAN
-    subdivision_code: BC
-    subdivision_name: British Columbia
+    subdivision_code: BC-INTEGRATED
+    subdivision_name: Integrated system of British Columbia
     start: 2001
     end: present
     resolution: 60
-    note: Without the non-integrated areas, such as Haida Gwaii, and the area of Fort Nelson, which is in the data of Alberta
+    note: Without the area of Fort Nelson, which is in the data of Alberta, and the non-integrated areas, such as Haida Gwaii, the Central Coast and Atlin
