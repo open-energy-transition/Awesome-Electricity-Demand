@@ -3,12 +3,14 @@ sources:
     - URY
   aemo_nem:
     - AUS-NSW
+    - AUS-QLD1
+    - AUS-SA1
     - AUS-TAS
     - AUS-VIC
-  aeso:
-    - CAN-AB
-  bchydro:
-    - CAN-BC
+  aemo_wem:
+    - AUS-SWIS
+  caiso:
+    - USA-CAISO
   cammesa:
     - ARG-A
     - ARG-BA
@@ -33,11 +35,15 @@ sources:
     - ARG-Y
     - ARG-Z
   ccei:
-    - CAN-AB
     - CAN-NB
+    - CAN-NL-ISLAND
     - CAN-NS
     - CAN-ON
     - CAN-PE
+    - CAN-QC-INTEGRATED
+    - CAN-YT-INTEGRATED
+  cen:
+    - CHL-SEN
   cenace:
     - MEX-BCA
     - MEX-BCS
@@ -48,6 +54,11 @@ sources:
     - MEX-OCC
     - MEX-ORI
     - MEX-PEN
+  cnd:
+    - PAN-SIN
+  coes:
+    - PER-SEIN
+    - PER-SEIN-2000
   egat:
     - THA
   eia:
@@ -79,10 +90,14 @@ sources:
     - CZE
     - DEU
     - DNK
+    - ESP-PENINSULAR
     - EST
     - FIN
+    - FRA-CONTINENTAL
     - GBR-GB
     - GBR-NIR
+    - GEO-GSE
+    - GRC-INTERCONNECTED
     - HRV
     - HUN
     - IRL
@@ -94,12 +109,15 @@ sources:
     - MKD
     - MNE
     - NLD
+    - NOR-MAINLAND
     - POL
+    - PRT-MAINLAND
     - ROU
     - SRB
     - SVK
     - SVN
     - SWE
+    - UKR-IPS
     - XKX
   epias:
     - TUR
@@ -107,8 +125,151 @@ sources:
     - ZAF
   grupoice:
     - CRI
+  hydroquebec:
+    - CAN-QC-INTEGRATED
+  iea:
+    - ALB
+    - ARG
+    - AUS-DKIS
+    - AUS-NSW
+    - AUS-QLD1
+    - AUS-SA1
+    - AUS-SWIS
+    - AUS-TAS
+    - AUS-VIC
+    - AUT
+    - BEL
+    - BGD
+    - BGR
+    - BIH
+    - BOL-C
+    - BOL-H
+    - BOL-L
+    - BOL-O
+    - BOL-P
+    - BOL-SIN-B
+    - BOL-SIN-S
+    - BOL-T
+    - BRA-N
+    - BRA-N-2000
+    - BRA-N-2013
+    - BRA-N-2015
+    - BRA-NE
+    - BRA-S
+    - BRA-SE
+    - BRA-SE-2009
+    - CAN-NB
+    - CAN-NL-ISLAND
+    - CAN-NS
+    - CAN-ON
+    - CAN-PE
+    - CAN-QC-INTEGRATED
+    - CAN-YT-INTEGRATED
+    - CHE
+    - CHL-SEN
+    - COL-SIN
+    - CRI
+    - CYP
+    - CZE
+    - DEU
+    - DNK
+    - ESP-PENINSULAR
+    - EST
+    - FIN
+    - FRA-CONTINENTAL
+    - GBR-GB
+    - GEO-GSE
+    - GRC-INTERCONNECTED
+    - GTM
+    - HND-SIN
+    - HRV
+    - HUN
+    - IND
+    - IRL
+    - IRN
+    - ITA
+    - JPN-Chūbu
+    - JPN-Chūgoku
+    - JPN-Hokkaidō
+    - JPN-Hokuriku
+    - JPN-Kansai
+    - JPN-Kantō
+    - JPN-Kyūshū
+    - JPN-Okinawa
+    - JPN-Shikoku
+    - JPN-Tōhoku
+    - KOR
+    - LKA
+    - LTU
+    - LUX
+    - LVA
+    - MDA
+    - MEX-BCA
+    - MEX-BCS
+    - MEX-CEN
+    - MEX-NES
+    - MEX-NOR
+    - MEX-NTE
+    - MEX-OCC
+    - MEX-ORI
+    - MEX-PEN
+    - MKD
+    - MNE
+    - MYS-PENINSULAR
+    - NGA
+    - NIC-SIN
+    - NIC-SIN-2009
+    - NIC-SIN-2011
+    - NLD
+    - NOR-MAINLAND
+    - NZL-NI
+    - NZL-SI
+    - PAN-SIN
+    - PER-SEIN
+    - PHL-LUZON
+    - PHL-MINDANAO
+    - PHL-VISAYAS
+    - POL
+    - PRT-MAINLAND
+    - ROU
+    - RUS-CENTER
+    - RUS-EAST
+    - RUS-NORTHWEST
+    - RUS-SIBERIA
+    - RUS-SOUTH
+    - RUS-URALS
+    - RUS-VOLGA
+    - SGP
+    - SLV
+    - SRB
+    - SVK
+    - SVN
+    - SWE
+    - THA
+    - TUR
+    - TWN
+    - UKR-IPS
+    - UKR-IPS-2022
+    - URY
+    - USA-CAL
+    - USA-CAR
+    - USA-CENT
+    - USA-FLA
+    - USA-MIDA
+    - USA-MIDW
+    - USA-NE
+    - USA-NW
+    - USA-NY
+    - USA-SE
+    - USA-SW
+    - USA-TEN
+    - USA-TEX
+    - XKX
+    - ZAF
   ieso:
     - CAN-ON
+  ismo:
+    - PAK-NTDC
   isone:
     - USA-NE
   kansaitd:
@@ -117,8 +278,18 @@ sources:
     - KOR
   nbpower:
     - CAN-NB
+  nea:
+    - NPL-INPS
   neso:
     - GBR-GB
+  ngcp:
+    - PHL-BOHOL
+    - PHL-CEBU
+    - PHL-LEYTE-SAMAR
+    - PHL-LUZON
+    - PHL-MINDANAO
+    - PHL-NEGROS
+    - PHL-PANAY
   niti:
     - IND-AP
     - IND-AR
@@ -152,6 +323,8 @@ sources:
     - IND-TR
     - IND-UP
     - IND-UT
+  ntdc:
+    - PAK-NTDC
   occto:
     - JPN-Chūbu
     - JPN-Chūgoku
@@ -167,13 +340,28 @@ sources:
     - NGA
   ons:
     - BRA-N
+    - BRA-N-2000
+    - BRA-N-2013
+    - BRA-N-2015
     - BRA-NE
     - BRA-S
     - BRA-SE
+    - BRA-SE-2000
+    - BRA-SE-2009
   pgcb:
     - BGD
   pucsl:
     - LKA
+  so_ups:
+    - RUS-CENTER
+    - RUS-EAST
+    - RUS-NORTHWEST
+    - RUS-SIBERIA
+    - RUS-SOUTH
+    - RUS-URALS
+    - RUS-VOLGA
+  sonelgaz:
+    - DZA-RIN
   taipower:
     - TWN
   tepco:
@@ -212,3 +400,5 @@ sources:
     - CHN-XZ
     - CHN-YN
     - CHN-ZJ
+  xm:
+    - COL-SIN
