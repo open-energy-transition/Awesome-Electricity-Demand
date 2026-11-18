@@ -3,10 +3,10 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **432 time series** from **54 data sources** for **77 countries** and their subdivisions in:
+The list has **434 time series** from **55 data sources** for **78 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
-- [Asia](#asia) (17 countries)
+- [Asia](#asia) (18 countries)
 - [Europe](#europe) (39 countries)
 - [North America](#north-america) (9 countries)
 - [South America](#south-america) (7 countries)
@@ -75,7 +75,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### Asia
 
-<details open><summary>17 countries · 140 time series</summary>
+<details open><summary>18 countries · 142 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
@@ -101,6 +101,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | Okinawa | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From Okiden, whose terms also apply</sub> | 2016-2026 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) | ✅ |
 |  | Shikoku | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From Yonden, whose terms also apply</sub> | 2016-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) | ✅ |
 |  | Tōhoku | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From Tohoku EPCO, whose terms also apply</sub> | 2016-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) | ✅ |
+| **Kazakhstan** | <details><summary>2 subdivisions</summary>North-South zone, West zone</details> | [KOREM](https://korem.kz/en/news/planovye-i-fakticheskie-znacheniya-generacii-i-potrebleniya-subektov-bre)<br><sub>Sum of the metered consumption of the participants of the balancing market</sub> | 2023-present | hourly | 🔴 [No terms found](https://korem.kz/en/news/planovye-i-fakticheskie-znacheniya-generacii-i-potrebleniya-subektov-bre) |  |
 | **Malaysia** | Peninsular Malaysia | [GSO](https://www.gso.org.my/SystemData/SystemDemand.aspx) | 2016-present | 10 min | 🔴 [Use with authorisation](https://www.gso.org.my/TermsConditions.aspx) |  |
 |  | Peninsular Malaysia | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From GSO, whose terms also apply</sub> | 2017-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) | ✅ |
 | **Nepal** | Integrated Nepal Power System | [Open Data Nepal](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority)<br><sub>Without the districts that the grid did not reach, Humla, Mugu, Dolpa, Jumla, Kalikot, Bajura, Bajhang, Darchula, Manang, Solukhumbu and Rukum East</sub> | 2017-2018 | hourly | 🟢 [CC BY 4.0](https://opendatanepal.com/dataset/electricity-load-profile-of-nepal-in-2073-nepal-electricity-authority) | ✅ |
