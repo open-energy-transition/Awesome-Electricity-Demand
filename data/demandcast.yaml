@@ -9,6 +9,10 @@ sources:
     - AUS-VIC
   aemo_wem:
     - AUS-SWIS
+  aeso:
+    - CAN-AB-AIES
+  bchydro:
+    - CAN-BC-INTEGRATED
   caiso:
     - USA-CAISO
   cammesa:
@@ -35,6 +39,7 @@ sources:
     - ARG-Y
     - ARG-Z
   ccei:
+    - CAN-AB-AIES
     - CAN-NB
     - CAN-NL-ISLAND
     - CAN-NS
@@ -158,6 +163,8 @@ sources:
     - BRA-S
     - BRA-SE
     - BRA-SE-2009
+    - CAN-AB-AIES
+    - CAN-BC-INTEGRATED
     - CAN-NB
     - CAN-NL-ISLAND
     - CAN-NS
@@ -184,7 +191,6 @@ sources:
     - HND-SIN
     - HRV
     - HUN
-    - IND
     - IRL
     - IRN
     - ITA

@@ -9,6 +9,6 @@ entities:
   - country_code: CAN
     subdivision_code: NB
     subdivision_name: New Brunswick
-    start: 2018
+    start: 2019
     end: present
     resolution: 60
