@@ -1,0 +1,139 @@
+name: REE
+url: https://www.ree.es/en/datos/apidata
+access: public
+licence:
+  name: Non-commercial use with attribution, no derivatives
+  url: https://www.ree.es/en/legal-notice-privacy-policy
+  category: restricted
+entities:
+  - country_code: ESP
+    subdivision_code: PENINSULAR
+    subdivision_name: Peninsular Spain
+    start: 2011
+    end: present
+    resolution: 60
+    note: Without the Balearic and Canary Islands, Ceuta and Melilla
+  - country_code: ESP
+    subdivision_code: IB
+    subdivision_name: Balearic Islands
+    start: 2011
+    end: present
+    resolution: 60
+  - country_code: ESP
+    subdivision_code: CN
+    subdivision_name: Canary Islands
+    start: 2011
+    end: present
+    resolution: 60
+  - country_code: ESP
+    subdivision_code: CE
+    subdivision_name: Ceuta
+    start: 2011
+    end: present
+    resolution: 60
+  - country_code: ESP
+    subdivision_code: ML
+    subdivision_name: Melilla
+    start: 2011
+    end: present
+    resolution: 60
+  - country_code: ESP
+    subdivision_code: PENINSULAR
+    subdivision_name: Peninsular Spain
+    start: 2012
+    end: present
+    resolution: 5
+    url: https://demanda.ree.es/visiona/home
+    note: Without the Balearic and Canary Islands, Ceuta and Melilla
+  - country_code: ESP
+    subdivision_code: MALLORCA
+    subdivision_name: Mallorca
+    start: 2013
+    end: present
+    resolution: 5
+    url: https://demanda.ree.es/visiona/home
+  - country_code: ESP
+    subdivision_code: MENORCA
+    subdivision_name: Menorca
+    start: 2013
+    end: present
+    resolution: 5
+    url: https://demanda.ree.es/visiona/home
+  - country_code: ESP
+    subdivision_code: IBIZA
+    subdivision_name: Ibiza
+    start: 2016
+    end: present
+    resolution: 5
+    url: https://demanda.ree.es/visiona/home
+  - country_code: ESP
+    subdivision_code: FORMENTERA
+    subdivision_name: Formentera
+    start: 2016
+    end: present
+    resolution: 5
+    url: https://demanda.ree.es/visiona/home
+  - country_code: ESP
+    subdivision_code: GRAN-CANARIA
+    subdivision_name: Gran Canaria
+    start: 2012
+    end: present
+    resolution: 5
+    url: https://demanda.ree.es/visiona/home
+  - country_code: ESP
+    subdivision_code: TENERIFE
+    subdivision_name: Tenerife
+    start: 2012
+    end: present
+    resolution: 5
+    url: https://demanda.ree.es/visiona/home
+  - country_code: ESP
+    subdivision_code: LANZAROTE
+    subdivision_name: Lanzarote
+    start: 2012
+    end: present
+    resolution: 5
+    url: https://demanda.ree.es/visiona/home
+  - country_code: ESP
+    subdivision_code: FUERTEVENTURA
+    subdivision_name: Fuerteventura
+    start: 2012
+    end: present
+    resolution: 5
+    url: https://demanda.ree.es/visiona/home
+  - country_code: ESP
+    subdivision_code: LA-PALMA
+    subdivision_name: La Palma
+    start: 2012
+    end: present
+    resolution: 5
+    url: https://demanda.ree.es/visiona/home
+  - country_code: ESP
+    subdivision_code: LA-GOMERA
+    subdivision_name: La Gomera
+    start: 2012
+    end: present
+    resolution: 5
+    url: https://demanda.ree.es/visiona/home
+  - country_code: ESP
+    subdivision_code: EL-HIERRO
+    subdivision_name: El Hierro
+    start: 2012
+    end: present
+    resolution: 5
+    url: https://demanda.ree.es/visiona/home
+  - country_code: ESP
+    subdivision_code: CE
+    subdivision_name: Ceuta
+    start: 2019
+    end: present
+    resolution: 5
+    url: https://demanda.ree.es/visiona/home
+  - country_code: ESP
+    subdivision_code: ML
+    subdivision_name: Melilla
+    start: 2019
+    end: present
+    resolution: 5
+    url: https://demanda.ree.es/visiona/home
+    note: With a gap from June 2021 to January 2022
