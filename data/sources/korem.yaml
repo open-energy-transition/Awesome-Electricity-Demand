@@ -1,0 +1,24 @@
+name: KOREM
+url: https://korem.kz/en/news/planovye-i-fakticheskie-znacheniya-generacii-i-potrebleniya-subektov-bre
+access: public
+licence:
+  name: No terms found
+  url: https://korem.kz/en/news/planovye-i-fakticheskie-znacheniya-generacii-i-potrebleniya-subektov-bre
+  category: restricted
+entities:
+  - country_code: KAZ
+    subdivision_code: NORTH-SOUTH
+    subdivision_name: North-South zone
+    start: 2023
+    end: present
+    resolution: 60
+    note: Sum of the metered consumption of the participants of the
+      balancing market
+  - country_code: KAZ
+    subdivision_code: WEST
+    subdivision_name: West zone
+    start: 2023
+    end: present
+    resolution: 60
+    note: Sum of the metered consumption of the participants of the
+      balancing market
