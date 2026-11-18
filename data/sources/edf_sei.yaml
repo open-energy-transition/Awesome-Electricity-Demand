@@ -1,0 +1,14 @@
+name: EDF SEI
+url: https://opendata-corse.edf.fr/datasets/production-d-electricite-par-filiere-et-couts-de-production-au-pas-horaire-corse
+access: public
+licence:
+  name: Any use with attribution
+  url: https://opendata-corse.edf.fr/datasets/production-d-electricite-par-filiere-et-couts-de-production-au-pas-horaire-corse
+  category: open
+entities:
+  - country_code: FRA
+    subdivision_code: 20R
+    subdivision_name: Corsica
+    start: 2019
+    end: present
+    resolution: 60

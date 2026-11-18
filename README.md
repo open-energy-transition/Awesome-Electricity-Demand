@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **430 time series** from **52 data sources** for **76 countries** and their subdivisions in:
+The list has **431 time series** from **53 data sources** for **76 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (16 countries)
@@ -134,7 +134,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### Europe
 
-<details open><summary>39 countries · 107 time series</summary>
+<details open><summary>39 countries · 108 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
@@ -168,6 +168,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 | **France** | Continental France | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ENTSO-E, whose terms also apply; without Corsica</sub> | 2014-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) | ✅ |
 |  | Continental France | [ENTSO-E](https://transparency.entsoe.eu/)<br><sub>Without Corsica</sub> | 2015-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
+|  | Corsica | [EDF SEI](https://opendata-corse.edf.fr/datasets/production-d-electricite-par-filiere-et-couts-de-production-au-pas-horaire-corse) | 2019-present | hourly | 🟢 [Any use with attribution](https://opendata-corse.edf.fr/datasets/production-d-electricite-par-filiere-et-couts-de-production-au-pas-horaire-corse) |  |
 | **Georgia** | Power system of GSE | [ENTSO-E](https://transparency.entsoe.eu/)<br><sub>With Abkhazia; without the Tskhinvali region, supplied from Russia</sub> | 2022-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 |  | Power system of GSE | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ENTSO-E, whose terms also apply; with gaps; with Abkhazia; without the Tskhinvali region, supplied from Russia</sub> | 2022-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) | ✅ |
 | **Germany** | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ENTSO-E, whose terms also apply</sub> | 2014-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) | ✅ |
