@@ -1,1 +1,8 @@
-differences: []
+differences:
+  - source: emi
+    check: years
+    entity: NZL
+    reason: DemandCast keeps the national series of EMI only until 2020-12-22, before the two islands of the IEA start, as a country whose subdivisions have data that covers all of it has its own data only for the dates without theirs (https://github.com/open-energy-transition/demandcast/pull/405).
+  - source: iea
+    check: licence
+    reason: DemandCast gives one licence to each data source, and the terms of the system operators whose data the IEA republishes also apply, some of which do not allow redistribution, such as those of GSO, SO UES and NGCP, so DemandCast does not allow redistributing the data of the IEA (https://github.com/open-energy-transition/demandcast/pull/402).
