@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **411 time series** from **51 data sources** for **76 countries** and their subdivisions in:
+The list has **430 time series** from **52 data sources** for **76 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (16 countries)
@@ -134,7 +134,7 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### Europe
 
-<details open><summary>39 countries · 88 time series</summary>
+<details open><summary>39 countries · 107 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
@@ -211,7 +211,15 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 |  | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 | **Slovenia** | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ENTSO-E, whose terms also apply</sub> | 2014-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) | ✅ |
 |  | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
-| **Spain** | Peninsular Spain | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ENTSO-E, whose terms also apply; without the Balearic and Canary Islands, Ceuta and Melilla</sub> | 2014-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) | ✅ |
+| **Spain** | <details><summary>4 subdivisions</summary>Balearic Islands, Canary Islands, Ceuta, Melilla</details> | [REE](https://www.ree.es/en/datos/apidata) | 2011-present | hourly | 🔴 [Non-commercial use with attribution, no derivatives](https://www.ree.es/en/legal-notice-privacy-policy) |  |
+|  | Ceuta | [REE](https://demanda.ree.es/visiona/home) | 2019-present | 5 min | 🔴 [Non-commercial use with attribution, no derivatives](https://www.ree.es/en/legal-notice-privacy-policy) |  |
+|  | <details><summary>7 subdivisions</summary>El Hierro, Fuerteventura, Gran Canaria, La Gomera, La Palma, Lanzarote, Tenerife</details> | [REE](https://demanda.ree.es/visiona/home) | 2012-present | 5 min | 🔴 [Non-commercial use with attribution, no derivatives](https://www.ree.es/en/legal-notice-privacy-policy) |  |
+|  | <details><summary>2 subdivisions</summary>Formentera, Ibiza</details> | [REE](https://demanda.ree.es/visiona/home) | 2016-present | 5 min | 🔴 [Non-commercial use with attribution, no derivatives](https://www.ree.es/en/legal-notice-privacy-policy) |  |
+|  | <details><summary>2 subdivisions</summary>Mallorca, Menorca</details> | [REE](https://demanda.ree.es/visiona/home) | 2013-present | 5 min | 🔴 [Non-commercial use with attribution, no derivatives](https://www.ree.es/en/legal-notice-privacy-policy) |  |
+|  | Melilla | [REE](https://demanda.ree.es/visiona/home)<br><sub>With a gap from June 2021 to January 2022</sub> | 2019-present | 5 min | 🔴 [Non-commercial use with attribution, no derivatives](https://www.ree.es/en/legal-notice-privacy-policy) |  |
+|  | Peninsular Spain | [REE](https://www.ree.es/en/datos/apidata)<br><sub>Without the Balearic and Canary Islands, Ceuta and Melilla</sub> | 2011-present | hourly | 🔴 [Non-commercial use with attribution, no derivatives](https://www.ree.es/en/legal-notice-privacy-policy) |  |
+|  | Peninsular Spain | [REE](https://demanda.ree.es/visiona/home)<br><sub>Without the Balearic and Canary Islands, Ceuta and Melilla</sub> | 2012-present | 5 min | 🔴 [Non-commercial use with attribution, no derivatives](https://www.ree.es/en/legal-notice-privacy-policy) |  |
+|  | Peninsular Spain | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ENTSO-E, whose terms also apply; without the Balearic and Canary Islands, Ceuta and Melilla</sub> | 2014-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) | ✅ |
 |  | Peninsular Spain | [ENTSO-E](https://transparency.entsoe.eu/)<br><sub>Without the Balearic and Canary Islands, Ceuta and Melilla</sub> | 2015-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
 | **Sweden** | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From ENTSO-E, whose terms also apply</sub> | 2014-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) | ✅ |
 |  | National | [ENTSO-E](https://transparency.entsoe.eu/) | 2015-present | hourly | 🔴 [Use with authorisation](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions) | ✅ |
