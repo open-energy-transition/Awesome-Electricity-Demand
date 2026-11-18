@@ -1,0 +1,16 @@
+name: Zenodo
+url: https://zenodo.org/records/14918964
+access: public
+licence:
+  name: CC BY 4.0
+  url: https://zenodo.org/records/14918964
+  category: open
+entities:
+  - country_code: IDN
+    subdivision_code: JAMALI
+    subdivision_name: Java-Madura-Bali system
+    start: 2022
+    end: 2022
+    resolution: 60
+    note: Without small islands with their own systems, such as Bawean,
+      Karimunjawa, the Kangean Islands and Nusa Penida
