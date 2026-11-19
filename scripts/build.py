@@ -478,6 +478,7 @@ def records(
 def build_site(
     countries: list[Country],
     shapes: dict[str, list[Polygon]],
+    pieces: list[tuple[tuple[str, ...], list[Polygon]]],
     inside: dict[str, tuple[float, float]],
     site_dir: Path,
 ) -> None:
@@ -490,6 +491,10 @@ def build_site(
     shapes : dict
         The outlines of the countries and subdivisions, by label, for
         the interactive map and the map of the figures.
+    pieces : list of tuple
+        The pieces of the countries whose subdivisions lie one inside
+        another, each with the labels of the subdivisions that cover it,
+        for both maps.
     inside : dict
         The shares of the people and of the land of each country with
         subdivisions inside their outlines, by country code, for the
@@ -501,9 +506,10 @@ def build_site(
     -----
     The site is the content of ``site/``, with ``sources.csv`` and
     ``sources.json``, which list every time series, ``map.geojson``,
-    the outlines that the interactive map draws with their years of
-    data, and the figures. The map shows the data sources of a country
-    or subdivision from ``sources.json``.
+    the outlines that the interactive map draws and the places that it
+    colours by their years of data, and the figures. The map shows the
+    data sources of the countries and subdivisions of a place from
+    ``sources.json``.
     """
     import figures  # noqa: PLC0415 - Matplotlib is only needed here.
 
@@ -538,11 +544,12 @@ def build_site(
     )
     (site_dir / "map.geojson").write_text(
         json.dumps(
-            figures.map_features(countries, shapes), separators=(",", ":")
+            figures.map_features(countries, shapes, pieces),
+            separators=(",", ":"),
         ),
         encoding="utf-8",
     )
-    figures.plot_all(countries, shapes, inside, site_dir / "figures")
+    figures.plot_all(countries, shapes, pieces, inside, site_dir / "figures")
     logger.info("Site built in %s", site_dir)
 
 
@@ -574,13 +581,14 @@ def main(argv: list[str] | None = None) -> int:
     try:
         countries = registry.load()
         shapes = registry.load_shapes()
+        pieces = registry.load_pieces()
         inside = registry.load_shares()
     except RegistryError as e:
         logger.error("The data files have errors:\n%s", e)  # noqa: TRY400
         return 1
 
     if args.command == "site":
-        build_site(countries, shapes, inside, args.directory)
+        build_site(countries, shapes, pieces, inside, args.directory)
         return 0
 
     current = README.read_text(encoding="utf-8")

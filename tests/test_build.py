@@ -144,13 +144,15 @@ def test_build_site(data_dir: Path, tmp_path: Path) -> None:
     build.build_site(
         registry.load(data_dir),
         registry.load_shapes(data_dir),
+        registry.load_pieces(data_dir),
         registry.load_shares(data_dir),
         site,
     )
     for name in ("index.html", "map.js", "map.css"):
         assert (site / name).exists()
     outlines = json.loads((site / "map.geojson").read_text(encoding="utf-8"))
-    assert len(outlines["features"]) == 5
+    kinds = [f["properties"]["kind"] for f in outlines["features"]]
+    assert kinds == ["outline"] * 5 + ["place"] * 3
     assert (site / "figures" / "map_dark.png").exists()
     with (site / "sources.csv").open(encoding="utf-8") as f:
         rows = list(csv.DictReader(f))

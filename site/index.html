@@ -1,8 +1,9 @@
 <!doctype html>
 <!--
   Interactive map of the electricity demand data of the list. map.js
-  draws the outlines of map.geojson, coloured by their years of data, and
-  lists the data sources of a country or subdivision from sources.json.
+  colours the places of map.geojson by the years of data that cover them,
+  draws the outlines of the countries and subdivisions over them, and lists
+  the data sources of those under a click from sources.json.
   scripts/build.py generates both files next to this page.
 -->
 <html lang="en">
@@ -19,15 +20,15 @@
   <body>
     <main
       id="map"
-      aria-label="Map of the countries and subdivisions with electricity demand data. Select one to list its data sources."
+      aria-label="Map of the countries and subdivisions with electricity demand data. Select a place to list the data sources of every country and subdivision that covers it."
     ></main>
     <aside id="legend">
       <h1>Awesome Electricity Demand</h1>
       <p>
-        Hourly and sub-hourly electricity demand data. Select a country or
-        subdivision to list its data sources.
+        Hourly and sub-hourly electricity demand data. Select a place to list
+        the data sources of every country and subdivision that covers it.
       </p>
-      <h2>Years of data</h2>
+      <h2>Years of data covering each place</h2>
       <ul>
         <li><span class="swatch" data-class="0"></span>1–4</li>
         <li><span class="swatch" data-class="1"></span>5–9</li>

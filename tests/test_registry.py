@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING, Any
 import pytest
 
 import registry
-from conftest import entity, source, write_shapes, write_source
+from conftest import add_pieces, entity, source, write_shapes, write_source
 
 if TYPE_CHECKING:
     from pathlib import Path
@@ -317,10 +317,31 @@ def test_load_shares(data_dir: Path) -> None:
             "is a subdivision, with no shares",
         ),
         ('"label": "JPN", "people": 2, "land": 0.5', "less than or equal"),
+        ("", "a shape has either a label or covers"),
+        (
+            '"label": "JPN", "covers": ["JPN-Kantō"]',
+            "a shape has either a label or covers",
+        ),
+        ('"covers": []', "at least 1 item"),
+        ('"covers": ["JPN"]', "a piece covers only subdivisions"),
+        (
+            '"covers": ["JPN-Kantō", "DZA-X"]',
+            "a piece covers subdivisions of one country",
+        ),
+        (
+            '"covers": ["JPN-Kantō"], "people": 0.5, "land": 0.5',
+            "a piece has no shares",
+        ),
     ],
 )
 def test_invalid_shares(data_dir: Path, properties: str, message: str) -> None:
-    """Reject shares of a subdivision, alone, or out of range."""
+    """Reject invalid shares, and pieces that are not pieces.
+
+    Notes
+    -----
+    Shares belong to a country, both of them, from 0 to 1; a piece has
+    no label and no shares, and covers subdivisions of one country.
+    """
     ring = [[0, 0], [1, 0], [1, 1], [0, 0]]
     (data_dir / "shapes.geojson").write_text(
         '{"type": "FeatureCollection", "features": [{"type": "Feature", '
@@ -339,6 +360,24 @@ def test_load_shapes(data_dir: Path) -> None:
     assert len(shapes["DZA"]) == 1
     assert [len(ring) for ring in shapes["DZA"][0]] == [5, 5]
     assert shapes["EGY"][0][0][1] == (19.0, 0.0)
+
+
+def test_load_pieces(data_dir: Path) -> None:
+    """Load the pieces apart from the outlines, with what they cover."""
+    add_pieces(data_dir, [["JPN-Kantō"], ["JPN-Kantō", "JPN-Old"]])
+    pieces = registry.load_pieces(data_dir)
+    assert [covers for covers, _ in pieces] == [
+        ("JPN-Kantō",),
+        ("JPN-Kantō", "JPN-Old"),
+    ]
+    assert pieces[1][1][0][0][0] == (1.0, 20.0)
+    assert list(registry.load_shapes(data_dir)) == [
+        "DZA",
+        "EGY",
+        "AGO",
+        "JPN",
+        "JPN-Kantō",
+    ]
 
 
 def test_load_multipolygon_shapes(data_dir: Path) -> None:
