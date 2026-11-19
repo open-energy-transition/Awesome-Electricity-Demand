@@ -1,15 +1,16 @@
 """Draw the figures of the coverage of the list.
 
 The figures are computed from the countries and time series loaded by
-`registry`, and from the outlines of its shapes file and the shares
-of the countries inside them: a map of the countries and subdivisions
-with data, coloured by their years of data; the years of data of each
-continent by time resolution; and the share of the countries of each
-continent with data, and of the population and land area that their
-data covers. Each figure is drawn twice, as ``<name>_light.png`` and
-``<name>_dark.png``, for the light and dark themes of the reader. The
-outlines of the interactive map of the site come with the class of
-their years of data, as in the map of the figures.
+`registry`, and from the outlines and pieces of its shapes file and the
+shares of the countries inside them: a map of the countries and
+subdivisions with data, each place coloured by the years of data of
+every entity that covers it; the years of data of each continent by
+time resolution; and the share of the countries of each continent with
+data, and of the population and land area that their data covers. Each
+figure is drawn twice, as ``<name>_light.png`` and ``<name>_dark.png``,
+for the light and dark themes of the reader. The interactive map of the
+site gets the same places, with the class of their years of data, and
+the outlines of the entities.
 """
 
 from __future__ import annotations
@@ -29,14 +30,19 @@ from matplotlib.transforms import blended_transform_factory
 from registry import CONTINENTS, Country, Polygon
 
 if TYPE_CHECKING:
+    from collections.abc import Sequence
     from pathlib import Path
 
     from matplotlib.axes import Axes
     from matplotlib.figure import Figure
     from numpy.typing import NDArray
 
+Piece = tuple[tuple[str, ...], list[Polygon]]
+
 WIDTH = 7.2
 DPI = 200
+# Radius of the sphere of the areas, in km.
+EARTH_RADIUS = 6371.0088
 YEAR_CLASSES = (5, 10, 20)
 # En dashes, as in typeset ranges of years.
 YEAR_LABELS = ("1–4 years", "5–9", "10–19", "20+")  # noqa: RUF001
@@ -255,6 +261,30 @@ def years_by_resolution(countries: list[Country]) -> dict[int, list[int]]:
     return years
 
 
+def years_of_entities(countries: list[Country]) -> dict[str, set[int]]:
+    """Return the years of data of each country and subdivision.
+
+    Parameters
+    ----------
+    countries : list of Country
+        Every country of the list.
+
+    Returns
+    -------
+    dict
+        The years with data from any source, by label of the entity:
+        the country code for national data, and the country and
+        subdivision codes for a subdivision.
+    """
+    covered: dict[str, set[int]] = {}
+    for country in countries:
+        for series in country.series:
+            covered.setdefault(series.entity.label, set()).update(
+                range(series.entity.start, series.end_year + 1)
+            )
+    return covered
+
+
 def years_by_entity(countries: list[Country]) -> dict[str, int]:
     """Count the years of data of each country and subdivision.
 
@@ -267,16 +297,95 @@ def years_by_entity(countries: list[Country]) -> dict[str, int]:
     -------
     dict
         The number of years with data from any source, by label of the
-        entity: the country code for national data, and the country
-        and subdivision codes for a subdivision.
+        entity, as in `years_of_entities`.
     """
-    covered: dict[str, set[int]] = {}
-    for country in countries:
-        for series in country.series:
-            covered.setdefault(series.entity.label, set()).update(
-                range(series.entity.start, series.end_year + 1)
+    return {
+        label: len(years)
+        for label, years in years_of_entities(countries).items()
+    }
+
+
+def places(
+    countries: list[Country],
+    shapes: dict[str, list[Polygon]],
+    pieces: Sequence[Piece],
+) -> list[tuple[list[Polygon], int]]:
+    """Return the places of the maps, each with its years of data.
+
+    Parameters
+    ----------
+    countries : list of Country
+        Every country of the list.
+    shapes : dict
+        The outlines of the countries and subdivisions, by label.
+    pieces : sequence of tuple
+        The pieces of the countries whose subdivisions lie one inside
+        another, each with the labels of the subdivisions that cover it.
+
+    Returns
+    -------
+    list of tuple
+        The polygons of each place with data, and its number of years
+        with data: the countries with national data first, then the
+        places of their subdivisions, which a map draws over them.
+
+    Notes
+    -----
+    A place counts the years of every entity that covers it, so that no
+    data hides another: national data covers its whole country, and a
+    subdivision the places inside its outline. A country with pieces is
+    coloured piece by piece; the subdivisions of another country do not
+    overlap, so that each is coloured by its outline. The outlines that
+    are empty after their simplification are left out.
+    """
+    years = years_of_entities(countries)
+    split = {covers[0].partition("-")[0] for covers, _ in pieces}
+    parts = [
+        ((label,), polygons)
+        for label, polygons in shapes.items()
+        if "-" in label and label.partition("-")[0] not in split
+    ]
+    found = []
+    for label, polygons in shapes.items():
+        if "-" not in label and label in years:
+            found.append((polygons, len(years[label])))
+    for covers, polygons in [*parts, *pieces]:
+        covered = set(years.get(covers[0].partition("-")[0], ()))
+        for label in covers:
+            covered |= years.get(label, set())
+        if covered:
+            found.append((polygons, len(covered)))
+    return [
+        (kept, n)
+        for polygons, n in found
+        if (kept := [polygon for polygon in polygons if polygon])
+    ]
+
+
+def area(polygons: list[Polygon]) -> float:
+    """Return the approximate area of a shape, to sort the shapes.
+
+    Parameters
+    ----------
+    polygons : list of Polygon
+        The polygons of the shape, in degrees, with their exterior
+        rings anticlockwise and their holes clockwise.
+
+    Returns
+    -------
+    float
+        Its area in km², on the sinusoidal projection of a sphere.
+    """
+    total = 0.0
+    for polygon in polygons:
+        for ring in polygon:
+            xy = np.radians(np.asarray(ring, dtype=float))
+            x = xy[:, 0] * np.cos(xy[:, 1])
+            y = xy[:, 1]
+            total += 0.5 * float(
+                np.sum(x * np.roll(y, -1) - np.roll(x, -1) * y)
             )
-    return {label: len(years) for label, years in covered.items()}
+    return abs(total) * EARTH_RADIUS**2
 
 
 def year_class(years: int) -> int:
@@ -296,9 +405,11 @@ def year_class(years: int) -> int:
 
 
 def map_features(
-    countries: list[Country], shapes: dict[str, list[Polygon]]
+    countries: list[Country],
+    shapes: dict[str, list[Polygon]],
+    pieces: Sequence[Piece],
 ) -> dict[str, Any]:
-    """Return the outlines of the interactive map, with their years.
+    """Return the outlines and places of the interactive map.
 
     Parameters
     ----------
@@ -306,44 +417,56 @@ def map_features(
         Every country of the list.
     shapes : dict
         The outlines of the countries and subdivisions, by label.
+    pieces : sequence of tuple
+        The pieces of the countries whose subdivisions lie one inside
+        another, as `places` takes them.
 
     Returns
     -------
     dict
-        A GeoJSON feature collection with a feature for each outline,
-        whose properties are the code of its country, the code of its
-        subdivision or None, its years of data and the index of their
-        class in `YEAR_LABELS`, or -1 without data.
+        A GeoJSON feature collection. A feature of ``kind`` "outline"
+        for each country and subdivision, with the code of its country,
+        the code of its subdivision or None, and its approximate
+        ``area`` in km²; then a feature of ``kind`` "place" for each of
+        the `places` with data, with its years of data and the index of
+        their class in `YEAR_LABELS`.
 
     Notes
     -----
-    The countries come first and the subdivisions after them, so that
-    the map draws each subdivision over its country, as `plot_map` does.
+    The map fills the places, draws the outlines as borders, and finds
+    the entities under a click among the outlines, the smallest first.
     The outlines that are empty, as those of the smallest territories
     after their simplification, are left out, since the map cannot draw
     them.
     """
-    years = years_by_entity(countries)
     features = []
     for label in sorted(shapes, key=lambda label: ("-" in label, label)):
         country, _, subdivision = label.partition("-")
         polygons = [polygon for polygon in shapes[label] if polygon]
         if not polygons:
             continue
-        n = years.get(label, 0)
         features.append(
             {
                 "type": "Feature",
                 "properties": {
+                    "kind": "outline",
                     "country": country,
                     "subdivision": subdivision or None,
+                    "area": round(area(polygons)),
+                },
+                "geometry": {"type": "MultiPolygon", "coordinates": polygons},
+            }
+        )
+    for polygons, n in places(countries, shapes, pieces):
+        features.append(
+            {
+                "type": "Feature",
+                "properties": {
+                    "kind": "place",
                     "years": n,
-                    "class": year_class(n) if n else -1,
+                    "class": year_class(n),
                 },
-                "geometry": {
-                    "type": "MultiPolygon",
-                    "coordinates": polygons,
-                },
+                "geometry": {"type": "MultiPolygon", "coordinates": polygons},
             }
         )
     return {"type": "FeatureCollection", "features": features}
@@ -540,6 +663,7 @@ def _save(fig: Figure, path: Path) -> None:
 def plot_map(
     countries: list[Country],
     shapes: dict[str, list[Polygon]],
+    pieces: Sequence[Piece],
     theme: Theme,
     path: Path,
 ) -> None:
@@ -551,6 +675,9 @@ def plot_map(
         Every country of the list.
     shapes : dict
         The outlines of the countries and subdivisions, by label.
+    pieces : sequence of tuple
+        The pieces of the countries whose subdivisions lie one inside
+        another, as `places` takes them.
     theme : Theme
         Colours of the figure.
     path : Path
@@ -558,9 +685,11 @@ def plot_map(
 
     Notes
     -----
-    Each country with national data, and each subdivision on top of its
-    country, is coloured by its own years of data, in the classes of
-    `YEAR_LABELS`. An entity without an outline is left out.
+    Each place is coloured by the years of data of every entity that
+    covers it, in the classes of `YEAR_LABELS`, as `places` finds them,
+    and every outline is drawn over the places, so that a subdivision
+    inside another, or the earlier area of a grid, keeps its border. An
+    entity without an outline is left out.
     """
     years = years_by_entity(countries)
     fig = _figure(theme, 4.3)
@@ -581,25 +710,35 @@ def plot_map(
         edgecolor=theme.base,
         linewidth=0.8,
     )
-    layers: tuple[list[tuple[PlotPath, str]], ...] = ([], [], [])
-    for label, polygons in shapes.items():
-        is_country = "-" not in label
-        if label in years:
-            colour = theme.classes[year_class(years[label])]
-            layers[1 if is_country else 2].append(
-                (outline_path(polygons), colour)
-            )
-        if is_country:
-            layers[0].append((outline_path(polygons), theme.land))
-    for layer in layers:
-        ax.add_collection(
-            PathCollection(
-                [p for p, _ in layer],
-                facecolors=[c for _, c in layer],
-                edgecolors=theme.surface,
-                linewidths=0.3,
-            )
+    outlines = {
+        label: outline_path(polygons)
+        for label, polygons in shapes.items()
+        if any(polygons)
+    }
+    ax.add_collection(
+        PathCollection(
+            [p for label, p in outlines.items() if "-" not in label],
+            facecolors=theme.land,
+            edgecolors="none",
         )
+    )
+    found = places(countries, shapes, pieces)
+    ax.add_collection(
+        PathCollection(
+            [outline_path(polygons) for polygons, _ in found],
+            facecolors=[theme.classes[year_class(n)] for _, n in found],
+            edgecolors="face",
+            linewidths=0.2,
+        )
+    )
+    ax.add_collection(
+        PathCollection(
+            list(outlines.values()),
+            facecolors="none",
+            edgecolors=theme.surface,
+            linewidths=0.3,
+        )
+    )
     ax.set_xlim(globe[:, 0].min() - 0.02, globe[:, 0].max() + 0.02)
     ax.set_ylim(-1.38, 1.38)
     ax.set_aspect("equal")
@@ -624,8 +763,8 @@ def plot_map(
         fig,
         theme,
         "Where the list has demand data",
-        f"{covered} countries and {subdivisions} subdivisions, each "
-        "coloured by its own years of data",
+        f"{covered} countries and {subdivisions} subdivisions; each "
+        "place coloured by the years of data that cover it",
     )
     _save(fig, path)
 
@@ -809,6 +948,7 @@ def plot_coverage(
 def plot_all(
     countries: list[Country],
     shapes: dict[str, list[Polygon]],
+    pieces: Sequence[Piece],
     inside: dict[str, tuple[float, float]],
     directory: Path,
 ) -> None:
@@ -820,6 +960,9 @@ def plot_all(
         Every country of the list.
     shapes : dict
         The outlines of the countries and subdivisions, by label.
+    pieces : sequence of tuple
+        The pieces of the countries whose subdivisions lie one inside
+        another, as `places` takes them.
     inside : dict
         The shares of the people and of the land of each country with
         subdivisions inside their outlines, by country code.
@@ -828,7 +971,13 @@ def plot_all(
     """
     directory.mkdir(parents=True, exist_ok=True)
     for theme in THEMES:
-        plot_map(countries, shapes, theme, directory / f"map_{theme.name}.png")
+        plot_map(
+            countries,
+            shapes,
+            pieces,
+            theme,
+            directory / f"map_{theme.name}.png",
+        )
         plot_years(
             countries,
             theme,

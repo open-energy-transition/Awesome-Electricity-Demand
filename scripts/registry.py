@@ -12,8 +12,9 @@ the entities whose series DemandCast retrieves, which the list marks.
 ``shapes.geojson`` holds the outlines of the countries and of the
 subdivisions of the list, for the maps of the site, and for each
 country with subdivisions, the shares of its people and land inside
-their outlines. The README, the
-map and the figures are generated from them.
+their outlines; a country whose subdivisions lie one inside another
+also has its pieces, each with the subdivisions whose outlines include
+it. The README, the map and the figures are generated from them.
 """
 
 from __future__ import annotations
@@ -427,25 +428,31 @@ class MultiPolygonShape(StrictModel):
 
 
 class ShapeProperties(StrictModel):
-    """Properties of a shape: the label of its entity, and its shares.
+    """Properties of a shape: an outline, or a piece of a country.
 
     Attributes
     ----------
-    label : str
-        Label of the entity.
+    label : str or None
+        Label of the entity, for the outline of a country or
+        subdivision.
+    covers : list of str or None
+        For a piece of a country whose subdivisions lie one inside
+        another, the labels of the subdivisions whose outlines include
+        it.
     people, land : float or None
-        For a country with subdivisions, the shares of its people and
-        of its land inside the outlines of its subdivisions, from 0
-        to 1.
+        For the outline of a country with subdivisions, the shares of
+        its people and of its land inside the outlines of its
+        subdivisions, from 0 to 1.
     """
 
-    label: EntityLabel
+    label: EntityLabel | None = None
+    covers: Annotated[list[EntityLabel], Field(min_length=1)] | None = None
     people: Share | None = None
     land: Share | None = None
 
     @model_validator(mode="after")
-    def _check_shares(self) -> ShapeProperties:
-        """Check that only a country has shares, and both of them.
+    def _check_kind(self) -> ShapeProperties:
+        """Check that a shape is an outline or a piece, with its shares.
 
         Returns
         -------
@@ -455,11 +462,23 @@ class ShapeProperties(StrictModel):
         Raises
         ------
         ValueError
-            If a subdivision has shares, or a country only one.
+            If a shape has both a label and the subdivisions it covers,
+            or neither; if a piece covers a country, or subdivisions of
+            several countries; if a subdivision or a piece has shares,
+            or a country only one.
         """
+        if (self.label is None) == (self.covers is None):
+            raise ValueError("a shape has either a label or covers")
         if (self.people is None) != (self.land is None):
             raise ValueError("people and land go together")
-        if self.people is not None and "-" in self.label:
+        if self.covers is not None:
+            if any("-" not in label for label in self.covers):
+                raise ValueError("a piece covers only subdivisions")
+            if len({label.partition("-")[0] for label in self.covers}) > 1:
+                raise ValueError("a piece covers subdivisions of one country")
+            if self.people is not None:
+                raise ValueError("a piece has no shares")
+        elif self.people is not None and "-" in str(self.label):
             raise ValueError(f"{self.label} is a subdivision, with no shares")
         return self
 
@@ -761,7 +780,11 @@ def _read_shapes(data_dir: Path) -> list[ShapeFeature]:
         raise RegistryError(f"{SHAPES_FILE}: {e.strerror}") from e
     except ValidationError as e:
         raise RegistryError("\n".join(_describe(SHAPES_FILE, e))) from e
-    labels = Counter(f.properties.label for f in collection.features)
+    labels = Counter(
+        f.properties.label
+        for f in collection.features
+        if f.properties.label is not None
+    )
     twice = sorted(label for label, n in labels.items() if n > 1)
     if twice:
         raise RegistryError(f"{SHAPES_FILE}: duplicate shape {twice[0]}")
@@ -791,8 +814,28 @@ def load_shares(data_dir: Path = DATA_DIR) -> dict[str, tuple[float, float]]:
     return {
         f.properties.label: (f.properties.people, f.properties.land)
         for f in _read_shapes(data_dir)
-        if f.properties.people is not None and f.properties.land is not None
+        if f.properties.label is not None
+        and f.properties.people is not None
+        and f.properties.land is not None
     }
+
+
+def _polygons(geometry: PolygonShape | MultiPolygonShape) -> list[Polygon]:
+    """Return the polygons of a GeoJSON shape.
+
+    Parameters
+    ----------
+    geometry : PolygonShape or MultiPolygonShape
+        The shape.
+
+    Returns
+    -------
+    list of Polygon
+        Its polygons, each a list of rings.
+    """
+    if isinstance(geometry, PolygonShape):
+        return [geometry.coordinates]
+    return geometry.coordinates
 
 
 def load_shapes(data_dir: Path = DATA_DIR) -> dict[str, list[Polygon]]:
@@ -816,16 +859,43 @@ def load_shapes(data_dir: Path = DATA_DIR) -> dict[str, list[Polygon]]:
     shapes file that is missing or invalid, or has a label twice,
     raises `RegistryError`.
     """
-    shapes: dict[str, list[Polygon]] = {}
-    for feature in _read_shapes(data_dir):
-        label = feature.properties.label
-        geometry = feature.geometry
-        shapes[label] = (
-            [geometry.coordinates]
-            if isinstance(geometry, PolygonShape)
-            else geometry.coordinates
-        )
-    return shapes
+    return {
+        feature.properties.label: _polygons(feature.geometry)
+        for feature in _read_shapes(data_dir)
+        if feature.properties.label is not None
+    }
+
+
+def load_pieces(
+    data_dir: Path = DATA_DIR,
+) -> list[tuple[tuple[str, ...], list[Polygon]]]:
+    """Load the pieces of the countries with nested subdivisions.
+
+    Parameters
+    ----------
+    data_dir : Path, default DATA_DIR
+        Folder with the shapes file.
+
+    Returns
+    -------
+    list of tuple
+        For each piece, the labels of the subdivisions whose outlines
+        include it, and its polygons, in degrees of longitude and
+        latitude.
+
+    Notes
+    -----
+    ``scripts/shapes.py`` splits the subdivisions of a country where
+    one lies inside another, as the periods of a grid whose area grew,
+    so that the maps can colour each place by all the data that covers
+    it. A shapes file that is missing or invalid, or has a label
+    twice, raises `RegistryError`.
+    """
+    return [
+        (tuple(feature.properties.covers), _polygons(feature.geometry))
+        for feature in _read_shapes(data_dir)
+        if feature.properties.covers is not None
+    ]
 
 
 def load(data_dir: Path = DATA_DIR) -> list[Country]:

@@ -22,11 +22,11 @@ Python code for downloading, extracting, and processing the available data can b
 
 ### Data Overview
 
-The map shows each country and subdivision of the list, coloured by its years of data from all sources.
+The map shows each country and subdivision of the list, each place coloured by the years of data of all the sources that cover it.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://open-energy-transition.github.io/Awesome-Electricity-Demand/figures/map_dark.png">
-  <img src="https://open-energy-transition.github.io/Awesome-Electricity-Demand/figures/map_light.png" alt="World map of the countries and subdivisions with demand data, coloured by their years of data" width="100%">
+  <img src="https://open-energy-transition.github.io/Awesome-Electricity-Demand/figures/map_light.png" alt="World map of the countries and subdivisions with demand data, each place coloured by the years of data that cover it" width="100%">
 </picture>
 
 The years of data of each continent, by time resolution:

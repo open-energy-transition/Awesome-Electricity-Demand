@@ -9,7 +9,7 @@ import pytest
 
 import figures
 import registry
-from conftest import entity, source, write_source
+from conftest import add_pieces, entity, source, write_source
 
 if TYPE_CHECKING:
     from pathlib import Path
@@ -137,9 +137,11 @@ def test_outline_path_keeps_the_holes(data_dir: Path) -> None:
 def test_plot_all(data_dir: Path, tmp_path: Path) -> None:
     """Draw each figure in a light and a dark version."""
     directory = tmp_path / "figures"
+    add_pieces(data_dir, [["JPN-Kantō"]])
     figures.plot_all(
         registry.load(data_dir),
         registry.load_shapes(data_dir),
+        registry.load_pieces(data_dir),
         registry.load_shares(data_dir),
         directory,
     )
@@ -151,23 +153,81 @@ def test_plot_all(data_dir: Path, tmp_path: Path) -> None:
 
 
 def test_map_features(data_dir: Path) -> None:
-    """Give each outline its codes, years and class, countries first."""
+    """Give the outlines their codes and areas, then the places."""
     shapes = registry.load_shapes(data_dir)
     shapes["EGY"] = []
-    collection = figures.map_features(registry.load(data_dir), shapes)
+    collection = figures.map_features(registry.load(data_dir), shapes, [])
     properties = [f["properties"] for f in collection["features"]]
-    assert [(p["country"], p["subdivision"]) for p in properties] == [
-        ("AGO", None),
-        ("DZA", None),
-        ("JPN", None),
-        ("JPN", "Kantō"),
+    assert [
+        (p["kind"], p.get("country"), p.get("subdivision"))
+        for p in properties[:4]
+    ] == [
+        ("outline", "AGO", None),
+        ("outline", "DZA", None),
+        ("outline", "JPN", None),
+        ("outline", "JPN", "Kantō"),
     ]
-    assert [(p["years"], p["class"]) for p in properties[:3]] == [
-        (0, -1),
-        (10, 2),
-        (3, 0),
+    assert properties[1]["area"] == pytest.approx(
+        figures.area(shapes["DZA"]), abs=1
+    )
+    kanto = registry.current_year() - 2015 + 1
+    assert [(p["kind"], p["years"]) for p in properties[4:]] == [
+        ("place", 10),
+        ("place", 3),
+        ("place", kanto),
     ]
+    assert properties[5]["class"] == 0
     assert collection["features"][1]["geometry"]["type"] == "MultiPolygon"
+
+
+def test_places_add_the_years_of_the_country(data_dir: Path) -> None:
+    """Colour a subdivision by its years and those of its country."""
+    found = figures.places(
+        registry.load(data_dir), registry.load_shapes(data_dir), []
+    )
+    assert [n for _, n in found] == [
+        10,
+        3,
+        registry.current_year() - 2015 + 1,
+    ]
+
+
+def test_places_split_nested_subdivisions(data_dir: Path) -> None:
+    """Colour each piece by the years of every subdivision over it."""
+    write_source(
+        data_dir,
+        "old",
+        source(
+            [
+                entity(
+                    country_code="JPN",
+                    subdivision_code="Old",
+                    subdivision_name="Old",
+                    start=2000,
+                    end=2004,
+                )
+            ],
+            name="Old",
+        ),
+    )
+    add_pieces(data_dir, [["JPN-Kantō"], ["JPN-Kantō", "JPN-Old"]])
+    found = figures.places(
+        registry.load(data_dir),
+        registry.load_shapes(data_dir),
+        registry.load_pieces(data_dir),
+    )
+    kanto = registry.current_year() - 2015 + 1
+    assert [n for _, n in found] == [10, 3, kanto, kanto + 5]
+    assert found[3][0][0][0][0] == (1.0, 20.0)
+
+
+def test_area_of_a_square_with_a_hole(data_dir: Path) -> None:
+    """Measure a square of 9 degrees on the equator, less its hole."""
+    shapes = registry.load_shapes(data_dir)
+    degree = np.radians(1) * figures.EARTH_RADIUS
+    assert figures.area(shapes["DZA"]) == pytest.approx(
+        77 * degree**2, rel=0.01
+    )
 
 
 def test_map_leaves_out_entities_without_a_shape(
@@ -177,5 +237,7 @@ def test_map_leaves_out_entities_without_a_shape(
     shapes = registry.load_shapes(data_dir)
     del shapes["JPN-Kantō"]
     path = tmp_path / "map.png"
-    figures.plot_map(registry.load(data_dir), shapes, figures.THEMES[0], path)
+    figures.plot_map(
+        registry.load(data_dir), shapes, [], figures.THEMES[0], path
+    )
     assert path.stat().st_size > 0

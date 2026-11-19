@@ -128,6 +128,31 @@ def write_shapes(
     )
 
 
+def add_pieces(data_dir: Path, pieces: list[list[str]]) -> None:
+    """Add pieces to the shapes file, each a square of 1 degree.
+
+    Parameters
+    ----------
+    data_dir : Path
+        Data folder, with a shapes file.
+    pieces : list of list of str
+        The labels of the subdivisions that cover each piece.
+    """
+    path = data_dir / "shapes.geojson"
+    data = json.loads(path.read_text(encoding="utf-8"))
+    for i, covers in enumerate(pieces):
+        x = float(i)
+        ring = [[x, 20.0], [x + 1, 20.0], [x + 1, 21.0], [x, 21.0], [x, 20.0]]
+        data["features"].append(
+            {
+                "type": "Feature",
+                "properties": {"covers": covers},
+                "geometry": {"type": "Polygon", "coordinates": [ring]},
+            }
+        )
+    path.write_text(json.dumps(data), encoding="utf-8")
+
+
 @pytest.fixture
 def data_dir(tmp_path: Path) -> Path:
     """Write a data folder with four countries, two of them with data.

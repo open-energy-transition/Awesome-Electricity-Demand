@@ -16,7 +16,12 @@ Each country with subdivisions also gets the shares of its people and
 of its land inside the union of their outlines, for the figure of the
 coverage: the people from the density of population of SEDAC (GPW
 v4.11) in 2020 at 30 arc-seconds, which DemandCast downloads into its
-data folder, and the land from geodesic areas.
+data folder, and the land from geodesic areas. A country whose
+subdivisions lie one inside another, as the periods of a grid whose
+area grew over the years, or islands inside their archipelago, also
+gets its pieces: the places covered by the same subdivisions, each with
+their labels, so that the maps colour each place by all the data that
+covers it.
 
 The script runs in the environment of DemandCast, whose code finds the
 shapes, from the folder ``demandcast`` of its repository::
@@ -57,6 +62,10 @@ EARTH_RADIUS = 6371.0088
 # Half the width, in degrees, of the strips of a country outside its
 # subdivisions that count as inside them.
 SLIVER = 0.04
+# Share of the smaller of two subdivisions that has to be inside the
+# other for them to be nested, as a grid in the area it grew into, and
+# not neighbours whose borders were simplified apart.
+NESTED = 0.5
 # Codes of Natural Earth that differ from those of the list.
 COUNTRY_CODES = {"KOS": "XKX", "SDS": "SSD", "PSX": "PSE"}
 # Countries whose totals in the list are those of one map unit of
@@ -376,6 +385,128 @@ def add_shares(features: list[dict[str, Any]]) -> None:
             f["properties"]["land"] = round(land(inside) / land(whole), 4)
 
 
+def nested(shapes: list[Any]) -> bool:
+    """Tell whether one of some outlines lies mostly inside another.
+
+    Parameters
+    ----------
+    shapes : list of shapely.Geometry
+        The outlines of the subdivisions of a country.
+
+    Returns
+    -------
+    bool
+        True if the overlap of two of them is more than `NESTED` of the
+        area of the smaller one, as for a grid whose area grew over the
+        years, or an island inside its archipelago, and not for the
+        slivers along the borders of neighbours drawn apart.
+    """
+    for i, a in enumerate(shapes):
+        for b in shapes[i + 1 :]:
+            if not a.intersects(b):
+                continue
+            overlap = shapely.intersection(a, b, grid_size=GRID).area
+            if overlap > NESTED * min(a.area, b.area):
+                return True
+    return False
+
+
+def split(shapes: dict[str, Any]) -> dict[tuple[str, ...], Any]:
+    """Split overlapping outlines into the places of each set of them.
+
+    Parameters
+    ----------
+    shapes : dict
+        The outlines, by label.
+
+    Returns
+    -------
+    dict
+        The polygons of each set of labels whose outlines, and only
+        theirs, include the same places, by that set of labels.
+
+    Notes
+    -----
+    The outlines are cut on their grid, so that the pieces meet along
+    their edges; the lines and points that a cut can leave are dropped.
+    """
+    parts: list[tuple[Any, tuple[str, ...]]] = []
+    covered = shapely.MultiPolygon()
+    for label, shape in shapes.items():
+        shapely.prepare(shape)
+        pieces: list[tuple[Any, tuple[str, ...]]] = [
+            (shapely.difference(shape, covered, grid_size=GRID), (label,))
+        ]
+        covered = shapely.MultiPolygon(
+            polygons(shapely.union(covered, shape, grid_size=GRID))
+        )
+        for geometry, covers in parts:
+            if not shape.intersects(geometry):
+                pieces.append((geometry, covers))
+                continue
+            pieces.append(
+                (
+                    shapely.intersection(geometry, shape, grid_size=GRID),
+                    (*covers, label),
+                )
+            )
+            pieces.append(
+                (shapely.difference(geometry, shape, grid_size=GRID), covers)
+            )
+        parts = [
+            (shapely.MultiPolygon(polygons(g)), c)
+            for g, c in pieces
+            if polygons(g)
+        ]
+    merged: dict[tuple[str, ...], list[Any]] = {}
+    for geometry, covers in parts:
+        merged.setdefault(covers, []).extend(polygons(geometry))
+    return {
+        covers: shapely.MultiPolygon(kept)
+        for covers, polys in merged.items()
+        if (kept := polygons(shapely.union_all(polys, grid_size=GRID)))
+    }
+
+
+def piece_features(features: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Split the subdivisions of a country that lie one inside another.
+
+    Parameters
+    ----------
+    features : list of dict
+        The features of the countries and subdivisions.
+
+    Returns
+    -------
+    list of dict
+        For each country whose subdivisions are `nested`, a feature for
+        each set of them whose outlines include the same places, with
+        their labels as ``covers``. The subdivisions of the other
+        countries do not overlap, so that their outlines are already
+        their pieces.
+    """
+    by_country: dict[str, dict[str, Any]] = {}
+    for f in features:
+        label = f["properties"]["label"]
+        country, _, subdivision = label.partition("-")
+        if subdivision:
+            by_country.setdefault(country, {})[label] = shapely.geometry.shape(
+                f["geometry"]
+            )
+    return [
+        {
+            "type": "Feature",
+            "properties": {"covers": list(covers)},
+            "geometry": shapely.geometry.mapping(
+                shapely.orient_polygons(geometry)
+            ),
+        }
+        for shapes in by_country.values()
+        if nested(list(shapes.values()))
+        for covers, geometry in split(shapes).items()
+    ]
+
+
 def main() -> int:
     """Write the shapes file and list the subdivisions without a shape.
 
@@ -387,6 +518,7 @@ def main() -> int:
     subdivisions, missing = subdivision_features()
     features = country_features() + subdivisions
     add_shares(features)
+    features += piece_features(features)
     lines = [json.dumps(f, separators=(",", ":")) for f in features]
     SHAPES_FILE.write_text(
         '{"type":"FeatureCollection","features":[\n'
