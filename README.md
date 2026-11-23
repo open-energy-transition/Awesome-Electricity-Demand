@@ -3,7 +3,7 @@
 A curated collection of links to hourly or sub-hourly electricity demand data, designed to improve the accessibility and discoverability of datasets for energy system modelers and planners, while enhancing global open data coverage to support a sustainable energy transition.
 
 <!-- summary:start: generated from data/ by scripts/build.py, do not edit -->
-The list has **434 time series** from **55 data sources** for **78 countries** and their subdivisions in:
+The list has **433 time series** from **55 data sources** for **78 countries** and their subdivisions in:
 
 - [Africa](#africa) (3 countries)
 - [Asia](#asia) (18 countries)
@@ -75,16 +75,15 @@ The list below is generated from the files in [`data/`](data/): do not edit it d
 
 ### Asia
 
-<details open><summary>18 countries · 142 time series</summary>
+<details open><summary>18 countries · 141 time series</summary>
 
 | Country | Area | Source | Years | Resolution | Terms | DemandCast |
 | --- | --- | --- | --- | --- | --- | :-: |
 | **Bangladesh** | National | [PGCB](https://erp.powergrid.gov.bd/w/report/eyJpdiI6IldsU2ZQTGkvbkRnQU9FMjZ5UHhmeGc9PSIsInZhbHVlIjoiQzhONVl5ZGxRY3E3T3ZVNCtLZGt1Zz09IiwibWFjIjoiN2JiNTI5MzNhOWIxZDVjY2NkMmFlZWU4ZDU1N2I4OWZlYjNlZWM1ZGU4NzRiNWU4ZjQ3ZDc1ODRlMTk3MDc0YyIsInRhZyI6IiJ9/show_report) | 2014-present | 30 min | 🔴 [Personal use](https://web.archive.org/web/20260713163535/https://pgcb.gov.bd/pages/static-pages/%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%B0-%E0%A6%B6%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%AC%E0%A6%B2%E0%A7%80-qe03sl-697704dab42ad83461b56617) | ✅ |
 |  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From PGCB, whose terms also apply</sub> | 2015-2026 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) | ✅ |
 | **China** | <details><summary>31 subdivisions</summary>Anhui, Beijing, Chongqing, Fujian, Gansu, Guangdong, Guangxi, Guizhou, Hainan, Hebei, Heilongjiang, Henan, Hubei, Hunan, Inner Mongolia, Jiangsu, Jiangxi, Jilin, Liaoning, Ningxia, Qinghai, Shaanxi, Shandong, Shanghai, Shanxi, Sichuan, Tianjin, Tibet, Xinjiang, Yunnan, Zhejiang</details> | [Zenodo](https://zenodo.org/records/8322210)<br><sub>Modelled from the highest and lowest load of each day</sub> | 2018 | hourly | 🟢 [CC BY 4.0](https://zenodo.org/records/8322210) | ✅ |
-| **India** | National | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2024 | 30 min | 🔴 [Use with authorisation](https://www.niti.gov.in/website-policy) |  |
-|  | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From MERIT India, whose terms also apply</sub> | 2018-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
-|  | <details><summary>32 subdivisions</summary>Andhra Pradesh, Arunachal Pradesh, Assam, Bihar, Chandigarh, Chhattisgarh, Dadra and Nagar Haveli and Daman and Diu, Delhi, Goa, Gujarat, Haryana, Himachal Pradesh, Jammu and Kashmir and Ladakh, Jharkhand and West Bengal, Karnataka, Kerala, Madhya Pradesh, Maharashtra, Manipur, Meghalaya, Mizoram, Nagaland, Odisha, Puducherry, Punjab, Rajasthan, Sikkim, Tamil Nadu, Telangana, Tripura, Uttar Pradesh, Uttarakhand</details> | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve) | 2017-2026 | hourly | 🔴 [Use with authorisation](https://www.niti.gov.in/website-policy) | ✅ |
+| **India** | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From MERIT India, whose terms also apply</sub> | 2018-present | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) |  |
+|  | <details><summary>32 subdivisions</summary>Andhra Pradesh, Arunachal Pradesh, Assam, Bihar, Chandigarh, Chhattisgarh, Dadra and Nagar Haveli and Daman and Diu, Delhi, Goa, Gujarat, Haryana, Himachal Pradesh, Jammu and Kashmir and Ladakh, Jharkhand and West Bengal, Karnataka, Kerala, Madhya Pradesh, Maharashtra, Manipur, Meghalaya, Mizoram, Nagaland, Odisha, Puducherry, Punjab, Rajasthan, Sikkim, Tamil Nadu, Telangana, Tripura, Uttar Pradesh, Uttarakhand</details> | [NITI](https://iced.niti.gov.in/energy/electricity/distribution/national-level-consumption/load-curve)<br><sub>NITI also publishes their total for India and for each of its five regions</sub> | 2017-2026 | hourly | 🔴 [Use with authorisation](https://www.niti.gov.in/website-policy) 🔒 | ✅ |
 | **Indonesia** | Java-Madura-Bali system | [Zenodo](https://zenodo.org/records/14918964)<br><sub>Without small islands with their own systems, such as Bawean, Karimunjawa, the Kangean Islands and Nusa Penida</sub> | 2022 | hourly | 🟢 [CC BY 4.0](https://zenodo.org/records/14918964) |  |
 | **Iran** | National | [IEA](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker)<br><sub>From IREMA, whose terms also apply</sub> | 2014-2026 | hourly | 🟢 [CC BY 4.0](https://www.iea.org/data-and-statistics/data-tools/real-time-electricity-tracker) | ✅ |
 | **Japan** | <details><summary>10 subdivisions</summary>Chūbu, Chūgoku, Hokkaidō, Hokuriku, Kansai, Kantō, Kyūshū, Okinawa, Shikoku, Tōhoku</details> | [OCCTO](https://occtonet3.occto.or.jp/public/dfw/RP11/OCCTO/SD/LOGIN_login) | 2016-present | hourly | 🟢 [Any use with attribution](https://www.occto.or.jp/chosakuken.html) | ✅ |
