@@ -5,7 +5,9 @@ each source, and the pages of its entities. A link is ok if it answers
 with a status below 400, broken if it answers with another client
 error, unreachable if its server fails, times out or cannot be
 reached, and blocked if it refuses automated requests (401, 403 or
-429), which says nothing about the page. A link is unverifiable if it
+429), which says nothing about the page, or if it cannot be reached and
+the data files note that it is reachable only from some place, as a
+website that answers only in its country. A link is unverifiable if it
 can only be checked in a browser: its website answers a missing page
 with the same page, or its certificate can only be verified by a
 browser. The report, in JSON and Markdown, counts the failures in a
@@ -59,6 +61,7 @@ MAX_BYTES = 2_000_000
 BLOCKED_CODES = frozenset({401, 403, 429})
 REPORT_NAME = "link_report"
 URL_PATTERN = re.compile(r"https?://\S+")
+REACHABLE_ONLY = re.compile(r"\bReachable only from ([^;,.]+)", re.IGNORECASE)
 DIGITS = re.compile(rb"\d+")
 
 Status = Literal["ok", "unverifiable", "blocked", "broken", "unreachable"]
@@ -155,6 +158,41 @@ def collect_links(sources: dict[str, Source]) -> dict[str, list[str]]:
                     where += f"-{entity.subdivision_code}"
                 add(entity.url, f"{source_id}: {where}")
     return links
+
+
+def restricted_links(sources: dict[str, Source]) -> dict[str, str]:
+    """Find the links noted as reachable only from one place.
+
+    Parameters
+    ----------
+    sources : dict
+        The sources, by identifier.
+
+    Returns
+    -------
+    dict
+        For each link that every entity using it notes as "Reachable
+        only from" the same place, that place.
+
+    Notes
+    -----
+    An entity uses its own page, or the page of its source if it has
+    none. A website that answers only in its country cannot be reached
+    by the check, which runs elsewhere, so that its links say nothing
+    about the pages.
+    """
+    places: dict[str, set[str | None]] = {}
+    for source in sources.values():
+        for entity in source.entities:
+            found = REACHABLE_ONLY.search(entity.note or "")
+            places.setdefault(entity.url or source.url, set()).add(
+                found.group(1).strip() if found else None
+            )
+    return {
+        url: place
+        for url, found in places.items()
+        if len(found) == 1 and (place := next(iter(found))) is not None
+    }
 
 
 def _request(url: str, context: ssl.SSLContext | None) -> Answer:
@@ -373,6 +411,7 @@ def check_links(
     links: dict[str, list[str]],
     fetch: Callable[[str], Answer] | None = None,
     previous: dict[str, int] | None = None,
+    restricted: dict[str, str] | None = None,
 ) -> list[Result]:
     """Check links, and count their failures in a row.
 
@@ -385,6 +424,10 @@ def check_links(
         `LinkError`, by default `fetch_page`.
     previous : dict, optional
         Failures in a row of each link that failed the previous check.
+    restricted : dict, optional
+        The place from which each link that the data files note as
+        reachable only from there can be reached; such a link is
+        blocked, not unreachable, when it cannot be reached.
 
     Returns
     -------
@@ -399,6 +442,7 @@ def check_links(
     """
     fetcher = fetch or fetch_page
     previous = previous or {}
+    restricted = restricted or {}
     by_host: dict[str, list[str]] = defaultdict(list)
     for url in links:
         by_host[urllib.parse.urlsplit(url).netloc.lower()].append(url)
@@ -411,6 +455,16 @@ def check_links(
         results = [
             r for rs in pool.map(check_host, by_host.values()) for r in rs
         ]
+    results = [
+        dataclasses.replace(
+            r,
+            status="blocked",
+            detail=f"reachable only from {restricted[r.url]}: {r.detail}",
+        )
+        if r.status == "unreachable" and r.url in restricted
+        else r
+        for r in results
+    ]
     results = [
         dataclasses.replace(r, failures_in_a_row=previous.get(r.url, 0) + 1)
         if r.status in FAILED
@@ -539,8 +593,8 @@ def report_markdown(results: list[Result], checked_at: dt.datetime) -> str:
             "### Blocked to automated checks",
             "",
             (
-                "These websites refuse automated requests, so their links "
-                "could not be checked:"
+                "These websites refuse automated requests, or answer only "
+                "from some places, so their links could not be checked:"
             ),
             "",
         ]
@@ -629,16 +683,21 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     try:
-        links = collect_links(registry.load_sources())
+        sources = registry.load_sources()
     except RegistryError as e:
         logger.error("The data files have errors:\n%s", e)  # noqa: TRY400
         return 1
+    links = collect_links(sources)
     if args.only_new is not None:
         known = baseline_links(args.only_new)
         links = {url: uses for url, uses in links.items() if url not in known}
 
     checked_at = dt.datetime.now(dt.UTC)
-    results = check_links(links, previous=read_previous(args.previous))
+    results = check_links(
+        links,
+        previous=read_previous(args.previous),
+        restricted=restricted_links(sources),
+    )
     write_report(results, args.output, checked_at)
     failing = [r for r in results if r.status in FAILED]
     logger.info("%d links checked, %d failing.", len(results), len(failing))
