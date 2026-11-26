@@ -64,6 +64,8 @@ sources:
   coes:
     - PER-SEIN
     - PER-SEIN-2000
+  edf_sei:
+    - FRA-20R
   egat:
     - THA
   eia:
@@ -280,6 +282,9 @@ sources:
     - USA-NE
   kansaitd:
     - JPN-Kansai
+  korem:
+    - KAZ-NORTH-SOUTH
+    - KAZ-WEST
   krogd:
     - KOR
   nbpower:
