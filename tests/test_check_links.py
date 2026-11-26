@@ -112,6 +112,76 @@ def test_collect_links_lists_every_use(sources: dict[str, Source]) -> None:
     }
 
 
+def test_restricted_links(data_dir: Path) -> None:
+    """Find the pages noted as reachable only from one place.
+
+    Notes
+    -----
+    An entity without a page of its own uses the page of its source,
+    and the note may hold other remarks, in any case.
+    """
+    write_source(
+        data_dir,
+        "so_ups",
+        source(
+            [
+                entity(
+                    country_code="EGY",
+                    note="With gaps; reachable only from Egypt",
+                ),
+                entity(
+                    country_code="AGO",
+                    url="https://example.org/agola",
+                    note="Reachable only from Angola",
+                ),
+                entity(country_code="JPN", url="https://example.org/japan"),
+            ],
+            name="SO UES",
+            url="https://example.org/egypt",
+        ),
+    )
+    assert check_links.restricted_links(registry.load_sources(data_dir)) == {
+        "https://example.org/egypt": "Egypt",
+        "https://example.org/agola": "Angola",
+    }
+
+
+def test_restricted_links_need_every_use(data_dir: Path) -> None:
+    """Leave out a page that one entity notes and another does not."""
+    write_source(
+        data_dir,
+        "tepco",
+        source(
+            [entity(country_code="JPN", note="Reachable only from Japan")],
+            name="TEPCO",
+        ),
+    )
+    assert check_links.restricted_links(registry.load_sources(data_dir)) == {}
+
+
+def test_unreachable_restricted_link_is_blocked() -> None:
+    """Count a restricted link that cannot be reached as blocked.
+
+    Notes
+    -----
+    A restricted link that answers with an error is still broken.
+    """
+    url, gone = "https://example.org/ru", "https://example.org/gone"
+    fetch = Fetcher({url: LinkError("timed out"), gone: 404})
+    results = check_links.check_links(
+        {url: ["so_ups: page"], gone: ["so_ups: RUS"]},
+        fetch,
+        previous={url: 3},
+        restricted={url: "Russia", gone: "Russia"},
+    )
+    assert [
+        (r.url, r.status, r.detail, r.failures_in_a_row) for r in results
+    ] == [
+        (gone, "broken", "HTTP 404", 1),
+        (url, "blocked", "reachable only from Russia: timed out", 0),
+    ]
+
+
 @pytest.mark.parametrize(
     ("answer", "status", "detail"),
     [
